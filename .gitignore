@@ -1,0 +1,55 @@
+# DENY BY DEFAULT.
+#
+# This repo exists for one purpose: to give Kili a memory she can read on every
+# scheduled run. It is NOT a backup of the Kiki folder.
+#
+# The Kiki folder holds real client PII (prospect names, emails, deal values, call
+# transcripts) and large media. None of that belongs here. So everything is ignored
+# and specific paths are added back below. A new file is invisible to git unless
+# somebody deliberately allows it, which is the safe direction for a folder like
+# this one to fail in.
+#
+# Before widening this list, ask whether Kili actually needs to read the file, and
+# whether it names a client.
+
+/*
+
+!/.gitignore
+!/README.md
+
+# Her knowledge base. The whole point.
+!/.claude/
+/.claude/*
+!/.claude/knowledge/
+
+# Her own definition and her specialists, so she knows her roster.
+!/.claude/agents/
+
+# Her entry point.
+!/.claude/skills/
+/.claude/skills/*
+!/.claude/skills/kili/
+
+# Who she is, and the channel she currently reaches Kiki through.
+!/kili/
+/kili/*
+!/kili/NOTICE.md
+!/kili/channels/
+
+# Belt and braces. These must never appear regardless of the rules above.
+node_modules/
+.venv/
+.next/
+*.mp4
+*.mov
+*.png
+*.jpg
+*.jpeg
+*.pdf
+*.xlsx
+*.csv
+*.sqlite
+*.db
+.env
+.env.*
+!.env.example

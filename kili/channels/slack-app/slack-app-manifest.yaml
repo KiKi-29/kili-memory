@@ -1,0 +1,44 @@
+# Kili, as a Slack app.
+#
+# Paste this into api.slack.com/apps > Create New App > From a manifest.
+#
+# Deliberately omits event_subscriptions. Slack verifies the request URL the
+# moment you save one, and ours does not exist until the Vercel deploy. Adding
+# it to a manifest now would just fail. We add it after deploy, in the UI.
+
+display_information:
+  name: Kili
+  description: Kiki's sidekick. Sweeps the inbox, proposes the work, never creates without a go.
+  background_color: "#161616"
+
+features:
+  bot_user:
+    display_name: Kili
+    # Kili is only ever "online" while a message is being handled, since Vercel
+    # functions do not stay running. Showing her as online avoids a permanently
+    # grey dot that reads as broken.
+    always_online: true
+
+oauth_config:
+  scopes:
+    bot:
+      # Send the DM. This is the one that matters.
+      - chat:write
+      # Read messages in DMs with her. Required for the message.im event to
+      # carry any text; without it events arrive empty.
+      - im:history
+      # See the DM conversation itself.
+      - im:read
+      # Open a DM channel with Kiki from scratch. The morning ping needs this,
+      # because a cron run has no incoming message to reply into.
+      - im:write
+      # Resolve a user id to a name. Used for logging and for telling Kiki
+      # apart from anyone else who messages.
+      - users:read
+
+settings:
+  org_deploy_enabled: false
+  # Socket Mode is the alternative to a public webhook. It needs a process that
+  # stays connected, which is exactly what we avoided by going serverless.
+  socket_mode_enabled: false
+  token_rotation_enabled: false
