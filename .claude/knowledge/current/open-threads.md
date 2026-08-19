@@ -73,3 +73,28 @@ shape of it. Two defects in the parent get fixed in the same pass:
   is right. Alumni shipped with a slug problem and this is a plausible cause.
 
 Propose first as always. Arriving dates are a trigger to draft, never to publish.
+
+---
+
+## Two unanswered asks on the San Diego thread
+
+**Owner:** Kiki · **Opened:** 2026-08-19 · **Status:** surfaced to her, not yet answered
+
+Thread `1a01578de4731e29`, "Re: Software for Managing Park Reservations". Tier 1 D360
+prospect. Two things on it that nobody has replied to, by anyone, as of 2026-08-19:
+
+1. **Anya Meave asked for an intro to Downtown Detroit Partnership.** No reply from anyone
+   on the thread.
+2. **Michael Krut said he cannot locate D360 collateral in the CRM.** He is half right.
+   Thirteen published D360 one pagers exist on Collaterals `9765165683`, so there is
+   collateral and he cannot find it, which is a findability problem rather than a gap. But
+   none of the thirteen covers parks, facility booking or reservations, so for this
+   specific prospect there genuinely is nothing. Both halves need saying to him.
+
+These were raised with Kiki on 2026-08-19 and she has not answered either. **They are hers
+to answer, so keep them visible until she does.** They previously sat in the ledger's open
+table, which was wrong: the ledger records decisions already made, and an unanswered ask
+from a Tier 1 prospect is a live thread.
+
+Do not answer Michael or Anya directly, and do not draft a reply unless she asks. Surface
+them again if they are still open on the next sweep.
