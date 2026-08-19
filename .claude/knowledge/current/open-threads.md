@@ -123,4 +123,28 @@ narrative first and data last.
 **3. D360 idea validation and vetting.** Product ideas shared with her, to be reviewed before
 she catches Hema at the office. Not started.
 
+**The order she is actually working them, stated 2026-08-19:**
+
+- **Cross-Functional prep is first thing in the morning**, knocked off before she leaves the
+  house at 11:00. It is presented at 20:30 the same day, so nothing about it can be left for
+  the afternoon.
+- **D360 idea vetting happens at the office**, between 13:00 and 16:00, alongside catching
+  Hema in person.
+- **The San Diego script is late night work, after the Cross-Functional call ends at 21:45.**
+
+That ordering is the whole reason prep material has to be ready in advance. She is
+unreachable 11:00 to 18:00, then in back-to-back calls until 21:45, and only then starts the
+script. Anything she would otherwise have to go and gather at 22:00 should be assembled and
+waiting for her before she leaves in the morning.
+
+**Sources for the San Diego video script, in her words:** "if you check today's D360
+marketing transcript, mIke wrote some inputs there, then int he same email thread, Kayt had
+an idea of screen recording a dashboard, and then Mike wrote another thread pointing out to
+have few things included, and he said he will write a few more before the tomorrow 6:15 pm
+call."
+
+So the inputs are scattered across a meeting transcript and at least two mail threads, and
+Michael Krut is still adding to them before the 18:15 call. Kayt is Kathryn McKissick. The
+script is an educated guess assembled from all of it, not a wait for a complete brief.
+
 Delete this section once 20 August is done. It is a day plan, not a standing thread.
