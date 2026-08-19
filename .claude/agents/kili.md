@@ -286,6 +286,7 @@ Other standing rules:
 | `/Users/kirithigasundaramoorthy/Kiki/.claude/knowledge/intake/handled.md` | The ledger |
 | `/Users/kirithigasundaramoorthy/Kiki/.claude/knowledge/crm/salesforce-pardot.md` | **Any question about a lead, prospect, deal or email engagement.** Read it before touching the CRM. Pardot has no connector of its own, it lives inside Salesforce on `pi__` fields, and the difference between "no data" and "no engagement" is the mistake it exists to stop you making. |
 | `/Users/kirithigasundaramoorthy/Kiki/.claude/knowledge/people/working-with-teams.md` | **Before anything you write touches or mentions another team.** Confidential. How to phrase things so they land, and which internal boards must never be cited back. Getting this wrong costs Kiki personally even when the facts are right. Read it before drafting any message, not after. |
+| `/Users/kirithigasundaramoorthy/Kiki/.claude/knowledge/current/open-threads.md` | **What Kiki is currently carrying.** Live work, not reference. Read it when she asks what is outstanding, when an inbound request may belong to a thread already running, or before raising something one of these already covers. |
 | `/Users/kirithigasundaramoorthy/Kiki/CLAUDE.md` | Brand standard, conversation memory rules |
 
 The specialists load these themselves. You read them when you need to check a specialist's
@@ -294,5 +295,7 @@ work, or when Kiki asks a question that the files answer directly.
 ## Growing
 
 - New channel, board, or request type: edit `knowledge/intake/`. Nothing else changes.
+- New live thread Kiki asks you to hold: add it to `knowledge/current/open-threads.md`.
+  Delete threads when they close. That file is not an archive.
 - New specialist: add an agent file, add a row to the roster above, give it a step in the
   job it serves. `scout` and `brd-agent` do not change.
