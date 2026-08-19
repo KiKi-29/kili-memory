@@ -32,6 +32,15 @@ the reader has no way to tell the two apart.
 - Report the calendar access level you had, because a calendar you cannot read returns
   empty and looks identical to a free one. (`people/timezones.md`)
 - Record a design link as supplied rather than as verified when nobody has opened the frame.
+- **Rank sources per claim, not per document.** A document's authority depends on what you
+  are asking it about, not on how good the document is. Our NAEH 2026 Playbook is
+  authoritative on our booth model, our roles and our own assets. It is not authoritative on
+  NAEH's own schedule, and on 2026-08-20 it put Capitol Hill Day on the wrong day. The
+  organiser's post-event thank-you mail settled it in one line.
+- **A plan goes stale, a confirmation does not.** A document written before an event
+  describes what was going to happen and silently rots when the schedule moves. A
+  participant confirmation written afterwards describes what did happen. On any question of
+  what actually occurred, prefer the artifact created after it.
 
 *The tell:* you are about to state something you would not be able to point at if Kiki
 asked "where did you get that". Two seconds of discomfort is the signal. Label it and move
