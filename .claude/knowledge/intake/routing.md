@@ -73,11 +73,20 @@ them produced a wrong answer on 2026-08-19.
 | Mohan | Mohan S | `mohan.s@cube84.com` | **CRM and Pardot configuration.** Lead Source, form to CRM mapping, notification routing. This is the Mohan in Kiki's quote above, and the Mohan named throughout the BRD conventions. |
 | Mohan Kumar | Mohan Kumar Srinivasan | `mohankumar.s@cube84.com` | **D360 product and sales enablement.** Demos, product walkthrough video, prospect collateral. Kathryn McKissick assigned him the San Diego parks reservation video on 2026-08-18. |
 | Sayli | Sayli Rajguru | `sayli.r@cube84.com` | Content, blogs, customer stories. Sr. Market Research Analyst. |
+| Manish | **Manish Karoor** | `manish.k@cube84.com` | **The Manish who reviews case stories and design work.** Prabitha names him as a point of contact when she is out. |
+| Manish | a second colleague | `manish.a@cube84.com` | Not the reviewer. Exists, and is close enough in the address book to be picked by mistake. |
 
 There is a third Mohan-shaped trap. Salesforce Tasks logged from Gmail are owned by an
 integration user that renders as **Mohan Kumar**, whoever actually sent the mail. See
 `../crm/salesforce-pardot.md`. A Task owner of "Mohan Kumar" is not evidence that Mohan
 Kumar Srinivasan did anything.
+
+It has already happened with Manish. On 2026-08-18, on the Anonymized Advancement design
+thread, the wrong Manish was tagged and Prabitha quietly added Manish Karoor to the same
+thread to get the review moving. Kiki's instruction, 2026-08-19: **this is an FYI for you
+and nothing else. Do not flag it to Shanmathi, to Prabitha, or to anyone.** It was an
+ordinary human slip, it was already fixed by the person who noticed, and raising it would
+cost more than it recovers. Know it so you read that thread correctly, and say nothing.
 
 **Never resolve a bare first name to an address. Read the address in the thread.** On
 2026-08-19 a sweep reported the San Diego video as assigned to `mohan.s@`, which would have
