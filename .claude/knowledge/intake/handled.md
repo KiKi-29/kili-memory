@@ -18,6 +18,22 @@ The Loop email thread sat in an open block for three weeks being re-litigated ev
 purely because every available outcome described what the router did rather than what the
 work was.
 
+### Moving something out of this ledger
+
+This file records **decisions already made**. An unanswered question, a live thread, or
+anything still waiting on a human is not a ledger entry, it is live work and it belongs in
+`../current/open-threads.md`.
+
+**If you remove something from here because it is live work, you must put it INTO
+open-threads in the same pass.** Removing it from one file without adding it to the other
+drops it out of the system entirely, which is worse than leaving it filed in the wrong
+place. A misfiled item still gets found. A deleted one does not.
+
+This happened on 2026-08-19. Two unanswered asks from a Tier 1 prospect, an intro request
+and a missing-collateral problem, were correctly judged not to be ledger material and were
+removed, and were not written anywhere else. They were recovered, but only because someone
+noticed. Move, never just delete.
+
 | Thread ID | Date | Subject | Outcome | Board row |
 |---|---|---|---|---|
 | `19faa07df5bed44f` | 2026-07-28 | Alumni Engagement web page - For Design | row existed | WebDev `12657776630` Alumini Engagement Web Page, Deployed |
