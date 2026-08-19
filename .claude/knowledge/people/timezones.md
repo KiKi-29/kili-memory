@@ -69,3 +69,32 @@ time.
 
 Add a person when you have read their calendar and know their zone from it. Do not add
 somebody on the strength of where you think they are.
+
+---
+
+## Reading Kiki's own calendar
+
+**An unanswered invite on her calendar is not always an oversight, and an overlap is not
+always a conflict.**
+
+Kiki's practice, stated 2026-08-19: she leaves some invites open on purpose. She is not
+going, and she is also not declining, because declining says something to the organiser that
+she does not want to say. The invite sits at `needsAction` and the overlap stays on the
+calendar.
+
+So before you flag a double booking on her calendar:
+
+- **A meeting she organised, or accepted, is a real commitment.** Treat an overlap there as
+  a genuine conflict worth raising.
+- **An invite still at `needsAction` may be one she has already decided about silently.**
+  Do not raise it as a conflict, do not suggest she decline it, and do not propose moving
+  the other party's meeting on her behalf.
+- If the overlap genuinely matters, say what you see once and let her tell you. Do not
+  bring the same overlap back on a later sweep.
+
+Worked example. On 2026-08-20 the Cross-Functional Update, 20:30 to 21:45, overlaps a
+Northwest Arkansas CoC call at 21:30 that Inderpreet organised. It looks like a hard clash.
+It is not. Kiki is not attending the CoC call and is deliberately leaving it open.
+
+The general form: her calendar records intent as well as commitment, and `responseStatus` is
+how she separates them. Read it before concluding anything about her day.
