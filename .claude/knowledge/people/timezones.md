@@ -129,5 +129,11 @@ phone from the metro. So:
   it is being taken on the phone.
 - Outbound travel with nothing scheduled in it can be busy.
 
+**Both legs, always, without asking.** Kiki's answer when asked whether she wanted the
+return commute put back was one word: "always". So a trip to the office is two blocks, out
+and back. Do not block the outbound and leave her return to chance, and do not ask her to
+confirm the second one each time. If she tells you when she is leaving somewhere and when
+she wants to be home, that is a block.
+
 The general shape: her travel blocks describe where she is, not whether she is available.
 Availability is a separate question and she answers it, not you.
