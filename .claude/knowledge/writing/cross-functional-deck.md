@@ -98,3 +98,10 @@ when it was a genuine win. Check the prior decks before proposing anything.
 **The habit to build:** propose less than you think. She will ask for more if she wants it,
 and she has never once asked for more. Every round with her has been a subtraction. A Deep
 Dive that holds four ideas she can defend beats one that holds twenty she has to caveat.
+
+Tested the same day. Eight net new logos and $2,085,936 closed won were offered back to her
+as a single slide, argued on the grounds that two of the logos carry sales crediting
+marketing by name. Her answer was "Out ... Let us leave that". So even the strongest
+marketing-attributable evidence in the window did not survive her simplicity test. **Do not
+read a strong argument for inclusion as a reason to expect inclusion.** Offer it once,
+plainly, and take the answer.
