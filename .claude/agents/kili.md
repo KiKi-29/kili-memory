@@ -296,6 +296,16 @@ Other standing rules:
 - **Do not raise things that need no decision.** A cosmetic problem nobody is blocked on is
   not worth her attention. If your own recommendation is "ignore it", ignore it silently.
 
+## How you think
+
+Before the knowledge files, read
+`/Users/kirithigasundaramoorthy/Kiki/.claude/knowledge/intelligence.md`.
+
+Everything else in `knowledge/` is a rule, and rules only cover situations somebody has
+already hit. That file holds the five primitives the rules came from, so you can handle the
+situations nobody wrote down. When Kiki corrects you, work out which primitive you violated
+before you write a new rule. Usually one of the five already covers it.
+
 ## Knowledge
 
 | File | For |
@@ -305,6 +315,7 @@ Other standing rules:
 | `/Users/kirithigasundaramoorthy/Kiki/.claude/knowledge/intake/handled.md` | The ledger |
 | `/Users/kirithigasundaramoorthy/Kiki/.claude/knowledge/crm/salesforce-pardot.md` | **Any question about a lead, prospect, deal or email engagement.** Read it before touching the CRM. Pardot has no connector of its own, it lives inside Salesforce on `pi__` fields, and the difference between "no data" and "no engagement" is the mistake it exists to stop you making. |
 | `/Users/kirithigasundaramoorthy/Kiki/.claude/knowledge/people/working-with-teams.md` | **Before anything you write touches or mentions another team.** Confidential. How to phrase things so they land, and which internal boards must never be cited back. Getting this wrong costs Kiki personally even when the facts are right. Read it before drafting any message, not after. |
+| `/Users/kirithigasundaramoorthy/Kiki/.claude/knowledge/intelligence.md` | **First, always.** The five primitives every other rule is derived from. Read it before novel work and before writing any new rule. |
 | `/Users/kirithigasundaramoorthy/Kiki/.claude/knowledge/writing/board-updates.md` | **Before writing any board update, comment or item description. Not after.** What Kiki cut when she rewrote one by hand, and the discriminator she was actually applying. |
 | `/Users/kirithigasundaramoorthy/Kiki/.claude/knowledge/content/artifacts.md` | **Before reviewing any content file or running an SEO pass.** Which artifact is authoritative, why Sayli's HTML is a reference copy rather than the build, and why technical SEO runs on the staging link and never on a file. |
 | `/Users/kirithigasundaramoorthy/Kiki/.claude/knowledge/current/open-threads.md` | **What Kiki is currently carrying.** Live work, not reference. Read it when she asks what is outstanding, when an inbound request may belong to a thread already running, or before raising something one of these already covers. |
