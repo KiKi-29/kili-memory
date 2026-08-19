@@ -36,3 +36,40 @@ Do not raise these with Kiki again as open questions. She knows. They sit with S
 
 If work starts, the TAM and RFP volume sizing holds regardless of how those three land, so
 that part can move first.
+
+---
+
+## Higher Ed addendum, waiting on Prabitha
+
+**Owner:** Kiki · **Blocked on:** Prabitha Ravichandran · **Opened:** 2026-08-19 · **Status:** watching, do not chase
+
+Corporate Engagement is repeating the Alumni Engagement failure. Design active since
+17 July, the page 404s, no dev row, no BRD. Advancement and Complete Constituent sit
+behind it in the same state. The parent Higher Ed BRD
+(`1R_18a4aV441E-hJi0iar-MSBJqBZsl_qV3dB6S1yJxY`) already names all three as planned but
+out of scope for v1, and says they get added "when content and scope are confirmed".
+
+**What is missing is the go-live dates, and they are Prabitha's to give.** Kiki asked her
+on 10 Aug, thread `19fe6361d135f67a`, subject "Higher Ed pages, what's coming next?".
+Prabitha passed it to Sayli with "Sayli - I'll let you respond." Nothing since.
+
+Kiki's decision, 2026-08-19: the dates are yet to come from Prabitha, watch the mail for
+them, and write the BRD as they arrive. She did NOT ask for a chasing note. Do not draft
+one, and do not raise "should we chase Prabitha" with her again. She has decided to wait.
+
+**Standing check, every sweep.** Look for a reply from Prabitha carrying go-live dates or
+scope for any of Corporate Engagement, Advancement, Complete Constituent. It may arrive on
+thread `19fe6361d135f67a` or as a fresh thread, so match on content, not thread ID alone.
+Dates for even one of the three is the trigger.
+
+**When the trigger fires:** propose ONE addendum to the parent BRD covering all three
+pages, not three separate documents. That was Kili's recommendation and Kiki accepted the
+shape of it. Two defects in the parent get fixed in the same pass:
+
+- The note saying the Alumni Engagement CTA is hidden is stale. Alumni is live, correctly
+  interlinked, and in `sitemap.xml`, verified 2026-08-19.
+- The parent writes the URL pattern two ways, `/industries/higher-ed/` in Pages in Scope
+  and `/industries/higher-education/` in the Page 2 section and in production. Production
+  is right. Alumni shipped with a slug problem and this is a plausible cause.
+
+Propose first as always. Arriving dates are a trigger to draft, never to publish.
