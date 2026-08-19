@@ -98,3 +98,29 @@ from a Tier 1 prospect is a live thread.
 
 Do not answer Michael or Anya directly, and do not draft a reply unless she asks. Surface
 them again if they are still open on the next sweep.
+
+---
+
+## Kiki's three focus areas for 2026-08-20
+
+Her words: "Tomorrow my focus is getting a product video for the San Diego. So, the script
+must be done tomorrow. Friday gonna talk to Neethi on the same.. and then get it out. Other
+focus is the Cross Funcitonal Prep and last one is the D360 Idea Vlaidations and vetting."
+
+Three, in her order. Anything not on this list waits unless she raises it.
+
+**1. San Diego product video, script due today.** Tier 1 D360 prospect, thread
+`1a01578de4731e29`. The script is the deliverable today, Neethi on Friday 21 Aug, then it
+ships. Kathryn assigned the work to Mohan Kumar Srinivasan, `mohankumar.s@`, on 18 Aug, and
+Kiki meets Michael Krut at 18:15 today to scope what the video must show. Useful context she
+already has: thirteen published D360 one pagers exist on Collaterals `9765165683` and none
+covers parks, facility booking or reservations. The board this work gets logged to is still
+her open decision, Collaterals or Ad-hoc Requests `9604419366`.
+
+**2. Cross-Functional Deep Dive**, presented 20:30 IST today. See her framework, which runs
+narrative first and data last.
+
+**3. D360 idea validation and vetting.** Product ideas shared with her, to be reviewed before
+she catches Hema at the office. Not started.
+
+Delete this section once 20 August is done. It is a day plan, not a standing thread.

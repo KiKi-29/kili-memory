@@ -98,3 +98,36 @@ It is not. Kiki is not attending the CoC call and is deliberately leaving it ope
 
 The general form: her calendar records intent as well as commitment, and `responseStatus` is
 how she separates them. Read it before concluding anything about her day.
+
+---
+
+## Putting Kiki's travel on the calendar
+
+Her instruction, 2026-08-19: **"when Kili puts my travel on the calendar, she needs to put
+it as Out of Office - Commuting. And incase if I say in that same window there is a meeting,
+if i attend, let that meeting be there, dont decline."**
+
+Two parts, and the second is the one with a trap in it.
+
+**Title it exactly `Out of Office - Commuting`.** Not "Travel to office", not "Commute".
+That exact string, so it reads the same way every time and anyone glancing at her calendar
+knows what it is.
+
+**Never use Google's `OUT_OF_OFFICE` event type for it.** This is the trap. That event type
+can auto-decline conflicting invitations, which is precisely what she told us not to do. A
+travel block is a label, not a withdrawal. Create it as a normal event with that title and
+leave `eventType` alone.
+
+**A meeting inside a travel window stays.** She often takes calls while commuting. On
+2026-08-20 the Claude COE ran 16:00 to 17:00 inside a travel block and she took it on her
+phone from the metro. So:
+
+- Never decline, move or cancel anything because it falls inside travel.
+- Never suggest she decline it either.
+- If she has said she will attend, mark the travel block **free** rather than busy, so the
+  meeting does not read as a conflict. Note in the description which meeting it is and that
+  it is being taken on the phone.
+- Outbound travel with nothing scheduled in it can be busy.
+
+The general shape: her travel blocks describe where she is, not whether she is available.
+Availability is a separate question and she answers it, not you.
