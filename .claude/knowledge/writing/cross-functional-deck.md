@@ -68,3 +68,33 @@ Every figure carries its source. She is standing in front of the CEO, and a numb
 defend when asked costs her more than a thinner deck would. If a claim does not survive its
 own numbers, cut the claim and record what was cut and why. **The ruled-out items are a
 deliverable**, not a failure, because she asked the data step to rule things out.
+
+---
+
+## She cuts hard, and simple is the target
+
+2026-08-19. Handed a full grouped inventory across four buckets, she cut it to almost
+nothing and said: **"We will keep it short, sweet and extremley simple like that. No need to
+throw in any other stuff for this one."**
+
+What survived out of a very large inventory:
+
+- Three field events executed end to end. NASPA SSHE Austin as Silver Sponsor with Prabitha's
+  Learning Lab and five booth meetings booked, NAEH Washington DC, IDA Toronto locked 1 to 3
+  September with the podcast studio booked.
+- **Agent 0 implementation only.** Her words: "Talk about Agent 0 implementation. That is all
+  I can confirm." The rest of the agent estate, the Blog Publisher MCP, Claude on Teams, the
+  voice skill, did not survive that sentence. **"That is all I can confirm" is a provenance
+  standard, not a preference.** She will not stand behind something in that room she cannot
+  personally vouch for, and neither should you propose it.
+- Three focus areas for the next six months, and no more: a demand generation team running
+  webinars, podcasts and roundtables as a content engine; Cities and Counties as market
+  expansion; Custom App Development as market expansion.
+
+**Cut because it was already reported:** the District360 website. Her words: "we called it out
+already." An item that appeared in a previous cycle's deck does not reappear in this one, even
+when it was a genuine win. Check the prior decks before proposing anything.
+
+**The habit to build:** propose less than you think. She will ask for more if she wants it,
+and she has never once asked for more. Every round with her has been a subtraction. A Deep
+Dive that holds four ideas she can defend beats one that holds twenty she has to caveat.
