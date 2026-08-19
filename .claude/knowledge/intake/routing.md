@@ -63,6 +63,27 @@ stop.
 Precedent worth knowing: the Hamilton customer story went to WebDev as
 `CASE STUDY : HAMILTON`, not to a separate board. Follow that.
 
+#### Which Mohan, and which Sayli. Written 2026-08-19.
+
+Kiki's quote says "Sayli or Mohan". Both names are ambiguous in this account, and one of
+them produced a wrong answer on 2026-08-19.
+
+| Name as written | Full name | Address | Owns |
+|---|---|---|---|
+| Mohan | Mohan S | `mohan.s@cube84.com` | **CRM and Pardot configuration.** Lead Source, form to CRM mapping, notification routing. This is the Mohan in Kiki's quote above, and the Mohan named throughout the BRD conventions. |
+| Mohan Kumar | Mohan Kumar Srinivasan | `mohankumar.s@cube84.com` | **D360 product and sales enablement.** Demos, product walkthrough video, prospect collateral. Kathryn McKissick assigned him the San Diego parks reservation video on 2026-08-18. |
+| Sayli | Sayli Rajguru | `sayli.r@cube84.com` | Content, blogs, customer stories. Sr. Market Research Analyst. |
+
+There is a third Mohan-shaped trap. Salesforce Tasks logged from Gmail are owned by an
+integration user that renders as **Mohan Kumar**, whoever actually sent the mail. See
+`../crm/salesforce-pardot.md`. A Task owner of "Mohan Kumar" is not evidence that Mohan
+Kumar Srinivasan did anything.
+
+**Never resolve a bare first name to an address. Read the address in the thread.** On
+2026-08-19 a sweep reported the San Diego video as assigned to `mohan.s@`, which would have
+put a product video on the CRM owner, and separately rendered `sayli.r@` as "Sayli Rao"
+because no knowledge file recorded her surname. Both were name guesses dressed as facts.
+
 ### Vendor and partner threads stay off-board, deliberately
 
 **Kiki's decision, 2026-08-10.** These get no monday row and no board. This is a rule,
