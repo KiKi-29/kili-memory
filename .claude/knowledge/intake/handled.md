@@ -23,6 +23,7 @@ work was.
 | `19faa07df5bed44f` | 2026-07-28 | Alumni Engagement web page - For Design | row existed | WebDev `12657776630` Alumini Engagement Web Page, Deployed |
 | `19f6bdb71df23d74` | 2026-07-16 | Hamilton Success Story for website | row existed | WebDev `12597093800` CASE STUDY : HAMILTON, Deployed |
 | `19fd6bab359069a5` | 2026-08-06 | Blog Design Request - Student Involvement and Alumni Giving | row existed | Blog Tracker `12743425675` "Student involvement predicts alumni giving...", Design Completed |
+| `19ffa5f2ff6e7522` | 2026-08-13 | Design Request - Anonymized Advancement Case Story | row created | WebDev `12841087077` CASE STUDY : Anonymized Advancement, BRD Under Review |
 
 ---
 
@@ -101,6 +102,13 @@ follow Alumni. As of 2026-08-09:
   WebDev and with no BRD. See the note on Daily Tracker in `routing.md`. This is the one
   positioned to repeat the Alumni failure.
 
+**Superseded on 2026-08-19. Do not act on the three bullets above.** Corporate Engagement,
+Advancement and Complete Constituent are now one live thread owned by
+`../current/open-threads.md`, section "Higher Ed addendum, waiting on Prabitha". Kiki
+decided to wait for Prabitha's go-live dates rather than chase for them. The paragraphs
+above are kept as the 2026-08-09 record of how the risk was first spotted, not as a current
+state. Read `open-threads.md` for the current state, and do not re-raise the chase.
+
 Three WebDev rows created 2026-05-27 by form automation are **stale, not stalled**:
 `12113645539` Higher Ed industry main page, `12113686146` Product page student engagement
 solution, `12113734799` eBook student success program. All read `Not Yet Started`, but the
@@ -168,3 +176,62 @@ into `routing.md`. Do not surface BD Vault or LevelShift as unlogged work.
 |---|---|---|
 | Nandini's D360 FSA demo video with voiceover request | 2026-06-09 | **Parked 2026-08-09. Not being actioned.** Kiki's words: "park it in shelf. We are not going to touch it." Do not surface it in a future sweep. |
 | Levelshift call recording, Drive transcript and Read.ai summary | 2026-08-10 | **Kiki's explicit decision: leave all three in place, and keep recording on for future Levelshift calls.** Kili raised it as competitor exposure and she declined. Her words: "I met with Levelshift today. So, tha is okay." Read alongside "All Levelshift notes and activity should go to salesforce", the instinct is that this relationship gets recorded rather than hidden. Do not re-raise. |
+
+---
+
+## The 2026-08-19 sweep
+
+Window 2026-08-10 to 2026-08-19, picking up where this ledger's last activity ended.
+Three real requests, one of which was already delivered.
+
+### Approved and created
+
+Kiki's words, 2026-08-19: *"Anonymized case study - yes. Do it. Put it ont he monday board. Tag Shashank and Sayli."*
+
+WebDev `12841087077` **CASE STUDY : Anonymized Advancement**, group New Requests, status
+`BRD Under Review`, Task Intake Date 2026-08-13, owners Shashank Tripathi and Sayli
+Rajguru. Update `5472877788` carries the anonymization warning and the two blockers, the
+Figma that arrived as anchor text reading "Link" with no URL behind it, and the absent slug
+and SEO metadata.
+
+**The pattern worth carrying forward, which is the reason this is written down.** A story
+is not anonymous because it is labelled anonymized. On 2026-08-10 the Private Research
+University story went live carrying a named quote attribution with a job title and needed a
+post-publication edit to strip it. Nine days later the next anonymized story arrived with
+nobody having signed off that it is de-identified. Same requester, same approver, same
+document type. **So for any story described as anonymized, treat de-identification sign off
+as a blocking input, quote attributions included, and ask for it before the build rather
+than after.**
+
+When citing that precedent, cite the page, never the stripped name. Putting the removed
+name on a shared board to explain why names must not appear defeats the point.
+
+### Not a duplicate, and deliberately not linked
+
+`12801505088` "Anonymized Advancement Case Story" sits on Daily Tracker `8820743652`. That
+is the design side of the same work, not a twin of the WebDev row. It was left unlinked for
+two reasons. `board_relation_mkv5yf8e` does not accept that board, and more importantly
+linking it would surface a design-internal board onto a board the whole team reads. See
+`../people/working-with-teams.md`. Do not join these two.
+
+### Delivered, nothing owed
+
+| Thread ID | Date | Subject | Outcome |
+|---|---|---|---|
+| `19feac99b285738a` | 2026-08-10 | Quick Edit Required: Case Study Page | `delivered, not owed`. WebDev `12759647801`, shipped the same day it was raised, `Deployed`. Verified live on 2026-08-19: the name and job title are gone, the quote remains. |
+
+### Open. Nobody has approved these. Ask once, do not re-litigate.
+
+| What | State on 2026-08-19 |
+|---|---|
+| San Diego parks reservation video and one pager | Kathryn McKissick assigned it to Mohan Kumar Srinivasan on 2026-08-18, thread `1a01578de4731e29`. Tier 1 D360 prospect. `routing.md` has no genre for video. Two D360 boards can hold it, both quiet since spring: Collaterals `9765165683`, which already carries `Short video` and `One pager` as Type of Content and is organised by module, and Ad-hoc Requests `9604419366`, which links to WebDev and has held YouTube video work. Recommendation given to Kiki was Collaterals. Awaiting her. |
+| Corporate Engagement, Advancement, Complete Constituent | **Not tracked here. Live work, owned by `../current/open-threads.md`, section "Higher Ed addendum, waiting on Prabitha".** Kiki decided on 2026-08-19 to wait for Prabitha's go-live dates rather than chase for them. Read that file for the current state. Do not restate its contents in this ledger and do not re-raise the chase, that question is closed. |
+| Two unanswered questions on a Tier 1 prospect | On the same San Diego thread, Anya Meave asked for an intro to Downtown Detroit Partnership, and Michael Krut said he cannot locate D360 collateral in the CRM. Neither was answered by anyone. For the record: seven published D360 one pagers exist on Collaterals `9765165683`, and none of them covers parks or reservations. |
+| `.gitignore` excludes the BRD reference files | `/.claude/skills/*` admits only `kili/`, so `conventions.md`, `page-types.md`, `house-template.md` and `corpus-index.md` are untracked, while `agents/brd-agent.md` is tracked and instructs loading all four on every run. A scheduled cloud run therefore has no house conventions. Recommendation: admit the first three, keep `corpus-index.md` out because its excluded-BRD section names eight clients. Awaiting Kiki. |
+
+### A column `routing.md` does not document
+
+WebDev `9189704731` carries `link_mm62rrdp`, **Gmail Thread Links**, type link. It is the
+purpose-built handled marker on that board, populated in the format
+`Gmail thread: <subject> - <url>`, and it is absent from the dupe-check table in
+`routing.md`. Search it first, ahead of the columns listed there.
