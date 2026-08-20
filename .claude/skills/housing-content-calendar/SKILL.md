@@ -36,7 +36,7 @@ before it decides your output.
 | Thing | Value |
 |---|---|
 | Tracker, discover by | Drive title pattern `Weekly Conversations Report`, take newest `modifiedTime` |
-| Tracker, current file | `1ZnXHAP0r0pUCNTunzepjuJnM7SAyJ_S-oDsBvulzgxI` (`WE 14-08`, 243 rows, 14 weeks) |
+| Tracker, current file | `1ZnXHAP0r0pUCNTunzepjuJnM7SAyJ_S-oDsBvulzgxI` (`WE 14-08`, **229 log rows**, 14 weeks, 5 tabs) |
 | Tracker folder | `Outbound 2026`, `1UHJN40J_izxwqZlsidoldTDU3Evb0R24` |
 | Published-topic dedupe | `Already existing Blog topics`, `1gjqkEuWL2YKH6tJRyUElkI_AZ1LNh2TcQxelQCLA0JM` |
 | Retired intake sheet | `CUBE84 Blog Automation Pipeline - Intake Sheet`, `1_sj28P-ZH3pm987xz9J3V8ZZ7zPwGwNRa8UzRqVmTNc` |
@@ -48,6 +48,16 @@ before it decides your output.
 
 **The tracker title changes every week.** It carries the week-ending date. Resolve by pattern,
 report which file and which week you read, and never trust a hardcoded id to still be current.
+
+**Three numbers in that file disagree about how many conversations there are.** The log tab holds
+229 data rows. Counting lines that begin `| WE ` returns 243, because the pivot tab's 14 week
+labels start with the same token. The pivot's own grand total says 218. Use the log tab's data
+rows, and if you report a total, say which tab it came from.
+
+**The housing motion starts at WE 19-06.** Everything before it is a different product motion:
+WE 15-05 to WE 29-05 is intellectual-and-developmental-disability, behavioral health and CBO case
+management, and WE 05-06 to WE 12-06 is higher-education student success. In `backfill` mode, say
+that rather than reporting a low in-scope ratio as though the housing motion underperformed.
 
 ---
 
@@ -77,7 +87,9 @@ Spawn `signal-miner`. The brief carries, explicitly:
 
 - the resolved file id and title, and **how you established it was newest**
 - the window: the specific week token for `weekly`, `all` for `backfill`
-- the detail field: `Details`
+- the detail fields: `Details` on the conversation-log tab, **and the `Minutes of Meeting` tab**.
+  That second tab is where completed meetings are written up rather than cold calls, it is the
+  highest-density text in the file, and the first backfill left it unread.
 - the scope: housing and homelessness (below)
 - the ledger fingerprints, so repeats come back marked rather than rediscovered
 

@@ -11,6 +11,14 @@ Roles and organisation types only.
 
 ---
 
+## The unit is organisations, not rows
+
+Every count below is **distinct organisations**. This must stay written down. Fourteen
+organisations appear more than once across weeks, and the largest cluster reads 28 by rows against
+23 by organisations. Without the unit recorded, next week's miner cannot tell a growing pattern
+from a persistent follow-up thread, which is exactly the fake-evidence failure the unit exists to
+prevent.
+
 ## Status meanings
 
 | Status | Means | Blocks re-proposal? |
@@ -27,30 +35,101 @@ re-derived next week from different sentences.
 
 ---
 
+## Provenance
+
+Established 2026-08-20 by a full `backfill` mine of `Weekly Conversations Report - Cube 84 -
+WE 14-08` (`1ZnXHAP0r0pUCNTunzepjuJnM7SAyJ_S-oDsBvulzgxI`), weeks WE 15-05 to WE 14-08.
+
+**The conversation log is 229 rows, not 243.** A naive count of lines beginning `| WE ` returns
+243 because the pivot tab's 14 week labels are also week tokens. The pivot's own grand total says
+218 and matches neither. Count the log tab's data rows.
+
+Accounting: 229 read · 94 out of scope · 135 in scope · 65 logistics cut · 70 clustered ·
+18 fingerprints cleared the floor · 7 held weak.
+
+**The housing motion effectively starts at WE 19-06.** WE 15-05 to WE 29-05 is almost entirely
+intellectual-and-developmental-disability, behavioral health and CBO case management. WE 05-06 and
+WE 12-06 are higher-education student-success roles from a different product motion. All 77
+pre-WE-19-06 rows were grepped for housing terms: one hit, a bare refusal with no substance.
+Nothing was lost by setting them aside.
+
+**One tab is still unread.** Lines 274-384, roughly 25k characters, is the minutes-of-meeting tab,
+the only place in the file where a completed meeting is written up rather than a cold call. It is
+the highest-density unread text in the source and the likeliest home of another
+specificity-cleared signal. Mine it on the next run.
+
+---
+
 ## Ledger
 
-| Fingerprint | Pattern | Count | Weeks | Status | Notes |
-|---|---|---|---|---|---|
-| `hmis-ehr-double-documentation` | Runs HMIS and an EHR and documents into both. One org building an API to its HMIS vendor to close the gap. | 1 specific | WE 14-08 | `observed` | Clears the floor on specificity: a director of housing services enumerated three named operational problems unprompted. The strongest single signal in the log. |
-| `incumbent-multiyear-contract` | Locked into the incumbent HMIS on a multi-year contract, one at five years. Entry only via procurement. | 3 | WE 07-08, WE 14-08 | `observed` | Reads as an objection, is actually a timing question. Strong TL candidate. |
-| `procurement-only-entry` | Cannot engage a vendor outside a formal RFP. Told to wait for it. Two were mid-RFP at the time. | 3 | WE 07-08, WE 14-08 | `observed` | Points at a practical asset, an HMIS RFP requirements guide, more than at a blog. |
-| `regional-coc-approval-required` | Part of a larger Continuum of Care, so any system change needs regional approval. | 2 | WE 31-07, WE 14-08 | `observed` | Best TL candidate in the set. The counter-claim writes itself and a CoC lead could genuinely argue back. |
-| `existing-hmis-is-fine` | Already has an HMIS, satisfied, no plan to change. | 3 | WE 31-07, WE 07-08, WE 14-08 | `observed` | Standing position 1 already answers this. Risk of restating the spine rather than extending it. |
-| `wrong-stakeholder-unknown-owner` | The person reached does not own HMIS and often cannot name who does. Several referred onward. | 4 | WE 31-07 to WE 14-08 | `observed` | Real and recurring, but it is an outbound targeting problem more than a content topic. Route to Kili, not to a calendar. |
+### Cleared the evidence floor
 
-Established 2026-08-20 from a planning read of `Weekly Conversations Report - Cube 84 - WE 14-08`
-across weeks WE 15-05 to WE 14-08, 243 rows. **These are `observed`, not proposed.** Charlie's
-first run should recognise them rather than rediscover them, and should not treat them as already
-handled.
+| Fingerprint | Pattern | Orgs | Weeks | Status | Notes |
+|---|---|---|---|---|---|
+| `existing-hmis-is-fine` | Has an HMIS, satisfied, no plan to change | **16** | WE 03-07 to WE 14-08 | `observed` | The log's dominant fact. Almost never accompanied by a complaint: 11 of 16 also refused to look. **Slug is a bucket and will drift — split it** (see below). |
+| `wrong-stakeholder-referred-onward` | Person reached does not own HMIS, names somebody else | ~17 | WE 29-05 to WE 14-08 | `observed` | Outbound targeting, not content. Route to Kili. |
+| `cannot-name-the-hmis-owner-at-all` | Not "ask my colleague" but "I do not know who". One referral chain terminated at an HR business partner. | **6** | WE 03-07 to WE 31-07 | `observed` | The diagnostic half of the cluster above. A real finding, and it is about the market's own confusion, not about us. |
+| `hmis-admin-is-not-the-buyer` | The person whose title contains HMIS says they cannot decide | **5** | WE 07-08 to WE 14-08 | `observed` | **The most consequential targeting finding in the file.** The correct functional owner, still unable to buy. Says the ICP for a first meeting is not the HMIS role. |
+| `procurement-only-entry` | Cannot engage a vendor outside a formal RFP. Three had one issued, in flight, or planned. | **5** | WE 07-08 to WE 14-08 | `observed` | All five are government bodies. `hmis rfp` has zero search volume on both Semrush and Google, so this is the ebook, not a blog. |
+| `advocacy-or-association-does-not-run-hmis` | Alliances, coalitions and advocacy bodies prospected as HMIS buyers do not operate one | **5** | WE 03-07 to WE 14-08 | `observed` | List-quality finding. Route to Kili with `wrong-stakeholder-referred-onward`. |
+| `incumbent-multiyear-contract` | Locked into the incumbent on a multi-year term, one at five years, one with two years left | **4** | WE 24-07 to WE 14-08 | `observed` | Reads as an objection, is a timing question. Strong TL candidate. |
+| `hmis-owned-above-the-provider` | The provider does not own its HMIS; a CoC, county or lead agency does | **4** | WE 24-07 to WE 14-08 | `observed` | Distinct mechanism from needing approval. One prospect who said he "has no choice but to use their existing HMIS" **booked a demo once it was reframed as an operational layer on top.** That is the positioning working in the wild. |
+| `personal-cell-outreach-reads-as-a-scam` | Called on a personal mobile, prospect questions legitimacy | **4** | WE 03-07 to WE 14-08 | `observed` | Contact-data problem. Two of four ended in a do-not-call. Route to outbound ops, urgently. |
+| `regional-coc-approval-required` | A change needs sign-off from a body above the organisation, or from every participant in a shared HMIS | **3** | WE 24-07 to WE 14-08 | `observed` | Best TL candidate. The counter-claim writes itself and a CoC lead could genuinely argue back. |
+| `funding-cycle-gates-the-decision` | Not "no" but "not until the money cycle turns". One names the exact reopening trigger: a new CoC NOFO award. | **3** | WE 31-07 to WE 14-08 | `observed` | **Highest-value new signal.** It converts a closed door into a date. |
+| `recently-migrated-hmis` | Just changed systems, shut for a cycle | **3** | WE 10-07 to WE 14-08 | `observed` | Mirror of the contract cluster. Dates the next window instead of the current one. One agreed to a booth visit anyway when reframed as a benchmark. |
+| `small-org-no-capacity-for-a-vendor` | Too small to take on an external solution, one at ten people | **3** | WE 26-06 to WE 31-07 | `observed` | Qualification signal. Not content. |
+| `stale-contact-role-churn` | Named contact has left or moved departments | **3** | WE 19-06 to WE 14-08 | `observed` | Ops. |
+| `new-in-role-cannot-decide` | New to the role, not comfortable deciding alone | 2 | WE 31-07, WE 14-08 | `observed` | Thin, at exactly the floor. Notable because both still moved the conversation forward. |
+| `incumbent-named-and-concentrated` | 12 organisations named their incumbent. Four commercial vendors plus one homegrown system account for all twelve; **two account for eight.** | **12** | WE 17-07 to WE 14-08 | `observed` | Derived cross-cut, already counted elsewhere. Vendor names deliberately withheld here, see the note below. The concentration is the signal. |
+| `hmis-ehr-double-documentation` | Documents into both HMIS and an EHR, with an API to the HMIS vendor under construction. Same call named two more: persistent data-quality problems, and a hard cap on HMIS credentials in some counties because of per-seat cost to the lead agency. | 1, specificity | WE 14-08 | `observed` | **Still the strongest single row in the file.** Re-derived independently. A director of housing services volunteered all three ahead of a scheduled demo. |
+| `third-party-reports-incumbent-dissatisfaction` | A state coalition CEO said most of their member organisations run one particular HMIS, face challenges with it, are not happy with the outcomes, and told us to go call them | 1, specificity | WE 24-07 | `observed` | **The only row in 229 where anyone said an incumbent is failing** — and they said it about somebody else, not themselves. Worth knowing on its own. |
+
+### On withholding vendor names
+
+The miner withheld incumbent vendor names because in this log a vendor name only ever appears
+attached to an identifiable prospect organisation, and the PII rule forbids that pairing. That
+call was right for a committed file.
+
+**But competitor names decoupled from a prospect are not PII and are strategically load-bearing.**
+"Two vendors hold eight of twelve named incumbents" is a fact Charlie needs and can hold. When the
+concentration itself needs naming, name the vendors and drop the org, never both together.
+
+---
+
+## Two fingerprints that will not survive as written
+
+**`wrong-stakeholder-unknown-owner` is retired.** It welded two different findings together and
+the weld broke on first re-derivation: anything between 4 and 23 was defensible under the old
+slug, so its count carried no information. Split into `wrong-stakeholder-referred-onward` and
+`cannot-name-the-hmis-owner-at-all`, both above, both countable.
+
+**`existing-hmis-is-fine` is a coarse volume indicator, not a trend line.** Sixteen organisations
+reached it by four different routes: satisfied with a commercial incumbent, satisfied with a
+homegrown system, contractually unable to move, and too small to care. Next week's miner will draw
+the boundary somewhere else and the count will swing without the reality changing. **Split it into
+`satisfied-with-incumbent` and `no-appetite-for-any-vendor`** while the split is still cheap, or
+stop reading its count as a trend.
+
+The general lesson, worth carrying to any future tracker: **a fingerprint that names a mechanism
+survives, a fingerprint that names a mood does not.** A second system, a contract term, an RFP
+gate, an approval body, a funding cycle — those get re-derived identically. "Is fine" does not.
 
 ---
 
 ## Watch list
 
-Signals below the evidence floor, carried forward. A count moving from one to two is a trend
-forming and that is worth showing in the calendar.
+Below the floor, carried forward. A count moving from one to two is a trend forming.
 
-*Populated on the first live run. The planning read did not separate weak signals from noise.*
+| Fingerprint | Orgs | Note |
+|---|---|---|
+| `hmis-license-scarcity-cost` | 1 | Inside the double-documentation row. The most specific cost claim in the file: credentials capped by per-seat cost to the lead agency. Give it its own fingerprint the moment a second org says it. |
+| `hmis-data-quality-burden` | 1 | Same row. Not double-counted. |
+| `salesforce-present-not-for-hud-reporting` | 1 | A VP of housing programs at a regional affordable-housing nonprofit: they have Salesforce, they do not do CAPER, HUD work runs on the approved database on the public-housing-authority side. Directly load-bearing for a Salesforce-native pitch, but one clause is not an enumeration. Promoting it would be the invented-pattern failure. |
+| `internal-it-team-owns-it` | 2 | Two orgs, but one means an internal team alongside a vendor and the other a homegrown system. Different substance, so held weak rather than merged to reach the floor. |
+| `vendor-call-saturation` | 1 | Getting a lot of similar calls. |
+| `duplicate-outreach-to-same-contact` | 1 | Someone from Cube84 had called her the previous day. Ops. |
+| `reviewed-material-found-nothing-relevant` | 1 | Read the email and the site, nothing matched. The only genuine post-material rejection in 229 rows. |
 
 ---
 

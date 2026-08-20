@@ -43,6 +43,12 @@ Scrub quotes the same way. A quote is a sentence about the *work*, not about the
 sentence cannot survive anonymisation without losing its meaning, drop the quote and describe
 it instead.
 
+**Vendor and competitor names are not PII, but the pairing is.** A named incumbent attached to a
+named prospect identifies that prospect's stack and is forbidden. The same vendor name with the
+organisation dropped is ordinary market intelligence and is often the most useful thing in the
+log: which incumbents recur, and how concentrated they are. So report the concentration, name the
+vendors when the concentration is the point, and never both halves in one sentence.
+
 Before you return, re-read your own output looking for a capitalised name, an `@`, or a digit
 string that could be a phone number. That pass is not optional.
 
@@ -72,9 +78,20 @@ python3 -c "import json; c=json.load(open('<path>'))['fileContent']; ..."
 ```
 
 Flattened Google Sheets arrive as pipe-delimited markdown, one table block per tab, no tab
-names. So identify tabs by their header row, not by position. A row that starts with the week
-token is a log row; a row of contact details is a different tab and almost certainly the one
-holding phone numbers, so parse the log tab and leave the rest alone.
+names. So identify tabs by their header row, not by position. A row of contact details is a
+different tab and almost certainly the one holding phone numbers, so leave that one alone
+entirely.
+
+**Do not count rows by their leading token.** On a real tracker, counting lines beginning `| WE `
+returned 243 when the log held 229, because a pivot tab's week labels start with the same token.
+The pivot's own grand total said 218 and matched neither. Count the data rows of the tab you
+identified by header, and if two tabs disagree about the total, report both rather than picking one.
+
+**Mine every tab that holds free text, not just the obvious one.** A log tab of cold-call notes
+often sits beside a minutes-of-meeting tab where completed conversations are written up at length.
+That second tab is usually the highest-density text in the file. If your brief scoped you to one
+field and you can see another that carries substance, mine what you were asked for and then say
+plainly what you left unread and why.
 
 ## What counts as a signal
 
@@ -97,6 +114,11 @@ spend effort clustering it.
 conversations**, or **one conversation states it specifically enough to quote**. Independent
 means different organisations: the same person across three follow-ups is one conversation, and
 counting it as three is the single easiest way to fake evidence.
+
+**Count organisations, and say that is what you counted.** The gap is wide in real logs: on one
+tracker fourteen organisations recurred across weeks and the largest cluster read 28 by rows
+against 23 by organisations. A count whose unit is unstated is a count the next run cannot
+compare against, which turns a persistent follow-up thread into a fake growth trend.
 
 The specific-single exception is real and narrow. A call where somebody enumerates three named
 operational problems is worth more than four vague mentions. A call where somebody says "we're
@@ -134,9 +156,18 @@ than presenting it as new.
 
 ## What you return
 
-Per signal: fingerprint · the pattern in one line · conversation count · week range · roles and
-org types who said it · up to three scrubbed quotes · whether it is new or a repeat from the
-ledger.
+Per signal: fingerprint · the pattern in one line · **organisation count, with the unit stated** ·
+week range · roles and org types who said it · up to three scrubbed quotes · whether it is new or
+a repeat from the ledger.
+
+When a cluster splits cleanly on re-derivation, **say so and return both halves.** A slug covering
+two different findings produces a count that carries no information, because any number in a wide
+range is defensible under it. Splitting it is a finding, not a deviation from the brief.
+
+Say which fingerprints you think will survive re-derivation and which will not. The rule that
+holds up: **a fingerprint naming a mechanism survives, one naming a mood does not.** A second
+system, a contract term, an RFP gate, an approval body, a funding cycle get re-derived identically
+from different sentences. "Is fine" gets re-drawn somewhere else every time.
 
 Then the accounting, every number countable: rows read, out of scope, logistics cut, clustered,
 cleared the floor, weak. If those do not add up, say which ones you could not reconcile rather
