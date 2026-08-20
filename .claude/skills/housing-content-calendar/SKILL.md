@@ -132,8 +132,17 @@ Cheapest first, stop at the first hit:
 1. The ledger. Fingerprint match means proposed, approved, rejected or published before. A prior
    rejection with a reason does not come back.
 2. The intake board. A `Queued` or `Drafting` item covering it means it is already in flight.
-3. `Already existing Blog topics`. Published means the angle has to be genuinely new, and if it
-   is, say what changed rather than presenting a rewrite as a new topic.
+3. **The live site, and not the Drive index.** Read `https://cube84.com/sitemap.xml` and
+   `https://cube84.com/blog_sitemap.xml`, then confirm against Search Console via Windsor.
+   Verified 2026-08-20: **28 live housing URLs**, 20 pages plus 8 blog posts.
+4. `Already existing Blog topics` (`1gjqkEuWL2YKH6tJRyUElkI_AZ1LNh2TcQxelQCLA0JM`) **last, and
+   never alone.** It lists roughly 170 posts and **zero housing**, while 28 housing URLs are live.
+   Anything trusting it for dedupe will re-propose published work, and on the first live run it
+   nearly did. Treat it as a partial index, not a record of what exists.
+
+Published means the angle has to be genuinely new. **A live page with a soft overlap is a rewrite
+target, not a blocker.** Say which page, which part is already covered, and which part is not, and
+propose the rewrite rather than either a duplicate or a silent drop.
 
 ### Step 5 — Route to a bucket
 

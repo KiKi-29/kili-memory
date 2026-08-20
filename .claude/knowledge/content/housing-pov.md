@@ -59,7 +59,23 @@ takes "we don't have budget" at face value has misread the sentence.
 Appended on approval. Newest first. Each entry: date, title, the three slots, the strongest
 counter-argument, and its relationship to the spine.
 
-*None yet. Charlie's first run populates this.*
+### 2026-06-25 · Most Housing Systems Were Built to Report. Not to Run.
+`/webinar/housing-hmis-built-to-report-not-to-run` · live, verified against the page 2026-08-20
+
+**Standing position 2 has already shipped, under its own name, as a webinar.** The page headline
+states the thesis verbatim and the body argues that housing and HMIS systems are engineered to
+satisfy regulatory documentation rather than to support the daily work of case managers, program
+directors and housing authorities, then offers a system "built for the work, not just the
+compliance".
+
+This entry exists because the file previously said *"None yet"*, which was wrong, and every
+sequencing decision made on "the anchor has not shipped" was therefore made on a false premise.
+The ground is claimed. A new thesis must **extend** it or argue something else. Restating it in
+blog form is the repetition failure, and `pov-editor` should say so.
+
+The lesson, and it is the artifact-authority primitive: **a POV spine written without reading the
+live site is a guess about what has been argued.** Check the sitemap before claiming ground is
+unclaimed.
 
 ---
 

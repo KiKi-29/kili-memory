@@ -53,7 +53,18 @@ WE 12-06 are higher-education student-success roles from a different product mot
 pre-WE-19-06 rows were grepped for housing terms: one hit, a bare refusal with no substance.
 Nothing was lost by setting them aside.
 
-**One tab is still unread.** Lines 274-384, roughly 25k characters, is the minutes-of-meeting tab,
+**CUBE84 has 28 live housing URLs** (20 pages + 8 blog posts), verified from
+`cube84.com/sitemap.xml` and `blog_sitemap.xml` on 2026-08-20, against ~223 clicks and 18,165
+impressions over 15 months in Search Console. The Drive sheet `Already existing Blog topics` lists
+roughly 170 posts and **none of them**. Dedupe against the sitemap and Search Console, never
+against that sheet alone.
+
+**One tab was unread and is now read.** The first backfill described it as lines 274-384 and ~25k
+characters. It is **lines 273-287, 12 records, 7,938 characters** — a quarter of the briefed size,
+because the span given ran into an adjacent enrichment tab with no free text. Measured directly.
+Do not brief a tab by a line range somebody else estimated.
+
+**Superseded note:** Lines 274-384, roughly 25k characters, is the minutes-of-meeting tab,
 the only place in the file where a completed meeting is written up rather than a cold call. It is
 the highest-density unread text in the source and the likeliest home of another
 specificity-cleared signal. Mine it on the next run.
