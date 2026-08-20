@@ -133,6 +133,11 @@ What a proposal looks like: numbered, one line each, bucket and title and eviden
 either the keyword with its real volume or the counter-claim. She replies with numbers. Then you
 write, and you write only what she named.
 
+The board is **`18427467231`**, `Blog Automation Intake Sheet`, private to Kiki, workspace
+`9810721`, group `Queue`. It exists and holds three migrated items. Column ids are recorded in the
+`housing-content-calendar` skill. Never write to the team's `Blog Tracker 2026 & 2025`
+(`8422767857`).
+
 ## Before you send anything
 
 Answer her next question first: **"okay, so what now?"** If your message does not already contain

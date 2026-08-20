@@ -233,18 +233,35 @@ Approval covers that batch and does not carry forward.
 
 ### The board
 
-Create once if absent: `board_kind: private`, workspace `9810721`, name
-`Blog Automation Intake Sheet`, Kiki as owner. Private so it is hers alone until she invites
-somebody.
+**Live. Created 2026-08-20, do not create it again.**
 
-Columns, the first ten matching what Agent 2 already understands:
+`Blog Automation Intake Sheet`, board **`18427467231`**, `board_kind: private`, workspace
+`9810721` (CUBE84 Marketing), owner Kiki (`72233449`), single group `Queue` (`topics`).
+https://cube84-bunch.monday.com/boards/18427467231
 
-`Topic` (item name) · `Description` · `Target Audience` · `Keywords` · `Word Count` ·
-`Status` · `Author` · `Category` · `CMS Post URL/ID` · `Error Notes` · `Type` · `Bucket` ·
-`Signal Evidence` · `Volume` · `KD` · `Publish Week`
+| Column | ID | Type |
+|---|---|---|
+| Topic | `name` | item name |
+| Status | `color_mm6d8573` | status: Queued / Drafting / Pushed to staging / Published / Error |
+| Type | `color_mm6dmkk2` | status: blog / whitepaper / ebook |
+| Bucket | `color_mm6dnftw` | status: SEO-GEO-AEO / Thought Leadership |
+| Description | `long_text_mm6djmd1` | long_text |
+| Target Audience | `text_mm6detd0` | text |
+| Keywords | `text_mm6dyjsr` | text |
+| Word Count | `numeric_mm6dyf9c` | numbers |
+| Author | `text_mm6dcr5h` | text |
+| Category | `text_mm6dtb0v` | text |
+| Signal Evidence | `long_text_mm6dgwmd` | long_text, anonymized |
+| Volume | `numeric_mm6d10w8` | numbers, Google Keyword Planner |
+| KD | `numeric_mm6d3hf0` | numbers, Semrush |
+| Publish Week | `date_mm6dsp35` | date |
+| CMS Post URL/ID | `text_mm6dte0a` | text |
+| Error Notes | `long_text_mm6dcvam` | long_text |
 
-`Status` labels, matching Agent 2's state machine exactly: `Queued`, `Drafting`,
-`Pushed to staging`, `Published`, `Error`.
+Verified column ids, so nothing has to be rediscovered. Re-read with `get_board_info` before
+writing if a column may have been added, per the tool's own precondition.
+
+`Status` labels match Agent 2's state machine exactly.
 
 `Description` is the angle Agent 2 writes from, so it carries the argument, the persona, and for
 TL rows the three slots. A thin description produces a thin blog, and this field is the only
