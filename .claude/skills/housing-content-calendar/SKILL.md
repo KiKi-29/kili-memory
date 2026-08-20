@@ -127,13 +127,52 @@ Cheapest first, stop at the first hit:
 
 Exactly one bucket per topic, earned.
 
-**SEO / GEO / AEO.** Run `cube84-seo-keywords` for real Semrush volume, KD and question
-variants. Run `cube84-seo-geo` for AI Overview presence and passage citability. Run
-`cube84-seo-performance` for whether cube84.com already has impressions in striking distance.
-Optionally `cube84-seo-competitors` when winnability is genuinely unclear.
+**SEO / GEO / AEO.** Run `cube84-seo-keywords` for Semrush KD, SERP and question variants. Run
+`cube84-seo-geo` for AI Overview presence and passage citability. Run `cube84-seo-performance`
+for whether cube84.com already has impressions in striking distance. Optionally
+`cube84-seo-competitors` when winnability is genuinely unclear.
+
+**Volume comes from Google, not from Semrush.** They disagree materially and not just in
+magnitude: on a higher-ed set Semrush ranked one term above another and Google reversed the
+order, 1,300 a month against 70. A calendar sequenced on the wrong ranking fails the same way ad
+spend on it does. So pull volume from **Google Ads Keyword Planner through the Windsor
+connector** (`get_data`, `connector: "google_ads"`, account `948-200-8076`, fields `keyword`,
+`avg_monthly_searches`, `competition_index`, `top_of_page_bid_low`, `top_of_page_bid_high`,
+options `keyword_seeds` up to 20, `geo_target_constants: "2840"`, `language: "1000"`). Bids are
+in micros, divide by a million. Idea expansion only fires on multi-seed calls, so batch the
+week's candidates into one pull rather than checking them one at a time.
+
+Semrush stays the authority on **difficulty and the SERP**, which Keyword Planner does not
+report. Use each for what it actually knows.
 
 - Every number is measured. **Never estimate a volume or a KD.** If a tool cannot return one,
   the field says `unavailable` and names which tool failed.
+- **When Google and Semrush disagree by more than roughly 2x, print both** and say which one the
+  decision used. Silently picking the flattering number is how a calendar acquires a fake
+  priority order.
+
+#### Known traps in this keyword set
+
+Established live on 2026-08-20 against both tools. Check them before trusting a headline number.
+
+- **HMIS is an ambiguous acronym.** Funeral home and cemetery management software also call
+  themselves HMIS. The Keyword Planner expansion returns `hmis funeral home software` and
+  `hmis cemetery software` alongside the housing terms, and Google collapses `hmis` and
+  `homeless management information system` into one row with identical stats: 22,200 a month,
+  competition 2. **That 22,200 is not all housing demand.** Semrush put the same term at 1,000.
+  Neither number is usable on its own. Report both, name the ambiguity, and prefer the
+  unambiguous long-tail (`homeless management information system software`, 390) when sequencing.
+- **`coordinated entry` at 2,900 a month is the largest clean term in the set** and Semrush did
+  not surface it. It is the strongest argument for running the Google pull rather than skipping it.
+- **`affordable housing software` runs the disagreement backwards**: Semrush 390, Google 90, with
+  competition 43 and top-of-page bids from $13 to $97. Low volume, expensive, commercially
+  serious. A blog is the wrong instrument for a term somebody is paying $97 a click for.
+- **`hmis rfp` returns nothing from either tool.** Zero on Semrush, null on Google. The
+  procurement signal is real in the conversations and absent from search, which is precisely the
+  case the ebook format exists for.
+- **Google reports close variants with identical stats.** Deduplicate on the
+  `(volume, competition, bid_low, bid_high)` signature or the totals inflate. Three rows in this
+  set share one signature.
 - An AI Overview already answering the query is not a kill. It changes the angle toward the
   concrete detail an AI Overview cannot reproduce: a real workflow, a specific number, a named
   constraint.
@@ -215,8 +254,9 @@ On any failure, stop and report. Do not retry automatically and do not half-writ
 |---|---|
 | Tracker not found by pattern | Stop. Say what you searched. Do not fall back to the hardcoded id without saying you did. |
 | Tracker read overflows context | Expected. Slice the saved file with python. Never summarise from the first page. |
-| Semrush unavailable | The SEO bucket cannot be validated. Propose the TL bucket only, and say the SEO half is pending. Do not estimate. |
-| Windsor or GSC unavailable | Note it. Volume and KD alone still support a decision, striking distance is a bonus. |
+| Windsor unavailable | Volume cannot be established from Google. Fall back to Semrush volume and **label every figure as a Semrush estimate**, because the two disagree materially. Do not present an estimate as measured. |
+| Semrush unavailable | No difficulty and no SERP read. Volume alone cannot tell you whether a term is winnable. Propose the TL bucket only and say the SEO half is pending. |
+| GSC unavailable | Note it. Striking distance is a bonus signal, not a gate. |
 | Board write fails partway | Say which items landed and which did not. Never re-run a partial batch blind. |
 | Fewer than six clear the floor | Not a failure. Propose fewer, say why. |
 

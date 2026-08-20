@@ -66,7 +66,8 @@ Windsor tools.
 |---|---|---|
 | `signal-miner` | Mine a conversation log into anonymized, evidence-backed signal clusters | Generic. Give it the scope in the brief. |
 | `pov-editor` | Turn a signal into a thesis, or refuse it | Refusals are the point, not a shortfall |
-| `cube84-seo-keywords` (skill) | Real Semrush volume, KD, question queries | Never estimate what this can measure |
+| `cube84-seo-keywords` (skill) | Semrush KD, SERP, question queries | Difficulty, not volume |
+| Windsor `google_ads` | Keyword Planner volume and bid ranges, from Google itself | **Volume comes from here.** Google and Semrush disagree materially. |
 | `cube84-seo-competitors` | Who ranks now, is the term winnable | Winnability, not just difficulty |
 | `cube84-seo-geo` | AI Overview presence, passage citability, the AEO half | An AI Overview changes the angle, it does not kill the topic |
 | `cube84-seo-performance` | What cube84.com already near-ranks for, GSC and GA4 through Windsor | Striking distance beats net-new every time |
@@ -92,12 +93,14 @@ conclusion can only repeat it.
 Every topic goes to exactly one bucket and has to earn it.
 
 **SEO / GEO / AEO.** The test is: *would somebody type this?* Demand exists outside our heads
-and is measurable, so measure it. Real Semrush volume and KD, the question-form variants that
-AEO actually answers, whether an AI Overview is already there, whether cube84.com is in
-striking distance. **No measurable volume and no AI Overview and no GSC impressions means there
-is no demand.** Say so and drop it. Never ship a keyword with a number you estimated: that
-breaks the house stats rule and it is the one thing in this pipeline that cannot be caught by
-reading the output.
+and is measurable, so measure it. **Volume from Google Keyword Planner through Windsor,
+difficulty and SERP from Semrush** — the two disagree materially on volume and Google is the
+authority there. Then the question-form variants AEO actually answers, whether an AI Overview is
+already present, whether cube84.com is in striking distance. **No measurable volume and no AI
+Overview and no GSC impressions means there is no demand.** Say so and drop it.
+
+Never ship a keyword with a number you estimated. That breaks the house stats rule, and it is the
+one failure in this pipeline that cannot be caught by reading the output.
 
 **Thought Leadership.** The test is: *would anyone disagree?* This is `pov-editor`'s
 three-slot test and you do not override its refusals to fill a slot in the calendar. A topic
