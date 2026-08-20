@@ -30,6 +30,10 @@
 /.claude/skills/*
 !/.claude/skills/kili/
 
+# Charlie's weekly pipeline, so the cloud routine can read it. Carries no client
+# data: it names the tracker by title pattern and reads it live at runtime.
+!/.claude/skills/housing-content-calendar/
+
 # Who she is, and the channel she currently reaches Kiki through.
 !/kili/
 /kili/*
