@@ -126,6 +126,23 @@ Claim the oldest item whose `Type` is `blog` and whose `Status` is `Queued`.
 **Anything missing that you need, ask for.** Audience, angle, word count, keywords, an outline. Do
 not fill a gap with a plausible default and carry on.
 
+### When nobody is there to ask
+
+You also run unattended, on a schedule, with no human in the loop. **Then the rule is not "ask", it
+is "stop".**
+
+If a required field cannot be filled honestly, set `Status = Error`, write which field and why in
+`Error Notes`, and stop. No guessing. Specifically:
+
+- Word count empty, and the piece is not obviously a standard length
+- Only two genuinely related blog URLs exist, and the schema demands three
+- No real match in `list_blog_categories`
+- The author name does not resolve against `list_blog_authors`
+
+Fourteen mandatory fields with nobody watching is precisely the condition under which something
+plausible gets invented and shipped. An errored item somebody has to look at costs an hour. A
+fabricated figure in a published post costs more than that, and nobody catches it.
+
 ### Bucket changes the writing
 
 **`SEO-GEO-AEO`** — demand is measured and somebody typed this. Answer the query better than what
@@ -255,14 +272,32 @@ anchor rather than faking it. A brief names style, mood, the visual concept and 
 slug from the title: lowercase, hyphenated, punctuation and stopwords stripped.
 
 **5. Cover.** Fill the cover template with the real headline and audience kicker, never placeholder
-text, then:
+text. Then take one of two paths, and **both are first-class.**
+
+**Path A, rasterized.** Preferred when Chrome exists:
 
 ```
 .claude/wrighter/scripts/rasterize_cover.sh <cover.html>
 ```
 
-It prints base64 to stdout with the `data:image/png;base64,` prefix attached. Needs headless Chrome.
-Chrome lingers after the screenshot on this machine; the file is fine, kill the process if batching.
+It prints base64 to stdout with the `data:image/png;base64,` prefix attached. Chrome lingers after
+the screenshot on this machine; the file is fine, kill the process if batching.
+
+**Path B, inline SVG.** The script exits **2** when it cannot find Chrome, and non-zero otherwise.
+That is not a failed run. Take path B:
+
+- Draw the cover as an inline SVG banner at the top of `body_html`, using the same headline, kicker
+  and palette the raster would have used.
+- Pass a 1×1 transparent PNG data URI as `featured_image_base64` to satisfy the required field.
+
+**Path B is the expected path in an unattended run**, because a cloud sandbox has no Chrome. It is
+not a degraded fallback and it needs no apology in the report. Say which path you took.
+
+**Never ship a raster in a fallback typeface.** The cover loads its fonts from
+`.claude/wrighter/assets/fonts.css` by absolute path. If that file is missing, Chrome renders the
+cover in a system font and screenshots it perfectly happily, and nothing errors. A wrong-font cover
+looks finished, which makes it worse than no raster at all. If you cannot confirm the fonts loaded,
+take path B.
 
 **6. Push.** `publish_blog` saves a **draft**. Fourteen fields are required:
 

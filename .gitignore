@@ -34,6 +34,15 @@
 # data: it names the tracker by title pattern and reads it live at runtime.
 !/.claude/skills/housing-content-calendar/
 
+# Wrighter's build assets, so a scheduled run can draft while the Mac is off.
+# A page template, a font stylesheet and the cover script. No client data in any
+# of it, and the fonts are SIL Open Font Licence, which permits redistribution.
+# The raw .woff2 sources stay out: fonts.css already embeds them base64, so
+# shipping both is duplicate weight, and they are re-downloadable from Fontsource
+# if a weight ever needs adding.
+!/.claude/wrighter/
+/.claude/wrighter/assets/fonts/
+
 # Who she is, and the channel she currently reaches Kiki through.
 !/kili/
 /kili/*
