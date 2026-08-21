@@ -148,3 +148,47 @@ Michael Krut is still adding to them before the 18:15 call. Kayt is Kathryn McKi
 script is an educated guess assembled from all of it, not a wait for a complete brief.
 
 Delete this section once 20 August is done. It is a day plan, not a standing thread.
+
+---
+
+## Outbound: cold calls to personal mobiles are getting flagged as scams
+
+**Owner:** Kiki · **Found by:** Charlie, from the conversation tracker · **Opened:** 2026-08-21 · **Status:** needs routing to outbound ops, not weekly
+
+Four organisations in the tracker questioned whether the call was legitimate because it came to a
+personal mobile rather than a business line. **Two of the four ended in a do-not-call.** One asked
+outright whether it was a telephone scam.
+
+This is a contact-data problem, not a content or messaging problem, and it is burning prospects in
+a market where the total addressable list is small. It surfaced through the content pipeline only
+because that is what happened to be reading the tracker.
+
+**Why it is here rather than on a content board:** Charlie found it and correctly refused to turn it
+into a topic. It belongs with whoever owns list quality and dialling. Naming the owner is Kiki's
+call.
+
+Two related list-quality findings from the same read, lower urgency:
+
+- **`advocacy-or-association-does-not-run-hmis`**, 5 organisations. National alliances, national and
+  state coalitions and one county government were prospected as HMIS buyers. None of them operates
+  an HMIS. One said plainly that the alliance is the event host and the attendees are the audience.
+- **`hmis-admin-is-not-the-buyer`**, 5 organisations. The person whose job title contains HMIS says
+  they cannot decide. They are the correct functional owner and still cannot buy, which means the
+  ICP for a first meeting is probably not the HMIS role.
+
+---
+
+## The tracker's richest tab is not being filled in
+
+**Owner:** Kiki · **Opened:** 2026-08-21 · **Status:** FYI, no action requested yet
+
+The weekly conversation tracker has a minutes-of-meeting tab where completed meetings get written up
+at length, rather than the one-line cold-call notes in the main log. It is the highest-value text in
+the file: the single strongest signal found anywhere in 241 records came from that kind of write-up,
+where a director of housing services volunteered three named operational problems ahead of a demo.
+
+**The three most recent housing meetings have no entry there.** Twelve records exist in total.
+
+Nothing is asked of anyone yet. Worth knowing because the value of Charlie's weekly run scales
+directly with whether that tab gets filled in, and right now the meetings that matter most are the
+ones missing.

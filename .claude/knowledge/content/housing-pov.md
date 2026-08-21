@@ -39,6 +39,65 @@ the cause with new nouns is repetition, and `pov-editor` should say so.
 
 ---
 
+## Approved, not yet written
+
+### An RFP Written From the Data Standards Can Only Buy a Database
+Board item `12856969035` · approved 2026-08-21
+
+**Consensus:** an HMIS procurement is a compliance purchase, so specify conformance with HUD's
+Data Standards and let vendors answer against them.
+**Who holds it:** CoC lead agencies and county procurement offices who issue HMIS RFPs, and the
+HUD TA community whose templates they work from.
+**What we say instead:** an RFP written from the data standards can only buy a database, because
+the standards describe what must be reported and say nothing about the work that produces the data.
+
+**Verified, not assumed.** A published county HMIS RFP covering 39 agencies and ~329 users has 10
+of its 11 software requirements about reporting. "Case management": zero occurrences. "Workflow":
+zero. "Coordinated entry": zero. The technical specification appendix is two links, to the Data
+Standards Manual and the Data Dictionary.
+
+**Strongest counter-argument:** a procurement officer can fairly say an RFP is not a design
+document, and specifying workflow narrows the field toward whoever already builds that way. The
+answer is that a requirement can be an outcome rather than an architecture — "demonstrate a case
+manager completing intake, referral and assessment without leaving the system" is vendor-neutral,
+testable, and no reporting-first product passes it.
+
+**Relationship to the spine:** extends the shipped webinar thesis from the product to the
+procurement. The webinar argued the systems were built that way; this argues the buyers are
+specifying them that way, which is the mechanism keeping it true.
+
+### The Agreement You Already Signed Decides This, Not the Next CoC Meeting
+Board item `12856985774` · approved 2026-08-21 · **GATED, do not write**
+
+Consensus verified (24 CFR 578.7(b) does place HMIS authority with the CoC). The load-bearing
+half is not: nobody has counted exclusivity clauses across published CoC participation agreements.
+**Gate: count 15-20 of them. If most do forbid an adjacent operational system, kill the thesis
+rather than soften it.**
+
+**It also introduces a second root cause,** governance sequence rather than architecture. Two root
+causes can both be true, but a publication arguing both without reconciling them reads as having no
+position. **Kiki decides whether governance is a sibling thesis or a subordinate mechanism before
+this gets written.** That is an editorial call, not a writer's call.
+
+---
+
+## Refused, and why the refusals matter
+
+`pov-editor` refused two candidates on this run. Both refusals were correct and neither should be
+revived without new evidence.
+
+- **Contract timing** (`incumbent-multiyear-contract`, 7 orgs at the time). No defended opposing
+  view: HUD's own guidance already advises 12-24 month terms and notes 30-day cancellation clauses
+  are common. Arguing it would have been arguing with nobody.
+- **"We already have HMIS"** (`existing-hmis-is-fine`, 16 orgs). Restates the shipped anchor from
+  the demand side, and 11 of the 16 refused to engage at all, so the consensus would have had to be
+  invented rather than observed.
+
+The second one is the instructive refusal: **16 organisations is the largest count in the ledger and
+it still did not earn a thesis.** Volume of evidence is not the test. A defensible opposing view is.
+
+---
+
 ## What this audience will not read
 
 Not style preferences. These are read as signals to stop reading.

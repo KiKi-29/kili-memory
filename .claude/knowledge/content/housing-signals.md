@@ -73,6 +73,10 @@ specificity-cleared signal. Mine it on the next run.
 
 ## Ledger
 
+**Statuses below are superseded by the run log at the foot of this file.** Read that first: the
+first live run moved eleven of these and added three. The table stays as the evidence record.
+
+
 ### Cleared the evidence floor
 
 | Fingerprint | Pattern | Orgs | Weeks | Status | Notes |
@@ -150,3 +154,69 @@ Kept separate and read carefully. A rejection reason is the most compressed feed
 what Kiki actually wants published.
 
 *None yet.*
+
+
+---
+
+# Run log
+
+## Run 1 — proposed 2026-08-20, approved 2026-08-21, `backfill`
+
+Charlie's first live run. Mined the minutes-of-meeting tab that run 0 left unread, pulled four
+SERPs directly, and checked the live site instead of the Drive index. Kiki approved all four
+proposed topics.
+
+### Status changes
+
+| Fingerprint | Now | Where it went |
+|---|---|---|
+| `procurement-only-entry` | `approved` | Item `12856969035`, the RFP thesis. Consensus verified from a published county HMIS RFP: 39 agencies, ~329 users, 10 of 11 software requirements about reporting, zero occurrences of "case management", "workflow" or "coordinated entry", and a technical spec appendix that is two links to HUD's Data Standards Manual and Data Dictionary. |
+| `funding-cycle-gates-the-decision` | `approved` | Item `12857005047`, extending the affordable-housing funding guide. |
+| `regional-coc-approval-required` | `approved`, **gated** | Item `12856985774`. Consensus half verified against 24 CFR 578.7(b). Load-bearing half unverified. |
+| `hmis-owned-above-the-provider` | `approved` | Feeds both `12856985774` and the vendor-comparison rewrite. |
+| `incumbent-multiyear-contract` | `approved` as evidence, **refused** as its own thesis | Feeds rewrite `12856937936`. `pov-editor` refused it standalone: HUD's own guidance already advises 12-24 month terms and notes 30-day cancellations are common, so there is no defended opposing view to argue against. |
+| `hmis-data-quality-burden` | **promoted off the watch list**, `approved` | 3 orgs. Feeds rewrite `12856937936`. |
+| `existing-hmis-is-fine` | **killed** | `pov-editor` refused it: it restates the shipped anchor from the demand side, and 11 of 16 refused to engage, so the consensus would have had to be invented. Also impeached, see below. |
+| `hmis-admin-is-not-the-buyer` | **routed out** | Outbound targeting, not content. Kili's, not Charlie's. |
+| `personal-cell-outreach-reads-as-a-scam` | **routed out, urgent** | Outbound ops. Two of four ended in a do-not-call. See `../current/open-threads.md`. |
+| `advocacy-or-association-does-not-run-hmis` | **routed out** | List quality. Kili's. |
+| `cannot-name-the-hmis-owner-at-all` | `observed`, repurposed | Supporting evidence inside `12856985774`, not an argument of its own. |
+
+### New this run
+
+| Fingerprint | Orgs | Status | Note |
+|---|---|---|---|
+| `hud-vendor-report-validation-gate` | n/a, SERP-derived | `approved` as evidence | HUD's own vendor-checklist PDF ranks #1 for `hmis software vendors` and our page never addresses what that gate tests. |
+| `incumbent-satisfaction-differs-by-role-level` | 2 | `observed`, **high value** | **This impeaches `existing-hmis-is-fine`.** In both organisations where we have two levels, leadership said "fine" and the data owner then enumerated 4-6 concrete deficits. **Both leadership statements were wrong.** So the 16 measures who answered the phone, not what is true. Watch for a third instance. |
+| `three-newest-meetings-have-no-writeup` | n/a | ops | The three most recent housing meetings in the tracker have no minutes entry. The richest source is not being filled in. |
+
+### The channel finding, which outranks the calendar
+
+Four SERPs pulled directly on 2026-08-20: `point in time count` 0 of 12 commercial ·
+`coordinated entry system` 0 of 12 · `spdat housing application` 0 of 10 and the intent is
+service-seekers applying for shelter · `bed management software` 100% hospitals. **Fourteen terms
+describing CUBE84's actual product category return null volume.**
+
+In this market the people who rank are the people we sell to, and their funder. The one exception
+found is `hmis software vendors`, 5 of 12 commercial with HUD's checklist at #1, where cube84.com
+already holds position 8.89 on 3,956 impressions.
+
+**Consequence for every future run: net-new SEO is close to unavailable here.** This run proposed
+zero net-new SEO pieces and two rewrites of pages that already rank. Treat that as the normal
+shape of a week, not as a thin week.
+
+**Six ambiguity traps found**, the worst being that HMIS spans at least four industries: homeless
+services, funeral homes, cemeteries, and hazardous-materials labelling (`what is an hmis label`,
+`what does hmis stand for hazardous materials`). The 22,200 caveat is worse than first recorded.
+
+### Unverified, named
+
+- **AI Overview presence, for every keyword.** `cube84-seo-geo` hit Google's automated-query gate
+  (HTTP 429) and reported the block rather than inferring. Semrush's keyword reports carry no AI
+  Overview field. Not measurable today. Nothing was estimated, and the GEO half of the SEO test is
+  therefore still unrun.
+- Whether the two `hud-reporting-accelerator` URLs are stable cannibalization or a one-window artifact.
+- `hmis-admin-is-not-the-buyer` org count, estimated 5-7.
+- The pivot tab's 218 against the log tab's 229. Both printed, unreconciled.
+- One organisation inside `incumbent-named-and-concentrated` named two different incumbents 15
+  days apart at two role levels.
