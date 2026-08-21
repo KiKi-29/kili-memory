@@ -22,11 +22,10 @@
 /.claude/*
 !/.claude/knowledge/
 
-# Sandbox network allowlist, so a cloud run can reach slack.com and post as Kili
-# rather than as Kiki. Confirmed 2026-08-22: the cloud sandbox routes egress through a
-# policy-enforcing proxy and slack.com is not allowed by default, so her bot-token curl
-# returned "CONNECT tunnel failed, response 403". Reading Slack works because that goes
-# through the MCP connector. No secrets in this file, only two hostnames.
+# Tracked but deliberately empty. A sandbox network allowlist here does NOT widen the
+# cloud egress proxy: tried 2026-08-22, the file reached the cloud checkout and slack.com
+# stayed blocked. It governs the local sandbox on the Mac instead, so the experiment was
+# actively harmful and is reverted to {}. See knowledge/channels/slack.md.
 !/.claude/settings.json
 
 # Her own definition and her specialists, so she knows her roster.

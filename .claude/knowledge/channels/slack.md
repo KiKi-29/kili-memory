@@ -90,3 +90,48 @@ receipt and the dedupe marker in one object, and it needs no state file anywhere
 she answers herself forever, and each reply costs a model call.
 
 **What a channel is for** lives in `registry.md`. No entry means she reads and does not act.
+
+## The cloud cannot reach Slack. Settled 2026-08-22, stop retrying.
+
+A cloud run's Bash tool cannot post to Slack. Not with the bot token, not through a relay, not
+through anything. Measured from inside a run:
+
+| Host | Result |
+|---|---|
+| `slack.com` | **403, CONNECT tunnel failed** |
+| `hooks.slack.com` | **403** |
+| our own `slack-event-relay.vercel.app` | **403** |
+| `example.com` | **403** |
+| `api.github.com` | 200 |
+| `registry.npmjs.org` | 200 |
+| `api.anthropic.com` | reachable |
+
+The egress allowlist is a fixed set of developer infrastructure, and it is enforced above anything a
+repository can widen. A `.claude/settings.json` declaring `sandbox.network.allowedDomains` was
+pushed, confirmed present in the cloud checkout, and changed nothing. That setting governs the local
+sandbox on the Mac, not the cloud proxy. It was reverted, because as written it would have
+restricted the *local* sandbox to slack.com only.
+
+**There is no route around this.** Not a relay, not a custom domain, not a webhook host. Do not
+spend another run looking for one.
+
+### What it means for her voice
+
+**On Kiki's Mac, in a session, Bash reaches Slack and Kili speaks as Kili.** Verified.
+
+**In a cloud run, the only way to reach Slack is the MCP connector, which posts as Kiki.** No
+setting changes that.
+
+The mitigation, and it is a mitigation rather than a fix: **prefix the message so a human can tell
+who is speaking.** Open with `*Kili ·*` and the avatar being Kiki's becomes a cosmetic oddity
+instead of a confusing one. Reactions have no such problem, because a reaction is a mark rather than
+a voice.
+
+This supersedes the 2026-08-10 note claiming the identity problem was fixed. It was fixed for runs
+on the Mac, and the cloud is where the routines live.
+
+### Push notifications do work from the cloud
+
+Found while probing: a cloud run can send Kiki a mobile push natively, no Slack involved. A real
+second channel for anything genuinely urgent, and it carries no identity confusion at all because it
+is not pretending to be anybody.
