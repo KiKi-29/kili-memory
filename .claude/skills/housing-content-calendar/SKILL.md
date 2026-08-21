@@ -135,10 +135,26 @@ Cheapest first, stop at the first hit:
 3. **The live site, and not the Drive index.** Read `https://cube84.com/sitemap.xml` and
    `https://cube84.com/blog_sitemap.xml`, then confirm against Search Console via Windsor.
    Verified 2026-08-20: **28 live housing URLs**, 20 pages plus 8 blog posts.
-4. `Already existing Blog topics` (`1gjqkEuWL2YKH6tJRyUElkI_AZ1LNh2TcQxelQCLA0JM`) **last, and
-   never alone.** It lists roughly 170 posts and **zero housing**, while 28 housing URLs are live.
-   Anything trusting it for dedupe will re-propose published work, and on the first live run it
-   nearly did. Treat it as a partial index, not a record of what exists.
+4. **The blog centre Shared Drive**, root `0ALgcD68qBHPzUk9PVA`. Readable, confirmed 2026-08-21.
+   Subfolders `Nonprofit Blogs` (`1i3Ra_egJt4MxH5KLn-due4gM6KfE-c_f`), `Data Cloud Blogs`, `Blog
+   Image References`, plus loose docs in the root. This is the record of what was **started**, and
+   the gap between it and the sitemap is the list of work that brewed and stopped. Filing is
+   inconsistent: housing content is split between the root and `Nonprofit Blogs`, and the same piece
+   often exists as both a Doc and a `.docx`.
+
+5. Optional recency check: page 1 of `https://cube84.com/blog` is newest-first, six posts, one
+   request. Cheapest way to see what shipped this week. The full listing is 47 pages and carries no
+   dates, so never crawl it.
+
+**The Google Sheet `Already existing Blog topics` is retired. Do not read it.** It lists roughly 170
+posts and zero housing while 28 housing URLs are live, and on the first live run it nearly caused
+published work to be re-proposed.
+
+**One trap when matching a Drive doc to a live URL.** Titles and slugs drift apart. *Choosing Your
+2026 HMIS Strategy* is live under a slug naming five vendors. *Better Technology Frees People Who End
+Homelessness* is live at `better-technology-frees-homelessness-workers`. So a title match produces
+false "never shipped" results. If you cannot confidently match a doc to a URL, call it **unmatched**,
+never **abandoned**. A maybe must not masquerade as a finding.
 
 Published means the angle has to be genuinely new. **A live page with a soft overlap is a rewrite
 target, not a blocker.** Say which page, which part is already covered, and which part is not, and

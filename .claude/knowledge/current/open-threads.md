@@ -192,3 +192,31 @@ where a director of housing services volunteered three named operational problem
 Nothing is asked of anyone yet. Worth knowing because the value of Charlie's weekly run scales
 directly with whether that tab gets filled in, and right now the meetings that matter most are the
 ones missing.
+
+---
+
+## Content metadata index, parked
+
+**Owner:** Kiki · **Opened:** 2026-08-22 · **Status:** deliberately parked, iterate later
+
+The idea, which is Kiki's and is a good one: stop re-crawling the sitemap, the Shared Drive and
+Search Console on every run. Build a metadata index once, read the index on normal runs, reconcile it
+on a slower cadence. Saves tokens because the saving is in output size, not call count: the sitemap is
+68KB and the Drive listings are verbose.
+
+Shape agreed, per piece: title, live URL if any, Drive doc id if any, state (`started only` / `live` /
+`live and earning`), category, last checked. Three of those columns give the abandoned-work list for
+free, and a sample of a dozen docs already found three that brewed and stopped.
+
+**Two things settled before parking, so they are not re-litigated:**
+
+1. **A bi-weekly refresh alone would lie.** Wrighter drafts Mon/Wed/Thu, so up to six pieces can ship
+   inside one window. Whoever ships must append to the index in the same breath, making the scheduled
+   job a reconciliation rather than the only update.
+2. **The index must date itself.** The retired Google Sheet is the cautionary tale: it existed, it was
+   trusted, and it was wrong by 28 URLs. Any agent leaning on the index states its `last_full_sweep`
+   date out loud.
+
+**Kiki's decision 2026-08-22: do not build it yet.** What exists is good enough. Iterate as we go.
+The sources are already corrected in the `housing-content-calendar` skill, so nothing is blocked on
+this.
