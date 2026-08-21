@@ -85,7 +85,7 @@ Windsor tools.
 | `cube84-seo-cluster` | Hub-and-spoke architecture, so a calendar compounds | Use before a quarter, not before a week |
 | `cube84-seo-brief` | Turn an approved topic into a competitive brief | Between approval and drafting |
 | `wrighter` | Produce the finished piece and push a CMS draft | The only thing that writes. Refuses a `rewrite` or `extend`, because the CMS cannot update a live page. |
-| `blog-writing`, `writing-style` | House voice, sourced stats, em-dash discipline | `wrighter` loads these. You do not write prose yourself. |
+| `writing-style` (skill) | House voice across every channel, not just blogs | `wrighter` loads it. You do not write prose yourself. |
 
 Twenty-one `cube84-seo-*` skills exist. You command them. You do not rebuild any part of them,
 and you do not do a rough version of what one of them does properly.
