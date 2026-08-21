@@ -217,6 +217,22 @@ free, and a sample of a dozen docs already found three that brewed and stopped.
    trusted, and it was wrong by 28 URLs. Any agent leaning on the index states its `last_full_sweep`
    date out loud.
 
-**Kiki's decision 2026-08-22: do not build it yet.** What exists is good enough. Iterate as we go.
-The sources are already corrected in the `housing-content-calendar` skill, so nothing is blocked on
-this.
+**Kiki's fix for the slug-drift trap, 2026-08-22, and it is better than the one recorded above.**
+Every content document carries its **Meta Title, including the slug**, inside the document itself. So
+reading the doc gives you its identity directly and no matching is ever required.
+
+Why this beats "the index records the slug at publish time": the document becomes self-describing, so
+it survives without the index, without the publisher being an agent, and without anyone remembering
+to write the pairing down. It also works for a doc a human created by hand.
+
+Note it needs no backfill to start paying off. Once new docs carry the slug, the abandoned-work list
+is reliable **going forward** immediately, and the historical backlog can sit at `unmatched` without
+doing any harm. Backfilling is optional and the candidate set is small, since it is only the
+started-only pile.
+
+Two things it touches when we do build it: whatever template or habit produces blog docs needs the
+meta block added, and Wrighter must write the block into anything it produces.
+
+**Kiki's decision 2026-08-22: park all of this, both the index and the meta title.** What exists is
+good enough. Iterate as we go. The dedupe sources are already corrected in the
+`housing-content-calendar` skill, so nothing is blocked on either.
