@@ -187,7 +187,7 @@ proposed topics.
 | Fingerprint | Orgs | Status | Note |
 |---|---|---|---|
 | `hud-vendor-report-validation-gate` | n/a, SERP-derived | `approved` as evidence | HUD's own vendor-checklist PDF ranks #1 for `hmis software vendors` and our page never addresses what that gate tests. |
-| `incumbent-satisfaction-differs-by-role-level` | 2 | `observed`, **high value** | **This impeaches `existing-hmis-is-fine`.** In both organisations where we have two levels, leadership said "fine" and the data owner then enumerated 4-6 concrete deficits. **Both leadership statements were wrong.** So the 16 measures who answered the phone, not what is true. Watch for a third instance. |
+| `incumbent-satisfaction-differs-by-role-level` | 2 | `observed`, **high value** | **This puts a question mark over `existing-hmis-is-fine`.** In both organisations where we have two levels, leadership said "fine" and the data owner then listed 4-6 concrete deficits. **Two role levels gave incompatible accounts of the same system. Nobody checked which was accurate.** So at least one is wrong, possibly one is right, and the honest read is that the 16 may measure who answered the phone rather than what is true. Watch for a third instance. |
 | `three-newest-meetings-have-no-writeup` | n/a | ops | The three most recent housing meetings in the tracker have no minutes entry. The richest source is not being filled in. |
 
 ### The channel finding, which outranks the calendar
