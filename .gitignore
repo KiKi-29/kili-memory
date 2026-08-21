@@ -30,6 +30,19 @@
 /.claude/skills/*
 !/.claude/skills/kili/
 
+# brd-agent is tracked and instructs loading these on every run, so without them a
+# scheduled run of her BRD specialist has no house conventions at all. Recorded as a
+# defect in knowledge/intake/handled.md on 2026-08-19 and fixed 2026-08-22.
+# corpus-index.md is deliberately NOT admitted: its excluded-BRD section names eight
+# clients, which is exactly what this repo exists to keep out.
+!/.claude/skills/brd-writer/
+/.claude/skills/brd-writer/*
+!/.claude/skills/brd-writer/reference/
+/.claude/skills/brd-writer/reference/*
+!/.claude/skills/brd-writer/reference/conventions.md
+!/.claude/skills/brd-writer/reference/page-types.md
+!/.claude/skills/brd-writer/reference/house-template.md
+
 # Charlie's weekly pipeline, so the cloud routine can read it. Carries no client
 # data: it names the tracker by title pattern and reads it live at runtime.
 !/.claude/skills/housing-content-calendar/

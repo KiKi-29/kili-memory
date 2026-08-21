@@ -64,3 +64,29 @@ prompt. Anyone not on the allowlist got an assistant with no Gmail tools at all,
 so no prompt injection could reach the read tools even if it fully captured the
 model. Enforce a boundary by withholding the capability, never by instructing the
 model to decline. This holds regardless of channel.
+
+## Waking her on a Slack message, added 2026-08-22
+
+She used to find out about Slack only on a scheduled sweep. Now a message wakes her.
+
+**How.** Slack sends the event to a small function, and that function calls the routine's API
+trigger endpoint with a bearer token. The function has no brain: it verifies the request came from
+Slack, then says "go look." It never passes the message content, so a forged call can at worst make
+her look at a channel where nothing changed.
+
+**Why not Slack Workflow Builder.** It would have removed the middle function entirely, but it needs
+a Pro plan and CUBE84 is not on one. Settled 2026-08-22.
+
+**Scopes.** Her app was DM-only, `im:history` and `im:read`. Hearing a channel needs channel scopes
+added, and **a scope change needs a reinstall.** The app keeps running on the old scopes with a
+yellow banner until somebody does it, and the symptom is `missing_scope`.
+
+**Slack retries.** It wants an answer in three seconds and retries if it does not get one, so the
+same message can wake her twice. **The reaction is what stops a double action:** she reacts to a
+message once she has acted on it, so a second wake finds nothing left to do. The reaction is the
+receipt and the dedupe marker in one object, and it needs no state file anywhere.
+
+**She ignores her own posts.** Slack echoes a bot's own messages back as events. Without that guard
+she answers herself forever, and each reply costs a model call.
+
+**What a channel is for** lives in `registry.md`. No entry means she reads and does not act.

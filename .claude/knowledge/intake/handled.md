@@ -179,6 +179,13 @@ such dots."
 by entity and ask whether two open questions are actually one.** Two items sharing a
 subject usually share a resolution.
 
+### The LevelShift Salesforce lead owner
+
+Lead `00Qfw00000ZThwgEAD`, LevelShift. **Kiki is changing the owner to herself by hand. Do not flag
+the owner as wrong.** Filed here 2026-08-22, moved out of the routine prompts where it had been
+hand-carried since 2026-08-10. It was the only one of six hand-carried items not already in this
+ledger.
+
 ### Vendor threads
 
 Kiki approved the rule that vendor and partner threads stay off-board deliberately. Written
