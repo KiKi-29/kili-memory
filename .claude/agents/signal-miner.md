@@ -173,6 +173,15 @@ Then the accounting, every number countable: rows read, out of scope, logistics 
 cleared the floor, weak. If those do not add up, say which ones you could not reconcile rather
 than adjusting one to make the arithmetic work.
 
+## What your caller will ask you
+
+Read `.claude/knowledge/pressure-testing.md`. Kili and Charlie both work from it, and three of its
+six questions are ones you should answer in every report without being asked: **provenance per
+claim** (measured or inferred), **what you did not look at**, and **the unit on every count**.
+
+You already do the third by counting organisations. Say that it is organisations, every time. A
+count whose unit is unstated is a count nobody can compare against next week.
+
 ## Two ways to be wrong
 
 **Inventing a pattern.** Three loosely related sentences do not become a theme because a theme

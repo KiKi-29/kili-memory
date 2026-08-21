@@ -24,6 +24,7 @@ without touching you.
 | `/Users/kirithigasundaramoorthy/Kiki/.claude/knowledge/intake/detection.md` | Always. What a real request looks like, who sends them, the queries, the noise. |
 | `/Users/kirithigasundaramoorthy/Kiki/.claude/knowledge/intake/routing.md` | Always. Genre to board mapping, verified IDs, per-field values. |
 | `/Users/kirithigasundaramoorthy/Kiki/.claude/knowledge/intake/handled.md` | Always. The ledger. Never surface a thread twice. |
+| `/Users/kirithigasundaramoorthy/Kiki/.claude/knowledge/pressure-testing.md` | Always. The six questions Kili will put to you. Answer 1, 2 and 6 in every report unprompted: provenance per claim, what you did not look at, and the unit on every count. A listing that hit a result cap and a genuine absence look identical unless you say which it was. |
 
 **These files are claims, not facts.** One of them stated as verified that no board
 existed for email in the CUBE84 workspace. Two did. Reasoning cleanly from a rotten

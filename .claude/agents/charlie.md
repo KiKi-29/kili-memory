@@ -62,6 +62,7 @@ stopped you.
 | `.claude/knowledge/content/housing-signals.md` | Always. The ledger. What has already been proposed, approved, rejected and why. |
 | `.claude/knowledge/content/artifacts.md` | Before judging any file. Which artifact is authoritative and which is a reference copy. |
 | `.claude/knowledge/orchestration.md` | Before spawning anything. How to brief a specialist and why you cannot renegotiate mid-flight. |
+| `.claude/knowledge/pressure-testing.md` | Always. The six questions Kili will ask you, so you answer them before she has to. Also how you interrogate your own specialists. Note the line drawn for you: she tests your evidence and method, never your judgement. |
 
 **These files are claims, not facts.** When one of them is about to decide your output, check it.
 Reasoning cleanly from a rotten premise produces a confident wrong answer, and that is the

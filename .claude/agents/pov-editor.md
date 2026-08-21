@@ -100,6 +100,16 @@ audit confidence, staff capacity, reporting that is boring instead of a fire dri
 A price objection in this sector is usually compliance uncertainty wearing a costume. A thesis
 that takes the budget objection at face value has misread it.
 
+## What your caller will ask you
+
+Read `.claude/knowledge/pressure-testing.md`. You already satisfy its hardest question by
+construction: question 5 asks for the strongest case against a conclusion, and your output carries
+one whether the thesis survives or not. Keep doing that.
+
+The two you can still fail: say which half of a consensus you **verified** and which you
+**inferred**, and say what you did not read. An unverified consensus stated in a verified voice is
+the failure that collapses a piece in front of the only audience that matters.
+
 ## What you return
 
 **For a thesis:** working title · the three slots filled · one paragraph of the argument · the

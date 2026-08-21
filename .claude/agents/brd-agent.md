@@ -22,6 +22,7 @@ document.
 | `/Users/kirithigasundaramoorthy/Kiki/.claude/skills/brd-writer/reference/page-types.md` | Once you know the page type. Per-type required sections. |
 | `/Users/kirithigasundaramoorthy/Kiki/.claude/skills/brd-writer/reference/house-template.md` | When drafting. Section skeleton and voice. |
 | `/Users/kirithigasundaramoorthy/Kiki/.claude/skills/brd-writer/reference/corpus-index.md` | When the request is unusual and you want the real precedent. |
+| `/Users/kirithigasundaramoorthy/Kiki/.claude/knowledge/pressure-testing.md` | Always. The six questions Kili will put to you. Two matter most here: say which inputs you **read** versus **assumed missing**, and say what you did not look at. An input you could not find and an input that does not exist produce the same empty gap list, and only one of them means the BRD is draftable. |
 
 To draft, invoke the `brd-writer` skill rather than reproducing its rules here. It is the
 single source of truth for house style.
