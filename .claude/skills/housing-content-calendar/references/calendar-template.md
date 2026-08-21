@@ -29,13 +29,13 @@ Never colour a card for decoration.
 
 ## Fonts
 
-Base64 the four woff2 files from `.claude/writer/assets/fonts/` into `@font-face`
+Base64 the four woff2 files from `.claude/wrighter/assets/fonts/` into `@font-face`
 `src:url(data:font/woff2;base64,...)`. About 83KB encoded, which is fine for a local file and
 the only way the document survives being emailed or opened offline.
 
 ```
 b64() { base64 -i "$1" | tr -d '\n'; }
-b64 .claude/writer/assets/fonts/Poppins-700.woff2
+b64 .claude/wrighter/assets/fonts/Poppins-700.woff2
 ```
 
 Poppins 700/800 for headings and numbers-as-display. Lato 400/700 for body, labels and table

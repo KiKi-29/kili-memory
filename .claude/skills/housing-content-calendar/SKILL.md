@@ -4,7 +4,7 @@ description: >
   Charlie's weekly pipeline. Turns the outbound team's conversation tracker into an
   evidence-backed content calendar for the Homelessness and Housing market, routing every topic
   to either the SEO/GEO/AEO bucket or the Thought Leadership bucket, producing a branded HTML
-  calendar, and writing approved topics to the private intake board for the writer to draft.
+  calendar, and writing approved topics to the private intake board for Wrighter to draft.
   Use when the user says content calendar, housing content plan, what should we write about,
   mine the conversation tracker, run Charlie, or asks what the outbound conversations are telling
   us to publish. This is Agent 1 of the CUBE84 content system.
@@ -16,7 +16,7 @@ Agent 1 of CUBE84's content system, and Charlie's entry point.
 
 - **Agent 1, this skill:** mines the outbound tracker, produces topics, gets them approved,
   queues them.
-- **The `writer` agent:** produces each approved piece and pushes a CMS draft. It refuses a `rewrite` or `extend`, because the CMS cannot update a live page.
+- **`wrighter`:** produces each approved piece and pushes a CMS draft. It refuses a `rewrite` or `extend`, because the CMS cannot update a live page.
 - **Agent 3, visuals:** later.
 
 The output of a run is a **proposal**, never a commitment. Nothing reaches the board until Kiki
@@ -211,11 +211,11 @@ three achieved by promoting a weak thesis is not.
 
 | Format | When | Downstream |
 |---|---|---|
-| `blog` | Default. The argument fits 1,100 to 1,500 words. | the `writer` drafts it |
+| `blog` | Default. The argument fits 1,100 to 1,500 words. | `wrighter` drafts it |
 | `whitepaper` | The argument needs data the reader will cite in a funding or board conversation. | **None. Manual.** |
 | `ebook` | A practical how-to the reader keeps, like an HMIS RFP requirements guide. | **None. Manual.** |
 
-The `writer` produces `blog` items and refuses the rest. Every non-blog row is labelled **manual
+`wrighter` produces `blog` items and refuses the rest. Every non-blog row is labelled **manual
 production, no downstream agent** in the calendar and on the board. Do not let that gap go quiet.
 
 ### Step 7 — Assemble and propose
@@ -270,9 +270,9 @@ https://cube84-bunch.monday.com/boards/18427467231
 Verified column ids, so nothing has to be rediscovered. Re-read with `get_board_info` before
 writing if a column may have been added, per the tool's own precondition.
 
-`Status` labels match the writer's state machine exactly.
+`Status` labels match Wrighter's state machine exactly.
 
-`Description` is the angle the writer works from, so it carries the argument, the persona, and for
+`Description` is the angle Wrighter works from, so it carries the argument, the persona, and for
 TL rows the three slots. A thin description produces a thin blog, and this field is the only
 place the reasoning survives.
 
@@ -306,7 +306,7 @@ On any failure, stop and report. Do not retry automatically and do not half-writ
 - Never puts a prospect name, company, email or phone number in the ledger, the POV spine, the
   board, or anything committed to git.
 - Never creates a board item before Kiki approves that batch.
-- Never publishes anything. The `writer` pushes a draft, a human hits publish.
+- Never publishes anything. `wrighter` pushes a draft, a human hits publish.
 - Never writes to the team's Blog Tracker board.
 - Never pads a thin week to reach six.
 
