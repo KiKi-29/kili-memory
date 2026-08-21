@@ -122,10 +122,17 @@ spend another run looking for one.
 **In a cloud run, the only way to reach Slack is the MCP connector, which posts as Kiki.** No
 setting changes that.
 
-The mitigation, and it is a mitigation rather than a fix: **prefix the message so a human can tell
-who is speaking.** Open with `*Kili ·*` and the avatar being Kiki's becomes a cosmetic oddity
-instead of a confusing one. Reactions have no such problem, because a reaction is a mark rather than
-a voice.
+The mitigation, set by Kiki on 2026-08-22 and **non-negotiable**: every message opens with this
+line, verbatim, then a blank line, then the content.
+
+> _Kili here, Kiki's AI sidekick posting on behalf of her. Any mistakes, tag Kiki. I am still learning._
+
+It is not a style choice and not open to shortening. A message from Kiki's account that Kili wrote
+is a colleague reading something they believe Kiki said, and the line is what keeps that honest. It
+also tells a reader what to do about an error, which "tag Kiki" supplies and a bare name prefix does
+not.
+
+Reactions carry no line. A reaction is a mark, not a voice.
 
 This supersedes the 2026-08-10 note claiming the identity problem was fixed. It was fixed for runs
 on the Mac, and the cloud is where the routines live.
