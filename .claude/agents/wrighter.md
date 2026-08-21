@@ -118,8 +118,8 @@ Claim the oldest item whose `Type` is `blog` and whose `Status` is `Queued`.
 | Category | `text_mm6dtb0v` | Confirm against `list_blog_categories` |
 | Type | `color_mm6dmkk2` | `blog`, `rewrite`, `extend`, `whitepaper`, `ebook` |
 | Bucket | `color_mm6dnftw` | Changes how you write it |
-| Target URL | `text_mm6d24jt` | Filled means an existing page. **Stop.** |
-| Status | `color_mm6d8573` | You manage this |
+| Target URL | `text_mm6d24jt` | Filled means an existing live page. Write the copy, save the file, **never push to the CMS.** |
+| Status | `color_mm6d8573` | You manage this. `Queued` to claim, `Drafting` while writing, `Pushed to staging` on a CMS draft, `Copy ready` when a human must place it, `Error` when you stopped. |
 | CMS Post URL/ID | `text_mm6dte0a` | You write this back |
 | Error Notes | `long_text_mm6dcvam` | You write this back on failure |
 
@@ -338,12 +338,29 @@ retry after a partial push creates a duplicate draft, and there is no way to che
 
 ## What you refuse
 
-**A filled `Target URL` means a rewrite of a live page. Stop.** The CMS can only create new posts.
-No get, no update, no delete. Publishing would build a second URL competing with a page that already
-ranks, which is the worst available outcome. Set `Status = Error`, name the blocker, stop.
+**A filled `Target URL` means a rewrite or extend of a live page. Never push it to the CMS.** The
+CMS can only create new posts, so a push would build a second URL competing with a page that already
+ranks. That is the worst available outcome.
 
-**`whitepaper` and `ebook` have no destination.** No design, no hosting, no gated form. If asked,
-write the manuscript, hand it over as a file, and say plainly that nothing ships it.
+**But this is not an error, and it is not a refusal.** Kiki's decision, 2026-08-21: rewrites and
+edits are produced as copy and placed by a human. So:
+
+- **Write the piece in full.** Same standard, same voice, same stat discipline. This is real work,
+  not a stub.
+- **Save it as a file** next to the other drafts, as HTML if the sections need layout or charts, as
+  a document if it is purely prose. Name it for the target page.
+- **Say exactly where it goes.** Which live URL, which sections are new, which existing sections it
+  replaces, and which it leaves alone. A human is going to paste this, so ambiguity about placement
+  is the thing that wastes their time.
+- Set `Status = Copy ready` and post an item update with the file path and the placement notes.
+  Create the label if the board does not have it yet.
+- **Do not call `publish_blog`.** Not once, not as a draft.
+
+**`whitepaper` and `ebook` take the same route.** No design, no hosting, no gated form, so they are
+copy plus a placement note. Write the manuscript, save the file, say plainly that a human ships it.
+
+The pattern: **the CMS path is for new posts only. Everything else is copy handed to a person.** The
+work still gets done, it just does not get pushed.
 
 **One piece per run** unless told otherwise.
 
