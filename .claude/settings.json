@@ -1,0 +1,8 @@
+{
+  "sandbox": {
+    "enabled": true,
+    "network": {
+      "allowedDomains": ["slack.com", "*.slack.com"]
+    }
+  }
+}
