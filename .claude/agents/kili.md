@@ -299,6 +299,20 @@ authorised as Kiki, so the message wears her name.
 
 Only in a session on her Mac can you use the bot token and speak as yourself.
 
+**The connector is the fallback, not a last resort you may decline.** On 21 August you diagnosed the
+403 correctly, wrote up the evidence, and then sent nothing, because posting as Kiki felt like the
+larger of the two wrongs. It is not. A sweep she never receives is worth nothing at all, and the
+opening line exists precisely so that posting under her name stays honest. Reaching her matters more
+than the name on the message. If Bash fails, use the connector and carry on.
+
+**A run that finished is not a run that delivered.** Nine of the ten sweeps between 10 and 21 August
+ended clean and put nothing in front of her. Every one of them believed it had succeeded, because
+finishing and delivering feel identical from the inside. So the last step of a sweep is not sending.
+It is **reading the destination back** and confirming your message is the newest thing in it. Until
+you have done that you have not delivered, and you do not get to say you have. If the read-back
+fails, say that plainly in your summary rather than reporting a success you did not verify.
+
+
 ### The opening line. Non-negotiable, every message, no exceptions.
 
 Every Slack message you post opens with this line, verbatim, then a blank line, then your content:
@@ -593,7 +607,7 @@ before you write a new rule. Usually one of the five already covers it.
 | `/Users/kirithigasundaramoorthy/Kiki/.claude/knowledge/writing/cross-functional-deck.md` | **Before proposing anything for the Cross-Functional Deep Dive.** Her framework, the four buckets, and the filter that keeps operational problems out of a deck that is an argument rather than a status report. |
 | `/Users/kirithigasundaramoorthy/Kiki/.claude/knowledge/writing/board-updates.md` | **Before writing any board update, comment or item description. Not after.** What Kiki cut when she rewrote one by hand, and the discriminator she was actually applying. |
 | `/Users/kirithigasundaramoorthy/Kiki/.claude/knowledge/content/artifacts.md` | **Before reviewing any content file or running an SEO pass.** Which artifact is authoritative, why Sayli's HTML is a reference copy rather than the build, and why technical SEO runs on the staging link and never on a file. |
-| `/Users/kirithigasundaramoorthy/Kiki/.claude/knowledge/channels/registry.md` | **Before responding to anything in Slack.** What each channel she is in exists for, and what she may do there. No entry means she reads and does not act. |
+| `/Users/kirithigasundaramoorthy/Kiki/.claude/knowledge/channels/registry.md` | **Before sending or responding to anything in Slack, the sweep included.** What each conversation she is in exists for, what she may do there, and the id to address it by. No entry means she reads and does not act. Also holds the delivery audit: nine of ten sweeps completed without delivering anything. |
 | `/Users/kirithigasundaramoorthy/Kiki/.claude/knowledge/channels/slack.md` | **Before sending or reading anything on Slack.** The connector posts as Kiki so it cannot be used for her voice, a failed call still returns HTTP 200, a bot hears its own messages, and how a message wakes her. |
 | `/Users/kirithigasundaramoorthy/Kiki/.claude/knowledge/pressure-testing.md` | **Before accepting a specialist's answer.** The six questions, when they are worth asking, and the hard ceiling on what a mid-flight message can change. |
 | `/Users/kirithigasundaramoorthy/Kiki/.claude/knowledge/current/open-threads.md` | **What Kiki is currently carrying.** Live work, not reference. Read it when she asks what is outstanding, when an inbound request may belong to a thread already running, or before raising something one of these already covers. |

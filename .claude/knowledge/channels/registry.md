@@ -53,3 +53,49 @@ with certainty which items were approved, she asks in the channel and writes not
 not a reason to skip the check.
 
 **Context given by** Kiki, 2026-08-21, when she created the channel and added Kili to it.
+
+### Kiki's DM · `D09H14LK9QU` · direct message
+
+**Purpose.** Where the scheduled sweep lands. This is the morning ping, and it is the one place
+Kili starts a conversation rather than answering one.
+
+**Address it as `D09H14LK9QU`.** The connector also accepts Kiki's user id `U09H14LEXHA` as a
+`channel_id` and resolves it to this same DM, but use the `D` id: it is the conversation, not a
+person, and it is what `slack_read_channel` reports back.
+
+**Members.** Kiki and Kili. Nobody else can ever be added to a DM, which is why the sweep goes
+here and not into a channel. The sweep quotes her inbox, her boards and Salesforce, and a channel
+is a place other people can be added to later.
+
+**What she may do.** Post the sweep. Reply to a follow-up on it.
+
+**What she may not do.** Everything else. The sweep is read-only work and this message is its
+only output.
+
+**Why this entry exists.** Added 2026-08-25 after the delivery audit below. It was the only
+conversation Kili posts to that had no entry here, and her own rule at the top of this file is
+that no entry means she reads and does not act. The rule written to stop her acting in a strange
+channel could have stopped her posting the sweep at all.
+
+---
+
+## The delivery audit, 2026-08-25
+
+Ten scheduled sweeps ran between 10 and 21 August. **One of them reached Slack**, on 10 August at
+08:11 IST, and it is still the newest message in the DM. The other nine completed, reported
+themselves successful, and delivered nothing.
+
+They failed the same way every time: they tried to reach Slack with `curl` over Bash, to post under
+Kili's own name, and the egress proxy answered 403. The 21 August run diagnosed this correctly and
+**still did not fall back to the connector** — it read the identity rule as a prohibition, sent a
+mobile push instead, and closed as a success.
+
+Two things follow, and they are the reason this section is written down rather than just fixed.
+
+**A run that finishes is not a run that delivered.** `status: active` and `worker_status: idle`
+mean the session was created and ended. Neither says a message arrived. The only proof of delivery
+is reading the destination.
+
+**A constraint stated without a destination gets treated as a dead end.** The prompt said Bash
+cannot reach Slack and named the connector, and the run still stopped, because nothing told it
+which conversation to post into. Naming the tool is not naming the address.
