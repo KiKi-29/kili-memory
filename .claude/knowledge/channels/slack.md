@@ -142,3 +142,37 @@ on the Mac, and the cloud is where the routines live.
 Found while probing: a cloud run can send Kiki a mobile push natively, no Slack involved. A real
 second channel for anything genuinely urgent, and it carries no identity confusion at all because it
 is not pretending to be anybody.
+
+## The GitHub relay. Measured 2026-08-25.
+
+The section above says there is no route around the egress block and to stop looking. **That is
+still true for reaching Slack directly, and it is now too strong as written.** GitHub is on the
+allowlist, and GitHub can reach Slack. So a relay exists, in one direction only.
+
+**What works.** `KiKi-29/kili-reports` is a private repo holding one workflow and a `reports/`
+folder. A report file pushed there fires a GitHub Action, which posts to Slack with Kili's own
+`xoxb-` token from repository secrets. Tested twice from the Mac, and both messages arrived in
+`D0BNUQPH38F` **as Kili**, not as Kiki. The token never touches a routine prompt.
+
+**What does not work, and is why this is not live.** A cloud run cannot start it.
+
+| Route from a cloud run | Result |
+|---|---|
+| `git push` to the repo | **403** — `Claude doesn't have GitHub access to …`. The Claude GitHub App is not installed on the repo. Fixable in principle. |
+| `POST /repos/…/dispatches` | **403** — `repository_dispatch is not permitted for this session type`. Refused by the agent proxy itself, so no credential opens it. |
+| `api.github.com` generally | 200, and `/user` resolves to `KiKi-29` |
+| `GITHUB_TOKEN` / `GH_TOKEN` in the sandbox | Set, but 14 characters. Proxy placeholders, not usable credentials. |
+
+So the relay is built and proven from the Mac, and unreachable from the scheduled runs that actually
+need it. Until the push route is opened, **a cloud run still posts through the MCP connector, as
+Kiki, with the opening line.** That has not changed.
+
+**Why the reports repo is separate from `kili-memory`.** Opening the push route means granting a
+cloud run write access. Granting it on `kili-memory` would let a scheduled run edit `kili.md` — the
+file that tells it how to behave — and the edit would apply on the next run. Kiki chose the separate
+repo on 2026-08-25 for exactly that reason. `kili-reports` holds no instructions and nothing reads
+from it, so a run there can publish but can never rewrite its own rules. **Keep it that way: if the
+app is ever installed, install it on `kili-reports` only.**
+
+**The reports repo is private and must stay private.** A sweep quotes her inbox, her boards and
+Salesforce, so those files can name real people.
