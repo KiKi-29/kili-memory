@@ -473,6 +473,33 @@ this is not merely unbuilt, it is **unsolved**, and whoever rebuilds the push ha
 
 ---
 
+## The reviewer and the commenter are two different people
+
+**Found 2026-08-24.** A draft opened with "Sunil, this is the second draft, rewritten after your five
+comments." Sunil had never seen it. **Kiki wrote every one of those comments.** The `SME` field says
+who reviews *next*; the comment threads say who wrote *what is being answered*. Reading the first as
+the second put a false statement in the opening line of a document about to be sent to the person it
+was false about, while the Review Log two pages down attributed the same comments to Kiki correctly.
+The document contradicted itself.
+
+- **Never infer who commented from the `SME` field.** `read_file_content` with comments on returns
+  `authorName` on every thread. Use it.
+- **Address the header to nobody in particular.** "This is the second draft, revised after a first
+  round of review" is true whoever reviews next and whoever reviewed last. Naming the reader in the
+  opening line buys nothing and risks exactly this.
+- The Review Log names who raised each comment, which is where attribution belongs.
+
+## Write the header for the reader, not for the pipeline
+
+The same draft explained that the tables carry the same numbers "because Google Docs drops inline
+graphics." A subject matter expert does not care why our tooling behaves as it does. **Anything that
+explains our own machinery is for us and does not belong in a document a reviewer opens.**
+
+Say what the file is and what to do with it. "A design reference sits in this folder showing how the
+page will look, with the charts." Then stop.
+
+---
+
 ## Never name an organisation, even from a public document
 
 **Found the hard way, 2026-08-24.** A draft argued that a county's HMIS RFP could only buy a
