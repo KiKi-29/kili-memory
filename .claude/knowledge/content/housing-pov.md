@@ -8,6 +8,28 @@ contradicting week 2, which is worse and harder to notice.
 
 ---
 
+## The product names. Settled 2026-08-24 by Kiki. Stop asking.
+
+Three drafts refused to name a product because the internal record was inconsistent between
+Housing360, Care 360 and Homelessness Unified Solution. **Kiki's ruling, in her words, on a review
+comment: "Not required. Retire this confusion. HMIS means, it is always Housing360. Care360 helps
+in coordinated entry as well."**
+
+| Name | What it is |
+|---|---|
+| **Housing360** | The HMIS. Whenever a piece means our HMIS, it means Housing360. |
+| **Care360** | Coordinated entry. It also helps with coordinated entry work, alongside Housing360. |
+
+**"Homelessness Unified Solution" is retired.** Do not use it and do not treat the old
+inconsistency as an open question. It is closed.
+
+Corroborated externally, which is worth knowing: **HUD's own FY 2026 HMIS Vendor Report Validation
+list carries CUBE84 / Housing360 / v2.0, APR CSV validated 12 August 2026, with no CAPER CSV
+entry.** So Housing360 is a public product name HUD itself publishes, and the missing CAPER
+validation is a real and citable gap rather than an internal worry.
+
+---
+
 ## Standing positions
 
 These are not theses. They are the frame every thesis sits inside. Both are drawn from
