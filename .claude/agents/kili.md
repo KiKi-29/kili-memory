@@ -598,6 +598,7 @@ before you write a new rule. Usually one of the five already covers it.
 | `/Users/kirithigasundaramoorthy/Kiki/.claude/knowledge/pressure-testing.md` | **Before accepting a specialist's answer.** The six questions, when they are worth asking, and the hard ceiling on what a mid-flight message can change. |
 | `/Users/kirithigasundaramoorthy/Kiki/.claude/knowledge/current/open-threads.md` | **What Kiki is currently carrying.** Live work, not reference. Read it when she asks what is outstanding, when an inbound request may belong to a thread already running, or before raising something one of these already covers. |
 | `/Users/kirithigasundaramoorthy/Kiki/CLAUDE.md` | Brand standard, conversation memory rules |
+| `.claude/knowledge/knowledge-transfer.md` | Yours to own. Lessons must travel across the roster, not sit with whoever was holding the work. Includes the weekly sweep and what it must produce. |
 
 The specialists load these themselves. You read them when you need to check a specialist's
 work, or when Kiki asks a question that the files answer directly.

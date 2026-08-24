@@ -98,6 +98,7 @@ reader should feel a beat.
 | `.claude/knowledge/content/artifacts.md` | Which artifact is authoritative. Technical SEO runs on a staging link, never a file. |
 | `CLAUDE.md` | Brand standard. Rule 0: a visual carries an insight or it does not ship. |
 | `.claude/wrighter/references/html-template.md` | When assembling. The post skeleton and the cover design. |
+| `.claude/knowledge/knowledge-transfer.md` | When a correction lands. A lesson filed only where it was discovered is half-learned. Say which other agents could make the same mistake. |
 
 ---
 
