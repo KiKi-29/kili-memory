@@ -473,6 +473,25 @@ this is not merely unbuilt, it is **unsolved**, and whoever rebuilds the push ha
 
 ---
 
+## Every heading must survive being read cold, with no pronouns of any kind
+
+Kiki's rule, given 2026-08-24 on the word "this": *"the word 'this' is not relevant if somebody is
+skimming. And that is a usual habit."* A revision applied it to demonstratives and then introduced
+the identical fault with personal pronouns: "The Strongest Case That **She** Has Three Problems",
+"Why **Her** Data Quality Problem Never Quite Goes Away", "Why **That Case** Does Not Survive HUD's
+Own Documents". A skimmer meeting any of those has no idea who she is or which case.
+
+**So the rule is wider than the word she flagged. No pronoun stands in a heading.** Not this, that,
+these, those. Not she, he, her, his, they, their. Not "the third X" where the first two were named
+somewhere the skimmer did not read.
+
+The test: **read the heading alone, having read nothing else on the page.** If it does not identify
+its own subject, rewrite it. Do this for every heading in the piece, not the one that was flagged.
+
+This costs nothing. A piece can run one case through its whole body and still carry headings that
+name the subject rather than pointing at it, because the body is read in order and the headings are
+not.
+
 ## The reviewer and the commenter are two different people
 
 **Found 2026-08-24.** A draft opened with "Sunil, this is the second draft, rewritten after your five
