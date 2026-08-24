@@ -1,0 +1,105 @@
+name: Kili Slack relay
+
+# Why this exists.
+#
+# A cloud routine cannot reach slack.com. The egress allowlist is GitHub, npm and
+# Anthropic, and slack.com, hooks.slack.com and our own Vercel relay all answer 403.
+# Measured 2026-08-22, settled, do not retry from inside a run.
+#
+# GitHub is on that allowlist. So the run hands its report to GitHub and GitHub posts
+# it to Slack from here, where the bot token works and the message arrives as Kili
+# rather than as Kiki. The token lives in repository secrets and never touches a
+# routine prompt.
+
+on:
+  repository_dispatch:
+    types: [kili-report]
+  workflow_dispatch:
+    inputs:
+      text:
+        description: Message to post
+        required: true
+        default: "Relay test from the Kili Slack relay workflow."
+      channel:
+        description: Slack conversation id
+        required: false
+        default: D0BNUQPH38F
+
+jobs:
+  post:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Post to Slack as Kili
+        env:
+          SLACK_BOT_TOKEN: ${{ secrets.SLACK_BOT_TOKEN }}
+          # repository_dispatch carries the payload; workflow_dispatch carries inputs.
+          TEXT: ${{ github.event.client_payload.text || inputs.text }}
+          CHANNEL: ${{ github.event.client_payload.channel || inputs.channel || 'D0BNUQPH38F' }}
+        run: |
+          set -euo pipefail
+
+          if [ -z "${SLACK_BOT_TOKEN:-}" ]; then
+            echo "::error::SLACK_BOT_TOKEN is not set on this repository."
+            exit 1
+          fi
+          if [ -z "${TEXT:-}" ]; then
+            echo "::error::No message text was supplied."
+            exit 1
+          fi
+
+          # Slack's practical ceiling is about 4000 characters. Split on blank lines so a
+          # long sweep arrives whole across several messages rather than truncated.
+          python3 - <<'PY' > /tmp/chunks.json
+          import json, os, textwrap
+          text = os.environ["TEXT"]
+          LIMIT = 3800
+          chunks, current = [], ""
+          for para in text.split("\n\n"):
+              candidate = para if not current else current + "\n\n" + para
+              if len(candidate) <= LIMIT:
+                  current = candidate
+                  continue
+              if current:
+                  chunks.append(current)
+              # A single paragraph over the limit is hard-wrapped rather than dropped.
+              while len(para) > LIMIT:
+                  cut = para.rfind("\n", 0, LIMIT)
+                  cut = cut if cut > 0 else LIMIT
+                  chunks.append(para[:cut])
+                  para = para[cut:].lstrip("\n")
+              current = para
+          if current:
+              chunks.append(current)
+          json.dump(chunks, open("/dev/stdout", "w"))
+          PY
+
+          count=$(jq 'length' /tmp/chunks.json)
+          echo "Posting $count message(s) to $CHANNEL"
+
+          thread_ts=""
+          for i in $(seq 0 $((count - 1))); do
+            body=$(jq -c --arg ch "$CHANNEL" --argjson idx "$i" --arg ts "$thread_ts" '
+              { channel: $ch, text: .[$idx], unfurl_links: false, unfurl_media: false }
+              + (if $ts == "" then {} else { thread_ts: $ts } end)
+            ' /tmp/chunks.json)
+
+            resp=$(curl -sS -X POST https://slack.com/api/chat.postMessage \
+              -H "Authorization: Bearer ${SLACK_BOT_TOKEN}" \
+              -H "Content-Type: application/json; charset=utf-8" \
+              --data "$body")
+
+            # A failed Slack call still returns HTTP 200. The truth is `ok` in the body,
+            # so check that and nothing else.
+            if [ "$(printf '%s' "$resp" | jq -r '.ok')" != "true" ]; then
+              echo "::error::Slack refused the message: $(printf '%s' "$resp" | jq -r '.error // "unknown"')"
+              printf '%s\n' "$resp"
+              exit 1
+            fi
+
+            # Keep the follow-on parts in a thread so her DM shows one entry, not five.
+            if [ -z "$thread_ts" ]; then
+              thread_ts=$(printf '%s' "$resp" | jq -r '.ts')
+            fi
+          done
+
+          echo "Delivered $count message(s) as Kili to $CHANNEL"

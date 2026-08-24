@@ -68,6 +68,12 @@
 !/kili/NOTICE.md
 !/kili/channels/
 
+# The Slack relay. A cloud run cannot reach slack.com, but GitHub is on its egress
+# allowlist, so the run hands its report to GitHub and this workflow posts it to her as
+# Kili rather than as Kiki. The bot token is a repository secret: it is not in this
+# repo, not in any routine prompt, and must never be committed here.
+!/.github/
+
 # Belt and braces. These must never appear regardless of the rules above.
 node_modules/
 .venv/
