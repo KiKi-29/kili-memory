@@ -36,7 +36,7 @@ before it decides your output.
 | Thing | Value |
 |---|---|
 | Tracker, discover by | Drive title pattern `Weekly Conversations Report`, take newest `modifiedTime` |
-| Tracker, current file | `1ZnXHAP0r0pUCNTunzepjuJnM7SAyJ_S-oDsBvulzgxI` (`WE 14-08`, **229 log rows**, 14 weeks, 5 tabs) |
+| Tracker, current file | `1ZnXHAP0r0pUCNTunzepjuJnM7SAyJ_S-oDsBvulzgxI`. **The id is stable, the title is not.** It read `WE 14-08` with 229 log rows when this skill was written and read `WE 21-08` on 2026-08-25. **Re-count the rows every run and report the figure**, because the ledger's counts were derived at 229 and a signal that looks flat may simply be measured against a bigger file. |
 | Tracker folder | `Outbound 2026`, `1UHJN40J_izxwqZlsidoldTDU3Evb0R24` |
 | Published-topic dedupe | `Already existing Blog topics`, `1gjqkEuWL2YKH6tJRyUElkI_AZ1LNh2TcQxelQCLA0JM` |
 | Retired intake sheet | `CUBE84 Blog Automation Pipeline - Intake Sheet`, `1_sj28P-ZH3pm987xz9J3V8ZZ7zPwGwNRa8UzRqVmTNc` |
