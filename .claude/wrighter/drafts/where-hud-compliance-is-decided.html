@@ -1,0 +1,260 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Where HUD Compliance Is Decided</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700;800&family=Lato:wght@400;700&display=swap"><style>
+  body{margin:0;background:#ffffff}
+  .c84-blog{font-family:'Lato',-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
+    color:#161616;line-height:1.7;font-size:18px;max-width:760px;margin:0 auto;padding:0 20px 80px}
+  .c84-blog h1,.c84-blog h2,.c84-blog h3{font-family:'Poppins',-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
+    color:#161616;line-height:1.25;font-weight:700}
+  .c84-blog h1{font-size:38px;margin:0 0 8px}
+  .c84-blog h2{font-size:27px;margin:44px 0 12px}
+  .c84-blog h3{font-size:21px;margin:28px 0 8px}
+  .c84-blog p{margin:0 0 18px}
+  .c84-blog a{color:#4187FF;text-decoration:underline}
+  .c84-blog ul,.c84-blog ol{margin:0 0 18px 22px;padding:0}
+  .c84-blog li{margin:0 0 8px}
+  .c84-blog table{border-collapse:collapse;width:100%;margin:24px 0;font-size:16px}
+  .c84-blog th,.c84-blog td{border:1px solid #e2e2e2;padding:10px 14px;text-align:left;vertical-align:top}
+  .c84-blog th{background:#F6F6F6;font-family:'Poppins',sans-serif;font-weight:600}
+  .c84-blog td.num,.c84-blog th.num{text-align:right;font-variant-numeric:tabular-nums}
+  .c84-blog figure{margin:28px 0}
+  .c84-blog figcaption{font-size:14px;color:#5a5a5a;margin-top:8px}
+  .c84-blog .callout{background:#F6F6F6;border-left:4px solid #4187FF;padding:16px 20px;margin:24px 0;border-radius:4px}
+  .c84-blog blockquote{margin:24px 0;padding:0 0 0 20px;border-left:4px solid #161616;
+    font-family:'Poppins',sans-serif;font-size:21px;line-height:1.45;font-weight:600}
+</style></head><body><article class="c84-blog"><figure style="margin:0 0 36px">
+<svg viewBox="0 0 1200 630" width="100%" role="img"
+     aria-label="Cover: Where HUD Compliance Is Decided. For CoC administrators, HMIS leads and compliance officers.">
+  <rect x="0" y="0" width="1200" height="630" fill="#F6F6F6"/>
+  <circle cx="1130" cy="88" r="188" fill="none" stroke="#183459" stroke-width="36" opacity="0.9"/>
+  <rect x="72" y="196" width="64" height="8" rx="4" fill="#4187FF"/>
+  <text x="72" y="176" font-family="Poppins, Helvetica, Arial, sans-serif" font-size="20"
+        font-weight="700" letter-spacing="2.8" fill="#183459">COC ADMINISTRATORS  &#183;  HMIS LEADS</text>
+  <text x="72" y="300" font-family="Poppins, Helvetica, Arial, sans-serif" font-size="62"
+        font-weight="800" fill="#161616">Where HUD</text>
+  <text x="72" y="370" font-family="Poppins, Helvetica, Arial, sans-serif" font-size="62"
+        font-weight="800" fill="#161616">Compliance Is</text>
+  <text x="72" y="440" font-family="Poppins, Helvetica, Arial, sans-serif" font-size="62"
+        font-weight="800" fill="#4187FF">Decided</text>
+  <text x="72" y="516" font-family="Lato, Helvetica, Arial, sans-serif" font-size="24" fill="#161616"
+        opacity="0.85">Q6e grades the gap between the day it happened and the day it was typed.</text>
+  <text x="72" y="576" font-family="Poppins, Helvetica, Arial, sans-serif" font-size="22"
+        font-weight="700" fill="#161616">CUBE84</text>
+</svg>
+</figure><h1>Where HUD Compliance Is Decided</h1><p style="font-size:15px;color:#5a5a5a"><strong>Rewrite copy for an existing page.</strong> Goes into <a href="https://cube84.com/blog/hud-apr-caper-reporting-challenges-for-housing-nonprofits-and-how-to-simplify-them-in-salesforce">/blog/hud-apr-caper-reporting-challenges-for-housing-nonprofits-and-how-to-simplify-them-in-salesforce</a>. Placement notes are in the Doc version.</p>
+<h2>What HUD Actually Measures When It Measures Data Quality</h2>
+
+<p>Open the report and count the tables. The Table of Questions in HUD's
+<a href="https://files.hudexchange.info/resources/documents/HMIS-Programming-Specifications-CoC-APR-and-ESG-CAPER.pdf">HMIS
+Programming Specifications for the CoC APR and ESG CAPER</a>, version 1.0, aligned with the FY 2026
+HMIS Data Standards, lists 70 distinct report tables. Six of them sit under Q6, Data Quality, and
+those six decide whether anyone believes the other 64.</p>
+
+<p>Five of the six audit what is written in a field. Q6a covers name, Social Security number, date of
+birth, and race and ethnicity. Q6b covers veteran status, project start date, relationship to head of
+household, enrollment CoC and disabling condition. Q6c covers destination and income at start, at
+annual assessment and at exit. Q6d covers the chronic homelessness elements, and Q6f counts records
+left open that should have been closed. All five are answerable by looking at a record and judging
+whether the value in it is right, which is what a pre-submission review is good at.</p>
+
+<p>Q6e works differently, and it is the one worth stopping on. It reads no field values at all.
+Per the FY 2026 HMIS Standard Reporting Terminology Glossary, Q6e counts records by
+&#8220;the number of days between [project start date] and [date created],&#8221; sorted into six
+buckets: fewer than 0 days, 0 days, 1 to 3 days, 4 to 6 days, 7 to 10 days, and 11 or more days.
+The same calculation runs again against project exit dates. HUD is grading the gap between the day
+the thing happened and the day somebody typed it in.</p>
+
+<blockquote>&#8220;Timely data entry is critical to ensuring data accuracy and completeness.&#8221;
+&#8212; FY 2026 HMIS Standard Reporting Terminology Glossary, Q6. Timeliness</blockquote>
+
+<p>There is no field to correct there and no review week in which that gap narrows. It was set months
+earlier, by whether your system made entry easy on the day the client walked in. Note the top bucket,
+which counts records created <em>before</em> the event they describe. HUD says that row
+&#8220;will only contain zeros if all data was entered on or after the date of occurrence,&#8221; so
+a nonzero count is a signature of batch entry after the fact. Q6e is a workflow measurement printed
+on the same page as everything else.</p>
+
+<h2>Eight of the Thirteen Universal Data Elements Are Fixed to a Moment</h2>
+
+<p>The same pattern runs through the schema underneath. HUD's FY 2026 HMIS Data Standards, effective
+October 1, 2025, define 13 Universal Data Elements that every participating project collects
+regardless of funding source. The manual splits them into two groups by design, and the split is the
+whole argument in miniature.</p>
+
+<p>Five are Universal Identifier Elements, one and only one per client record: name, Social Security
+number, date of birth, race and ethnicity, and veteran status. Those belong to the person rather than
+to an episode, and the manual says that if they are observed to be incorrect or outdated they must be
+corrected. Fixing one in March for something entered in September is housekeeping.</p>
+
+<p>The other eight are Universal Project Stay Elements, and each carries a Collection Point tied to a
+specific moment. Five are collected at project start, two at project exit, and Housing Move-In Date
+is recorded at move-in. Sixteen Common Program Specific Data Elements, numbered 4.02 through 4.21,
+sit on top of that, each stored against a collection stage of its own. Most of what HUD asks for is
+anchored to a point in the work, and a reporting cycle arrives long after those points have
+passed.</p>
+
+<figure>
+<svg viewBox="0 0 720 260" width="100%" role="img"
+     aria-label="Of HUD's 13 Universal Data Elements, 5 are collected at record creation and 8 are bound to a moment in the project stay.">
+  <text x="60" y="34" font-family="Poppins, sans-serif" font-size="16" font-weight="600" fill="#161616">
+    The 13 Universal Data Elements, split by when HUD requires them</text>
+  <rect x="60.00" y="100" width="230.77" height="64" fill="#F6F6F6" stroke="#161616" stroke-width="1.5"/>
+  <rect x="290.77" y="100" width="369.23" height="64" fill="#4187FF"/>
+  <line x1="60.00" y1="164" x2="60.00" y2="176" stroke="#9a9a9a" stroke-width="1"/><line x1="106.15" y1="164" x2="106.15" y2="176" stroke="#9a9a9a" stroke-width="1"/><line x1="152.31" y1="164" x2="152.31" y2="176" stroke="#9a9a9a" stroke-width="1"/><line x1="198.46" y1="164" x2="198.46" y2="176" stroke="#9a9a9a" stroke-width="1"/><line x1="244.62" y1="164" x2="244.62" y2="176" stroke="#9a9a9a" stroke-width="1"/><line x1="290.77" y1="164" x2="290.77" y2="176" stroke="#9a9a9a" stroke-width="1"/><line x1="336.92" y1="164" x2="336.92" y2="176" stroke="#9a9a9a" stroke-width="1"/><line x1="383.08" y1="164" x2="383.08" y2="176" stroke="#9a9a9a" stroke-width="1"/><line x1="429.23" y1="164" x2="429.23" y2="176" stroke="#9a9a9a" stroke-width="1"/><line x1="475.38" y1="164" x2="475.38" y2="176" stroke="#9a9a9a" stroke-width="1"/><line x1="521.54" y1="164" x2="521.54" y2="176" stroke="#9a9a9a" stroke-width="1"/><line x1="567.69" y1="164" x2="567.69" y2="176" stroke="#9a9a9a" stroke-width="1"/><line x1="613.85" y1="164" x2="613.85" y2="176" stroke="#9a9a9a" stroke-width="1"/><line x1="660.00" y1="164" x2="660.00" y2="176" stroke="#9a9a9a" stroke-width="1"/>
+  <line x1="60.00" y1="176" x2="660.00" y2="176" stroke="#9a9a9a" stroke-width="1"/>
+  <text x="175.38" y="140" text-anchor="middle" font-family="Lato, sans-serif" font-size="26"
+        font-weight="700" fill="#161616">5</text>
+  <text x="475.38" y="140" text-anchor="middle" font-family="Lato, sans-serif" font-size="26"
+        font-weight="700" fill="#ffffff">8</text>
+  <text x="175.38" y="206" text-anchor="middle" font-family="Lato, sans-serif" font-size="14"
+        fill="#161616">Record creation</text>
+  <text x="175.38" y="226" text-anchor="middle" font-family="Lato, sans-serif" font-size="13"
+        fill="#5a5a5a">Correctable any day</text>
+  <text x="475.38" y="206" text-anchor="middle" font-family="Lato, sans-serif" font-size="14"
+        fill="#161616">Bound to a project-stay moment</text>
+  <text x="475.38" y="226" text-anchor="middle" font-family="Lato, sans-serif" font-size="13"
+        fill="#5a5a5a">Project start, project exit, or move-in</text>
+  <text x="60" y="250" font-family="Lato, sans-serif" font-size="12" fill="#5a5a5a">
+    Each tick = one data element. Bar widths are proportional to element counts.</text>
+</svg>
+<figcaption>Counted element by element from the Collection Point rows in HUD's
+<em>FY 2026 HMIS Data Standards Manual</em>, Version 1, effective October 1, 2025. Record creation:
+3.01 Name, 3.02 Social Security Number, 3.03 Date of Birth, 3.04 Race and Ethnicity, 3.07 Veteran
+Status. Project start: 3.08, 3.10, 3.15, 3.16, 3.917. Project exit: 3.11, 3.12. At move-in: 3.20.</figcaption>
+</figure>
+
+<h2>The Sentence in the Data Standards That Settles This</h2>
+
+<p>If you read one page of the manual, read element 5.03, Data Collection Stage. It is the field that
+tells the system which moment a record belongs to: project start, project update, annual assessment,
+or project exit. And it contains a sentence that closes the argument.</p>
+
+<blockquote>&#8220;The Data Collection Stage may not be inferred from the &#8216;Information
+Date.&#8217;&#8221; &#8212; FY 2026 HMIS Data Standards Manual, element 5.03</blockquote>
+
+<p>HUD is stating, inside its own schema, that compliance cannot be reconstructed from the data
+afterward. The stage has to be recorded as the work happens, because no later process may work it out
+from the dates. That is a design requirement, binding on the software rather than on the person
+assembling the report.</p>
+
+<p>The annual assessment shows what that costs. Records required at annual assessment must carry an
+Information Date no more than 30 days before or after the anniversary of the head of household's
+Project Start Date, and one and only one such record per element inside that 60-day window. So every
+household carries its own recurring deadline, keyed to its own enrollment date, and the APR has a row
+counting &#8220;adult stayers without required annual assessment.&#8221; A calendar with 200
+households on it is a scheduling system, and either your software runs it or a person does.</p>
+
+<figure>
+<svg viewBox="0 0 720 300" width="100%" role="img"
+     aria-label="A project stay timeline showing the four data collection stages, with the annual assessment window drawn to scale as 30 days either side of the anniversary of the head of household's project start date.">
+  <text x="60" y="30" font-family="Poppins, sans-serif" font-size="16" font-weight="600" fill="#161616">
+    HUD's four collection stages, placed on one project stay</text>
+  <rect x="70.0" y="118" width="600.0" height="34" fill="#F6F6F6" stroke="#c9c9c9" stroke-width="1"/>
+  <text x="370.0" y="140" text-anchor="middle" font-family="Lato, sans-serif" font-size="13"
+        fill="#5a5a5a">Project Update &#8212; any point during the stay</text>
+  <rect x="572.5" y="160" width="90.0" height="50" fill="#4187FF" fill-opacity="0.18"
+        stroke="#4187FF" stroke-width="1.5"/>
+  <line x1="617.5" y1="152" x2="617.5" y2="218" stroke="#4187FF" stroke-width="2" stroke-dasharray="5 4"/>
+  <text x="668" y="100" text-anchor="end" font-family="Lato, sans-serif" font-size="13"
+        font-weight="700" fill="#4187FF">Annual Assessment</text>
+  <text x="668" y="116" text-anchor="end" font-family="Lato, sans-serif" font-size="12"
+        fill="#4187FF">&#177;30 days from the day-365 anniversary</text>
+  <line x1="70.0" y1="80" x2="70.0" y2="218" stroke="#161616" stroke-width="2"/>
+  <text x="70.0" y="72" font-family="Lato, sans-serif" font-size="13" font-weight="700"
+        fill="#161616">Project Start</text>
+  <line x1="670.0" y1="80" x2="670.0" y2="218" stroke="#161616" stroke-width="2" stroke-dasharray="5 4"/>
+  <text x="670.0" y="72" text-anchor="end" font-family="Lato, sans-serif" font-size="13"
+        font-weight="700" fill="#161616">Project Exit</text>
+  <line x1="70.0" y1="210" x2="670.0" y2="210" stroke="#161616" stroke-width="1.5"/>
+  <line x1="70.0" y1="210" x2="70.0" y2="220" stroke="#9a9a9a" stroke-width="1"/><text x="70.0" y="240" text-anchor="middle" font-family="Lato, sans-serif" font-size="12" fill="#5a5a5a">Day 0</text><line x1="220.0" y1="210" x2="220.0" y2="220" stroke="#9a9a9a" stroke-width="1"/><text x="220.0" y="240" text-anchor="middle" font-family="Lato, sans-serif" font-size="12" fill="#5a5a5a">Day 100</text><line x1="370.0" y1="210" x2="370.0" y2="220" stroke="#9a9a9a" stroke-width="1"/><text x="370.0" y="240" text-anchor="middle" font-family="Lato, sans-serif" font-size="12" fill="#5a5a5a">Day 200</text><line x1="520.0" y1="210" x2="520.0" y2="220" stroke="#9a9a9a" stroke-width="1"/><text x="520.0" y="240" text-anchor="middle" font-family="Lato, sans-serif" font-size="12" fill="#5a5a5a">Day 300</text><line x1="670.0" y1="210" x2="670.0" y2="220" stroke="#9a9a9a" stroke-width="1"/><text x="670.0" y="240" text-anchor="middle" font-family="Lato, sans-serif" font-size="12" fill="#5a5a5a">Day 400</text>
+  <text x="60" y="278" font-family="Lato, sans-serif" font-size="12" fill="#5a5a5a">
+    Horizontal axis is days since project start, drawn to scale at 1.5 px per day.</text>
+  <text x="60" y="294" font-family="Lato, sans-serif" font-size="12" fill="#5a5a5a">
+    Project exit is drawn at day 400 for illustration; the real date is whenever the client exits.</text>
+</svg>
+<figcaption>Window drawn from HUD's rule that annual assessment records carry an Information Date
+&#8220;no more than 30 days before or after the anniversary of the Head of Household's
+&#8216;Project Start Date&#8217;&#8221; &#8212; <em>FY 2026 HMIS Data Standards Manual</em>,
+element 5.03 Data Collection Stage.</figcaption>
+</figure>
+
+<h2>What a Report-Time Fix Can Reach</h2>
+
+<p>None of this makes pre-submission review pointless. Review is where genuine value errors get
+caught, and the four difficulties described above &#8212; scattered data, manual assembly, unclear
+rules, and a long final check &#8212; are all real. The useful division is between the errors a review
+can still reach and the ones that closed months ago.</p>
+
+<table>
+  <thead><tr><th>If the finding is</th><th>Then the fix lives</th><th>Reachable in review week</th></tr></thead>
+  <tbody>
+    <tr><td>A missing income value at exit (Q6c)</td><td>In the record, correctable now</td><td>Yes</td></tr>
+    <tr><td>A blank disabling condition at start (Q6b)</td><td>In the record, correctable now</td><td>Yes</td></tr>
+    <tr><td>An 11+ day entry lag on project starts (Q6e)</td><td>In how intake reaches the system</td><td>No</td></tr>
+    <tr><td>Records created before the event (Q6e, row 1)</td><td>In batch entry habits</td><td>No</td></tr>
+    <tr><td>A stayer with no annual assessment</td><td>In who or what watches the anniversary</td><td>No, the window has closed</td></tr>
+    <tr><td>An outreach record open past 90 days (Q6f)</td><td>In exit prompting</td><td>Partly, and it recurs</td></tr>
+  </tbody>
+</table>
+
+<p>The rows marked no come back every cycle in the same shape, because the correction happens
+downstream of the cause and each cycle re-earns the same finding. Teams reading the same Q6e
+distribution three years running are usually looking at an entry workflow nobody has changed, and
+there is a
+<a href="https://cube84.com/blog/better-technology-frees-homelessness-workers">real staff cost to
+fragmented systems that shows up long before the report does</a>.</p>
+
+<h2>Four Design Questions to Ask Before the Next Cycle</h2>
+
+<p>These separate a reporting problem from a design problem, and none of them can be answered during
+an APR window.</p>
+
+<ul>
+  <li><strong>Where does a project start get recorded, and how far is that from the
+  conversation?</strong> Every hop between the two shows up in Q6e as days.</li>
+  <li><strong>What tells a case manager that a household's annual assessment window opens next
+  week?</strong> If the answer is a spreadsheet somebody maintains, the control is a person.</li>
+  <li><strong>When a required field is skipped, does anyone find out that day or that quarter?</strong>
+  Validating at entry and validating at export produce very different Q6b numbers.</li>
+  <li><strong>How many places does one client's information get typed?</strong> Duplicate entry
+  turns a busy week into an entry lag.</li>
+</ul>
+
+<p>Answering those four is design work, and it sits alongside the reporting layer. HMIS is the system
+of record HUD requires. The operational layer is where intake, referral, follow-up and document
+chasing actually happen, and we have written before about
+<a href="https://cube84.com/blog/how-salesforce-supports-housing-nonprofits-along-with-hmis">how a
+Salesforce layer works alongside HMIS rather than in place of it</a>. The same architectural point
+runs through
+<a href="https://cube84.com/webinar/housing-hmis-built-to-report-not-to-run">our webinar on housing
+systems that were built to report rather than to run</a>.</p>
+
+<h2>Reporting Gets Calmer When the Workflow Carries the Compliance</h2>
+
+<p>A reporting cycle is an audit of the previous twelve months of workflow, printed as tables. Q6e
+says so in six buckets of days. Element 5.03 says so by refusing to let any later process infer the
+stage. The annual assessment window says so by attaching a deadline to each household's enrollment
+date rather than to your fiscal calendar.</p>
+
+<p>So the useful work happens between cycles. Move validation to the moment of entry, put the
+anniversary dates in a system that raises them, and cut the number of places a case manager types the
+same thing. Review week then gets shorter for a reason you can name: there is less left to find. A
+process that merely feels calmer produces the same Q6e distribution it produced last year.</p>
+
+<p>Reporting will still take work. It will stop being the week that discovers what the year did.</p>
+
+<h2>Sources</h2>
+<ul>
+  <li><a href="https://files.hudexchange.info/resources/documents/HMIS-Programming-Specifications-CoC-APR-and-ESG-CAPER.pdf">HUD,
+  HMIS Programming Specifications: CoC APR and ESG CAPER, v1.0</a> &#8212; aligns with FY 2026 HMIS
+  Data Standards, released October 2025, for reporting beginning October 1, 2025. Source of the
+  70-table count, the Q6a&#8211;Q6f titles, the Q6e buckets, and the annual assessment rows.</li>
+  <li><a href="https://www.hudexchange.info/programs/hmis/hmis-data-standards/">HUD, FY 2026 HMIS
+  Data Standards</a> &#8212; landing page for the Data Standards Manual, Data Dictionary and
+  Reporting Glossary, effective October 1, 2025.</li>
+  <li>HUD, FY 2026 HMIS Data Standards Manual, Version 1, released October 2025 &#8212; Universal
+  Data Elements list and Collection Point rows, and element 5.03 Data Collection Stage.
+  Direct file: <a href="https://files.hudexchange.info/resources/documents/HMIS-Data-Standards.pdf">HMIS-Data-Standards.pdf</a>.</li>
+  <li>HUD, FY 2026 HMIS Standard Reporting Terminology Glossary &#8212; Q6. Timeliness, page 46, the
+  definition and rules behind the Q6e buckets. Direct file:
+  <a href="https://files.hudexchange.info/resources/documents/HMIS-Standard-Reporting-Terminology-Glossary.pdf">HMIS-Standard-Reporting-Terminology-Glossary.pdf</a>.</li>
+</ul>
+</article></body></html>

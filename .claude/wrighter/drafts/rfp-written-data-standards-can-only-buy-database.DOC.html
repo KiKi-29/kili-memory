@@ -1,0 +1,310 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>An RFP Written From the Data Standards Can Only Buy a Database</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700;800&family=Lato:wght@400;700&display=swap" rel="stylesheet">
+<style>
+  body{font-family:'Lato',Helvetica,Arial,sans-serif;color:#161616;line-height:1.7;font-size:12pt;max-width:760px;margin:0 auto;padding:24px}
+  h1,h2,h3{font-family:'Poppins',Helvetica,Arial,sans-serif;color:#161616;line-height:1.25;font-weight:700}
+  h1{font-size:26pt;margin:0 0 8px}
+  h2{font-size:17pt;margin:30px 0 10px}
+  p{margin:0 0 12px}
+  a{color:#4187FF}
+  table{border-collapse:collapse;width:100%;margin:16px 0;font-size:11pt}
+  th,td{border:1px solid #cccccc;padding:7px 10px;text-align:left;vertical-align:top}
+  th{background:#F6F6F6;font-family:'Poppins',Helvetica,Arial,sans-serif;font-weight:600}
+  td.num,th.num{text-align:right}
+  .figcap{font-size:10pt;color:#5a5a5a;margin:0 0 20px}
+  blockquote{margin:0 0 12px;padding:0 0 0 16px;border-left:3px solid #4187FF}
+  .callout{background:#F6F6F6;border-left:4px solid #4187FF;padding:12px 16px;margin:16px 0}
+  hr{border:0;border-top:1px solid #cccccc;margin:24px 0}
+</style>
+</head>
+<body>
+<h2 style="margin-top:0">Draft for SME review</h2>
+<div class="callout">
+<p><strong>Open decision for Kiki, before this publishes: the source RFP has been anonymized, and
+that was not the writer's call to make permanently.</strong></p>
+<p>The evidence in this piece comes from one real county-level HMIS RFP. This draft names no county,
+no state, and carries no link to the document, because the issuing county is reported to be a live
+prospect, with an open lead and roughly twenty prospect-type accounts across that region. Publishing
+a piece that criticizes a named prospect's own procurement document, with a link to it, is not
+recoverable once it is out.</p>
+<p><strong>The cost is real and it should be weighed rather than absorbed.</strong> A reader can no
+longer audit the eleven requirements or the zero-occurrence counts for themselves, and this is a
+thought-leadership piece whose authority rests almost entirely on a primary source. Removing the
+citation removes the reader's ability to check the strongest thing about the argument.</p>
+<p><strong>Three options, and this is an editorial and commercial call rather than a writer's
+call:</strong> name the county and accept the risk, ask the county's permission to cite the document,
+or find a comparable RFP from an organization that is not a prospect and lead with that one instead.
+Every count in this draft is unchanged and independently re-verified against the source, so restoring
+the name and the link is a few minutes of editing if that is the decision.</p>
+<p><strong>One honest limit of the anonymization.</strong> The piece still reports 39 agencies,
+approximately 329 users, and the exact procurement dates, because those figures are the argument. A
+determined reader who searches on them can still identify the county. What has been removed is the
+accusation by name and the one-click link, so this reduces the exposure rather than eliminating it.
+If the requirement is that the source be genuinely unfindable, the counts and dates would have to
+soften too, and the piece would get materially weaker.</p>
+<p>The incumbent vendor is also named in the source document and is deliberately omitted here, for
+the same reason.</p>
+</div>
+<p><strong>Preview:</strong> paste the Drive viewUrl of
+<code>rfp-written-data-standards-can-only-buy-database.html</code> here. That file is the rendered
+version, with the cover and both figures as charts.</p>
+<p><strong>Board item:</strong> 12856969035 (Blog Automation Intake Sheet) &middot;
+<strong>Type:</strong> blog, new post, no target URL &middot; <strong>Bucket:</strong> Thought
+Leadership &middot; <strong>Author:</strong> Sunil Jith S H &middot; <strong>Category:</strong>
+Nonprofit &middot; <strong>SME:</strong> shsuniljith@cube84.com</p>
+<p><strong>A note on the two figures.</strong> Drive's HTML-to-Doc conversion silently drops inline
+SVG, so both figures appear here as tables carrying the identical numbers. Nothing is missing from
+this version.</p>
+<hr>
+<h1>An RFP Written From the Data Standards Can Only Buy a Database</h1>
+
+<p>In June 2024, a county housing and community development department went to market for a new Homeless Management Information System. The request for proposals it published
+runs to twelve pages and it is competently drafted. It covers hosting, data migration, training,
+warranty, backup and recovery, browser compatibility, insurance and cost. It states that thirty-nine
+agencies and approximately three hundred twenty-nine current users depend on the system being
+replaced.</p>
+
+<p>Search that document for the phrase "case management." It appears zero times. "Workflow" appears
+zero times. "Coordinated entry" appears zero times.</p>
+
+<p>None of that is careless. The RFP is faithful to the source it was written from, and the source
+is where the trouble starts. Its entire technical specification, Exhibit 2, consists of three
+hyperlinks pointing to two HUD documents: the HMIS Data Standards Manual and the HMIS Data
+Dictionary. Everything the county said about what the software must be, it said by reference to
+those two files.</p>
+
+<p>Those two files describe what has to be reported. On the work that produces the data, they are
+close to silent. So a county that specifies an HMIS this way will receive proposals for an excellent
+reporting database, award the contract to the best of them, and find out eighteen months later that
+its case managers still run the actual job out of a spreadsheet.</p>
+
+<h2>What the RFP Asks the Software To Do</h2>
+
+<p>Section IV.A lists eleven software requirements. Vendors answer these line by line, so they are
+the county's own account of what an HMIS is for.</p>
+
+<p>Three of the eleven ask for reports: a comprehensive report generator producing HUD-mandated,
+CoC-specific and ad hoc reports, data interoperability including the mandated HUD 2024 CSV and
+Hashed CSV exports, and user-interactive reports and dashboards. Two ask about getting data into
+fields, through customizable interfaces and conditional formatting inside the data collection
+module. Two are administrative, covering system oversight tools and the ability for administrators
+to upload and download data without vendor assistance. Two describe the shape of the purchase rather
+than the product, namely a commercial off-the-shelf web application and compatibility with four
+named browsers. One governs access, restricting client data by release-of-information permission.</p>
+
+<p>That leaves one. Requirement ten reads, in full: "Closed loop referral system." Six words, no
+elaboration and no test attached, sitting underneath three separate requirements about reporting.</p>
+
+<table>
+  <thead>
+    <tr><th class="num">#</th><th>Requirement, as written in Section IV.A</th><th>What it specifies</th></tr>
+  </thead>
+  <tbody>
+    <tr><td class="num">1</td><td>Commercial off-the-shelf web-based software application</td><td>Purchase form</td></tr>
+    <tr><td class="num">2</td><td>Restrict access to client data by Release of Information permission</td><td>Access control</td></tr>
+    <tr><td class="num">3</td><td>Comprehensive report generator: HUD-mandated, CoC-specific, ad hoc</td><td>Reporting</td></tr>
+    <tr><td class="num">4</td><td>System oversight and management tools</td><td>Administration</td></tr>
+    <tr><td class="num">5</td><td>Customizable interfaces for data collection and input efficiency</td><td>Data entry</td></tr>
+    <tr><td class="num">6</td><td>Data interoperability, plus HUD 2024 CSV and Hashed CSV exports</td><td>Reporting</td></tr>
+    <tr><td class="num">7</td><td>Compatibility with Edge, Firefox, Chrome and Safari</td><td>Purchase form</td></tr>
+    <tr><td class="num">8</td><td>Conditional formatting within data collection module</td><td>Data entry</td></tr>
+    <tr><td class="num">9</td><td>Administrators upload and download data without vendor assistance</td><td>Administration</td></tr>
+    <tr><td class="num">10</td><td>Closed loop referral system</td><td><strong>The daily work</strong></td></tr>
+    <tr><td class="num">11</td><td>Capability to generate user interactive reports and dashboards</td><td>Reporting</td></tr>
+  </tbody>
+</table>
+
+<table>
+  <thead><tr><th>What the requirement specifies</th><th class="num">Requirements</th></tr></thead>
+  <tbody>
+    <tr><td>Reporting and exports</td><td class="num">3</td></tr>
+    <tr><td>Data entry and forms</td><td class="num">2</td></tr>
+    <tr><td>System administration</td><td class="num">2</td></tr>
+    <tr><td>Purchase form and browsers</td><td class="num">2</td></tr>
+    <tr><td>Access control</td><td class="num">1</td></tr>
+    <tr><td>The daily work</td><td class="num">1</td></tr>
+    <tr><td><strong>Total</strong></td><td class="num"><strong>11</strong></td></tr>
+  </tbody>
+</table>
+<p class="figcap"><strong>Figure 1.</strong> The eleven software requirements in Section IV.A, grouped
+by what each one specifies. The HTML preview renders this as a bar chart drawn to scale; the numbers
+are identical. Counted directly from the document. Source: a county-level Request for Proposals for a Homeless Management Information System, issued June 2024, Section IV.A. The issuing county is not named here. The document is a public procurement record and CUBE84 can supply it on request.</p>
+
+<h2>HUD Asked For Less Than the County Handed Over</h2>
+
+<p>The reasonable assumption is that the county deferred to HUD because HUD had already settled the
+question. HUD has not.</p>
+
+<p>The FY 2026 HMIS Data Dictionary states its own scope in a single sentence: "Every data element
+required by HUD and the federal partners to be stored within an HMIS is specified in this document."
+Stored. The cover of that same document carries the line "FOR REPORTING BEGINNING OCTOBER 1, 2025."
+The Data Standards Manual describes itself as "a guide to collecting quantitative data," and then
+sets out the whole of what it demands of the software: "An HMIS must be able to collect all the data
+elements defined within these HMIS Data Standards, support the system logic identified, and ensure
+that the visibility of data elements is appropriate to the Project Type and Funding Sources for any
+given project."</p>
+
+<p>Collect the elements, support the logic, control the visibility. HUD stops there on purpose. On
+how any of it should behave for the person using it, the Data Dictionary says the decision belongs
+to somebody else: "The methods vendors may elect to make dependencies visible/invisible, colored for
+completion/shaded out, etc. are up to each software developer."</p>
+
+<p>Then the Manual says the thing that ought to change how these documents get written.</p>
+
+<blockquote><p>"CoCs and HMIS leads are responsible for verifying that any software they use meets
+their needs, including federal reporting requirements."</p></blockquote>
+
+<p>Read the preposition. Reporting is named as one item inside the set of things a CoC needs, and
+verifying the rest is assigned to the CoC by name. HUD delegated the work-shaped half of the
+specification to the buyer, in writing, on the same page where it declines to endorse any product.
+An RFP assembled from the standards alone hands that assignment straight back to a federal agency
+that already refused it.</p>
+
+<div class="callout">
+<p>This is the mechanism behind a pattern we have argued before. CUBE84's webinar on why
+<a href="https://cube84.com/webinar/housing-hmis-built-to-report-not-to-run">most housing systems
+were built to report rather than to run</a> made the case that these platforms are engineered around
+regulatory documentation. The procurement documents are where that architecture gets ordered.</p>
+</div>
+
+<h2>The Case For Writing It Exactly That Way</h2>
+
+<p>A procurement officer reading this has a serious answer ready, and it deserves stating at full
+strength rather than in a version that is easy to knock down.</p>
+
+<p>An RFP is a solicitation. Its job is to describe the requirement and let the market propose
+solutions, so a buyer who begins describing how the software should be built has stopped procuring
+and started designing. Specifying the work also tends to specify an architecture. Write "the case
+manager completes intake, referral and assessment inside a single client record" and you have
+arguably described one product category and excluded others, which in public procurement is grounds
+for a protest. Restrictive specifications get challenged, challenges delay awards, and a delayed
+award on a system that thirty-nine agencies depend on is an operational risk rather than a
+theoretical one.</p>
+
+<p>Set against that, HUD's Data Standards are the safest available ground. They are federal, they
+are neutral, no bidder can claim they were drafted to favor a competitor, and every serious vendor
+can meet them. All of that holds, and it argues for a particular kind of requirement rather than for
+leaving the work unspecified.</p>
+
+<h2>The County Already Built the Test and Never Wrote the Script</h2>
+
+<p>Section VI.A.5 of the same RFP requires every respondent to hand over the web address of a live
+test demonstration site, with credentials, available to county staff from July 10 to August 7, 2024.
+Twenty-eight days. Phase III of the evaluation then invites short-listed respondents to an oral
+presentation and system demonstration.</p>
+
+<p>So the county built a four-week hands-on evaluation window and a live demonstration stage into a
+procurement whose written requirements never mention the work. The instrument exists. The script for
+it was never written.</p>
+
+<p>Phase II names three evaluation criteria: professional and technical competence, understanding of
+objectives and approach, and cost proposal. The RFP adds that they are "not necessarily listed in
+order of importance," so they carry no weights either. Nothing in them directs the review committee
+to open a demonstration site and try to finish a piece of casework.</p>
+
+<table>
+  <thead><tr><th>Milestone</th><th>Date</th><th class="num">Day</th></tr></thead>
+  <tbody>
+    <tr><td>RFP issued</td><td>June 3, 2024</td><td class="num">0</td></tr>
+    <tr><td>Proposals due</td><td>July 3, 2024</td><td class="num">30</td></tr>
+    <tr><td>Test demonstration site opens</td><td>July 10, 2024</td><td class="num">37</td></tr>
+    <tr><td>Test demonstration site closes</td><td>August 7, 2024</td><td class="num">65</td></tr>
+    <tr><td>Respondent selected</td><td>September 16, 2024</td><td class="num">105</td></tr>
+    <tr><td>Contract awarded</td><td>September 20, 2024</td><td class="num">109</td></tr>
+  </tbody>
+</table>
+<p class="figcap"><strong>Figure 2.</strong> The procurement calendar, across the 109 days from issue
+to award. The test demonstration window runs 28 days, from day 37 to day 65, and no task script is
+attached to it. The HTML preview renders this as a to-scale timeline; the dates and day offsets are
+identical. Source: the same county-level HMIS Request for Proposals, Section V (Procurement Timetable) and Section VI.A.5.</p>
+
+<p>This is where the objection resolves. A requirement can name an outcome and stay silent about
+architecture, and an outcome written that way survives every test the objection raises. It describes
+no product. It favors no vendor. Any bidder may satisfy it by any means it likes. And it is testable
+in an afternoon, on a demonstration site the county had already committed to keeping open for four
+weeks.</p>
+
+<p>The difference sits entirely in the wording. An architectural requirement names a mechanism and
+invites a protest. An outcome requirement names a result and puts the burden of proof where
+procurement law is comfortable leaving it—on the bidder.</p>
+
+<table>
+  <thead><tr><th>Instead of specifying this</th><th>Ask for this</th></tr></thead>
+  <tbody>
+    <tr><td>A unified client record across intake, referral and assessment</td><td>Demonstrate one client moving through intake, assessment and referral without re-keying a field</td></tr>
+    <tr><td>Task management and automated alerts</td><td>Demonstrate a list of clients whose income documentation expires within thirty days</td></tr>
+    <tr><td>Configurable case management workflow</td><td>Demonstrate reassigning a caseload, and show what the receiving staff member sees</td></tr>
+    <tr><td>Bidirectional referral tracking module</td><td>Demonstrate a referral sent, a partner response recorded, and elapsed days shown</td></tr>
+    <tr><td>Mobile field access with offline capability</td><td>Demonstrate an outreach contact recorded away from a desk and reconciled to the client record</td></tr>
+  </tbody>
+</table>
+
+<h2>Five Tasks Worth Putting In the Script</h2>
+
+<p>Each of these is written as an outcome, so each stays neutral about how a vendor achieves it.
+Together they take under an hour on a demonstration site, and they test the half of the job the
+Data Standards never describe.</p>
+
+<table>
+  <thead><tr><th class="num">#</th><th>The task you set the vendor</th><th>What it establishes</th></tr></thead>
+  <tbody>
+    <tr><td class="num">1</td><td>Enroll a household of three, then change which member is head of household</td><td>Whether the record models a household or a row</td></tr>
+    <tr><td class="num">2</td><td>Complete intake, an assessment and a referral for one client in one sitting</td><td>Whether the work is continuous or stitched from modules</td></tr>
+    <tr><td class="num">3</td><td>List every client whose income documentation expires in thirty days</td><td>Whether the system looks forward or only backward</td></tr>
+    <tr><td class="num">4</td><td>Send a referral, record the partner's response, show elapsed days</td><td>Whether requirement ten means anything in practice</td></tr>
+    <tr><td class="num">5</td><td>Reassign forty clients to a new case manager, then log in as that person</td><td>Whether a case survives staff turnover</td></tr>
+  </tbody>
+</table>
+
+<p>Task three separates the field fastest. A reporting-first system answers questions about what
+already happened, because that is what an Annual Performance Report asks. A question about what will
+go wrong in the next thirty days has nowhere to come from in a database built around completed
+enrollments and exits, so a spreadsheet answers it instead. Task five is the one leadership should
+watch, since continuity after turnover decides whether a case carries on or restarts.</p>
+
+<p>Task four matters for a different reason. Requirement ten already asks for a closed loop referral
+system, so the county has the requirement. What it lacks is any way to tell a working loop from a
+field named "referral status," and forty minutes on the demonstration site settles that where a
+written response never will.</p>
+
+<h2>What the Omission Actually Costs</h2>
+
+<p>The daily work does not disappear because an RFP declines to mention it. It relocates, and the
+place it relocates to is unfunded, unaudited and maintained by whoever cares most.</p>
+
+<p>Referrals get chased by email and phone. Document expiry lives in a tracker on somebody's
+desktop. The full picture of a client gets reassembled each morning from the database, an inbox and
+memory. None of that appears in a procurement file, and all of it shows up later as the thing that
+makes <a href="https://cube84.com/blog/hud-apr-caper-reporting-challenges-for-housing-nonprofits-and-how-to-simplify-them-in-salesforce">APR
+and CAPER cycles turn into an all-hands scramble</a>, because errors surface at audit time instead
+of at entry time. Counties that reach this point often end up
+<a href="https://cube84.com/blog/how-salesforce-supports-housing-nonprofits-along-with-hmis">running an
+operational layer alongside HMIS</a> to hold the work the database was never specified to hold, which
+is a reasonable outcome and a more expensive one than writing the page in the first place. The
+<a href="https://cube84.com/blog/salesforce-vs-bitfocus-vs-caseworthy-vs-wellsky-vs-bonterra-choosing-your-2026-hmis-strategy">trade-offs
+between compliance-first HMIS platforms and broader operational systems</a> are all knowable before a
+solicitation goes out.</p>
+
+<p>This county asked for a database and it very likely received a good one. If your own
+procurement is still in draft, the correction costs one page. Keep every data-standards requirement
+where it sits, keep the demonstration window you were already going to run, and add the five tasks a
+vendor has to complete in front of you. The document you have today will buy a compliant database.
+Whether it buys a system your staff can work inside depends on a page nobody has written yet.</p>
+
+<h2>Sources</h2>
+<ul>
+  <li>A county-level Request for Proposals for a Homeless Management Information System, issued June 2024 (12 pages), covering 39 participating agencies and approximately 329 users. Every figure and every quoted requirement in this piece was counted directly from that document. It is a public procurement record. The issuing county is not named here, and CUBE84 can supply the document on request.</li>
+  <li><a href="https://www.hudexchange.info/programs/hmis/hmis-data-standards/">HUD Exchange, FY 2026
+  HMIS Data Standards</a> — the current standards, and HUD's own statement of their scope.</li>
+  <li><a href="https://files.hudexchange.info/resources/documents/HMIS-Data-Dictionary.pdf">FY 2026
+  HMIS Data Dictionary</a> (PDF) — "Every data element required by HUD and the federal partners to be
+  stored within an HMIS is specified in this document."</li>
+  <li><a href="https://files.hudexchange.info/resources/documents/HMIS-Data-Standards-Manual-2024.pdf">FY
+  2024 HMIS Data Standards Manual</a> (PDF, version 1.7) &mdash; the edition the RFP cites, and the source of the quotations on HMIS implementation and CoC responsibility.</li>
+</ul>
+</body>
+</html>

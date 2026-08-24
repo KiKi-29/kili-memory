@@ -1,0 +1,426 @@
+<html><body><h1 style="color:#4187FF">PREVIEW LINK NOT YET INSERTED</h1>
+<p><strong>Preview:</strong> [HTML preview viewUrl goes on this line — no Google Drive connector was
+available on the run that wrote this revision, so both files were written to disk for a human to
+place.]</p>
+<hr>
+<p><strong>Board item:</strong> 12856100534 &middot; Blog Automation Intake Sheet (18427467231)<br>
+<strong>Type:</strong> blog &middot; <strong>Bucket:</strong> SEO-GEO-AEO &middot; net-new page, Target URL empty<br>
+<strong>Author:</strong> Sunil Jith S H &middot; <strong>Category:</strong> Nonprofit &middot; <strong>Locale:</strong> US<br>
+<strong>Revision:</strong> pass 2, applying five review comments. Board and Drive were not touched on
+this run.<br>
+<strong>Word count:</strong> 2,127 prose (paragraphs and headings), against 1,147 in pass 1 measured
+the same way. Counting tables and figure captions as well, 2,836 against 1,414. The board target was
+1,100. Comment 4 asked for depth in the four-questions section and that section carries
+most of the increase; nothing was padded elsewhere to match.<br>
+<strong>Slug:</strong> coordinated-entry-systems-hud-requires-work-falls-through (unchanged)<br>
+<strong>SEO title:</strong> What Is a Coordinated Entry System? Requirements and Workflow Gaps<br>
+<strong>Meta description:</strong> A coordinated entry system is HUD's required assessment and referral
+process. Two HMIS data elements carry all four of its components, which is why your case managers
+still keep a spreadsheet.<br>
+<strong>Keywords:</strong> coordinated entry system (primary), HMIS system, HMIS data quality,
+homeless management information system software<br>
+<strong>Cover:</strong> path B, inline SVG banner. No Chrome on the authoring machine, so no raster
+was produced and none was faked in a fallback typeface.</p>
+
+<p><strong>What changed in this pass:</strong></p>
+<ul>
+<li><strong>Comment 1.</strong> A new section, "Every Field Inside Elements 4.19 and 4.20," lists all
+nine fields of 4.19 and all seven fields of 4.20 verbatim from the HUD Exchange Response Descriptions
+tables, with response categories. These were read fresh from the source on 24 August 2026 rather than
+expanded from the summary in pass 1. A new Figure 2 counts the sixteen fields by who fills them.</li>
+<li><strong>Comment 2.</strong> The H2 "An Event Log Answers a Different Question Than a Case Manager
+Asks" became "Why a Compliance Record Cannot Run a Caseload," and the original sentence now sits
+inside the prose as a pull quote.</li>
+<li><strong>Comment 3.</strong> Every heading was audited for a demonstrative pronoun. "What This
+Looks Like on a Tuesday Morning" became "One Intake Conversation, Four Places to Type It." "Where to
+Start Depends on Which Symptom You Have" became "Which Symptom to Fix First." The rest were already
+skimmable and were left alone.</li>
+<li><strong>Comment 4.</strong> The four-questions section now gives each question its own H3 with the
+reasoning behind it, what a bad answer reveals, and what to do about it. New Figure 4 maps each
+question to the specific HUD field evidence that produces it.</li>
+<li><strong>Comment 5.</strong> New Figure 5 sequences the closing recommendations and states the
+reason for the order.</li>
+</ul>
+
+<p><strong>For the reviewer, on sourcing:</strong> every figure is traceable to HUD. The counts 13, 16
+and 29 were counted from the FY 2026 HMIS Data Standards Manual element lists and re-confirmed
+against the manual's navigation on 24 August 2026. The nine-field and seven-field counts, and the
+sixteen-field total, were counted from the Response Descriptions tables on the 4.19 and 4.20 element
+pages on the same date. All five outbound and internal links were re-checked and return HTTP 200.
+Nothing here is estimated.</p>
+
+<p><strong>One thing to look at closely.</strong> On the 4.20 page, HUD's instruction reads "Recording
+any event in Field 2, Responses 10 through 15, 17 and 18 indicates there is an opening for the client
+to be housed by the project," which names eight responses. Seven of the printed Event options carry
+that same sentence in their own descriptions. The response codes and the printed label order do not
+line up one to one, so the draft quotes HUD's instruction verbatim, reports the discrepancy, and
+tells the reader to map codes from the HMIS CSV specification rather than counting down the visible
+list. I did not assert a total count of Event options, because I could not map HUD's numbering onto
+the printed labels with confidence. If you would rather this caveat came out, the paragraph beginning
+"One caution worth carrying" is the one to cut.</p>
+
+<p>The Tuesday-morning example is one organization from the outbound tracker, anonymized to role and
+organization type, and it is labeled in the draft as illustrative rather than measured.</p>
+
+<p><strong>To approve:</strong> leave a comment on this document saying <strong>Approved</strong>. That
+comment is the only approval signal the pipeline can read. If anything needs changing, comment
+in place and it will be picked up on the next pass.</p>
+<hr>
+<article >
+
+  <h1>Coordinated Entry Systems: What HUD Requires and Where the Work Falls Through</h1>
+
+  <p>A coordinated entry system is the process a Continuum of Care uses to assess everyone in its
+  region who asks for homeless assistance and to refer them to housing against one shared set of
+  priorities. It is a federal requirement. <a href="https://www.ecfr.gov/current/title-24/section-578.7">24 CFR
+  578.7(a)(8)</a> directs every CoC to "establish and operate either a centralized or coordinated
+  assessment system that provides an initial, comprehensive assessment of the needs of individuals
+  and families for housing and services."</p>
+
+  <p>Read that requirement again and notice the noun. Assessment. That one word shapes every
+  coordinated entry system in the country, and it explains much of why your case managers still keep
+  a spreadsheet.</p>
+
+  <h2>What HUD Asks You to Record</h2>
+
+  <p>HUD names four core components of coordinated entry, and its guidance is precise about what the
+  data standards do with them. The coordinated entry data elements "standardize data
+  collection on core components of CE – access, assessment, referral, and prioritization," per
+  <a href="https://www.hudexchange.info/homelessness-assistance/coordinated-entry/">HUD Exchange</a>.
+  The verb is collection.</p>
+
+  <p>In the FY 2026 HMIS Data Standards Manual, all four are carried by two client-level elements.
+  <a href="https://www.hudexchange.info/programs/hmis/hmis-data-standards/standards/common-program-specific-data-elements/419-coordinated-entry-assessment/">4.19
+  Coordinated Entry Assessment</a> holds an assessment date, location, type and level, the CoC's own
+  questions and results, and a prioritization status.
+  <a href="https://www.hudexchange.info/programs/hmis/hmis-data-standards/standards/common-program-specific-data-elements/420-coordinated-entry-event/">4.20
+  Coordinated Entry Event</a> holds referral and placement events with their results. A third,
+  2.09 Coordinated Entry Participation Status, is a project-level flag.</p>
+
+  <table border="1" cellpadding="6" cellspacing="0">
+    <thead>
+      <tr><th>Core component</th><th>Where it lands in HMIS</th><th>Element</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>Access</td><td>Assessment location</td><td>4.19</td></tr>
+      <tr><td>Assessment</td><td>Date, type, level, questions, results</td><td>4.19</td></tr>
+      <tr><td>Prioritization</td><td>Prioritization Status field</td><td>4.19</td></tr>
+      <tr><td>Referral</td><td>Event and event result</td><td>4.20</td></tr>
+    </tbody>
+  </table>
+
+  <p>Set that against how specific the rest of the manual is. Counting its own element list, HUD
+  names 13 Universal Data Elements and 16 Common Program Specific Data Elements collected about
+  clients. That is 29 fields of federal precision about what must be recorded, and two carry the whole of
+  coordinated entry.</p>
+
+  <h3>Figure 1. Client-level HMIS data elements HUD specifies</h3>
+<p><em>In the HTML preview this is a bar chart drawn to scale. The numbers are identical.</em></p>
+<table border="1" cellpadding="6" cellspacing="0">
+<thead><tr><th>Measure</th><th>Count</th></tr></thead>
+<tbody>
+<tr><td>Client-level data elements HUD specifies (13 Universal + 16 Common Program Specific)</td><td>29</td></tr>
+<tr><td>Of those, carrying coordinated entry (4.19 Assessment, 4.20 Event)</td><td>2</td></tr>
+</tbody></table>
+<p><em>Source: HUD Exchange, FY 2026 HMIS Data Standards Manual. Counts taken from the manual's own
+Universal and Common Program Specific element lists.</em></p>
+
+  <h2>Every Field Inside Elements 4.19 and 4.20</h2>
+
+  <p>Two elements sounds thin until you open them, so here is the whole of both, field by field, as
+  the FY 2026 manual writes them. Sixteen fields carry coordinated entry in an HMIS. Nine sit in
+  4.19 and seven sit in 4.20. Reading the list is the fastest way to see what your system is
+  actually required to hold, and what it is quietly leaving to you.</p>
+
+  <h3>4.19 Coordinated Entry Assessment: nine fields</h3>
+
+  <table border="1" cellpadding="6" cellspacing="0">
+    <thead>
+      <tr><th>Field name</th><th>Response category or data type</th><th>What it records</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>Date of Assessment</td><td>Date</td><td>The date the assessment occurred</td></tr>
+      <tr><td>Assessment Location</td><td>Administrator-managed list of locations</td><td>Community-defined values, may derive from the HMIS project list</td></tr>
+      <tr><td>Assessment Type</td><td>Phone, Virtual, In Person</td><td>How the assessment was conducted</td></tr>
+      <tr><td>Assessment Level</td><td>Crisis Needs Assessment, Housing Needs Assessment</td><td>Immediate crisis needs, or in-depth housing needs</td></tr>
+      <tr><td>Assessment Questions</td><td>Locally determined fields</td><td>Every question asked, as key-value pairs</td></tr>
+      <tr><td>Assessment Answers</td><td>Locally determined fields</td><td>The client's response to each question</td></tr>
+      <tr><td>Assessment Result Type</td><td>Locally determined fields</td><td>Result categories the community defines</td></tr>
+      <tr><td>Assessment Result</td><td>Locally determined fields</td><td>The result for each result type</td></tr>
+      <tr><td>Prioritization Status</td><td>Placed on prioritization list, Not placed on prioritization list</td><td>Whether the client reached the community's housing priority list</td></tr>
+    </tbody>
+  </table>
+
+  <p>Notice how much of that list HUD hands back to you. Assessment Type, Assessment Level and
+  Prioritization Status arrive with fixed response options, so three of the nine fields are
+  standardized nationally. One is a date. The remaining five, meaning the location list and all four
+  question and result fields, are marked "locally determined" or administrator-managed, which is HUD
+  saying your CoC decides. That flexibility is deliberate and it is the reason two CoCs can run
+  entirely different assessments and both be compliant. It is also the reason nobody can hand you a
+  configuration and call it done.</p>
+
+  <h3>4.20 Coordinated Entry Event: seven fields</h3>
+
+  <table border="1" cellpadding="6" cellspacing="0">
+    <thead>
+      <tr><th>Field name</th><th>Response category or data type</th><th>What it records</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>Date of Event</td><td>Date</td><td>The date the event occurred</td></tr>
+      <tr><td>Event</td><td>Fixed list of problem-solving, assessment and referral options</td><td>The referral or intervention that took place</td></tr>
+      <tr><td>Problem Solving / Diversion / Rapid Resolution result</td><td>Yes, No</td><td>Whether the client was housed or re-housed in a safe alternative</td></tr>
+      <tr><td>Post-placement / follow-up case management result</td><td>Yes, No</td><td>Whether the client enrolled in the aftercare project</td></tr>
+      <tr><td>Location of Crisis Housing or Permanent Housing Referral</td><td>System-generated list of project IDs accepting CE referrals</td><td>Project name and HMIS project ID the client was referred to</td></tr>
+      <tr><td>Referral Result</td><td>Successful referral: client accepted; Unsuccessful referral: client rejected; Unsuccessful referral: provider rejected</td><td>How the referral resolved</td></tr>
+      <tr><td>Date of Result</td><td>Date</td><td>The date the referral was confirmed successful or unsuccessful</td></tr>
+    </tbody>
+  </table>
+
+  <p>The Event field is where the real detail lives. Its options run from problem-solving
+  conversations and referrals to a scheduled assessment, through service referrals for street
+  outreach and housing navigation, and on to referrals against an actual vacancy in emergency
+  shelter, transitional housing, joint TH-RRH, rapid rehousing, permanent supportive housing, other
+  permanent housing, and a Housing Stability Voucher. HUD marks the subset that means a door
+  genuinely opened: "Recording any event in Field 2, Responses 10 through 15, 17 and 18 indicates
+  there is an opening for the client to be housed by the project."</p>
+
+  <p>One caution worth carrying into a configuration review. On that same page, seven of the listed
+  options carry the sentence about an opening in their own descriptions, while the instruction above
+  numbers eight. The response codes and the printed label order do not line up one to one, so map
+  your event codes from the HMIS CSV specification rather than from the position of a label on the
+  page. Teams that count down the visible list instead of reading the codes get their opening
+  metrics wrong by one category, and it surfaces at reporting time.</p>
+
+  <p>Now hold the whole sixteen-field picture in view, because the gap is the point.</p>
+
+  <h3>Figure 2. All 16 coordinated entry fields, by who fills the field</h3>
+<p><em>In the HTML preview this is a bar chart drawn to scale against a 16-field total. The numbers
+are identical.</em></p>
+<table border="1" cellpadding="6" cellspacing="0">
+<thead><tr><th>Who fills the field</th><th>Fields</th></tr></thead>
+<tbody>
+<tr><td>HUD fixes the response options</td><td>7</td></tr>
+<tr><td>Your CoC or your system supplies the values</td><td>6</td></tr>
+<tr><td>Dates</td><td>3</td></tr>
+<tr><td><strong>Total across 4.19 and 4.20</strong></td><td><strong>16</strong></td></tr>
+<tr><td><strong>Fields carrying an owner, a due date or a next action</strong></td><td><strong>0</strong></td></tr>
+</tbody></table>
+<p><em>Source: fields counted directly from the Response Descriptions tables on the HUD Exchange pages
+for 4.19 Coordinated Entry Assessment and 4.20 Coordinated Entry Event, FY 2026 HMIS Data Standards
+Manual, read 24 August 2026. The zero is a true zero: neither element defines a field for an
+assignee, a deadline or a next step.</em></p>
+
+  <h2>Why a Compliance Record Cannot Run a Caseload</h2>
+
+  <p>Look at how HUD tells you to collect these sixteen fields. The collection point for each
+  element is "At Occurrence," and each is collected about the Head of Household. Both details sit on
+  the element pages.</p>
+
+  <p>So the record the federal government asks for is a log of things that already happened,
+  attached to one person per household. That is reasonable for a funder to want. It produces a
+  defensible APR, it lets a CoC prioritize across a region, and it shows whether referrals turn into
+  placements. Every one of those is a real use, and an HMIS that does them well is doing its job.</p>
+
+  <blockquote><p><strong>An event log answers a different question than a case manager asks.</strong></p></blockquote>
+
+  <p>A log tells you what happened. A case manager needs to know which referral has gone quiet,
+  whose income verification is about to expire, and which household is one document short of a unit
+  about to be offered to somebody else. None of those questions is answerable from the sixteen
+  fields, because none of them holds an owner, a due date, or a next action. HUD never asked it to.
+  The manual is a reporting specification, and it is a good one.</p>
+
+  <p>CUBE84 argued this about housing technology generally in a webinar on
+  <a href="https://cube84.com/webinar/housing-hmis-built-to-report-not-to-run">why most housing
+  systems were built to report rather than to run</a>. Coordinated entry is where the pattern bites
+  first, because it carries the most handoffs.</p>
+
+  <h2>One Intake Conversation, Four Places to Type It</h2>
+
+  <p>A director of housing services at a multi-county homeless services nonprofit described this to
+  us before a scheduled demo, unprompted. Staff there document into HMIS and into a separate
+  electronic health record, with an interface between the two still under construction. Until it
+  lands, the same client conversation gets typed twice, by the same person, on the same
+  afternoon.</p>
+
+  <p>That is one organization, so read it as an illustration rather than a measurement. The shape
+  will be familiar anyway.</p>
+
+  <h3>Figure 3. Where one intake conversation gets recorded</h3>
+<p><em>In the HTML preview this is a flow diagram. The content is identical.</em></p>
+<table border="1" cellpadding="6" cellspacing="0">
+<thead><tr><th>Destination</th><th>What it holds</th><th>Specified by HUD?</th></tr></thead>
+<tbody>
+<tr><td>HMIS: 4.19 Assessment, 4.20 Event</td><td>The required record</td><td>Yes</td></tr>
+<tr><td>Electronic health record</td><td>Interface to HMIS still being built</td><td>No</td></tr>
+<tr><td>Referral email to partner agency</td><td>Knows what was asked for</td><td>No</td></tr>
+<tr><td>Follow-up spreadsheet</td><td>Knows who needs a call back</td><td>No</td></tr>
+</tbody></table>
+<p><em>Destinations reported by a director of housing services at a multi-county homeless services
+nonprofit, anonymized to role and organization type. One organization, so treat it as illustrative.
+Element references from the FY 2026 HMIS Data Standards Manual.</em></p>
+
+  <p>Every arrow away from the required record is where a version of the truth starts to drift. The
+  spreadsheet knows who needs a call back. HMIS knows what HUD will be told. The referral email
+  knows what the partner agency was asked for. None of them knows what the others know, so somebody
+  rebuilds the picture before doing anything useful. Case managers do that reconstruction daily and
+  rarely count it as work. It looks like getting ready to start.</p>
+
+  <h2>Four Questions to Run Against Your Own Coordinated Entry System</h2>
+
+  <p>None of these needs a vendor in the room. Each one traces back to something specific in the
+  sixteen fields above, which is what makes them diagnostic rather than rhetorical. Run them against
+  the system you have, write the answers down, and treat those answers as the requirements for
+  whatever you do next.</p>
+
+  <h3>Figure 4. Each question, its field evidence, and what a bad answer means</h3>
+<p><em>In the HTML preview this is a four-row diagnostic panel. The content is identical.</em></p>
+<table border="1" cellpadding="6" cellspacing="0">
+<thead><tr><th>#</th><th>Question</th><th>The field evidence behind it</th><th>A bad answer means</th></tr></thead>
+<tbody>
+<tr><td>1</td><td>One person, one system, intake to referral?</td><td>4.19 and 4.20 are separate elements with separate collection points</td><td>Every handoff is a re-entry, and re-entry is where records split</td></tr>
+<tr><td>2</td><td>When a referral goes quiet, what tells you?</td><td>Referral Result is filled in on follow-up; nothing in the 16 fields is a deadline</td><td>Memory is your only control, and memory leaves with the staffer</td></tr>
+<tr><td>3</td><td>Where does a non-head-of-household appear?</td><td>Both elements are "Data Collected About: Head of Household"</td><td>The rest of the family lives wherever you happened to put them</td></tr>
+<tr><td>4</td><td>Before a report is due, does service stop?</td><td>Collection point for both elements is "At Occurrence"</td><td>Data is assembled at reporting time, against HUD's own instruction</td></tr>
+</tbody></table>
+<p><em>Field names, collection points and the head-of-household scope are quoted from the HUD Exchange
+pages for 4.19 and 4.20, FY 2026 HMIS Data Standards Manual.</em></p>
+
+  <h3>1. Can one person complete intake, assessment, and referral without leaving the system?</h3>
+
+  <p>Time it with a real case that is already open, and with the staffer who normally does it. The reason this question works is structural: 4.19
+  and 4.20 are two elements with two collection points, and most systems reflect that split in their
+  screens. So the moment assessment finishes, somebody navigates somewhere else to record the
+  referral, and often somewhere else again to tell the receiving project.</p>
+
+  <p>A bad answer sounds like a list of steps rather than a number of minutes. If your staff describe
+  a route through three screens and an email, the count of context switches is your real
+  measurement, and each one is a place where the record and the reality drift apart. Watch
+  particularly for the phrase "then I copy it into." That is double entry being described by someone
+  who has stopped noticing it.</p>
+
+  <p>What to do about it: put this question into your procurement document verbatim. It names an
+  outcome rather than an architecture, so no vendor can satisfy it on paper, and it is testable in a
+  live demo in under ten minutes. Ask to drive the demo yourself with a household of four.</p>
+
+  <h3>2. When a referral goes quiet, what tells somebody?</h3>
+
+  <p>This is the question that separates a record from a workflow. Referral Result in 4.20 has three
+  response options, and all three are recorded after somebody follows up and learns the answer. Date
+  of Result is filled in when the outcome becomes known. Neither field creates the follow-up, and
+  nothing in the sixteen fields sets a date by which silence becomes a problem.</p>
+
+  <p>If the honest answer is a person remembering, memory is your control. Memory does not survive
+  turnover, and in homeless services turnover is the norm rather than the exception. The version of
+  this answer to worry about most is "our team is really good about that," because it is usually true
+  and it is entirely dependent on the people currently in the chairs.</p>
+
+  <p>What to do about it: this is the cheapest of the four to fix and the fastest to show a result.
+  Put an owner and a due date on every open referral in whatever system already holds them, then
+  review the overdue list weekly with names attached. You are adding two fields and one meeting, and
+  you will find referrals that have been quiet for months. Fix this one first if you want early
+  credibility for a larger change.</p>
+
+  <h3>3. Where does a household member who is not the head of household appear?</h3>
+
+  <p>Both elements say "Data Collected About: Head of Household." That is an efficient rule for
+  regional prioritization, since a CoC ranks households rather than individuals. It also means the
+  federal record of your coordinated entry work describes one person per family.</p>
+
+  <p>A bad answer is any answer that names a location outside your system of record: a case note, an
+  attachment, a shared drive, somebody's own tracker. Ask specifically about a teenager aging toward
+  eighteen, a household member with a disability affecting unit selection, and a member whose income
+  changes eligibility. Those three details decide placements, and they routinely live nowhere
+  official.</p>
+
+  <p>What to do about it: decide deliberately where household-level detail belongs, write it down,
+  and make it the same place every time. The failure here is rarely that teams have no answer. It is
+  that they have four answers, one per case manager, and none of them is wrong enough to force a
+  decision.</p>
+
+  <h3>4. In the week before a report is due, does anyone stop serving clients?</h3>
+
+  <p>HUD's instruction for both elements is "At Occurrence," which means data is meant to be captured
+  as the work happens. A reporting crunch is evidence that it is being assembled afterward instead.
+  The crunch is the symptom, and the cause sits upstream in when and how validation happens.</p>
+
+  <p>A yes tells you something more specific than "we are busy." It tells you your data quality
+  checks run at reporting time rather than at entry time, so errors are discovered weeks after the
+  conversation that could have resolved them. By then the client may be unreachable, and the person
+  fixing the record is guessing. That guessing is the quiet reason data quality work feels
+  demoralizing.</p>
+
+  <p>What to do about it: move validation to the point of entry. Required fields, plausibility checks
+  and inline warnings while the client is still in the room cost a few seconds each and remove whole
+  days from the reporting cycle. Then measure the change by timing the next submission rather than by
+  asking whether it felt easier. Our walkthrough of
+  <a href="https://cube84.com/blog/hud-apr-caper-reporting-challenges-for-housing-nonprofits-and-how-to-simplify-them-in-salesforce">what
+  makes APR and CAPER submission harder than it should be</a> covers the mechanics.</p>
+
+  <h2>Which Symptom to Fix First</h2>
+
+  <p>Fixing this begins with deciding which symptom costs your team the most time this quarter,
+  because sequence matters more than scope. Each pairing below is explained underneath the table.</p>
+
+  <table border="1" cellpadding="6" cellspacing="0">
+    <thead>
+      <tr><th>If this is the symptom</th><th>Then address this first</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>Same client typed into two systems</td><td>One record of origin, with the second system fed from it</td></tr>
+      <tr><td>Referrals going quiet</td><td>An owner and a due date on every open referral</td></tr>
+      <tr><td>Data quality flags at APR time</td><td>Validation at the point of entry</td></tr>
+      <tr><td>Household detail living in a spreadsheet</td><td>A record that extends past the head of household</td></tr>
+      <tr><td>Nobody is sure who can decide</td><td>Confirm your HMIS lead agency before scoping anything</td></tr>
+    </tbody>
+  </table>
+
+  <p>Take double entry first, because it compounds. Every duplicated record adds a second place to
+  be wrong. Referrals going quiet is the cheapest to fix, since a due date and a named owner on an
+  existing record needs no new system. Data quality flags at reporting time come from the timing of
+  validation rather than the diligence of staff, and that is the part leadership most often gets
+  backwards. The governance question belongs last on the list and first on your calendar, because
+  confirming who can decide costs one conversation and unblocks everything after it.</p>
+
+  <h3>Figure 5. Order of work, and the reason for the order</h3>
+<p><em>In the HTML preview this is a sequencing diagram. The content is identical.</em></p>
+<table border="1" cellpadding="6" cellspacing="0">
+<thead><tr><th>Order</th><th>The move</th><th>Why it sits here</th></tr></thead>
+<tbody>
+<tr><td>Prerequisite</td><td>Confirm your HMIS lead agency</td><td>Last on the list of problems, first on the calendar. Nothing below can be decided without it.</td></tr>
+<tr><td>1</td><td>Owner and due date on every open referral</td><td>Cheapest change. Two fields and one weekly review, no new system.</td></tr>
+<tr><td>2</td><td>One record of origin, second system fed from it</td><td>Highest compounding cost. Each duplicate adds a second place to be wrong.</td></tr>
+<tr><td>3</td><td>Validation moved to the point of entry</td><td>Validation timing is the cause, so timing is the fix. HUD already says "At Occurrence".</td></tr>
+<tr><td>4</td><td>A record that extends past the head of household</td><td>Widest change, so it goes last. Both elements stop at one person per household.</td></tr>
+</tbody></table>
+<p><em>Sequence argued from the cost and prerequisite structure of each change rather than from
+measured data. The "At Occurrence" collection point and the head-of-household scope are from the HUD
+Exchange pages for 4.19 and 4.20, FY 2026 HMIS Data Standards Manual.</em></p>
+
+  <p>None of this asks you to replace HMIS. HMIS is where HUD's numbers live and it does that job.
+  Moving one household from crisis to stability is a different job, and it needs a record that
+  carries the next action rather than a log of the last one. If you inherited a vendor decision, our
+  <a href="https://cube84.com/blog/salesforce-vs-bitfocus-vs-caseworthy-vs-wellsky-vs-bonterra-choosing-your-2026-hmis-strategy">side-by-side
+  look at how the main HMIS products compare</a> sets out the criteria worth holding a product
+  against.</p>
+
+  <h2>Sources</h2>
+  <ul>
+    <li><a href="https://www.ecfr.gov/current/title-24/section-578.7">24 CFR 578.7, Responsibilities
+    of the Continuum of Care</a> (eCFR) — paragraph (a)(8) carries the centralized or coordinated
+    assessment system requirement, quoted verbatim above.</li>
+    <li><a href="https://www.hudexchange.info/homelessness-assistance/coordinated-entry/">HUD
+    Exchange, Coordinated Entry</a> — the four core components, and the statement that the CE data
+    elements standardize data collection on them.</li>
+    <li><a href="https://www.hudexchange.info/programs/hmis/hmis-data-standards/">FY 2026 HMIS Data
+    Standards Manual</a> (HUD Exchange) — the Universal and Common Program Specific element lists the
+    counts of 13, 16 and 2 were taken from.</li>
+    <li><a href="https://www.hudexchange.info/programs/hmis/hmis-data-standards/standards/common-program-specific-data-elements/419-coordinated-entry-assessment/">4.19
+    Coordinated Entry Assessment</a> — the nine-field Response Descriptions table reproduced above,
+    the "At Occurrence" collection point, and the head-of-household scope. Read 24 August 2026.</li>
+    <li><a href="https://www.hudexchange.info/programs/hmis/hmis-data-standards/standards/common-program-specific-data-elements/420-coordinated-entry-event/">4.20
+    Coordinated Entry Event</a> — the seven-field Response Descriptions table reproduced above, the
+    Event response list, and the quoted instruction on Responses 10 through 15, 17 and 18. Read
+    24 August 2026.</li>
+  </ul>
+
+</article></body></html>

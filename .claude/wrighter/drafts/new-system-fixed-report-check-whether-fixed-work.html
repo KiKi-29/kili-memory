@@ -1,0 +1,305 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>A New System Fixed the Report. Check Whether It Fixed the Work.</title>
+<meta name="description" content="A completed HMIS migration replaces the reporting layer. HUD's transition guidance carries one instruction column, headed Data Entry Requirement. Here is the test to run on a system already live.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700;800&family=Lato:wght@400;700&display=swap">
+<style>
+  body{margin:0;background:#fff;padding:0 20px 60px}
+  .c84-blog{font-family:'Lato',-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
+    color:#161616;line-height:1.7;font-size:18px;max-width:760px;margin:0 auto}
+  .c84-blog h1,.c84-blog h2,.c84-blog h3{font-family:'Poppins',-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
+    color:#161616;line-height:1.25;font-weight:700}
+  .c84-blog h1{font-size:38px;margin:0 0 8px}
+  .c84-blog h2{font-size:27px;margin:44px 0 12px}
+  .c84-blog h3{font-size:21px;margin:32px 0 8px}
+  .c84-blog p{margin:0 0 18px}
+  .c84-blog a{color:#4187FF;text-decoration:underline}
+  .c84-blog ul,.c84-blog ol{margin:0 0 18px 22px;padding:0}
+  .c84-blog li{margin:0 0 10px}
+  .c84-blog table{border-collapse:collapse;width:100%;margin:24px 0;font-size:16px}
+  .c84-blog th,.c84-blog td{border:1px solid #e2e2e2;padding:10px 14px;text-align:left;vertical-align:top}
+  .c84-blog th{background:#F6F6F6;font-family:'Poppins',sans-serif;font-weight:600}
+  .c84-blog td.num,.c84-blog th.num{text-align:right;font-variant-numeric:tabular-nums}
+  .c84-blog figure{margin:30px 0}
+  .c84-blog figcaption{font-size:14px;color:#5a5a5a;margin-top:8px}
+  .c84-blog .callout{background:#F6F6F6;border-left:4px solid #4187FF;padding:16px 20px;margin:24px 0;border-radius:4px}
+  .c84-blog blockquote{margin:26px 0;padding:4px 0 4px 20px;border-left:3px solid #4187FF;
+    font-family:'Poppins',sans-serif;font-weight:600;font-size:22px;line-height:1.4;color:#161616}
+  .c84-blog .byline{font-size:15px;color:#5a5a5a;margin:0 0 30px}
+  /* Cover banner — path B, inline SVG. No Chrome on the authoring machine. */
+  .c84-cover{max-width:1200px;margin:0 auto 34px}
+</style>
+</head>
+<body>
+
+<!-- ============================================================
+     COVER — path B, drawn as inline SVG. Same headline, kicker and
+     palette a rasterized cover would have used. Ring in electric
+     violet #7646FE per the housing-audience cover note.
+     ============================================================ -->
+<div class="c84-cover">
+<svg viewBox="0 0 1200 630" width="100%" role="img"
+     aria-label="Cover: A new system fixed the report. Check whether it fixed the work. For HMIS system administrators and CoC executive and program leadership."
+     xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="630" fill="#F6F6F6"/>
+  <circle cx="1140" cy="90" r="192" fill="none" stroke="#7646FE" stroke-width="36" opacity="0.9"/>
+  <rect x="72" y="150" width="64" height="8" rx="4" fill="#4187FF"/>
+  <text x="72" y="212" font-family="Poppins, Helvetica, Arial, sans-serif" font-size="20"
+        font-weight="700" fill="#4187FF" letter-spacing="2.8">HMIS ADMINS &amp; CoC LEADERSHIP</text>
+  <text font-family="Poppins, Helvetica, Arial, sans-serif" font-size="60" font-weight="800" fill="#161616">
+    <tspan x="72" y="300">A New System Fixed</tspan>
+    <tspan x="72" y="366">the Report. Check</tspan>
+    <tspan x="72" y="432">Whether It <tspan fill="#4187FF">Fixed</tspan></tspan>
+    <tspan x="72" y="498"><tspan fill="#4187FF">the Work.</tspan></tspan>
+  </text>
+  <text x="72" y="574" font-family="Poppins, Helvetica, Arial, sans-serif" font-size="22"
+        font-weight="700" fill="#161616">CUBE84</text>
+</svg>
+</div>
+
+<article class="c84-blog">
+
+  <h1>A New System Fixed the Report. Check Whether It Fixed the Work.</h1>
+  <p class="byline">By Sunil Jith S H &middot; For HMIS system administrators and CoC executive and program leadership</p>
+
+  <p>Three organizations closed the door on us this year for the same reason. Each had just finished
+  migrating its HMIS. New system live, reports coming out clean, question settled, and no appetite for a
+  conversation about operations for a full cycle. Three organizations is three organizations, so read that
+  as an observation and not a trend.</p>
+
+  <p>The reasoning holds as far as it goes. A migration is expensive and disruptive, and clean reports at the end of one mean something real got fixed. What got fixed was the reporting layer. Whether the work got better is a separate question, and nobody on those selection committees had been asked it.</p>
+
+  <h2>What a Migration Replaces</h2>
+
+  <p>Start with the guidance a Continuum of Care works from when its HMIS changes underneath it. HUD's
+  <em>HMIS Data Collection Requirements for Transition to FY 2026 HMIS Data Standards</em>, dated October
+  2025, runs to two pages. It carries a table of thirteen data element rows, and that table has exactly one
+  instruction column, headed <strong>Data Entry Requirement</strong>.</p>
+
+  <p>Read all thirteen rows and you learn precisely what your staff must now type, for which clients, from
+  which date. You learn nothing about whether they can type it in one place.</p>
+
+  <p>The pattern holds one level up. HUD's HMIS Guides and Tools library files every resource it publishes under six headings.</p>
+
+  <table>
+    <thead>
+      <tr><th>Section heading in HUD's HMIS Guides and Tools</th><th>What it governs</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>HMIS Data and Technical Standards</td><td>The record's required shape</td></tr>
+      <tr><td>HMIS Data Quality</td><td>Whether the record is complete and accurate</td></tr>
+      <tr><td>HMIS Leads and Governance</td><td>Who is accountable for the record</td></tr>
+      <tr><td>HMIS Privacy and Security</td><td>Who may see the record</td></tr>
+      <tr><td>Project Setup and Data Collection Resources</td><td>The configuration that produces the record</td></tr>
+      <tr><td>Vendor Programming and Data Exchange Resources</td><td>The reports that come out of the record</td></tr>
+    </tbody>
+  </table>
+
+  <p>All six govern the record, from its required shape through to the reports that come out of it. None governs the job that produces it. HUD's framing on the FY 2026 HMIS Data Standards page states the order out loud: the purpose of correct configuration is that "proper project setup and data collection will help ensure accurate project and system-level reporting."</p>
+
+  <p>Reporting is the terminal outcome there, and everything before it is a means. A committee that reads this guidance and concludes a clean report is the finish line has read it correctly. That is the problem worth naming.</p>
+
+  <h2>The Migration That Published Its Own Scope</h2>
+
+  <p>One county-level HMIS migration has its transition material in the public record, which makes this checkable. We describe it by type instead of naming it, because the argument needs the fact of publication and nothing else about the jurisdiction. The published scope splits into three countable parts.</p>
+
+  <p><strong>Eleven software requirements.</strong> One names a step in a case manager's job: a closed loop referral system. A second asks for customizable interfaces, and specifies their purpose as maximizing data collection and input efficiency, which illustrates the ordering under discussion. The other nine cover report generation, HUD exports, access permissions, browser support, and administrative tooling.</p>
+
+  <p><strong>Nine vendor services making up the migration.</strong> Installation, hosting, interfaces, HUD-mandated and local reports, a phased implementation plan, a data migration plan, training, backup and recovery, and data quality recommendations. Every one is real work a migration needs. None of the nine is a test against the job.</p>
+
+  <p><strong>Nine areas the implementation plan had to address.</strong> Timeline, organization chart, dedicated resources, software and hardware, acceptance testing criteria, training plan, preventive maintenance, backup contingency, and security. The fifth is where a test against the work would have lived. Those criteria were left for the vendor to propose.</p>
+
+  <figure>
+    <svg viewBox="0 0 760 288" width="100%" role="img" font-family="Lato, Helvetica, Arial, sans-serif"
+         aria-label="Bar chart. Of thirteen data entry instruction rows in HUD's transition guidance, zero name a step in the case manager's job. Of six section headings in HUD's HMIS Guides and Tools, zero do. Of eleven software requirements in the published county migration scope, one does. Of nine vendor services, zero do. Of nine implementation plan areas, zero do."
+         xmlns="http://www.w3.org/2000/svg">
+      <!-- value axis guide -->
+      <line x1="310" y1="18" x2="310" y2="252" stroke="#c9c9c9" stroke-width="1"/>
+
+      <!-- Row 1: 13 items, 0 name the work. scale = 340/13 = 26.153846 px per item -->
+      <text x="298" y="45" text-anchor="end" font-size="13" fill="#161616">HUD transition guidance rows</text>
+      <rect x="310" y="28" width="340.00" height="24" fill="#F6F6F6" stroke="#c9c9c9" stroke-width="1"/>
+      <text x="660" y="45" font-size="13" fill="#161616"><tspan font-weight="700" fill="#4187FF">0</tspan> of 13</text>
+
+      <!-- Row 2: 6 items, 0 name the work. 6 x 26.153846 = 156.92 -->
+      <text x="298" y="93" text-anchor="end" font-size="13" fill="#161616">HUD HMIS guidance sections</text>
+      <rect x="310" y="76" width="156.92" height="24" fill="#F6F6F6" stroke="#c9c9c9" stroke-width="1"/>
+      <text x="477" y="93" font-size="13" fill="#161616"><tspan font-weight="700" fill="#4187FF">0</tspan> of 6</text>
+
+      <!-- Row 3: 11 items, 1 names the work. 11 x 26.153846 = 287.69 ; 1 x 26.153846 = 26.15 -->
+      <text x="298" y="141" text-anchor="end" font-size="13" fill="#161616">Migration scope: software specs</text>
+      <rect x="310" y="124" width="287.69" height="24" fill="#F6F6F6" stroke="#c9c9c9" stroke-width="1"/>
+      <rect x="310" y="124" width="26.15" height="24" fill="#4187FF"/>
+      <text x="608" y="141" font-size="13" fill="#161616"><tspan font-weight="700" fill="#4187FF">1</tspan> of 11</text>
+
+      <!-- Row 4: 9 items, 0 name the work. 9 x 26.153846 = 235.38 -->
+      <text x="298" y="189" text-anchor="end" font-size="13" fill="#161616">Migration scope: vendor services</text>
+      <rect x="310" y="172" width="235.38" height="24" fill="#F6F6F6" stroke="#c9c9c9" stroke-width="1"/>
+      <text x="555" y="189" font-size="13" fill="#161616"><tspan font-weight="700" fill="#4187FF">0</tspan> of 9</text>
+
+      <!-- Row 5: 9 items, 0 name the work -->
+      <text x="298" y="237" text-anchor="end" font-size="13" fill="#161616">Migration: implementation areas</text>
+      <rect x="310" y="220" width="235.38" height="24" fill="#F6F6F6" stroke="#c9c9c9" stroke-width="1"/>
+      <text x="555" y="237" font-size="13" fill="#161616"><tspan font-weight="700" fill="#4187FF">0</tspan> of 9</text>
+
+      <!-- legend -->
+      <rect x="310" y="264" width="14" height="14" fill="#F6F6F6" stroke="#c9c9c9" stroke-width="1"/>
+      <text x="331" y="275" font-size="12" fill="#5a5a5a">All items in the section</text>
+      <rect x="480" y="264" width="14" height="14" fill="#4187FF"/>
+      <text x="501" y="275" font-size="12" fill="#5a5a5a">Items naming a step in the case manager's job</text>
+    </svg>
+    <figcaption>Bars are drawn to scale at 26.15 pixels per item. Sources: HUD, <em>HMIS Data Collection
+    Requirements for Transition to FY 2026 HMIS Data Standards</em>, October 2025, for the 13 rows; HUD
+    Exchange, HMIS Guides and Tools, for the 6 section headings; a county-level HMIS migration with publicly
+    documented transition material, counted by CUBE84, for the 11 software requirements, 9 vendor services
+    and 9 implementation plan areas.</figcaption>
+  </figure>
+
+  <h2>The Case a Committee Can Fairly Make</h2>
+
+  <p>Set out properly, the opposing argument is strong. Data entry conformance is exactly what HUD holds a Continuum of Care accountable for. Under 24 CFR 578.7(b), a CoC carries five HMIS obligations, and one of them is to review and approve a data quality plan. That plan is a named regulatory artifact. HUD's HMIS Data Quality Plan Worksheet organizes it around four principles: timeliness, completeness, accuracy, and consistency. The Annual Performance Report goes to HUD every operating year through Sage.</p>
+
+  <p>A committee scoping a migration to the compliance obligation is scoping to the thing it will be measured on. Widening that scope into a workflow redesign adds cost, schedule and political risk to a project already carrying plenty of all three. It also invites a fair objection: specifying how staff work narrows the vendor field toward whoever already builds that way.</p>
+
+  <p>The committee in the published case also put hands on the software. A test demonstration site was open to it for four weeks, and the final phase was a live system demonstration. Nobody bought this sight unseen, and none of it is negligence.</p>
+
+  <h2>Where the Reading Goes Wrong</h2>
+
+  <p>The obligation is real and this argument does not ask anyone to trade it away. Two things sit alongside it.</p>
+
+  <p>First, "optimize for data entry" specifies an output. Specifying an output leaves the path to it open, and the path is where staff either work inside the system or work around it. A program can produce an immaculate APR while referral chasing and document tracking both live in a spreadsheet, because the APR reads the record and cannot see how the record got there. Specifying the output is how a program arrives at a system its staff do not work in, which is the same failure as the system being retired.</p>
+
+  <p>Second, the regulation that creates the HMIS obligation creates another one immediately after it. Under
+  24 CFR 578.7(c)(1), the Continuum must coordinate the implementation of a housing and service system
+  covering, at minimum, outreach, engagement and assessment; shelter, housing and supportive services; and
+  prevention strategies. Three components of a working service system, required by the same rule, in the
+  same section, of the same body that requires the data quality plan.</p>
+
+  <figure>
+    <svg viewBox="0 0 760 300" width="100%" role="img"
+         aria-label="Two obligations from the same regulation. 24 CFR 578.7(b) sets five HMIS obligations, all five addressed by a migration. 24 CFR 578.7(c)(1) sets three components of a housing and service system, none addressed by a migration."
+         xmlns="http://www.w3.org/2000/svg">
+      <text x="380" y="22" text-anchor="middle" font-family="Poppins, Helvetica, Arial, sans-serif"
+            font-size="15" font-weight="700" fill="#161616">24 CFR 578.7 — Responsibilities of the Continuum of Care</text>
+      <line x1="60" y1="36" x2="700" y2="36" stroke="#c9c9c9" stroke-width="1"/>
+      <line x1="195" y1="36" x2="195" y2="58" stroke="#c9c9c9" stroke-width="1"/>
+      <line x1="565" y1="36" x2="565" y2="58" stroke="#c9c9c9" stroke-width="1"/>
+
+      <!-- Left: paragraph (b), 5 obligations, all 5 addressed -->
+      <rect x="30" y="58" width="330" height="222" fill="#F6F6F6" stroke="#c9c9c9" stroke-width="1"/>
+      <rect x="30" y="58" width="5" height="222" fill="#4187FF"/>
+      <text x="52" y="84" font-family="Poppins, Helvetica, Arial, sans-serif" font-size="14"
+            font-weight="700" fill="#161616">(b) Designating and operating an HMIS</text>
+      <text x="52" y="106" font-family="Lato, Helvetica, Arial, sans-serif" font-size="12.5"
+            font-weight="700" fill="#4187FF">5 obligations · migration addressed 5</text>
+      <g font-family="Lato, Helvetica, Arial, sans-serif" font-size="12.5" fill="#161616">
+        <text x="52" y="136">1. Designate a single HMIS</text>
+        <text x="52" y="160">2. Designate an HMIS Lead</text>
+        <text x="52" y="184">3. Approve privacy, security, data quality plans</text>
+        <text x="52" y="208">4. Ensure consistent participation</text>
+        <text x="52" y="232">5. Ensure HUD-compliant administration</text>
+      </g>
+      <text x="52" y="262" font-family="Lato, Helvetica, Arial, sans-serif" font-size="12"
+            fill="#5a5a5a">What the migration was scoped to.</text>
+
+      <!-- Right: paragraph (c)(1), 3 components, 0 addressed -->
+      <rect x="400" y="58" width="330" height="222" fill="#F6F6F6" stroke="#c9c9c9" stroke-width="1"/>
+      <rect x="400" y="58" width="5" height="222" fill="#161616"/>
+      <text x="422" y="84" font-family="Poppins, Helvetica, Arial, sans-serif" font-size="14"
+            font-weight="700" fill="#161616">(c)(1) A housing and service system</text>
+      <text x="422" y="106" font-family="Lato, Helvetica, Arial, sans-serif" font-size="12.5"
+            font-weight="700" fill="#161616">3 components · migration addressed 0</text>
+      <g font-family="Lato, Helvetica, Arial, sans-serif" font-size="12.5" fill="#161616">
+        <text x="422" y="136">1. Outreach, engagement, and assessment</text>
+        <text x="422" y="160">2. Shelter, housing, and supportive services</text>
+        <text x="422" y="184">3. Prevention strategies</text>
+      </g>
+      <text x="422" y="262" font-family="Lato, Helvetica, Arial, sans-serif" font-size="12"
+            fill="#5a5a5a">Untouched by a migration scoped to (b).</text>
+    </svg>
+    <figcaption>Source: 24 CFR 578.7, Responsibilities of the Continuum of Care. Counts are the numbered
+    sub-paragraphs of (b) and the enumerated components of (c)(1) as written in the regulation.</figcaption>
+  </figure>
+
+  <p>A migration scoped to 578.7(b) discharges all five of those obligations and touches none of the three
+  in 578.7(c)(1). Both paragraphs are HUD requirements. A committee that treated the first as the whole of
+  both did not misread its accountability. It read half of it.</p>
+
+  <h2>The Test You Can Run on a System That Is Already Live</h2>
+
+  <p>This needs no procurement and it works on a system that went live last quarter. Take one recently closed case, sit with the case manager who owns it, and walk it forward in the new system in front of you.</p>
+
+  <ol>
+    <li>Open a new intake and record the vulnerability assessment, from the first conversation through to a saved client record. Note every tool touched that is not the HMIS.</li>
+    <li>Collect and attach the documents the program requires: ID, income proof, disability verification, consent. Then find where the checklist tracking what is still missing actually lives.</li>
+    <li>Make a referral to a partner agency and record it. Then establish, inside the system, whether it was accepted, declined, or never answered.</li>
+    <li>Record an assessment and a progress note on the same client on the same day, without re-entering anything captured at intake.</li>
+    <li>Hand the case to a second staff member and ask them what happens next, using only the system.</li>
+  </ol>
+
+  <p>Count the exits. An exit is any moment the case manager leaves the system to finish a step: a spreadsheet, an email thread, a PDF, a message to a partner, a paper form, a notebook. A clean APR will not give you this number, because the report reads the record and never sees the route it traveled.</p>
+
+  <table>
+    <thead>
+      <tr><th class="num">Exits counted</th><th>What it means</th><th>What to do next</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="num">0</td>
+        <td>The migration fixed the work as well as the report</td>
+        <td>Write the walkthrough down and make it the acceptance test for the next system</td>
+      </tr>
+      <tr>
+        <td class="num">1&ndash;2</td>
+        <td>A workaround has quietly become policy</td>
+        <td>Name the two gaps and close them as a configuration change, not a procurement</td>
+      </tr>
+      <tr>
+        <td class="num">3+</td>
+        <td>The reporting layer was replaced and the work layer was not</td>
+        <td>Scope the work layer deliberately, alongside HMIS rather than instead of it</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <p>Three or more is the outcome a clean first APR most reliably hides. The reporting cycle after a migration tends to be calmer than the one before it, because the data got cleaned during the move. That calm is a one-time benefit of the move, and reading it as evidence about the workflow is how a committee closes the file.</p>
+
+  <h2>If the Count Comes Back Above Zero</h2>
+
+  <p>Nothing here argues the migration was wrong. A CoC has to run a designated HMIS that produces a defensible APR, and a system that cannot do that has to be replaced. The narrower claim is that the migration answered the reporting question and left the operating one open.</p>
+
+  <p>The practical move is to stop asking the HMIS to be two systems. It exists because HUD requires a database and requires reports out of it, and it is generally good at that. Moving one person from crisis to stability has a different shape: sequenced tasks, chased referrals, expiring documents, and continuity when staff turn over. We made the architectural case for that split in our webinar on <a href="https://cube84.com/webinar/housing-hmis-built-to-report-not-to-run">why most housing systems were built to report rather than to run</a>. If your next reporting cycle also worries you, our walkthrough of <a href="https://cube84.com/blog/hud-apr-caper-reporting-challenges-for-housing-nonprofits-and-how-to-simplify-them-in-salesforce">where APR and CAPER reporting breaks down for housing nonprofits</a> traces that symptom to the same root, and our comparison of <a href="https://cube84.com/blog/salesforce-vs-bitfocus-vs-caseworthy-vs-wellsky-vs-bonterra-choosing-your-2026-hmis-strategy">the 2026 HMIS strategy options</a> shows where each platform sits.</p>
+
+  <p>Run the walkthrough before the next competition cycle. It costs an afternoon, and it answers the
+  question the committee was never handed.</p>
+
+  <h2>Sources</h2>
+
+  <ul>
+    <li><a href="https://files.hudexchange.info/resources/documents/HMIS-Data-Collection-Requirements-for-Transition.pdf">HUD,
+    <em>HMIS Data Collection Requirements for Transition to FY 2026 HMIS Data Standards</em></a>, October
+    2025. Two pages, thirteen data element rows, one instruction column headed "Data Entry Requirement".</li>
+    <li><a href="https://www.hudexchange.info/programs/hmis/hmis-guides/">HUD Exchange, HMIS Guides and
+    Tools</a>. The six section headings quoted above, and the HMIS Data Quality Plan Worksheet's four
+    principles of timeliness, completeness, accuracy and consistency.</li>
+    <li><a href="https://www.hudexchange.info/programs/hmis/hmis-data-standards/">HUD Exchange, FY 2026 HMIS
+    Data Standards</a>. Effective October 1, 2025, and the source of the quoted sentence on project setup
+    and reporting.</li>
+    <li><a href="https://www.ecfr.gov/current/title-24/section-578.7">24 CFR 578.7, Responsibilities of the
+    Continuum of Care</a>. Paragraph (b), five HMIS obligations. Paragraph (c)(1), three components of the
+    housing and service system.</li>
+    <li>A county-level HMIS migration with publicly documented transition material. Deliberately not linked
+    and not named, because the document identifies a specific jurisdiction and the argument needs only the
+    fact that the material was published. The eleven software requirements, nine vendor services and nine
+    implementation plan areas were counted by CUBE84 directly from that document.</li>
+  </ul>
+
+</article>
+
+</body>
+</html>

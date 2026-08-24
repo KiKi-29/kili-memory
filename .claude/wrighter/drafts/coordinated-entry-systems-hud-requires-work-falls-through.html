@@ -1,0 +1,567 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Coordinated Entry Systems: What HUD Requires and Where the Work Falls Through</title>
+<meta name="description" content="A coordinated entry system is HUD's required assessment and referral process. Two HMIS data elements carry all four of its components, which is why your case managers still keep a spreadsheet.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700;800&family=Lato:wght@400;700&display=swap">
+<style>
+  body{margin:0;background:#fff;padding:0 20px 60px}
+  .c84-blog{font-family:'Lato',-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
+    color:#161616;line-height:1.7;font-size:18px;max-width:760px;margin:0 auto}
+  .c84-blog h1,.c84-blog h2,.c84-blog h3{font-family:'Poppins',-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
+    color:#161616;line-height:1.25;font-weight:700}
+  .c84-blog h1{font-size:38px;margin:0 0 8px}
+  .c84-blog h2{font-size:27px;margin:44px 0 12px}
+  .c84-blog h3{font-size:21px;margin:32px 0 8px}
+  .c84-blog p{margin:0 0 18px}
+  .c84-blog a{color:#4187FF;text-decoration:underline}
+  .c84-blog ul,.c84-blog ol{margin:0 0 18px 22px;padding:0}
+  .c84-blog li{margin:0 0 8px}
+  .c84-blog table{border-collapse:collapse;width:100%;margin:24px 0;font-size:16px}
+  .c84-blog th,.c84-blog td{border:1px solid #e2e2e2;padding:10px 14px;text-align:left;vertical-align:top}
+  .c84-blog th{background:#F6F6F6;font-family:'Poppins',sans-serif;font-weight:600}
+  .c84-blog td.num,.c84-blog th.num{text-align:right;font-variant-numeric:tabular-nums}
+  .c84-blog figure{margin:28px 0}
+  .c84-blog figcaption{font-size:14px;color:#5a5a5a;margin-top:8px}
+  .c84-blog .callout{background:#F6F6F6;border-left:4px solid #4187FF;padding:16px 20px;margin:24px 0;border-radius:4px}
+  .c84-blog blockquote{margin:26px 0;padding:4px 0 4px 20px;border-left:3px solid #4187FF;
+    font-family:'Poppins',sans-serif;font-weight:600;font-size:22px;line-height:1.4;color:#161616}
+  /* Cover banner — path B, inline SVG. No Chrome on the authoring machine. */
+  .c84-cover{max-width:1200px;margin:0 auto 34px}
+</style>
+</head>
+<body>
+
+<!-- ============================================================
+     COVER — path B, drawn as inline SVG. Same headline, kicker and
+     palette a rasterized cover would have used. Ring in electric
+     violet #7646FE per the housing-audience cover note.
+     ============================================================ -->
+<div class="c84-cover">
+<svg viewBox="0 0 1200 630" width="100%" role="img"
+     aria-label="Cover: Coordinated Entry Systems. What HUD requires and where the work falls through. For case managers and CoC program staff."
+     xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="630" fill="#F6F6F6"/>
+  <circle cx="1140" cy="90" r="192" fill="none" stroke="#7646FE" stroke-width="36" opacity="0.9"/>
+  <rect x="72" y="150" width="64" height="8" rx="4" fill="#4187FF"/>
+  <text x="72" y="212" font-family="Poppins, Helvetica, Arial, sans-serif" font-size="20"
+        font-weight="700" fill="#4187FF" letter-spacing="2.8">CASE MANAGERS &amp; CoC PROGRAM STAFF</text>
+  <text font-family="Poppins, Helvetica, Arial, sans-serif" font-size="62" font-weight="800" fill="#161616">
+    <tspan x="72" y="300">Coordinated Entry</tspan>
+    <tspan x="72" y="366">Systems: What HUD</tspan>
+    <tspan x="72" y="432">Requires, and Where</tspan>
+    <tspan x="72" y="498">the <tspan fill="#4187FF">Work Falls Through</tspan></tspan>
+  </text>
+  <text x="72" y="574" font-family="Poppins, Helvetica, Arial, sans-serif" font-size="22"
+        font-weight="700" fill="#161616">CUBE84</text>
+</svg>
+</div>
+
+<article class="c84-blog">
+
+  <h1>Coordinated Entry Systems: What HUD Requires and Where the Work Falls Through</h1>
+
+  <p>A coordinated entry system is the process a Continuum of Care uses to assess everyone in its
+  region who asks for homeless assistance and to refer them to housing against one shared set of
+  priorities. It is a federal requirement. <a href="https://www.ecfr.gov/current/title-24/section-578.7">24 CFR
+  578.7(a)(8)</a> directs every CoC to "establish and operate either a centralized or coordinated
+  assessment system that provides an initial, comprehensive assessment of the needs of individuals
+  and families for housing and services."</p>
+
+  <p>Read that requirement again and notice the noun. Assessment. That one word shapes every
+  coordinated entry system in the country, and it explains much of why your case managers still keep
+  a spreadsheet.</p>
+
+  <h2>What HUD Asks You to Record</h2>
+
+  <p>HUD names four core components of coordinated entry, and its guidance is precise about what the
+  data standards do with them. The coordinated entry data elements "standardize data
+  collection on core components of CE – access, assessment, referral, and prioritization," per
+  <a href="https://www.hudexchange.info/homelessness-assistance/coordinated-entry/">HUD Exchange</a>.
+  The verb is collection.</p>
+
+  <p>In the FY 2026 HMIS Data Standards Manual, all four are carried by two client-level elements.
+  <a href="https://www.hudexchange.info/programs/hmis/hmis-data-standards/standards/common-program-specific-data-elements/419-coordinated-entry-assessment/">4.19
+  Coordinated Entry Assessment</a> holds an assessment date, location, type and level, the CoC's own
+  questions and results, and a prioritization status.
+  <a href="https://www.hudexchange.info/programs/hmis/hmis-data-standards/standards/common-program-specific-data-elements/420-coordinated-entry-event/">4.20
+  Coordinated Entry Event</a> holds referral and placement events with their results. A third,
+  2.09 Coordinated Entry Participation Status, is a project-level flag.</p>
+
+  <table>
+    <thead>
+      <tr><th>Core component</th><th>Where it lands in HMIS</th><th>Element</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>Access</td><td>Assessment location</td><td>4.19</td></tr>
+      <tr><td>Assessment</td><td>Date, type, level, questions, results</td><td>4.19</td></tr>
+      <tr><td>Prioritization</td><td>Prioritization Status field</td><td>4.19</td></tr>
+      <tr><td>Referral</td><td>Event and event result</td><td>4.20</td></tr>
+    </tbody>
+  </table>
+
+  <p>Set that against how specific the rest of the manual is. Counting its own element list, HUD
+  names 13 Universal Data Elements and 16 Common Program Specific Data Elements collected about
+  clients. That is 29 fields of federal precision about what must be recorded, and two carry the whole of
+  coordinated entry.</p>
+
+  <figure>
+    <!-- Drawn to scale. max = 29, bar area = 335px from x=255.
+         29 -> 335.00px   |   2 -> 335 * 2/29 = 23.10px -->
+    <svg viewBox="0 0 660 190" width="100%" role="img"
+         font-family="Lato, Helvetica, Arial, sans-serif"
+         aria-label="Bar chart. HUD specifies 29 client-level data elements for an HMIS-participating project. Two of those 29 carry coordinated entry."
+         xmlns="http://www.w3.org/2000/svg">
+      <text x="0" y="46" font-size="14" fill="#161616">Client-level data elements HUD specifies</text>
+      <text x="0" y="64" font-size="12" fill="#5a5a5a">(13 Universal + 16 Common Program Specific)</text>
+      <rect x="255" y="30" width="335.00" height="38" fill="#4187FF"/>
+      <text x="598" y="55" font-size="15" fill="#161616">29</text>
+
+      <text x="0" y="126" font-size="14" fill="#161616">Of those, carrying coordinated entry</text>
+      <text x="0" y="144" font-size="12" fill="#5a5a5a">(4.19 Assessment, 4.20 Event)</text>
+      <rect x="255" y="110" width="23.10" height="38" fill="#4187FF"/>
+      <text x="288" y="135" font-size="15" fill="#161616">2</text>
+
+      <line x1="255" y1="168" x2="590" y2="168" stroke="#c9c9c9" stroke-width="1"/>
+      <text x="255" y="186" font-size="11" fill="#5a5a5a">0</text>
+      <text x="590" y="186" font-size="11" fill="#5a5a5a" text-anchor="end">29 elements</text>
+    </svg>
+    <figcaption>Figure 1. Bars drawn to scale. Source: HUD Exchange, FY 2026 HMIS Data Standards
+    Manual — counts taken from the manual's own Universal and Common Program Specific element
+    lists.</figcaption>
+  </figure>
+
+  <h2>Every Field Inside Elements 4.19 and 4.20</h2>
+
+  <p>Two elements sounds thin until you open them, so here is the whole of both, field by field, as
+  the FY 2026 manual writes them. Sixteen fields carry coordinated entry in an HMIS. Nine sit in
+  4.19 and seven sit in 4.20. Reading the list is the fastest way to see what your system is
+  actually required to hold, and what it is quietly leaving to you.</p>
+
+  <h3>4.19 Coordinated Entry Assessment: nine fields</h3>
+
+  <table>
+    <thead>
+      <tr><th>Field name</th><th>Response category or data type</th><th>What it records</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>Date of Assessment</td><td>Date</td><td>The date the assessment occurred</td></tr>
+      <tr><td>Assessment Location</td><td>Administrator-managed list of locations</td><td>Community-defined values, may derive from the HMIS project list</td></tr>
+      <tr><td>Assessment Type</td><td>Phone, Virtual, In Person</td><td>How the assessment was conducted</td></tr>
+      <tr><td>Assessment Level</td><td>Crisis Needs Assessment, Housing Needs Assessment</td><td>Immediate crisis needs, or in-depth housing needs</td></tr>
+      <tr><td>Assessment Questions</td><td>Locally determined fields</td><td>Every question asked, as key-value pairs</td></tr>
+      <tr><td>Assessment Answers</td><td>Locally determined fields</td><td>The client's response to each question</td></tr>
+      <tr><td>Assessment Result Type</td><td>Locally determined fields</td><td>Result categories the community defines</td></tr>
+      <tr><td>Assessment Result</td><td>Locally determined fields</td><td>The result for each result type</td></tr>
+      <tr><td>Prioritization Status</td><td>Placed on prioritization list, Not placed on prioritization list</td><td>Whether the client reached the community's housing priority list</td></tr>
+    </tbody>
+  </table>
+
+  <p>Notice how much of that list HUD hands back to you. Assessment Type, Assessment Level and
+  Prioritization Status arrive with fixed response options, so three of the nine fields are
+  standardized nationally. One is a date. The remaining five, meaning the location list and all four
+  question and result fields, are marked "locally determined" or administrator-managed, which is HUD
+  saying your CoC decides. That flexibility is deliberate and it is the reason two CoCs can run
+  entirely different assessments and both be compliant. It is also the reason nobody can hand you a
+  configuration and call it done.</p>
+
+  <h3>4.20 Coordinated Entry Event: seven fields</h3>
+
+  <table>
+    <thead>
+      <tr><th>Field name</th><th>Response category or data type</th><th>What it records</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>Date of Event</td><td>Date</td><td>The date the event occurred</td></tr>
+      <tr><td>Event</td><td>Fixed list of problem-solving, assessment and referral options</td><td>The referral or intervention that took place</td></tr>
+      <tr><td>Problem Solving / Diversion / Rapid Resolution result</td><td>Yes, No</td><td>Whether the client was housed or re-housed in a safe alternative</td></tr>
+      <tr><td>Post-placement / follow-up case management result</td><td>Yes, No</td><td>Whether the client enrolled in the aftercare project</td></tr>
+      <tr><td>Location of Crisis Housing or Permanent Housing Referral</td><td>System-generated list of project IDs accepting CE referrals</td><td>Project name and HMIS project ID the client was referred to</td></tr>
+      <tr><td>Referral Result</td><td>Successful referral: client accepted; Unsuccessful referral: client rejected; Unsuccessful referral: provider rejected</td><td>How the referral resolved</td></tr>
+      <tr><td>Date of Result</td><td>Date</td><td>The date the referral was confirmed successful or unsuccessful</td></tr>
+    </tbody>
+  </table>
+
+  <p>The Event field is where the real detail lives. Its options run from problem-solving
+  conversations and referrals to a scheduled assessment, through service referrals for street
+  outreach and housing navigation, and on to referrals against an actual vacancy in emergency
+  shelter, transitional housing, joint TH-RRH, rapid rehousing, permanent supportive housing, other
+  permanent housing, and a Housing Stability Voucher. HUD marks the subset that means a door
+  genuinely opened: "Recording any event in Field 2, Responses 10 through 15, 17 and 18 indicates
+  there is an opening for the client to be housed by the project."</p>
+
+  <p>One caution worth carrying into a configuration review. On that same page, seven of the listed
+  options carry the sentence about an opening in their own descriptions, while the instruction above
+  numbers eight. The response codes and the printed label order do not line up one to one, so map
+  your event codes from the HMIS CSV specification rather than from the position of a label on the
+  page. Teams that count down the visible list instead of reading the codes get their opening
+  metrics wrong by one category, and it surfaces at reporting time.</p>
+
+  <p>Now hold the whole sixteen-field picture in view, because the gap is the point.</p>
+
+  <figure>
+    <!-- Drawn to scale. Total = 16 fields across 4.19 (9) and 4.20 (7).
+         Bar area = 320px from x=300, so 1 field = 20px.
+         7 -> 140px | 6 -> 120px | 3 -> 60px | 0 -> 0px (label only) -->
+    <svg viewBox="0 0 660 268" width="100%" role="img"
+         font-family="Lato, Helvetica, Arial, sans-serif"
+         aria-label="Bar chart of the 16 fields across HMIS elements 4.19 and 4.20. HUD fixes the response options for 7 fields. The community or the system supplies 6. Three are dates. Zero of the 16 carry an owner, a due date or a next action."
+         xmlns="http://www.w3.org/2000/svg">
+      <text x="0" y="18" font-size="13" font-weight="700" fill="#161616">All 16 coordinated entry fields, by who fills the field</text>
+
+      <text x="0" y="48" font-size="13" fill="#161616">HUD fixes the response options</text>
+      <rect x="300" y="34" width="140" height="30" fill="#4187FF"/>
+      <text x="450" y="55" font-size="14" fill="#161616">7</text>
+
+      <text x="0" y="98" font-size="13" fill="#161616">Your CoC or your system supplies</text>
+      <rect x="300" y="84" width="120" height="30" fill="#4187FF"/>
+      <text x="430" y="105" font-size="14" fill="#161616">6</text>
+
+      <text x="0" y="148" font-size="13" fill="#161616">Dates</text>
+      <rect x="300" y="134" width="60" height="30" fill="#4187FF"/>
+      <text x="370" y="155" font-size="14" fill="#161616">3</text>
+
+      <text x="0" y="198" font-size="13" font-weight="700" fill="#161616">Carry an owner, a due date</text>
+      <text x="0" y="215" font-size="13" font-weight="700" fill="#161616">or a next action</text>
+      <line x1="300" y1="184" x2="300" y2="214" stroke="#161616" stroke-width="2"/>
+      <text x="310" y="205" font-size="14" font-weight="700" fill="#161616">0</text>
+
+      <line x1="300" y1="234" x2="620" y2="234" stroke="#c9c9c9" stroke-width="1"/>
+      <text x="300" y="252" font-size="11" fill="#5a5a5a">0</text>
+      <text x="620" y="252" font-size="11" fill="#5a5a5a" text-anchor="end">16 fields</text>
+    </svg>
+    <figcaption>Figure 2. Bars drawn to scale against a 16-field total. Fields counted directly from
+    the Response Descriptions tables on the HUD Exchange pages for 4.19 Coordinated Entry Assessment
+    and 4.20 Coordinated Entry Event, FY 2026 HMIS Data Standards Manual, read 24 August 2026. The
+    zero is a true zero: neither element defines a field for an assignee, a deadline or a next
+    step.</figcaption>
+  </figure>
+
+  <h2>Why a Compliance Record Cannot Run a Caseload</h2>
+
+  <p>Look at how HUD tells you to collect these sixteen fields. The collection point for each
+  element is "At Occurrence," and each is collected about the Head of Household. Both details sit on
+  the element pages.</p>
+
+  <p>So the record the federal government asks for is a log of things that already happened,
+  attached to one person per household. That is reasonable for a funder to want. It produces a
+  defensible APR, it lets a CoC prioritize across a region, and it shows whether referrals turn into
+  placements. Every one of those is a real use, and an HMIS that does them well is doing its job.</p>
+
+  <blockquote>An event log answers a different question than a case manager asks.</blockquote>
+
+  <p>A log tells you what happened. A case manager needs to know which referral has gone quiet,
+  whose income verification is about to expire, and which household is one document short of a unit
+  about to be offered to somebody else. None of those questions is answerable from the sixteen
+  fields, because none of them holds an owner, a due date, or a next action. HUD never asked it to.
+  The manual is a reporting specification, and it is a good one.</p>
+
+  <p>CUBE84 argued this about housing technology generally in a webinar on
+  <a href="https://cube84.com/webinar/housing-hmis-built-to-report-not-to-run">why most housing
+  systems were built to report rather than to run</a>. Coordinated entry is where the pattern bites
+  first, because it carries the most handoffs.</p>
+
+  <h2>One Intake Conversation, Four Places to Type It</h2>
+
+  <p>A director of housing services at a multi-county homeless services nonprofit described this to
+  us before a scheduled demo, unprompted. Staff there document into HMIS and into a separate
+  electronic health record, with an interface between the two still under construction. Until it
+  lands, the same client conversation gets typed twice, by the same person, on the same
+  afternoon.</p>
+
+  <p>That is one organization, so read it as an illustration rather than a measurement. The shape
+  will be familiar anyway.</p>
+
+  <figure>
+    <svg viewBox="0 0 660 320" width="100%" role="img"
+         font-family="Lato, Helvetica, Arial, sans-serif"
+         aria-label="Diagram. One intake conversation is recorded into four destinations: HMIS elements 4.19 and 4.20, which HUD specifies, plus an electronic health record, a referral email to a partner agency, and a follow-up spreadsheet, none of which HUD specifies."
+         xmlns="http://www.w3.org/2000/svg">
+      <rect x="6" y="128" width="184" height="64" rx="6" fill="#fff" stroke="#4187FF" stroke-width="2"/>
+      <text x="98" y="154" font-size="14" font-weight="700" text-anchor="middle" fill="#161616">One intake</text>
+      <text x="98" y="174" font-size="14" font-weight="700" text-anchor="middle" fill="#161616">conversation</text>
+
+      <path d="M190 160 C 260 160, 260 44, 330 44"   fill="none" stroke="#161616" stroke-width="1.4"/>
+      <path d="M190 160 C 260 160, 260 116, 330 116" fill="none" stroke="#161616" stroke-width="1.4"/>
+      <path d="M190 160 C 260 160, 260 188, 330 188" fill="none" stroke="#161616" stroke-width="1.4"/>
+      <path d="M190 160 C 260 160, 260 260, 330 260" fill="none" stroke="#161616" stroke-width="1.4"/>
+
+      <rect x="330" y="20" width="324" height="48" rx="6" fill="#4187FF"/>
+      <text x="346" y="41" font-size="14" font-weight="700" fill="#ffffff">HMIS: 4.19 Assessment, 4.20 Event</text>
+      <text x="346" y="59" font-size="12" fill="#ffffff">The one destination HUD specifies</text>
+
+      <rect x="330" y="92" width="324" height="48" rx="6" fill="#F6F6F6" stroke="#161616" stroke-width="1"/>
+      <text x="346" y="113" font-size="14" font-weight="700" fill="#161616">Electronic health record</text>
+      <text x="346" y="131" font-size="12" fill="#5a5a5a">Interface to HMIS still being built</text>
+
+      <rect x="330" y="164" width="324" height="48" rx="6" fill="#F6F6F6" stroke="#161616" stroke-width="1"/>
+      <text x="346" y="185" font-size="14" font-weight="700" fill="#161616">Referral email to partner agency</text>
+      <text x="346" y="203" font-size="12" fill="#5a5a5a">Knows what was asked for</text>
+
+      <rect x="330" y="236" width="324" height="48" rx="6" fill="#F6F6F6" stroke="#161616" stroke-width="1"/>
+      <text x="346" y="257" font-size="14" font-weight="700" fill="#161616">Follow-up spreadsheet</text>
+      <text x="346" y="275" font-size="12" fill="#5a5a5a">Knows who needs a call back</text>
+
+      <text x="6" y="310" font-size="12" fill="#5a5a5a">One of four destinations is the one the data standards describe.</text>
+    </svg>
+    <figcaption>Figure 3. Destinations reported by a director of housing services at a multi-county
+    homeless services nonprofit, anonymized to role and organization type. One organization, so
+    treat it as illustrative. Element references from the FY 2026 HMIS Data Standards
+    Manual.</figcaption>
+  </figure>
+
+  <p>Every arrow away from the required record is where a version of the truth starts to drift. The
+  spreadsheet knows who needs a call back. HMIS knows what HUD will be told. The referral email
+  knows what the partner agency was asked for. None of them knows what the others know, so somebody
+  rebuilds the picture before doing anything useful. Case managers do that reconstruction daily and
+  rarely count it as work. It looks like getting ready to start.</p>
+
+  <h2>Four Questions to Run Against Your Own Coordinated Entry System</h2>
+
+  <p>None of these needs a vendor in the room. Each one traces back to something specific in the
+  sixteen fields above, which is what makes them diagnostic rather than rhetorical. Run them against
+  the system you have, write the answers down, and treat those answers as the requirements for
+  whatever you do next.</p>
+
+  <figure>
+    <svg viewBox="0 0 660 452" width="100%" role="img"
+         font-family="Lato, Helvetica, Arial, sans-serif"
+         aria-label="Diagnostic panel. Four questions, each with the HMIS field evidence behind it and what a bad answer reveals. One: can one person finish intake, assessment and referral in one system. Two: when a referral goes quiet, what tells somebody. Three: where does a non-head-of-household member appear. Four: does anyone stop serving clients before a report is due."
+         xmlns="http://www.w3.org/2000/svg">
+      <rect x="0" y="0" width="660" height="30" fill="#161616"/>
+      <text x="14" y="20" font-size="13" font-weight="700" fill="#ffffff">Question</text>
+      <text x="286" y="20" font-size="13" font-weight="700" fill="#ffffff">The field evidence behind it</text>
+      <text x="500" y="20" font-size="13" font-weight="700" fill="#ffffff">A bad answer means</text>
+
+      <!-- Row 1 -->
+      <rect x="0" y="30" width="660" height="104" fill="#F6F6F6"/>
+      <rect x="0" y="30" width="4" height="104" fill="#4187FF"/>
+      <circle cx="26" cy="56" r="12" fill="#4187FF"/>
+      <text x="26" y="61" font-size="13" font-weight="700" text-anchor="middle" fill="#ffffff">1</text>
+      <text x="46" y="52" font-size="13" font-weight="700" fill="#161616">One person, one system,</text>
+      <text x="46" y="69" font-size="13" font-weight="700" fill="#161616">intake to referral?</text>
+      <text x="286" y="52" font-size="12" fill="#161616">4.19 and 4.20 are separate</text>
+      <text x="286" y="68" font-size="12" fill="#161616">elements with separate</text>
+      <text x="286" y="84" font-size="12" fill="#161616">collection points</text>
+      <text x="500" y="52" font-size="12" fill="#161616">Every handoff is a</text>
+      <text x="500" y="68" font-size="12" fill="#161616">re-entry, and re-entry</text>
+      <text x="500" y="84" font-size="12" fill="#161616">is where records split</text>
+
+      <!-- Row 2 -->
+      <rect x="0" y="136" width="660" height="104" fill="#ffffff"/>
+      <rect x="0" y="136" width="4" height="104" fill="#4187FF"/>
+      <circle cx="26" cy="162" r="12" fill="#4187FF"/>
+      <text x="26" y="167" font-size="13" font-weight="700" text-anchor="middle" fill="#ffffff">2</text>
+      <text x="46" y="158" font-size="13" font-weight="700" fill="#161616">When a referral goes</text>
+      <text x="46" y="175" font-size="13" font-weight="700" fill="#161616">quiet, what tells you?</text>
+      <text x="286" y="158" font-size="12" fill="#161616">Referral Result is filled in</text>
+      <text x="286" y="174" font-size="12" fill="#161616">on follow-up; nothing in</text>
+      <text x="286" y="190" font-size="12" fill="#161616">the 16 fields is a deadline</text>
+      <text x="500" y="158" font-size="12" fill="#161616">Memory is your only</text>
+      <text x="500" y="174" font-size="12" fill="#161616">control, and memory</text>
+      <text x="500" y="190" font-size="12" fill="#161616">leaves with the staffer</text>
+
+      <!-- Row 3 -->
+      <rect x="0" y="242" width="660" height="104" fill="#F6F6F6"/>
+      <rect x="0" y="242" width="4" height="104" fill="#4187FF"/>
+      <circle cx="26" cy="268" r="12" fill="#4187FF"/>
+      <text x="26" y="273" font-size="13" font-weight="700" text-anchor="middle" fill="#ffffff">3</text>
+      <text x="46" y="264" font-size="13" font-weight="700" fill="#161616">Where does a non-head-</text>
+      <text x="46" y="281" font-size="13" font-weight="700" fill="#161616">of-household appear?</text>
+      <text x="286" y="264" font-size="12" fill="#161616">Both elements are</text>
+      <text x="286" y="280" font-size="12" fill="#161616">"Data Collected About:</text>
+      <text x="286" y="296" font-size="12" fill="#161616">Head of Household"</text>
+      <text x="500" y="264" font-size="12" fill="#161616">The rest of the family</text>
+      <text x="500" y="280" font-size="12" fill="#161616">lives wherever you</text>
+      <text x="500" y="296" font-size="12" fill="#161616">happened to put them</text>
+
+      <!-- Row 4 -->
+      <rect x="0" y="348" width="660" height="104" fill="#ffffff"/>
+      <rect x="0" y="348" width="4" height="104" fill="#4187FF"/>
+      <circle cx="26" cy="374" r="12" fill="#4187FF"/>
+      <text x="26" y="379" font-size="13" font-weight="700" text-anchor="middle" fill="#ffffff">4</text>
+      <text x="46" y="370" font-size="13" font-weight="700" fill="#161616">Before a report is due,</text>
+      <text x="46" y="387" font-size="13" font-weight="700" fill="#161616">does service stop?</text>
+      <text x="286" y="370" font-size="12" fill="#161616">Collection point for both</text>
+      <text x="286" y="386" font-size="12" fill="#161616">elements is "At</text>
+      <text x="286" y="402" font-size="12" fill="#161616">Occurrence"</text>
+      <text x="500" y="370" font-size="12" fill="#161616">Data is assembled at</text>
+      <text x="500" y="386" font-size="12" fill="#161616">reporting time, against</text>
+      <text x="500" y="402" font-size="12" fill="#161616">HUD's own instruction</text>
+    </svg>
+    <figcaption>Figure 4. Each question mapped to the field-level evidence that produces it. Field
+    names, collection points and the head-of-household scope are quoted from the HUD Exchange pages
+    for 4.19 and 4.20, FY 2026 HMIS Data Standards Manual.</figcaption>
+  </figure>
+
+  <h3>1. Can one person complete intake, assessment, and referral without leaving the system?</h3>
+
+  <p>Time it with a real case that is already open, and with the staffer who normally does it. The reason this question works is structural: 4.19
+  and 4.20 are two elements with two collection points, and most systems reflect that split in their
+  screens. So the moment assessment finishes, somebody navigates somewhere else to record the
+  referral, and often somewhere else again to tell the receiving project.</p>
+
+  <p>A bad answer sounds like a list of steps rather than a number of minutes. If your staff describe
+  a route through three screens and an email, the count of context switches is your real
+  measurement, and each one is a place where the record and the reality drift apart. Watch
+  particularly for the phrase "then I copy it into." That is double entry being described by someone
+  who has stopped noticing it.</p>
+
+  <p>What to do about it: put this question into your procurement document verbatim. It names an
+  outcome rather than an architecture, so no vendor can satisfy it on paper, and it is testable in a
+  live demo in under ten minutes. Ask to drive the demo yourself with a household of four.</p>
+
+  <h3>2. When a referral goes quiet, what tells somebody?</h3>
+
+  <p>This is the question that separates a record from a workflow. Referral Result in 4.20 has three
+  response options, and all three are recorded after somebody follows up and learns the answer. Date
+  of Result is filled in when the outcome becomes known. Neither field creates the follow-up, and
+  nothing in the sixteen fields sets a date by which silence becomes a problem.</p>
+
+  <p>If the honest answer is a person remembering, memory is your control. Memory does not survive
+  turnover, and in homeless services turnover is the norm rather than the exception. The version of
+  this answer to worry about most is "our team is really good about that," because it is usually true
+  and it is entirely dependent on the people currently in the chairs.</p>
+
+  <p>What to do about it: this is the cheapest of the four to fix and the fastest to show a result.
+  Put an owner and a due date on every open referral in whatever system already holds them, then
+  review the overdue list weekly with names attached. You are adding two fields and one meeting, and
+  you will find referrals that have been quiet for months. Fix this one first if you want early
+  credibility for a larger change.</p>
+
+  <h3>3. Where does a household member who is not the head of household appear?</h3>
+
+  <p>Both elements say "Data Collected About: Head of Household." That is an efficient rule for
+  regional prioritization, since a CoC ranks households rather than individuals. It also means the
+  federal record of your coordinated entry work describes one person per family.</p>
+
+  <p>A bad answer is any answer that names a location outside your system of record: a case note, an
+  attachment, a shared drive, somebody's own tracker. Ask specifically about a teenager aging toward
+  eighteen, a household member with a disability affecting unit selection, and a member whose income
+  changes eligibility. Those three details decide placements, and they routinely live nowhere
+  official.</p>
+
+  <p>What to do about it: decide deliberately where household-level detail belongs, write it down,
+  and make it the same place every time. The failure here is rarely that teams have no answer. It is
+  that they have four answers, one per case manager, and none of them is wrong enough to force a
+  decision.</p>
+
+  <h3>4. In the week before a report is due, does anyone stop serving clients?</h3>
+
+  <p>HUD's instruction for both elements is "At Occurrence," which means data is meant to be captured
+  as the work happens. A reporting crunch is evidence that it is being assembled afterward instead.
+  The crunch is the symptom, and the cause sits upstream in when and how validation happens.</p>
+
+  <p>A yes tells you something more specific than "we are busy." It tells you your data quality
+  checks run at reporting time rather than at entry time, so errors are discovered weeks after the
+  conversation that could have resolved them. By then the client may be unreachable, and the person
+  fixing the record is guessing. That guessing is the quiet reason data quality work feels
+  demoralizing.</p>
+
+  <p>What to do about it: move validation to the point of entry. Required fields, plausibility checks
+  and inline warnings while the client is still in the room cost a few seconds each and remove whole
+  days from the reporting cycle. Then measure the change by timing the next submission rather than by
+  asking whether it felt easier. Our walkthrough of
+  <a href="https://cube84.com/blog/hud-apr-caper-reporting-challenges-for-housing-nonprofits-and-how-to-simplify-them-in-salesforce">what
+  makes APR and CAPER submission harder than it should be</a> covers the mechanics.</p>
+
+  <h2>Which Symptom to Fix First</h2>
+
+  <p>Fixing this begins with deciding which symptom costs your team the most time this quarter,
+  because sequence matters more than scope. Each pairing below is explained underneath the table.</p>
+
+  <table>
+    <thead>
+      <tr><th>If this is the symptom</th><th>Then address this first</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>Same client typed into two systems</td><td>One record of origin, with the second system fed from it</td></tr>
+      <tr><td>Referrals going quiet</td><td>An owner and a due date on every open referral</td></tr>
+      <tr><td>Data quality flags at APR time</td><td>Validation at the point of entry</td></tr>
+      <tr><td>Household detail living in a spreadsheet</td><td>A record that extends past the head of household</td></tr>
+      <tr><td>Nobody is sure who can decide</td><td>Confirm your HMIS lead agency before scoping anything</td></tr>
+    </tbody>
+  </table>
+
+  <p>Take double entry first, because it compounds. Every duplicated record adds a second place to
+  be wrong. Referrals going quiet is the cheapest to fix, since a due date and a named owner on an
+  existing record needs no new system. Data quality flags at reporting time come from the timing of
+  validation rather than the diligence of staff, and that is the part leadership most often gets
+  backwards. The governance question belongs last on the list and first on your calendar, because
+  confirming who can decide costs one conversation and unblocks everything after it.</p>
+
+  <figure>
+    <svg viewBox="0 0 660 330" width="100%" role="img"
+         font-family="Lato, Helvetica, Arial, sans-serif"
+         aria-label="Sequencing diagram. Confirm the HMIS lead agency first as a prerequisite. Then fix referrals going quiet as the cheapest change, then double entry because it compounds, then move validation to the point of entry, then extend the record past the head of household."
+         xmlns="http://www.w3.org/2000/svg">
+      <text x="0" y="16" font-size="13" font-weight="700" fill="#161616">Order of work, and the reason for the order</text>
+
+      <!-- Step 0: prerequisite -->
+      <rect x="0" y="30" width="660" height="46" rx="4" fill="#161616"/>
+      <text x="16" y="49" font-size="13" font-weight="700" fill="#ffffff">First, and it is a phone call: confirm your HMIS lead agency</text>
+      <text x="16" y="67" font-size="12" fill="#ffffff">Last on the list of problems, first on the calendar. Nothing below can be decided without it.</text>
+
+      <!-- Ladder -->
+      <line x1="30" y1="88" x2="30" y2="298" stroke="#4187FF" stroke-width="2"/>
+
+      <circle cx="30" cy="108" r="9" fill="#4187FF"/>
+      <text x="30" y="112" font-size="11" font-weight="700" text-anchor="middle" fill="#ffffff">1</text>
+      <text x="52" y="105" font-size="13" font-weight="700" fill="#161616">Owner and due date on every open referral</text>
+      <text x="52" y="122" font-size="12" fill="#5a5a5a">Cheapest change. Two fields and one weekly review, no new system.</text>
+
+      <circle cx="30" cy="168" r="9" fill="#4187FF"/>
+      <text x="30" y="172" font-size="11" font-weight="700" text-anchor="middle" fill="#ffffff">2</text>
+      <text x="52" y="165" font-size="13" font-weight="700" fill="#161616">One record of origin, second system fed from it</text>
+      <text x="52" y="182" font-size="12" fill="#5a5a5a">Highest compounding cost. Each duplicate adds a second place to be wrong.</text>
+
+      <circle cx="30" cy="228" r="9" fill="#4187FF"/>
+      <text x="30" y="232" font-size="11" font-weight="700" text-anchor="middle" fill="#ffffff">3</text>
+      <text x="52" y="225" font-size="13" font-weight="700" fill="#161616">Validation moved to the point of entry</text>
+      <text x="52" y="242" font-size="12" fill="#5a5a5a">Validation timing is the cause, so timing is the fix. HUD already says "At Occurrence".</text>
+
+      <circle cx="30" cy="288" r="9" fill="#4187FF"/>
+      <text x="30" y="292" font-size="11" font-weight="700" text-anchor="middle" fill="#ffffff">4</text>
+      <text x="52" y="285" font-size="13" font-weight="700" fill="#161616">A record that extends past the head of household</text>
+      <text x="52" y="302" font-size="12" fill="#5a5a5a">Widest change, so it goes last. Both elements stop at one person per household.</text>
+    </svg>
+    <figcaption>Figure 5. Sequence argued from the cost and prerequisite structure of each change
+    rather than from measured data. The "At Occurrence" collection point and the head-of-household
+    scope are from the HUD Exchange pages for 4.19 and 4.20, FY 2026 HMIS Data Standards
+    Manual.</figcaption>
+  </figure>
+
+  <p>None of this asks you to replace HMIS. HMIS is where HUD's numbers live and it does that job.
+  Moving one household from crisis to stability is a different job, and it needs a record that
+  carries the next action rather than a log of the last one. If you inherited a vendor decision, our
+  <a href="https://cube84.com/blog/salesforce-vs-bitfocus-vs-caseworthy-vs-wellsky-vs-bonterra-choosing-your-2026-hmis-strategy">side-by-side
+  look at how the main HMIS products compare</a> sets out the criteria worth holding a product
+  against.</p>
+
+  <h2>Sources</h2>
+  <ul>
+    <li><a href="https://www.ecfr.gov/current/title-24/section-578.7">24 CFR 578.7, Responsibilities
+    of the Continuum of Care</a> (eCFR) — paragraph (a)(8) carries the centralized or coordinated
+    assessment system requirement, quoted verbatim above.</li>
+    <li><a href="https://www.hudexchange.info/homelessness-assistance/coordinated-entry/">HUD
+    Exchange, Coordinated Entry</a> — the four core components, and the statement that the CE data
+    elements standardize data collection on them.</li>
+    <li><a href="https://www.hudexchange.info/programs/hmis/hmis-data-standards/">FY 2026 HMIS Data
+    Standards Manual</a> (HUD Exchange) — the Universal and Common Program Specific element lists the
+    counts of 13, 16 and 2 were taken from.</li>
+    <li><a href="https://www.hudexchange.info/programs/hmis/hmis-data-standards/standards/common-program-specific-data-elements/419-coordinated-entry-assessment/">4.19
+    Coordinated Entry Assessment</a> — the nine-field Response Descriptions table reproduced above,
+    the "At Occurrence" collection point, and the head-of-household scope. Read 24 August 2026.</li>
+    <li><a href="https://www.hudexchange.info/programs/hmis/hmis-data-standards/standards/common-program-specific-data-elements/420-coordinated-entry-event/">4.20
+    Coordinated Entry Event</a> — the seven-field Response Descriptions table reproduced above, the
+    Event response list, and the quoted instruction on Responses 10 through 15, 17 and 18. Read
+    24 August 2026.</li>
+  </ul>
+
+</article>
+</body>
+</html>

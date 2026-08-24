@@ -1,0 +1,352 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>An RFP Written From the Data Standards Can Only Buy a Database | CUBE84</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700;800&family=Lato:wght@400;700&display=swap" rel="stylesheet">
+<style>
+  body{margin:0;padding:0 20px 80px;background:#fff}
+  .c84-blog{font-family:'Lato',-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
+    color:#161616;line-height:1.7;font-size:18px;max-width:760px;margin:0 auto}
+  .c84-blog h1,.c84-blog h2,.c84-blog h3{font-family:'Poppins',-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
+    color:#161616;line-height:1.25;font-weight:700}
+  .c84-blog h1{font-size:38px;margin:0 0 8px}
+  .c84-blog h2{font-size:27px;margin:44px 0 12px}
+  .c84-blog h3{font-size:21px;margin:28px 0 8px}
+  .c84-blog p{margin:0 0 18px}
+  .c84-blog a{color:#4187FF;text-decoration:underline}
+  .c84-blog ul,.c84-blog ol{margin:0 0 18px 22px;padding:0}
+  .c84-blog li{margin:0 0 8px}
+  .c84-blog table{border-collapse:collapse;width:100%;margin:24px 0;font-size:16px}
+  .c84-blog th,.c84-blog td{border:1px solid #e2e2e2;padding:10px 14px;text-align:left;vertical-align:top}
+  .c84-blog th{background:#F6F6F6;font-family:'Poppins',sans-serif;font-weight:600}
+  .c84-blog td.num,.c84-blog th.num{text-align:right;font-variant-numeric:tabular-nums}
+  .c84-blog figure{margin:28px 0}
+  .c84-blog figcaption{font-size:14px;color:#5a5a5a;margin-top:8px}
+  .c84-blog .callout{background:#F6F6F6;border-left:4px solid #4187FF;padding:16px 20px;margin:24px 0;border-radius:4px}
+  .c84-blog .cover{margin:0 auto 36px;display:block;max-width:760px;width:100%}
+  .c84-blog blockquote{margin:0 0 18px;padding:0 0 0 20px;border-left:3px solid #4187FF;color:#161616;font-style:normal}
+</style>
+</head>
+<body>
+<article class="c84-blog">
+
+<!-- ============ COVER (inline SVG, Path B) ============ -->
+<svg class="cover" viewBox="0 0 1200 630" role="img"
+     aria-label="Cover: An RFP Written From the Data Standards Can Only Buy a Database. For CoC leads and county HMIS procurement. Eleven software requirements, one describes the work.">
+  <rect x="0" y="0" width="1200" height="630" fill="#183459"/>
+  <circle cx="1200" cy="60" r="210" fill="none" stroke="#4187FF" stroke-width="36" opacity="0.28"/>
+  <text x="72" y="128" font-family="Poppins, sans-serif" font-weight="700" font-size="20"
+        letter-spacing="2.8" fill="#47c09d">FOR COC LEADS AND COUNTY HMIS PROCUREMENT</text>
+  <rect x="72" y="152" width="64" height="8" rx="4" fill="#4187FF"/>
+  <text x="72" y="262" font-family="Poppins, sans-serif" font-weight="800" font-size="64" fill="#F6F6F6">
+    <tspan x="72" dy="0">An RFP Written From the</tspan>
+    <tspan x="72" dy="76">Data Standards Can Only</tspan>
+    <tspan x="72" dy="76">Buy a <tspan fill="#47c09d">Database</tspan></tspan>
+  </text>
+  <text x="72" y="562" font-family="Poppins, sans-serif" font-weight="700" font-size="22" fill="#F6F6F6">CUBE84</text>
+  <text x="1128" y="540" text-anchor="end" font-family="Lato, sans-serif" font-weight="700" font-size="19" fill="#F6F6F6">11 software requirements</text>
+  <text x="1128" y="568" text-anchor="end" font-family="Lato, sans-serif" font-weight="700" font-size="19" fill="#47c09d">1 describes the work</text>
+</svg>
+
+<h1>An RFP Written From the Data Standards Can Only Buy a Database</h1>
+
+<p>In June 2024, a county housing and community development department went to market for a new Homeless Management Information System. The request for proposals it published
+runs to twelve pages and it is competently drafted. It covers hosting, data migration, training,
+warranty, backup and recovery, browser compatibility, insurance and cost. It states that thirty-nine
+agencies and approximately three hundred twenty-nine current users depend on the system being
+replaced.</p>
+
+<p>Search that document for the phrase "case management." It appears zero times. "Workflow" appears
+zero times. "Coordinated entry" appears zero times.</p>
+
+<p>None of that is careless. The RFP is faithful to the source it was written from, and the source
+is where the trouble starts. Its entire technical specification, Exhibit 2, consists of three
+hyperlinks pointing to two HUD documents: the HMIS Data Standards Manual and the HMIS Data
+Dictionary. Everything the county said about what the software must be, it said by reference to
+those two files.</p>
+
+<p>Those two files describe what has to be reported. On the work that produces the data, they are
+close to silent. So a county that specifies an HMIS this way will receive proposals for an excellent
+reporting database, award the contract to the best of them, and find out eighteen months later that
+its case managers still run the actual job out of a spreadsheet.</p>
+
+<h2>What the RFP Asks the Software To Do</h2>
+
+<p>Section IV.A lists eleven software requirements. Vendors answer these line by line, so they are
+the county's own account of what an HMIS is for.</p>
+
+<p>Three of the eleven ask for reports: a comprehensive report generator producing HUD-mandated,
+CoC-specific and ad hoc reports, data interoperability including the mandated HUD 2024 CSV and
+Hashed CSV exports, and user-interactive reports and dashboards. Two ask about getting data into
+fields, through customizable interfaces and conditional formatting inside the data collection
+module. Two are administrative, covering system oversight tools and the ability for administrators
+to upload and download data without vendor assistance. Two describe the shape of the purchase rather
+than the product, namely a commercial off-the-shelf web application and compatibility with four
+named browsers. One governs access, restricting client data by release-of-information permission.</p>
+
+<p>That leaves one. Requirement ten reads, in full: "Closed loop referral system." Six words, no
+elaboration and no test attached, sitting underneath three separate requirements about reporting.</p>
+
+<table>
+  <thead>
+    <tr><th class="num">#</th><th>Requirement, as written in Section IV.A</th><th>What it specifies</th></tr>
+  </thead>
+  <tbody>
+    <tr><td class="num">1</td><td>Commercial off-the-shelf web-based software application</td><td>Purchase form</td></tr>
+    <tr><td class="num">2</td><td>Restrict access to client data by Release of Information permission</td><td>Access control</td></tr>
+    <tr><td class="num">3</td><td>Comprehensive report generator: HUD-mandated, CoC-specific, ad hoc</td><td>Reporting</td></tr>
+    <tr><td class="num">4</td><td>System oversight and management tools</td><td>Administration</td></tr>
+    <tr><td class="num">5</td><td>Customizable interfaces for data collection and input efficiency</td><td>Data entry</td></tr>
+    <tr><td class="num">6</td><td>Data interoperability, plus HUD 2024 CSV and Hashed CSV exports</td><td>Reporting</td></tr>
+    <tr><td class="num">7</td><td>Compatibility with Edge, Firefox, Chrome and Safari</td><td>Purchase form</td></tr>
+    <tr><td class="num">8</td><td>Conditional formatting within data collection module</td><td>Data entry</td></tr>
+    <tr><td class="num">9</td><td>Administrators upload and download data without vendor assistance</td><td>Administration</td></tr>
+    <tr><td class="num">10</td><td>Closed loop referral system</td><td><strong>The daily work</strong></td></tr>
+    <tr><td class="num">11</td><td>Capability to generate user interactive reports and dashboards</td><td>Reporting</td></tr>
+  </tbody>
+</table>
+
+<figure>
+  <svg viewBox="0 0 620 300" role="img" width="100%"
+       aria-label="Bar chart of the eleven software requirements in Section IV.A grouped by what they specify: reporting 3, data entry 2, administration 2, purchase form 2, access control 1, the daily work 1."
+       font-family="Lato, sans-serif">
+    <line x1="50" y1="210" x2="590" y2="210" stroke="#c9c9c9" stroke-width="1"/>
+    <line x1="50" y1="150" x2="590" y2="150" stroke="#ededed" stroke-width="1"/>
+    <line x1="50" y1="90"  x2="590" y2="90"  stroke="#ededed" stroke-width="1"/>
+    <line x1="50" y1="30"  x2="590" y2="30"  stroke="#ededed" stroke-width="1"/>
+    <text x="42" y="214" text-anchor="end" font-size="11" fill="#5a5a5a">0</text>
+    <text x="42" y="154" text-anchor="end" font-size="11" fill="#5a5a5a">1</text>
+    <text x="42" y="94"  text-anchor="end" font-size="11" fill="#5a5a5a">2</text>
+    <text x="42" y="34"  text-anchor="end" font-size="11" fill="#5a5a5a">3</text>
+
+    <rect x="58"  y="30"  width="62" height="180" fill="#4187FF"/>
+    <rect x="148" y="90"  width="62" height="120" fill="#4187FF"/>
+    <rect x="238" y="90"  width="62" height="120" fill="#4187FF"/>
+    <rect x="328" y="90"  width="62" height="120" fill="#4187FF"/>
+    <rect x="418" y="150" width="62" height="60"  fill="#4187FF"/>
+    <rect x="508" y="150" width="62" height="60"  fill="#4187FF" stroke="#161616" stroke-width="2"/>
+
+    <text x="89"  y="22"  text-anchor="middle" font-size="14" font-weight="700" fill="#161616">3</text>
+    <text x="179" y="82"  text-anchor="middle" font-size="14" font-weight="700" fill="#161616">2</text>
+    <text x="269" y="82"  text-anchor="middle" font-size="14" font-weight="700" fill="#161616">2</text>
+    <text x="359" y="82"  text-anchor="middle" font-size="14" font-weight="700" fill="#161616">2</text>
+    <text x="449" y="142" text-anchor="middle" font-size="14" font-weight="700" fill="#161616">1</text>
+    <text x="539" y="142" text-anchor="middle" font-size="14" font-weight="700" fill="#161616">1</text>
+
+    <text x="89"  y="228" text-anchor="middle" font-size="11" fill="#5a5a5a">Reporting and</text>
+    <text x="89"  y="242" text-anchor="middle" font-size="11" fill="#5a5a5a">exports</text>
+    <text x="179" y="228" text-anchor="middle" font-size="11" fill="#5a5a5a">Data entry</text>
+    <text x="179" y="242" text-anchor="middle" font-size="11" fill="#5a5a5a">and forms</text>
+    <text x="269" y="228" text-anchor="middle" font-size="11" fill="#5a5a5a">System</text>
+    <text x="269" y="242" text-anchor="middle" font-size="11" fill="#5a5a5a">administration</text>
+    <text x="359" y="228" text-anchor="middle" font-size="11" fill="#5a5a5a">Purchase form</text>
+    <text x="359" y="242" text-anchor="middle" font-size="11" fill="#5a5a5a">and browsers</text>
+    <text x="449" y="228" text-anchor="middle" font-size="11" fill="#5a5a5a">Access</text>
+    <text x="449" y="242" text-anchor="middle" font-size="11" fill="#5a5a5a">control</text>
+    <text x="539" y="228" text-anchor="middle" font-size="11" font-weight="700" fill="#161616">The daily</text>
+    <text x="539" y="242" text-anchor="middle" font-size="11" font-weight="700" fill="#161616">work</text>
+  </svg>
+  <figcaption>The eleven software requirements in Section IV.A, grouped by what each one specifies.
+  Counted directly from the document. Source: a county-level Request for Proposals for a Homeless Management Information System, issued June 2024, Section IV.A. The issuing county is not named here. The document is a public procurement record and CUBE84 can supply it on request.</figcaption>
+</figure>
+
+<h2>HUD Asked For Less Than the County Handed Over</h2>
+
+<p>The reasonable assumption is that the county deferred to HUD because HUD had already settled the
+question. HUD has not.</p>
+
+<p>The FY 2026 HMIS Data Dictionary states its own scope in a single sentence: "Every data element
+required by HUD and the federal partners to be stored within an HMIS is specified in this document."
+Stored. The cover of that same document carries the line "FOR REPORTING BEGINNING OCTOBER 1, 2025."
+The Data Standards Manual describes itself as "a guide to collecting quantitative data," and then
+sets out the whole of what it demands of the software: "An HMIS must be able to collect all the data
+elements defined within these HMIS Data Standards, support the system logic identified, and ensure
+that the visibility of data elements is appropriate to the Project Type and Funding Sources for any
+given project."</p>
+
+<p>Collect the elements, support the logic, control the visibility. HUD stops there on purpose. On
+how any of it should behave for the person using it, the Data Dictionary says the decision belongs
+to somebody else: "The methods vendors may elect to make dependencies visible/invisible, colored for
+completion/shaded out, etc. are up to each software developer."</p>
+
+<p>Then the Manual says the thing that ought to change how these documents get written.</p>
+
+<blockquote><p>"CoCs and HMIS leads are responsible for verifying that any software they use meets
+their needs, including federal reporting requirements."</p></blockquote>
+
+<p>Read the preposition. Reporting is named as one item inside the set of things a CoC needs, and
+verifying the rest is assigned to the CoC by name. HUD delegated the work-shaped half of the
+specification to the buyer, in writing, on the same page where it declines to endorse any product.
+An RFP assembled from the standards alone hands that assignment straight back to a federal agency
+that already refused it.</p>
+
+<div class="callout">
+<p>This is the mechanism behind a pattern we have argued before. CUBE84's webinar on why
+<a href="https://cube84.com/webinar/housing-hmis-built-to-report-not-to-run">most housing systems
+were built to report rather than to run</a> made the case that these platforms are engineered around
+regulatory documentation. The procurement documents are where that architecture gets ordered.</p>
+</div>
+
+<h2>The Case For Writing It Exactly That Way</h2>
+
+<p>A procurement officer reading this has a serious answer ready, and it deserves stating at full
+strength rather than in a version that is easy to knock down.</p>
+
+<p>An RFP is a solicitation. Its job is to describe the requirement and let the market propose
+solutions, so a buyer who begins describing how the software should be built has stopped procuring
+and started designing. Specifying the work also tends to specify an architecture. Write "the case
+manager completes intake, referral and assessment inside a single client record" and you have
+arguably described one product category and excluded others, which in public procurement is grounds
+for a protest. Restrictive specifications get challenged, challenges delay awards, and a delayed
+award on a system that thirty-nine agencies depend on is an operational risk rather than a
+theoretical one.</p>
+
+<p>Set against that, HUD's Data Standards are the safest available ground. They are federal, they
+are neutral, no bidder can claim they were drafted to favor a competitor, and every serious vendor
+can meet them. All of that holds, and it argues for a particular kind of requirement rather than for
+leaving the work unspecified.</p>
+
+<h2>The County Already Built the Test and Never Wrote the Script</h2>
+
+<p>Section VI.A.5 of the same RFP requires every respondent to hand over the web address of a live
+test demonstration site, with credentials, available to county staff from July 10 to August 7, 2024.
+Twenty-eight days. Phase III of the evaluation then invites short-listed respondents to an oral
+presentation and system demonstration.</p>
+
+<p>So the county built a four-week hands-on evaluation window and a live demonstration stage into a
+procurement whose written requirements never mention the work. The instrument exists. The script for
+it was never written.</p>
+
+<p>Phase II names three evaluation criteria: professional and technical competence, understanding of
+objectives and approach, and cost proposal. The RFP adds that they are "not necessarily listed in
+order of importance," so they carry no weights either. Nothing in them directs the review committee
+to open a demonstration site and try to finish a piece of casework.</p>
+
+<figure>
+  <svg viewBox="0 0 620 210" role="img" width="100%"
+       aria-label="Timeline of the county HMIS procurement, June 3 to September 20 2024, drawn to scale. The test demonstration site is open for 28 days, from July 10 to August 7."
+       font-family="Lato, sans-serif">
+    <rect x="227" y="96" width="133" height="28" fill="#4187FF" opacity="0.18"/>
+    <rect x="227" y="96" width="133" height="28" fill="none" stroke="#4187FF" stroke-width="1.5"/>
+    <line x1="50" y1="110" x2="570" y2="110" stroke="#161616" stroke-width="1.5"/>
+
+    <circle cx="50"  cy="110" r="4" fill="#161616"/>
+    <circle cx="193" cy="110" r="4" fill="#161616"/>
+    <circle cx="227" cy="110" r="4" fill="#4187FF"/>
+    <circle cx="360" cy="110" r="4" fill="#4187FF"/>
+    <circle cx="551" cy="110" r="4" fill="#161616"/>
+    <circle cx="570" cy="110" r="4" fill="#161616"/>
+
+    <text x="50"  y="70" text-anchor="middle" font-size="11" fill="#5a5a5a">RFP issued</text>
+    <text x="50"  y="84" text-anchor="middle" font-size="11" font-weight="700" fill="#161616">Jun 3</text>
+    <text x="227" y="70" text-anchor="middle" font-size="11" fill="#5a5a5a">Demo site opens</text>
+    <text x="227" y="84" text-anchor="middle" font-size="11" font-weight="700" fill="#161616">Jul 10</text>
+    <text x="551" y="70" text-anchor="middle" font-size="11" fill="#5a5a5a">Respondent selected</text>
+    <text x="551" y="84" text-anchor="middle" font-size="11" font-weight="700" fill="#161616">Sep 16</text>
+
+    <text x="193" y="142" text-anchor="middle" font-size="11" font-weight="700" fill="#161616">Jul 3</text>
+    <text x="193" y="156" text-anchor="middle" font-size="11" fill="#5a5a5a">Proposals due</text>
+    <text x="360" y="142" text-anchor="middle" font-size="11" font-weight="700" fill="#161616">Aug 7</text>
+    <text x="360" y="156" text-anchor="middle" font-size="11" fill="#5a5a5a">Demo site closes</text>
+    <text x="570" y="142" text-anchor="end" font-size="11" font-weight="700" fill="#161616">Sep 20</text>
+    <text x="570" y="156" text-anchor="end" font-size="11" fill="#5a5a5a">Contract awarded</text>
+
+    <line x1="293" y1="124" x2="293" y2="176" stroke="#4187FF" stroke-width="1" stroke-dasharray="3 3"/>
+    <text x="293" y="192" text-anchor="middle" font-size="12" font-weight="700" fill="#4187FF">28 days of hands-on access, with no task script</text>
+  </svg>
+  <figcaption>The procurement calendar, drawn to scale across the 109 days from issue to award. The
+  shaded band is the test demonstration window required by Section VI.A.5. Source: the same county-level HMIS Request for Proposals, Section V (Procurement Timetable) and Section VI.A.5.</figcaption>
+</figure>
+
+<p>This is where the objection resolves. A requirement can name an outcome and stay silent about
+architecture, and an outcome written that way survives every test the objection raises. It describes
+no product. It favors no vendor. Any bidder may satisfy it by any means it likes. And it is testable
+in an afternoon, on a demonstration site the county had already committed to keeping open for four
+weeks.</p>
+
+<p>The difference sits entirely in the wording. An architectural requirement names a mechanism and
+invites a protest. An outcome requirement names a result and puts the burden of proof where
+procurement law is comfortable leaving it—on the bidder.</p>
+
+<table>
+  <thead><tr><th>Instead of specifying this</th><th>Ask for this</th></tr></thead>
+  <tbody>
+    <tr><td>A unified client record across intake, referral and assessment</td><td>Demonstrate one client moving through intake, assessment and referral without re-keying a field</td></tr>
+    <tr><td>Task management and automated alerts</td><td>Demonstrate a list of clients whose income documentation expires within thirty days</td></tr>
+    <tr><td>Configurable case management workflow</td><td>Demonstrate reassigning a caseload, and show what the receiving staff member sees</td></tr>
+    <tr><td>Bidirectional referral tracking module</td><td>Demonstrate a referral sent, a partner response recorded, and elapsed days shown</td></tr>
+    <tr><td>Mobile field access with offline capability</td><td>Demonstrate an outreach contact recorded away from a desk and reconciled to the client record</td></tr>
+  </tbody>
+</table>
+
+<h2>Five Tasks Worth Putting In the Script</h2>
+
+<p>Each of these is written as an outcome, so each stays neutral about how a vendor achieves it.
+Together they take under an hour on a demonstration site, and they test the half of the job the
+Data Standards never describe.</p>
+
+<table>
+  <thead><tr><th class="num">#</th><th>The task you set the vendor</th><th>What it establishes</th></tr></thead>
+  <tbody>
+    <tr><td class="num">1</td><td>Enroll a household of three, then change which member is head of household</td><td>Whether the record models a household or a row</td></tr>
+    <tr><td class="num">2</td><td>Complete intake, an assessment and a referral for one client in one sitting</td><td>Whether the work is continuous or stitched from modules</td></tr>
+    <tr><td class="num">3</td><td>List every client whose income documentation expires in thirty days</td><td>Whether the system looks forward or only backward</td></tr>
+    <tr><td class="num">4</td><td>Send a referral, record the partner's response, show elapsed days</td><td>Whether requirement ten means anything in practice</td></tr>
+    <tr><td class="num">5</td><td>Reassign forty clients to a new case manager, then log in as that person</td><td>Whether a case survives staff turnover</td></tr>
+  </tbody>
+</table>
+
+<p>Task three separates the field fastest. A reporting-first system answers questions about what
+already happened, because that is what an Annual Performance Report asks. A question about what will
+go wrong in the next thirty days has nowhere to come from in a database built around completed
+enrollments and exits, so a spreadsheet answers it instead. Task five is the one leadership should
+watch, since continuity after turnover decides whether a case carries on or restarts.</p>
+
+<p>Task four matters for a different reason. Requirement ten already asks for a closed loop referral
+system, so the county has the requirement. What it lacks is any way to tell a working loop from a
+field named "referral status," and forty minutes on the demonstration site settles that where a
+written response never will.</p>
+
+<h2>What the Omission Actually Costs</h2>
+
+<p>The daily work does not disappear because an RFP declines to mention it. It relocates, and the
+place it relocates to is unfunded, unaudited and maintained by whoever cares most.</p>
+
+<p>Referrals get chased by email and phone. Document expiry lives in a tracker on somebody's
+desktop. The full picture of a client gets reassembled each morning from the database, an inbox and
+memory. None of that appears in a procurement file, and all of it shows up later as the thing that
+makes <a href="https://cube84.com/blog/hud-apr-caper-reporting-challenges-for-housing-nonprofits-and-how-to-simplify-them-in-salesforce">APR
+and CAPER cycles turn into an all-hands scramble</a>, because errors surface at audit time instead
+of at entry time. Counties that reach this point often end up
+<a href="https://cube84.com/blog/how-salesforce-supports-housing-nonprofits-along-with-hmis">running an
+operational layer alongside HMIS</a> to hold the work the database was never specified to hold, which
+is a reasonable outcome and a more expensive one than writing the page in the first place. The
+<a href="https://cube84.com/blog/salesforce-vs-bitfocus-vs-caseworthy-vs-wellsky-vs-bonterra-choosing-your-2026-hmis-strategy">trade-offs
+between compliance-first HMIS platforms and broader operational systems</a> are all knowable before a
+solicitation goes out.</p>
+
+<p>This county asked for a database and it very likely received a good one. If your own
+procurement is still in draft, the correction costs one page. Keep every data-standards requirement
+where it sits, keep the demonstration window you were already going to run, and add the five tasks a
+vendor has to complete in front of you. The document you have today will buy a compliant database.
+Whether it buys a system your staff can work inside depends on a page nobody has written yet.</p>
+
+<h2>Sources</h2>
+<ul>
+  <li>A county-level Request for Proposals for a Homeless Management Information System, issued June 2024 (12 pages), covering 39 participating agencies and approximately 329 users. Every figure and every quoted requirement in this piece was counted directly from that document. It is a public procurement record. The issuing county is not named here, and CUBE84 can supply the document on request.</li>
+  <li><a href="https://www.hudexchange.info/programs/hmis/hmis-data-standards/">HUD Exchange, FY 2026
+  HMIS Data Standards</a> — the current standards, and HUD's own statement of their scope.</li>
+  <li><a href="https://files.hudexchange.info/resources/documents/HMIS-Data-Dictionary.pdf">FY 2026
+  HMIS Data Dictionary</a> (PDF) — "Every data element required by HUD and the federal partners to be
+  stored within an HMIS is specified in this document."</li>
+  <li><a href="https://files.hudexchange.info/resources/documents/HMIS-Data-Standards-Manual-2024.pdf">FY
+  2024 HMIS Data Standards Manual</a> (PDF, version 1.7) &mdash; the edition the RFP cites, and the source of the quotations on HMIS implementation and CoC responsibility.</li>
+</ul>
+
+</article>
+</body>
+</html>

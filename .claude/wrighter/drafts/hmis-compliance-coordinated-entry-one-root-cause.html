@@ -1,0 +1,261 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Why Your HMIS Compliance Problem and Your Coordinated Entry Problem Are the Same Problem</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700;800&family=Lato:wght@400;700&display=swap">
+<style>
+  .c84-blog{font-family:'Lato',-apple-system,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;
+    color:#161616;line-height:1.7;font-size:18px;max-width:760px;margin:0 auto;padding:0 20px}
+  .c84-blog h1,.c84-blog h2,.c84-blog h3{font-family:'Poppins',-apple-system,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;
+    color:#161616;line-height:1.25;font-weight:700}
+  .c84-blog h1{font-size:38px;margin:0 0 8px}
+  .c84-blog h2{font-size:27px;margin:44px 0 12px}
+  .c84-blog p{margin:0 0 18px}
+  .c84-blog a{color:#4187FF;text-decoration:underline}
+  .c84-blog ul{margin:0 0 18px 22px;padding:0}
+  .c84-blog li{margin:0 0 8px}
+  .c84-blog table{border-collapse:collapse;width:100%;margin:24px 0;font-size:16px}
+  .c84-blog th,.c84-blog td{border:1px solid #e2e2e2;padding:10px 14px;text-align:left;vertical-align:top}
+  .c84-blog th{background:#F6F6F6;font-family:'Poppins',sans-serif;font-weight:600}
+  .c84-blog td.num,.c84-blog th.num{text-align:right;font-variant-numeric:tabular-nums}
+  .c84-blog figure{margin:24px 0}
+  .c84-blog figcaption{font-size:14px;color:#5a5a5a;margin-top:8px}
+</style></head>
+<body style="margin:0;background:#ffffff">
+<article class="c84-blog">
+<figure style="margin:0 0 34px">
+<svg viewBox="0 0 1200 630" width="100%" role="img"
+     aria-label="Cover graphic reading: HMIS administrators and CoC leadership. HUD compliance and coordinated entry are one problem. CUBE84.">
+  <rect x="0" y="0" width="1200" height="630" fill="#F6F6F6"/>
+  <circle cx="1130" cy="90" r="192" fill="none" stroke="#183459" stroke-width="36"/>
+  <rect x="72" y="196" width="64" height="8" rx="4" fill="#4187FF"/>
+  <text x="72" y="264" font-family="Poppins, Helvetica, Arial, sans-serif" font-size="20"
+        font-weight="700" letter-spacing="2.8" fill="#4187FF">HMIS ADMINISTRATORS &amp; CoC LEADERSHIP</text>
+  <text font-family="Poppins, Helvetica, Arial, sans-serif" font-size="62" font-weight="800" fill="#161616">
+    <tspan x="72" y="352">HUD compliance and</tspan>
+    <tspan x="72" y="420">coordinated entry are</tspan>
+    <tspan x="72" y="488"><tspan fill="#4187FF">one problem</tspan></tspan>
+  </text>
+  <text x="72" y="574" font-family="Poppins, Helvetica, Arial, sans-serif" font-size="22"
+        font-weight="700" fill="#161616">CUBE84</text>
+</svg>
+</figure>
+<h1>Why Your HMIS Compliance Problem and Your Coordinated Entry Problem Are the Same Problem</h1>
+
+<p>An APR data-quality flag lands on a Tuesday. On Thursday a partner agency calls, because a
+household they just walked through intake had already been assessed twice that month, once at a
+shelter across town and once at your own front door. Two tickets. One goes to whoever owns
+reporting, the other to whoever owns coordinated entry, who in most Continuums sits on a different
+committee having a different vendor conversation.</p>
+
+<p>Neither ticket closes the other. Next quarter, both come back.</p>
+
+<p>We have argued that
+<a href="https://cube84.com/webinar/housing-hmis-built-to-report-not-to-run">most housing systems were built to report rather than to run</a>. That is the
+architecture. The seam is narrower than the architecture, and it sits in HUD&rsquo;s own published
+schema where anyone can open it and check.</p>
+
+<h2>Two Duties in One Regulation, and Nothing Connecting Them</h2>
+
+<p>24 CFR 578.7 hands your Continuum both jobs a few lines apart.</p>
+
+<p>Paragraph (a)(8) requires the CoC to &ldquo;establish and operate either a centralized or
+coordinated assessment system that provides an initial, comprehensive assessment of the needs of
+individuals and families for housing and services.&rdquo; Three sentences. No data system is named,
+and no data quality plan is required.</p>
+
+<p>Paragraph (b) then gives HMIS five numbered duties, among them designating a single HMIS for
+the geographic area, designating an HMIS Lead, and approving &ldquo;a privacy plan, security plan,
+and data quality plan for the HMIS.&rdquo; One duty has a named system, a named accountable party
+and a data quality plan. The other has a policy requirement and a pointer to a future HUD Notice.
+Everything downstream inherited that shape: your org chart, your budget lines, and the
+<a href="https://cube84.com/blog/salesforce-vs-bitfocus-vs-caseworthy-vs-wellsky-vs-bonterra-choosing-your-2026-hmis-strategy">category of software you choose between</a>, which is why a reporting module and
+a case management module still arrive as separate quotes.</p>
+
+<h2>HUD Specified the Report Precisely and Left the Work as a Placeholder</h2>
+
+<p>Open the FY 2026 HMIS Data Dictionary and put two kinds of element side by side.</p>
+
+<p>Element 4.02, Income and Sources, runs to 18 fields. Fifteen are named income sources, from
+earned income through SSI, TANF and child support, each with its own dependent field for a monthly
+dollar amount. Health Insurance has 12 fields and Non-Cash Benefits has 8. Nothing in any of the
+three is left to local interpretation, because all three feed named tables on the annual
+report.</p>
+
+<p>Element 4.19, Coordinated Entry Assessment, has seven fields, and the dictionary is explicit
+about which ones count: &ldquo;Fields 1-4 and field 7 will be required for reporting purposes.
+Fields 5 &amp; 6 are included as placeholders for communities who currently do, or want to in the
+future, collect CE Assessment questions, answers, and results in HMIS.&rdquo; Fields 5 and 6 are
+the assessment itself, the questions your staff ask and the score that decides who gets housed
+first. On those: &ldquo;There is no specified structure or format for an assessment.&rdquo;</p>
+
+<figure>
+<svg viewBox="0 0 480 300" role="img" width="100%" font-family="Lato, Helvetica, Arial, sans-serif"
+     aria-label="Bar chart of the number of fields HUD specifies for four HMIS data elements: 4.02 Income and Sources has 18 fields, 4.04 Health Insurance has 12, 4.03 Non-Cash Benefits has 8, and 4.19 Coordinated Entry Assessment has 5 fields required for reporting.">
+  <line x1="40" y1="230.0" x2="470" y2="230.0" stroke="#c9c9c9" stroke-width="1"/>
+  <rect x="62" y="50.0" width="72" height="180.0" fill="#4187FF"/><text x="98" y="41.0" text-anchor="middle" font-size="16" font-weight="700" fill="#161616">18</text><text x="98" y="252" text-anchor="middle" font-size="12" fill="#161616">4.02 Income and Sources</text><rect x="170" y="110.0" width="72" height="120.0" fill="#4187FF"/><text x="206" y="101.0" text-anchor="middle" font-size="16" font-weight="700" fill="#161616">12</text><text x="206" y="252" text-anchor="middle" font-size="12" fill="#161616">4.04 Health Insurance</text><rect x="278" y="150.0" width="72" height="80.0" fill="#4187FF"/><text x="314" y="141.0" text-anchor="middle" font-size="16" font-weight="700" fill="#161616">8</text><text x="314" y="252" text-anchor="middle" font-size="12" fill="#161616">4.03 Non-Cash Benefits</text><rect x="386" y="180.0" width="72" height="50.0" fill="#161616"/><text x="422" y="171.0" text-anchor="middle" font-size="16" font-weight="700" fill="#161616">5</text><text x="422" y="252" text-anchor="middle" font-size="12" fill="#161616">4.19 Coordinated Entry</text><text x="422" y="267" text-anchor="middle" font-size="12" fill="#161616">Assessment</text><text x="422" y="282" text-anchor="middle" font-size="12" fill="#161616">(reportable fields)</text>
+  <text x="40" y="286" font-size="12" fill="#161616">Fields specified in the schema</text>
+</svg>
+<figcaption>Fields counted directly from the FY 2026 HMIS Data Dictionary, U.S. Department of
+Housing and Urban Development, released October 2025. The 4.19 bar counts the five fields the
+dictionary states are "required for reporting purposes"; the assessment questions, answers and
+score sit in two further fields the dictionary describes as placeholders.</figcaption>
+</figure>
+
+<p>Five fields record that an assessment happened, which is what a report needs. The content
+is a container.</p>
+
+<table>
+<thead><tr><th>HMIS data element</th><th class="num">Fields</th><th>Left to local definition</th></tr></thead>
+<tbody>
+<tr><td>4.02 Income and Sources</td><td class="num">18</td><td>Nothing</td></tr>
+<tr><td>4.04 Health Insurance</td><td class="num">12</td><td>Nothing</td></tr>
+<tr><td>4.03 Non-Cash Benefits</td><td class="num">8</td><td>Nothing</td></tr>
+<tr><td>4.19 Coordinated Entry Assessment</td><td class="num">7</td><td>The questions, the answers, the score</td></tr>
+</tbody></table>
+
+<p>A vendor building to this specification produces a validated, dollar-precise form for 4.02 and
+a configurable container for 4.19. Complying with the document faithfully produces the product your
+staff complain about.</p>
+
+<h2>One Root Cause, Three Symptoms You Already Recognize</h2>
+
+<table>
+<thead><tr><th>What you see</th><th>Where the ticket goes</th><th>Where it originates</th></tr></thead>
+<tbody>
+<tr><td>Annual assessment scramble in the last two weeks of the window</td><td>Compliance</td>
+    <td>The enrollment anniversary lives in a report instead of a task list</td></tr>
+<tr><td>APR data-quality flag on a project you thought was clean</td><td>Reporting</td>
+    <td>Nothing required the data at the moment the work happened</td></tr>
+<tr><td>The same household through intake twice in one month</td><td>Coordinated entry</td>
+    <td>Prioritization list and enrollment record are separate, graded separately</td></tr>
+</tbody></table>
+
+<p><strong>The annual assessment scramble.</strong> HUD requires three common elements at annual
+assessment, 4.02 Income and Sources, 4.03 Non-Cash Benefits and 4.04 Health Insurance, recorded
+with an Information Date &ldquo;no more than 30 days before or after the anniversary of the Head of
+Household&rsquo;s Project Start Date,&rdquo; a new record &ldquo;regardless of whether the responses
+have changed since project start or the previous annual assessment,&rdquo; updating the Head of
+Household &ldquo;and any other household members at the
+same time.&rdquo; Three elements, every household member, a 60-day window, once a year. A system
+holding the enrollment knows the anniversary is coming and can hand a case manager a task in week
+50. A system whose job is answering the report finds out when the report asks.</p>
+
+<p><strong>The APR data-quality flag.</strong> Six of the 70 tables in the FY 2026 CoC APR and ESG
+CAPER programming specifications grade data quality, Q6a through Q6f. One of them, Q6e, grades
+nothing except lag, bucketing project start and exit records by how many days passed before entry,
+from under zero days through 11 or more. HUD is measuring the distance between the work and the
+record. When your team lives inside that distance every week,
+<a href="https://cube84.com/blog/hud-apr-caper-reporting-challenges-for-housing-nonprofits-and-how-to-simplify-them-in-salesforce">the annual report hands it back as a data-quality finding</a> months after anyone
+could act on it.</p>
+
+<p><strong>Duplicate intake across providers.</strong> Coordinated entry is carved out of that
+report entirely. The specifications are &ldquo;applicable to all project types except Coordinated
+Entry projects,&rdquo; which &ldquo;must be generated using the HMIS Programming Specifications for
+Coordinated Entry APR (CE APR).&rdquo; Two reports, two universes, no table anywhere in the CoC APR
+that looks at coordinated entry. Nothing in the reporting architecture requires the prioritization
+list and the enrollment record to be one record, so in most systems they are two, and the household
+pays the difference in repeated intakes.</p>
+
+<figure>
+<svg viewBox="0 0 360 300" role="img" width="100%" font-family="Lato, Helvetica, Arial, sans-serif"
+     aria-label="Grid of 70 squares, one for each table in the FY 2026 CoC APR and ESG CAPER programming specifications. Six squares are highlighted for the data quality tables Q6a to Q6f. No square represents coordinated entry, because coordinated entry is reported separately.">
+  <text x="20" y="24" font-size="14" font-weight="700" fill="#161616">70 tables in the CoC APR and ESG CAPER</text>
+  <rect x="20" y="40" width="26" height="26" rx="3" fill="#4187FF"/><rect x="51" y="40" width="26" height="26" rx="3" fill="#4187FF"/><rect x="82" y="40" width="26" height="26" rx="3" fill="#4187FF"/><rect x="113" y="40" width="26" height="26" rx="3" fill="#4187FF"/><rect x="144" y="40" width="26" height="26" rx="3" fill="#4187FF"/><rect x="175" y="40" width="26" height="26" rx="3" fill="#4187FF"/><rect x="206" y="40" width="26" height="26" rx="3" fill="#dfe3e8"/><rect x="237" y="40" width="26" height="26" rx="3" fill="#dfe3e8"/><rect x="268" y="40" width="26" height="26" rx="3" fill="#dfe3e8"/><rect x="299" y="40" width="26" height="26" rx="3" fill="#dfe3e8"/><rect x="20" y="71" width="26" height="26" rx="3" fill="#dfe3e8"/><rect x="51" y="71" width="26" height="26" rx="3" fill="#dfe3e8"/><rect x="82" y="71" width="26" height="26" rx="3" fill="#dfe3e8"/><rect x="113" y="71" width="26" height="26" rx="3" fill="#dfe3e8"/><rect x="144" y="71" width="26" height="26" rx="3" fill="#dfe3e8"/><rect x="175" y="71" width="26" height="26" rx="3" fill="#dfe3e8"/><rect x="206" y="71" width="26" height="26" rx="3" fill="#dfe3e8"/><rect x="237" y="71" width="26" height="26" rx="3" fill="#dfe3e8"/><rect x="268" y="71" width="26" height="26" rx="3" fill="#dfe3e8"/><rect x="299" y="71" width="26" height="26" rx="3" fill="#dfe3e8"/><rect x="20" y="102" width="26" height="26" rx="3" fill="#dfe3e8"/><rect x="51" y="102" width="26" height="26" rx="3" fill="#dfe3e8"/><rect x="82" y="102" width="26" height="26" rx="3" fill="#dfe3e8"/><rect x="113" y="102" width="26" height="26" rx="3" fill="#dfe3e8"/><rect x="144" y="102" width="26" height="26" rx="3" fill="#dfe3e8"/><rect x="175" y="102" width="26" height="26" rx="3" fill="#dfe3e8"/><rect x="206" y="102" width="26" height="26" rx="3" fill="#dfe3e8"/><rect x="237" y="102" width="26" height="26" rx="3" fill="#dfe3e8"/><rect x="268" y="102" width="26" height="26" rx="3" fill="#dfe3e8"/><rect x="299" y="102" width="26" height="26" rx="3" fill="#dfe3e8"/><rect x="20" y="133" width="26" height="26" rx="3" fill="#dfe3e8"/><rect x="51" y="133" width="26" height="26" rx="3" fill="#dfe3e8"/><rect x="82" y="133" width="26" height="26" rx="3" fill="#dfe3e8"/><rect x="113" y="133" width="26" height="26" rx="3" fill="#dfe3e8"/><rect x="144" y="133" width="26" height="26" rx="3" fill="#dfe3e8"/><rect x="175" y="133" width="26" height="26" rx="3" fill="#dfe3e8"/><rect x="206" y="133" width="26" height="26" rx="3" fill="#dfe3e8"/><rect x="237" y="133" width="26" height="26" rx="3" fill="#dfe3e8"/><rect x="268" y="133" width="26" height="26" rx="3" fill="#dfe3e8"/><rect x="299" y="133" width="26" height="26" rx="3" fill="#dfe3e8"/><rect x="20" y="164" width="26" height="26" rx="3" fill="#dfe3e8"/><rect x="51" y="164" width="26" height="26" rx="3" fill="#dfe3e8"/><rect x="82" y="164" width="26" height="26" rx="3" fill="#dfe3e8"/><rect x="113" y="164" width="26" height="26" rx="3" fill="#dfe3e8"/><rect x="144" y="164" width="26" height="26" rx="3" fill="#dfe3e8"/><rect x="175" y="164" width="26" height="26" rx="3" fill="#dfe3e8"/><rect x="206" y="164" width="26" height="26" rx="3" fill="#dfe3e8"/><rect x="237" y="164" width="26" height="26" rx="3" fill="#dfe3e8"/><rect x="268" y="164" width="26" height="26" rx="3" fill="#dfe3e8"/><rect x="299" y="164" width="26" height="26" rx="3" fill="#dfe3e8"/><rect x="20" y="195" width="26" height="26" rx="3" fill="#dfe3e8"/><rect x="51" y="195" width="26" height="26" rx="3" fill="#dfe3e8"/><rect x="82" y="195" width="26" height="26" rx="3" fill="#dfe3e8"/><rect x="113" y="195" width="26" height="26" rx="3" fill="#dfe3e8"/><rect x="144" y="195" width="26" height="26" rx="3" fill="#dfe3e8"/><rect x="175" y="195" width="26" height="26" rx="3" fill="#dfe3e8"/><rect x="206" y="195" width="26" height="26" rx="3" fill="#dfe3e8"/><rect x="237" y="195" width="26" height="26" rx="3" fill="#dfe3e8"/><rect x="268" y="195" width="26" height="26" rx="3" fill="#dfe3e8"/><rect x="299" y="195" width="26" height="26" rx="3" fill="#dfe3e8"/><rect x="20" y="226" width="26" height="26" rx="3" fill="#dfe3e8"/><rect x="51" y="226" width="26" height="26" rx="3" fill="#dfe3e8"/><rect x="82" y="226" width="26" height="26" rx="3" fill="#dfe3e8"/><rect x="113" y="226" width="26" height="26" rx="3" fill="#dfe3e8"/><rect x="144" y="226" width="26" height="26" rx="3" fill="#dfe3e8"/><rect x="175" y="226" width="26" height="26" rx="3" fill="#dfe3e8"/><rect x="206" y="226" width="26" height="26" rx="3" fill="#dfe3e8"/><rect x="237" y="226" width="26" height="26" rx="3" fill="#dfe3e8"/><rect x="268" y="226" width="26" height="26" rx="3" fill="#dfe3e8"/><rect x="299" y="226" width="26" height="26" rx="3" fill="#dfe3e8"/>
+  <rect x="20" y="279" width="14" height="14" rx="3" fill="#4187FF"/>
+  <text x="41" y="291" font-size="13" fill="#161616">6 grade data quality (Q6a–Q6f)</text>
+  <rect x="20" y="303" width="14" height="14" rx="3" fill="#dfe3e8"/>
+  <text x="41" y="315" font-size="13" fill="#161616">64 report on people, households and outcomes</text>
+  <text x="20" y="339" font-size="13" font-weight="700" fill="#161616">0 cover coordinated entry</text>
+</svg>
+<figcaption>Counted from the Table of Questions in the HMIS Programming Specifications for the CoC
+APR and ESG CAPER, FY 2026, U.S. Department of Housing and Urban Development. Coordinated entry
+projects are excluded from this report and covered by a separate Coordinated Entry APR.</figcaption>
+</figure>
+
+<h2>The Strongest Case That These Really Are Two Problems</h2>
+
+<p>A CoC lead makes this case well. HUD&rsquo;s data standards are externally imposed. No architecture makes 4.02 optional or shortens the 60-day annual assessment
+window. The APR is a federal report with a federal deadline and a submission path through Sage.
+Coordinated entry is governed by a separate HUD Notice, runs on an assessment tool your community
+chose, and follows prioritization policy your CoC board votes on. Different governing documents,
+different accountable bodies, different failure modes. On that reading, a vendor claiming one
+architecture fixes both is selling a consolidation you pay for twice, once in license and once in
+migration.</p>
+
+<p>Half of that is correct, and it is the half worth conceding first. The volume of data HUD asks
+for is fixed, and a better-built system does not remove a single field.</p>
+
+<h2>Why That Case Does Not Survive HUD&rsquo;s Own Documents</h2>
+
+<p><strong>HUD never asked the reporting system to run coordinated entry.</strong> Its Coordinated
+Entry Management and Data Guide quotes the Coordinated Entry Notice directly: &ldquo;HUD does not
+require CoCs to use their HMIS as part of their coordinated entry process.&rdquo; The same passage
+calls HMIS your &ldquo;mandatory HMIS recordkeeping&rdquo; and allows that other systems
+&ldquo;might be better or more quickly able to meet the community&rsquo;s coordinated entry
+needs.&rdquo; The schema was describing a report. It never claimed to describe the work.</p>
+
+<p><strong>The schema&rsquo;s own history shows which parts were load-bearing.</strong> The FY 2024
+HMIS Data Standards Manual retired 4.19 and 4.20 and introduced a replacement, 4.21 Coordinated
+Entry Activity. Its July 2023 revision removed 4.21 and reinstated 4.19 and 4.20. By FY 2026,
+element 4.21 is Sex. Across the same stretch the Universal Data Elements were renumbered, combined
+and reworded, and none was removed and then put back. Stability follows what feeds the report to
+Congress, which HUD says is what those elements are for: they are &ldquo;the foundation on which the
+Longitudinal System Analysis (LSA) is developed,&rdquo; and the LSA informs the report that
+&ldquo;provides Congress with national estimates of the current state of homelessness across the
+United States.&rdquo;</p>
+
+<p><strong>The regulation sets when data must be recorded, never when it must be discovered.</strong>
+HUD requires the annual assessment inside a 60-day window, and nothing in its documents requires
+you to find out about it inside that window. Whichever system holds the enrollment decides that gap,
+and the gap is where the shape of your burden gets chosen: continuous, or annual and all at once.</p>
+
+<h2>What Changes When the Build Order Is Reversed</h2>
+
+<p>Reverse the two layers and the same regulatory volume lands differently. The enrollment record
+holds the anniversary date, so week 50 produces a task for a named case manager instead of week 54
+producing a list of exceptions. The referral holds the receiving provider as a relationship rather
+than an email thread, so the second provider inherits the assessment that already exists. The
+assessment holds its questions, answers and score as structured fields, which is exactly what the
+dictionary declined to specify. The five reportable fields of 4.19 then fall out of records already
+being kept.</p>
+
+<p>Four questions will tell you which order your systems were built in.</p>
+
+<ul>
+<li>Does anything raise an enrollment anniversary before the window opens, or does a report find it
+after the window closes?</li>
+<li>When a referral goes out, does the receiving provider inherit the assessment, or re-ask it?</li>
+<li>Is your coordinated entry score a queryable field, or a value inside a document?</li>
+<li>Does your data quality plan describe checks at entry, or checks before submission?</li>
+</ul>
+
+<p>None of this removes a HUD requirement. It moves the moment of truth from the reporting cycle
+to the day the work happens, which turns audit exposure into something your team can see while there
+is still time to act. In practice that is
+<a href="https://cube84.com/blog/how-salesforce-supports-housing-nonprofits-along-with-hmis">an operational layer running alongside your HMIS rather than inside it</a>,
+holding the tasks, the referrals and the documents, and producing HUD-compliant output because
+somebody did the work rather than reconstructed it.</p>
+
+<p>The webinar named the architecture. The dictionary shows the paragraph where it was chosen, and
+it is the same paragraph behind both of your fires.</p>
+
+<h2>Sources</h2>
+<ul>
+<li><a href="https://www.ecfr.gov/current/title-24/part-578/section-578.7">24 CFR 578.7, Responsibilities of the Continuum of Care</a> (eCFR, current) &mdash;
+paragraph (a)(8) on the centralized or coordinated assessment system, and paragraph (b)&rsquo;s five HMIS duties.</li>
+<li><a href="https://files.hudexchange.info/resources/documents/HMIS-Data-Dictionary.pdf">FY 2026 HMIS Data Dictionary</a>, U.S. Department of Housing and Urban Development,
+released October 2025 &mdash; field counts for elements 4.02, 4.03, 4.04 and 4.19, the placeholder language
+in 4.19, and the annual assessment window.</li>
+<li><a href="https://files.hudexchange.info/resources/documents/HMIS-Programming-Specifications-CoC-APR-and-ESG-CAPER.pdf">HMIS Programming Specifications: CoC APR and ESG CAPER, FY 2026</a>, HUD &mdash;
+the 70-table Table of Questions, the six Q6 data quality tables including Q6e timeliness, and the exclusion
+of coordinated entry projects.</li>
+<li><a href="https://files.hudexchange.info/resources/documents/HMIS-Data-Standards-Manual-2024.pdf">FY 2024 HMIS Data Standards Manual</a>, HUD &mdash; the revision history recording
+4.21 Coordinated Entry Activity added and then removed with 4.19 and 4.20 reinstated, and the statement
+that the Universal Data Elements are the foundation of the Longitudinal System Analysis.</li>
+<li><a href="https://files.hudexchange.info/resources/documents/coordinated-entry-management-and-data-guide.pdf">Coordinated Entry Management and Data Guide</a>, HUD &mdash; quoting the Coordinated
+Entry Notice that HUD does not require CoCs to use their HMIS as part of coordinated entry.</li>
+</ul>
+
+</article>
+</body></html>
