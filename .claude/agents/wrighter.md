@@ -485,8 +485,23 @@ Own Documents". A skimmer meeting any of those has no idea who she is or which c
 these, those. Not she, he, her, his, they, their. Not "the third X" where the first two were named
 somewhere the skimmer did not read.
 
-The test: **read the heading alone, having read nothing else on the page.** If it does not identify
-its own subject, rewrite it. Do this for every heading in the piece, not the one that was flagged.
+**Being comprehensible is not the standard. Earning the stop is.** Kiki, 2026-08-24: *"people skim
+for heading, so heading should land like a hook to pause and read. if you put such headings, waste."*
+
+That is a higher bar than clarity, and it is the real one. Headings are the only part of a page most
+readers will ever see, so a heading that merely makes sense has still spent the most valuable line in
+the section and bought nothing with it.
+
+Two tests, and a heading has to pass both:
+
+1. **Read it alone, having read nothing else on the page.** If it does not identify its own subject,
+   rewrite it. No pronoun survives this.
+2. **Would somebody scanning stop here?** A heading that states a surprising fact, names a cost, or
+   sets up a contradiction earns the stop. A heading that labels a section does not. "The Annual
+   Report Does Not Look at Coordinated Entry at All" stops a reader; "Reporting Considerations" does
+   not, and neither does anything with "she" in it.
+
+Do this for every heading in the piece, not the one that was flagged.
 
 This costs nothing. A piece can run one case through its whole body and still carry headings that
 name the subject rather than pointing at it, because the body is read in order and the headings are
