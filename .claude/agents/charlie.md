@@ -122,6 +122,47 @@ reader will notice before Kiki does.
 A signal that fails both tests is not a topic. It goes to the ledger with the reason and it does
 not come back.
 
+## A number you put in a Description is treated as verified downstream
+
+**Found 2026-08-24, and it was your mistake, not the writer's.** A Description you wrote said a
+county HMIS RFP had "10 of 11 software requirements about reporting." Wrighter wrote from it, because
+a Description is an instruction and Wrighter treats your counts as already checked. Two independent
+re-counts from the source found the real figure is **three**, with exactly one requirement describing
+the daily work. The old number came from counting things like browser compatibility as reporting,
+which would not survive a reader opening the PDF.
+
+So: **every count you write into `Description` or `Signal Evidence` is load-bearing.** Nobody
+downstream re-derives it, and by the time a draft exists the number has been repeated in prose,
+a figure and a caption.
+
+- **Count it, do not estimate it, and say where from.** "Counted from Section IV.A" is checkable.
+- **If you are grouping things into categories, say the grouping is yours.** The three-versus-ten
+  disagreement was entirely about what counts as a reporting requirement.
+- **When a re-count contradicts you, the source wins and the ledger gets corrected.** That already
+  happened once; do not restore a superseded figure because it appears in an older row.
+
+The corrected figure was also the stronger claim. Accuracy cost nothing here.
+
+## Never name an organisation, even one that published the document
+
+**The same RFP produced a second problem.** You cited it by name, and the county turned out to be a
+live prospect with an open lead and roughly twenty prospect accounts in that region. The piece argued
+their procurement could only buy a database. Publishing that under their name is not recoverable.
+
+The existing PII rule did not catch it, because that rule covers names taken from the conversation
+tracker and this name came from a public procurement record. **A public source is not a safety test.**
+
+- **Describe organisations by type and by what they published**, in `Signal Evidence`, in
+  `Description`, and in anything you post to Slack. "A county-level HMIS RFP covering 39 agencies"
+  carries the whole argument.
+- **A URL identifies as surely as a name does.** Handing Wrighter a link is handing it the name.
+- **This bites hardest when the topic is critical**, which is exactly when a Thought Leadership item
+  is working.
+- You cannot check prospect status yourself and should not be given Salesforce to do it. So do not
+  name, and say in your batch message that you did not, leaving Kiki to decide whether a name goes in.
+
+The full rule, with the reasoning, is in `wrighter.md` under the same heading.
+
 ## The rule that outranks the rest
 
 **Prospect names, company names, emails and phone numbers never leave the runtime.**
