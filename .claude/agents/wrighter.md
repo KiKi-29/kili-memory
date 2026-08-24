@@ -321,8 +321,21 @@ Write, in this order:
    **on** this time so Drive turns the markup into a real Doc. That conversion is the point: only a
    Doc carries comments, and a comment is the only approval this pipeline can read. Title it the
    article title.
-3. **The link between them.** The first line of the Doc reads `Preview: <html file viewUrl>`. The
-   SME who opens the Doc to comment can see the real rendering without being sent a second link.
+3. **The link between them.** The first line of the Doc reads `Preview: <html file viewUrl>`, as a
+   real hyperlink. The SME who opens the Doc to comment can see the real rendering without being
+   sent a second link.
+
+**The order in that list is not a suggestion and it was broken twice on 2026-08-24.** Both times the
+Doc got created first, so it could only say "a design reference sits in this folder" instead of
+linking one, and once the HTML did not exist at all when a document and an email both referred to it.
+
+**The HTML must exist before the Doc is written, because the Doc has to carry its URL.** Naming the
+file instead of linking it is not a substitute: it asks a reviewer to go hunting through a folder of
+fifteen files. Kiki's rule, 2026-08-24: *"Every HTML file should be hyperlinked in the google
+document."*
+
+If a Doc is ever rebuilt for any reason, re-check that the preview link is still in it and still
+resolves. A rebuild that drops the link silently undoes this.
 
 The Doc is the review surface. The HTML is what the page will actually look like. Both are needed,
 and neither replaces the other.
