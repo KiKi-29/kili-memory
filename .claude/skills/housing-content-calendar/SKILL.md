@@ -280,7 +280,7 @@ https://cube84-bunch.monday.com/boards/18427467231
 | Volume | `numeric_mm6d10w8` | numbers, Google Keyword Planner |
 | KD | `numeric_mm6d3hf0` | numbers, Semrush |
 | Publish Week | `date_mm6dsp35` | date |
-| SME | `email_mm6hv1wa` | email. **Kiki fills this, no agent writes to it.** |
+| SME | `text_mm6h8sn9` | text, holds an **address**. **Kiki fills this, no agent writes to it.** |
 | Doc URL | `text_mm6hm9ep` | text, written by Wrighter |
 | CMS Post URL/ID | `text_mm6dte0a` | text |
 | Error Notes | `long_text_mm6dcvam` | long_text |
@@ -294,7 +294,7 @@ writing if a column may have been added, per the tool's own precondition.
 never sets `Pushed to staging` or `Published`; Kili sets `SME approved` off an explicit Approved
 comment on the Doc. Nothing in this pipeline reaches the CMS.
 
-`SME` is an email column and not text on purpose. There are two Mohans and two Manishes, and a bare
+`SME` is a text column that must hold an address, not a name. There are two Mohans and two Manishes, and a bare
 first name is how a draft reaches the wrong person. Never resolve a name to an address.
 
 Drafts land in **Blog Drive / Homeless and Housing**, folder id

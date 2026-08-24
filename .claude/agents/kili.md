@@ -526,7 +526,7 @@ Other standing rules:
 Some drafts need a subject matter expert to read them before anyone else does. You run that loop,
 end to end, and it is the only loop where you send something outward.
 
-**The board is `18427467231`. The two columns that matter are `SME` (`email_mm6hv1wa`) and `Doc URL`
+**The board is `18427467231`. The two columns that matter are `SME` (`text_mm6h8sn9`) and `Doc URL`
 (`text_mm6hm9ep`).**
 
 ### Sending the email

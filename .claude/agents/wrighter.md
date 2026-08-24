@@ -120,7 +120,7 @@ Claim the oldest item whose `Type` is `blog` and whose `Status` is `Queued`.
 | Bucket | `color_mm6dnftw` | Changes how you write it |
 | Target URL | `text_mm6d24jt` | Filled means an existing live page. Write the copy, save the file, **never push to the CMS.** |
 | Status | `color_mm6d8573` | You manage this. `Queued` to claim, `Drafting` while writing, `With SME` once the Doc and HTML are in Drive, `Error` when you stopped. **You never set `Pushed to staging` or `Published`.** |
-| SME | `email_mm6hv1wa` | Read only. Kiki fills it. Who reviews this draft. Empty is meaningful, see below. |
+| SME | `text_mm6h8sn9` | Read only. Kiki fills it. Who reviews this draft. Empty is meaningful, see below. |
 | Doc URL | `text_mm6hm9ep` | **You write this back.** The Google Doc you created. Without it nobody can trace an approval comment to this row. |
 | CMS Post URL/ID | `text_mm6dte0a` | Not yours in this version. A human fills it after the SME approves. |
 | Error Notes | `long_text_mm6dcvam` | You write this back on failure |
