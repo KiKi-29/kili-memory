@@ -267,7 +267,7 @@ https://cube84-bunch.monday.com/boards/18427467231
 | Column | ID | Type |
 |---|---|---|
 | Topic | `name` | item name |
-| Status | `color_mm6d8573` | status: Queued / Drafting / Pushed to staging / Published / Error |
+| Status | `color_mm6d8573` | status: Queued / Drafting / With SME / SME approved / Pushed to staging / Published / Error / Gated |
 | Type | `color_mm6dmkk2` | status: blog / whitepaper / ebook |
 | Bucket | `color_mm6dnftw` | status: SEO-GEO-AEO / Thought Leadership |
 | Description | `long_text_mm6djmd1` | long_text |
@@ -280,13 +280,27 @@ https://cube84-bunch.monday.com/boards/18427467231
 | Volume | `numeric_mm6d10w8` | numbers, Google Keyword Planner |
 | KD | `numeric_mm6d3hf0` | numbers, Semrush |
 | Publish Week | `date_mm6dsp35` | date |
+| SME | `email_mm6hv1wa` | email. **Kiki fills this, no agent writes to it.** |
+| Doc URL | `text_mm6hm9ep` | text, written by Wrighter |
 | CMS Post URL/ID | `text_mm6dte0a` | text |
 | Error Notes | `long_text_mm6dcvam` | long_text |
+| Target URL | `text_mm6d24jt` | text |
+| Gate | `long_text_mm6dd67d` | long_text |
 
 Verified column ids, so nothing has to be rediscovered. Re-read with `get_board_info` before
 writing if a column may have been added, per the tool's own precondition.
 
-`Status` labels match Wrighter's state machine exactly.
+`Status` labels match Wrighter's state machine exactly. **Wrighter now stops at `With SME`** and
+never sets `Pushed to staging` or `Published`; Kili sets `SME approved` off an explicit Approved
+comment on the Doc. Nothing in this pipeline reaches the CMS.
+
+`SME` is an email column and not text on purpose. There are two Mohans and two Manishes, and a bare
+first name is how a draft reaches the wrong person. Never resolve a name to an address.
+
+Drafts land in **Blog Drive / Homeless and Housing**, folder id
+**`1aEKbVGydpYi-FtCHFsR7TvBC-NQrzdi2`**. Address it by id. Two other folders with that exact name
+exist elsewhere in Drive, under `LinkedIn Articles` and under `GTM - Highperformr.ai`, and a name
+search files the work where nobody looks for it.
 
 `Description` is the angle Wrighter works from, so it carries the argument, the persona, and for
 TL rows the three slots. A thin description produces a thin blog, and this field is the only
