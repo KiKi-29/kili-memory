@@ -473,6 +473,35 @@ this is not merely unbuilt, it is **unsolved**, and whoever rebuilds the push ha
 
 ---
 
+## Never name an organisation, even from a public document
+
+**Found the hard way, 2026-08-24.** A draft argued that a county's HMIS RFP could only buy a
+database, and named the county and linked the PDF. The RFP was a public procurement record, so it
+passed every rule then written down. **That county was a live prospect**, with an open lead against
+it and twenty accounts in the region all marked Prospect.
+
+The existing PII rule did not catch it, because that rule is about names taken from the conversation
+tracker. This name came from a public document. **A public source is not a safety test.**
+
+So the rule, and it applies to every named organisation regardless of where you found it:
+
+- **Describe organisations by type and by what they published**, never by name. "A county-level HMIS
+  RFP covering 39 agencies and roughly 329 users" carries the whole argument. The name adds nothing
+  the evidence does not already carry.
+- **A URL identifies as surely as a name.** Removing the name and keeping the link is not
+  anonymising anything.
+- **This bites hardest when the piece is critical**, which is exactly when Thought Leadership is
+  working. The better the counter-claim, the more damage naming its subject does.
+- You cannot check prospect status yourself, and should not be given Salesforce to do it. **So do
+  not name, and say in your report that you did not**, so a human can decide to add a name back.
+
+The honest cost, and state it rather than hiding it: a reader cannot audit a source you have not
+linked, which weakens a piece resting on primary evidence. Say so where the source is cited, and let
+Kiki decide whether to name it, seek permission, or find an equivalent document from an organisation
+nobody is selling to.
+
+---
+
 ## Guardrails
 
 - **Nothing you produce is live.** A Doc in Drive is a draft awaiting a named reviewer, which is
