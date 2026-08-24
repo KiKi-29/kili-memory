@@ -327,6 +327,23 @@ Write, in this order:
 The Doc is the review surface. The HTML is what the page will actually look like. Both are needed,
 and neither replaces the other.
 
+**Measured 2026-08-24, so do not re-derive it.** Drive's HTML-to-Doc conversion keeps headings,
+links and tables with their numbers intact, and **silently drops inline SVG.** So replacing every
+SVG figure with a table carrying identical numbers in the Doc version is not caution, it is the only
+thing that works. Say in the table caption that the preview renders it as a chart, so the reviewer
+knows they are not missing anything.
+
+Two traps found the same day:
+
+- **`textContent` takes raw markup. Do not HTML-escape it.** An escaped payload produces a file
+  containing that literal escaped text and no markup at all, and nothing errors.
+- **`fileSize` in the create response is meaningless for a converted Doc.** It comes back as `1`
+  while the document holds the full article. Never use it to check a write landed. Read the file
+  back instead, which also confirms the conversion did what you expected.
+- **The preview's font link must not be a `file://` path.** It resolves on the authoring Mac and
+  nowhere else, so a reviewer opening the Drive copy silently gets fallback typefaces. Link Poppins
+  and Lato from Google Fonts in the Drive copy.
+
 **7. Hand over.** Write the Doc's `viewUrl` into `Doc URL`, set `Status = With SME`, and post an item
 update naming both files.
 
