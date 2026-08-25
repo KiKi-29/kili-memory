@@ -35,8 +35,18 @@ entry means new. That is the whole mechanism, and it needs no extra plumbing.
 
 ### `#blog-intake-channel` · `C0BRQ4DTJQN` · private
 
-**Purpose.** Kiki approves content topics here. Charlie proposes a numbered batch, she replies with
-the numbers she wants, and the approved ones get queued for Wrighter to draft.
+**Purpose.** Every content decision Kiki makes happens here. Two things arrive:
+
+1. **Topic approvals.** Charlie proposes a numbered batch, she replies with the numbers she wants, and
+   the approved ones get queued for Wrighter to draft.
+2. **Revision reports, added 2026-08-26.** The Wrighter revision run posts here twice a day, 09:00 and
+   18:00, saying what it revised on drafts sitting with a reviewer, what it deliberately did not do,
+   and anything it is holding for Kiki to decide. Kiki's call: content decisions belong in the content
+   room, and her DM stays for sweeps.
+
+**Do not confuse the two.** A reply to a revision report is a decision about one draft, not an approval
+of topics. Numbers on their own belong to a Charlie batch. If a reply could plausibly answer either,
+ask which.
 
 **Members.** Kiki (`U09H14LEXHA`) and Kili (`U0BPVFVE7H6`). Two people, as of 2026-08-22.
 
@@ -48,6 +58,11 @@ Charlie. Charlie writes the board. Record rejections in the ledger with her reas
 
 **What she may not do.** Approve anything herself. Interpret an ambiguous reply. If she cannot tell
 with certainty which items were approved, she asks in the channel and writes nothing.
+
+**Ignore the revision run's own posts.** They arrive from `U0BPVFVE7H6`, which is her own id, so the
+ignore-my-own-posts guard covers them. They wake her because the relay fires on any message in this
+channel; nothing is owed and she should stop cheaply. If she ever finds herself replying to one, that
+guard has broken and it should be reported.
 
 **Only Kiki can approve.** `U09H14LEXHA` and nobody else. The channel having two members today is
 not a reason to skip the check.
