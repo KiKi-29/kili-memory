@@ -1,10 +1,16 @@
-# Kili, as a Slack app.
+# Kili, as a Slack app. App id A0BP33M5VUH, bot user U0BPVFVE7H6.
 #
-# Paste this into api.slack.com/apps > Create New App > From a manifest.
+# THIS FILE NOW MATCHES THE LIVE APP, as read back from api.slack.com on
+# 2026-08-25. It did not before, and that cost real time — see the warning below.
 #
-# Deliberately omits event_subscriptions. Slack verifies the request URL the
-# moment you save one, and ours does not exist until the Vercel deploy. Adding
-# it to a manifest now would just fail. We add it after deploy, in the UI.
+# To change the app: edit api.slack.com/apps > Kili > App Manifest, then update
+# this file from what the live one says. Never the other way round.
+#
+# WHY THIS MATTERS. The earlier version of this file deliberately omitted
+# event_subscriptions ("we add it after deploy, in the UI") and predated the
+# channels:history and groups:history scopes. So it described an app that no
+# longer existed. Pasting it over the live manifest would have wiped the event
+# subscriptions and killed the wake. The label on a thing is not the thing.
 
 display_information:
   name: Kili
@@ -12,33 +18,81 @@ display_information:
   background_color: "#161616"
 
 features:
+  # ADDED 2026-08-25, and this block is the whole reason the DM was broken.
+  #
+  # With no app_home block at all, Slack defaults the messages tab to READ ONLY.
+  # The symptom is not an error anywhere in the config: it is the sentence
+  # "Sending messages to this app has been turned off" appearing in Slack where
+  # the message box should be, and `slack_send_message` failing with
+  # `execution_failed: restricted_action_read_only_channel`.
+  #
+  # A bot can post into its own DM regardless. A human, or the MCP connector
+  # acting as one, cannot. So the DM was a one-way pipe pointing at Kiki for
+  # sixteen days, and every scheduled sweep aimed at it would have failed.
+  app_home:
+    home_tab_enabled: false
+    messages_tab_enabled: true
+    messages_tab_read_only_enabled: false
   bot_user:
     display_name: Kili
-    # Kili is only ever "online" while a message is being handled, since Vercel
-    # functions do not stay running. Showing her as online avoids a permanently
-    # grey dot that reads as broken.
+    # Verified working: the green dot shows next to her name in Slack.
     always_online: true
 
 oauth_config:
   scopes:
     bot:
-      # Send the DM. This is the one that matters.
+      # Read messages in public channels she is a member of.
+      - channels:history
+      # Send the message. The one that matters.
       - chat:write
-      # Read messages in DMs with her. Required for the message.im event to
-      # carry any text; without it events arrive empty.
+      # Read messages in DMs with her. Without it, message.im arrives empty.
       - im:history
       # See the DM conversation itself.
       - im:read
-      # Open a DM channel with Kiki from scratch. The morning ping needs this,
-      # because a cron run has no incoming message to reply into.
+      # Open a DM with Kiki from scratch, since a scheduled run has no message
+      # to reply into.
       - im:write
-      # Resolve a user id to a name. Used for logging and for telling Kiki
-      # apart from anyone else who messages.
+      # Read messages in private channels she is in, e.g. #blog-intake-channel.
+      - groups:history
+      # Resolve a user id to a name, and tell Kiki apart from anyone else.
       - users:read
+  pkce_enabled: false
 
 settings:
+  event_subscriptions:
+    # The doorbell. A Vercel relay receives the event and fires the
+    # `Kili channel wake` routine, trig_01YMAJxHhVh1G8S2CHYkrWFi.
+    #
+    # TWO KNOWN PROBLEMS HERE, both open as of 2026-08-25:
+    #
+    # 1. Every event wakes her TWICE. Runs arrive in pairs seconds apart. It is
+    #    not overlapping subscriptions — message.channels and message.groups are
+    #    mutually exclusive. Slack requires a 200 within THREE SECONDS and
+    #    retries up to three times otherwise, so the relay is almost certainly
+    #    triggering the routine before acknowledging. Ack first, trigger after.
+    #
+    # 2. The x-vercel-protection-bypass token is a live secret sitting in a
+    #    query string, in this file and in the Slack config. Anyone holding it
+    #    can wake Kili at will. Rotate it, and verify the X-Slack-Signature
+    #    header in the relay instead — the bypass only gets past Vercel's gate,
+    #    it does not prove the request came from Slack.
+    #
+    # Note: slack-event-relay.vercel.app is NOT in the Vercel account reachable
+    # from the Vercel MCP (that one lists zero projects), so it cannot be
+    # inspected from a session. It lives under a different login.
+    request_url: https://slack-event-relay.vercel.app/api/slack-events?x-vercel-protection-bypass=N6LWILopR1bUlLNkCm3k2l6N4gx76JoR
+    bot_events:
+      - message.channels
+      - message.groups
+      # ADDED 2026-08-25. Without this she never hears a DM at all. Fixing the
+      # read-only messages tab without adding this gives you a door with no
+      # bell: Kiki can type, and nothing happens.
+      #
+      # VERIFIED: "hi" sent 13:21:33 IST, wake fired 13:21:36 IST. Three seconds.
+      - message.im
   org_deploy_enabled: false
-  # Socket Mode is the alternative to a public webhook. It needs a process that
-  # stays connected, which is exactly what we avoided by going serverless.
+  # Socket Mode needs a process that stays connected, which is what going
+  # serverless avoided.
   socket_mode_enabled: false
   token_rotation_enabled: false
+  is_mcp_enabled: false
