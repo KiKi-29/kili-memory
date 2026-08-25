@@ -10,6 +10,37 @@ already covers.
 
 ---
 
+## Kiki's four decisions of 2026-08-25 13:05
+
+**Recorded:** 2026-08-25 · **Status:** settled, do not re-raise
+
+Quoted from her own Slack message in `#blog-intake-channel` at 13:05 IST, verbatim:
+
+> All the Higher Ed are taken care of, the pages and everything. You can chill there.
+> San Diego and D360 Product video are same.
+> Don't update anything on Monday board.
+> TSIC - I noticed. Let us play by the ear. We don't have any action items, I believe
+
+What each one closes:
+
+1. **Higher Ed is done.** The pages and everything. **Stop raising the Higher Ed addendum, the
+   parent BRD and Prabitha's go-live dates at her.** Whatever the addendum entry further down this
+   file still says about waiting on Prabitha, this supersedes it.
+2. **San Diego and the D360 product video are one ask, not two.** Kili had counted them separately
+   and flagged a "three video asks in five days" pattern off the back of it. It is two, which makes
+   the pattern weaker than it was presented. Her own 19 Aug note already said they were one thing.
+3. **Nothing gets written to the monday board** on the strength of any of this.
+4. **TSIC is noted and parked.** Play it by ear. No action items believed outstanding, so it needs
+   no board, no row and no chasing.
+
+**Why this entry exists.** These four existed only in a Slack thread for most of a day. Kili checked
+origin rather than her own copy, found `open-threads.md` and `handled.md` both last touched 22 August,
+and said plainly that Tuesday's sweep would walk in and raise Higher Ed and the video board again.
+She was right, and she declined to write them from the cloud on purpose — `kili-memory` is walled off
+from a scheduled run by design. So this is the manual link in the chain, and it is a real one.
+
+---
+
 ## Custom development GTM motion
 
 **Owner:** Kiki · **Asked by:** Satha · **Opened:** 2026-08-19 · **Status:** logged, not started
