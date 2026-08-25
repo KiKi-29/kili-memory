@@ -167,18 +167,55 @@ folder. A report file pushed there fires a GitHub Action, which posts to Slack w
 `xoxb-` token from repository secrets. Tested twice from the Mac, and both messages arrived in
 `D0BNUQPH38F` **as Kili**, not as Kiki. The token never touches a routine prompt.
 
-**What does not work, and is why this is not live.** A cloud run cannot start it.
+**THE RELAY IS LIVE. A cloud run fires it. Proven 2026-08-25.**
+
+Everything below this line supersedes the earlier claim that a cloud run could not start it. That
+claim was true only because the routine was not configured for it.
+
+**The cause was `session_context.sources`, not permissions.** A cloud run gets a git credential
+*only* for the repositories listed as its sources. The sweeps listed `kili-memory` alone, so
+`kili-reports` was uncloned and uncredentialed, and the push 403'd. Add it as a second source and
+the run gets both a checkout and a working credential.
+
+The Claude GitHub App **was already installed** on `kili-reports` the whole time — four months, on
+*Only select repositories*, alongside `crux-bootcamp-mode`. The earlier note blamed a missing
+install and that was simply wrong. Nobody could check it from a session, which is exactly how the
+bad guess survived: `gh api /user/installations` needs an app-authorized token.
+
+**Measured from inside a cloud run, 2026-08-25 08:05 UTC:**
 
 | Route from a cloud run | Result |
 |---|---|
-| `git push` to the repo | **403** — `Claude doesn't have GitHub access to …`. The Claude GitHub App is not installed on the repo. Fixable in principle. |
-| `POST /repos/…/dispatches` | **403** — `repository_dispatch is not permitted for this session type`. Refused by the agent proxy itself, so no credential opens it. |
-| `api.github.com` generally | 200, and `/user` resolves to `KiKi-29` |
-| `GITHUB_TOKEN` / `GH_TOKEN` in the sandbox | Set, but 14 characters. Proxy placeholders, not usable credentials. |
+| `git push` to `kili-reports` **when listed as a source** | **SUCCEEDS.** `77887dd..e946573 main -> main`, first try, no force |
+| Relay Action after that push | fired in 1s, completed in **8s**, posted **as Kili** |
+| `api.github.com/repos/KiKi-29/kili-reports` | **200** — app is installed |
+| `api.github.com/repos/KiKi-29/kili-memory` | **403** — *"GitHub access is not enabled for this session. An org admin must connect the Claude GitHub App for this organization."* Correct and intended: the app is deliberately NOT installed there |
+| `POST /repos/…/dispatches` | 403, refused by the agent proxy. Irrelevant now — push is the route |
+| `GITHUB_TOKEN` / `GH_TOKEN` | 14 characters, placeholders. Auth is injected by the proxy (`http.proxyauthmethod basic`), there is no token, no credentials file and no helper |
 
-So the relay is built and proven from the Mac, and unreachable from the scheduled runs that actually
-need it. Until the push route is opened, **a cloud run still posts through the MCP connector, as
-Kiki, with the opening line.** That has not changed.
+**So `kili-memory` read-via-API 403s while its clone works.** That is the wall Kiki asked for holding
+exactly as designed: a scheduled run can read its own definition and cannot rewrite it.
+
+**All three routines now deliver this way** — both sweeps and the channel wake. They write
+`reports/<stamp>.md` with a `<!-- slack-channel: … -->` first line, commit as `Kili`, and push to
+`main`. The Action strips the marker and posts to that channel.
+
+**Consequences, and they are the whole point:**
+
+- Messages arrive as **Kili**, her name, her avatar, her `APP` badge, her user id `U0BPVFVE7H6`.
+- **The disclosure line is gone from all three prompts.** It existed only because the connector wore
+  Kiki's name. Claiming to post on her behalf is now false, and a false disclosure is worse than none.
+- **Slack notifies her properly**, because a message from Kili is a message from somebody else.
+- **The self-wake loop closes.** Her own posts previously went out under Kiki's account, so her
+  ignore-my-own-posts guard could not see them and she woke herself — four wakes on 25 August, two
+  self-inflicted. Her posts now carry her own id.
+
+**Still true: the connector is the only way to place a reaction.** The relay posts messages only. So
+reactions stay under Kiki's account. A mark is not a voice, so this is acceptable, but it is why a
+correctly-attributed message can still carry a receipt that looks like Kiki's.
+
+**Still true: Bash cannot reach `slack.com` from the sandbox.** Nothing above changes that. The relay
+works precisely because GitHub is the intermediary.
 
 **Why the reports repo is separate from `kili-memory`.** Opening the push route means granting a
 cloud run write access. Granting it on `kili-memory` would let a scheduled run edit `kili.md` — the

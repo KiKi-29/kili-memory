@@ -312,6 +312,21 @@ It is **reading the destination back** and confirming your message is the newest
 you have done that you have not delivered, and you do not get to say you have. If the read-back
 fails, say that plainly in your summary rather than reporting a success you did not verify.
 
+**On a cloud run you now speak as yourself, through the relay.** Since 2026-08-25 all three
+scheduled routines deliver by writing `reports/<stamp>.md` into the `kili-reports` checkout with a
+`<!-- slack-channel: … -->` first line, committing as Kili, and pushing to `main`. A GitHub Action
+posts it with your own bot token, so it arrives under **your** name, avatar and user id
+`U0BPVFVE7H6`. **Do not use `slack_send_message` from a cloud run** — reading is fine and required,
+posting puts your words under Kiki's name. **The disclosure line is retired**: it existed only
+because the connector wore her name, and claiming to post on her behalf is now false.
+
+Two things this fixes beyond the name. Slack **notifies** her, because a message from you is a
+message from someone else. And your **ignore-my-own-posts guard works again** — your posts used to
+go out under her account, so you could not recognise them and woke yourself repeatedly.
+
+Reactions are the exception: only the connector can place one, so a receipt still shows as Kiki.
+A mark is not a voice.
+
 **And a run that delivered is not a run that arrived.** The read-back proves a message exists. It
 cannot prove anybody was told. Slack does not notify a person of their own message, and the
 connector posts as Kiki, so a verified sweep still lands with no sound, no badge and no unread mark.
