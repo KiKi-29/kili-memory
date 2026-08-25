@@ -1,8 +1,26 @@
 ---
 name: wrighter
 description: The one thing at CUBE84 that produces finished content. Takes an approved topic and turns it into a written, illustrated, brand-correct piece, then delivers it to Drive as a Google Doc plus an HTML preview for a subject matter expert to review. Holds the full CUBE84 blog standard and house voice inside it, the single source of truth for both. Handles blogs today; whitepapers and ebooks when a destination exists for them. Reports to Charlie, and can be called directly by Kiki.
-tools: Skill, Bash, Read, Write, Glob, Grep, ToolSearch, WebSearch, WebFetch, mcp__claude_ai_Google_Drive__create_file, mcp__claude_ai_Google_Drive__update_file, mcp__claude_ai_Google_Drive__read_file_content, mcp__claude_ai_Google_Drive__search_files, mcp__claude_ai_Google_Drive__get_file_metadata, mcp__claude_ai_monday_com__get_board_info, mcp__claude_ai_monday_com__get_board_items_page, mcp__claude_ai_monday_com__change_item_column_values, mcp__claude_ai_monday_com__create_update, mcp__claude_ai_CUBE84_Blog_Publisher__publish_blog, mcp__claude_ai_CUBE84_Blog_Publisher__list_blog_authors, mcp__claude_ai_CUBE84_Blog_Publisher__list_blog_categories
+tools: Skill, Bash, Read, Write, Glob, Grep, ToolSearch, WebSearch, WebFetch, mcp__claude_ai_Google_Drive__create_file, mcp__claude_ai_Google_Drive__update_file, mcp__claude_ai_Google_Drive__read_file_content, mcp__claude_ai_Google_Drive__search_files, mcp__claude_ai_Google_Drive__get_file_metadata, mcp__claude_ai_monday_com__get_board_info, mcp__claude_ai_monday_com__get_board_items_page, mcp__claude_ai_monday_com__change_item_column_values, mcp__claude_ai_monday_com__create_update, mcp__claude_ai_CUBE84_Blog_Publisher__publish_blog, mcp__claude_ai_CUBE84_Blog_Publisher__list_blog_authors, mcp__claude_ai_CUBE84_Blog_Publisher__list_blog_categories, mcp__Google_Drive__create_file, mcp__Google_Drive__update_file, mcp__Google_Drive__read_file_content, mcp__Google_Drive__search_files, mcp__Google_Drive__get_file_metadata, mcp__monday-com__get_board_info, mcp__monday-com__get_board_items_page, mcp__monday-com__change_item_column_values, mcp__monday-com__create_update, mcp__CUBE84_Blog_Publisher__publish_blog, mcp__CUBE84_Blog_Publisher__list_blog_authors, mcp__CUBE84_Blog_Publisher__list_blog_categories
 ---
+
+<!--
+TWO NAMING SCHEMES IN `tools:` ON PURPOSE. Do not tidy one away.
+
+The connectors are named differently depending on where this agent runs. In a claude.ai session they
+carry the `mcp__claude_ai_*` prefix; inside a scheduled cloud run they are `mcp__monday-com__*`,
+`mcp__Google_Drive__*` and `mcp__CUBE84_Blog_Publisher__*`. Listing only the first set is why the
+2026-08-24 scheduled run found no Drive and no monday, and the parent routine had to proxy every
+call on this agent's behalf.
+
+That fix was written as commit `f60ef2a` on 2026-08-24, could not be pushed (the cloud run had no
+write access to `kili-memory`, by design), was sent out as a patch file, and was never applied.
+Applied by hand 2026-08-26.
+
+Separately, and still true: **connectors do not travel to a spawned subagent in a cloud run.** Correct
+prefixes are necessary, not sufficient. A scheduled routine that needs Drive or monday should do that
+work itself rather than delegate it, which is what the revision run and Charlie's run both now do.
+-->
 
 # Wrighter
 
