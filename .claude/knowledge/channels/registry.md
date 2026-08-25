@@ -54,28 +54,46 @@ not a reason to skip the check.
 
 **Context given by** Kiki, 2026-08-21, when she created the channel and added Kili to it.
 
-### Kiki's DM · `D09H14LK9QU` · direct message
+### Kiki's DM with Kili · `D0BNUQPH38F` · direct message
 
 **Purpose.** Where the scheduled sweep lands. This is the morning ping, and it is the one place
 Kili starts a conversation rather than answering one.
 
-**Address it as `D09H14LK9QU`.** The connector also accepts Kiki's user id `U09H14LEXHA` as a
-`channel_id` and resolves it to this same DM, but use the `D` id: it is the conversation, not a
-person, and it is what `slack_read_channel` reports back.
+**Address it as `D0BNUQPH38F`.** That is the conversation between Kiki and Kili the bot user,
+`U0BPVFVE7H6`. Passing that user id as a `channel_id` resolves to the same DM, but use the `D` id:
+it is the conversation, not a person, and it is what `slack_read_channel` reports back.
 
-**Members.** Kiki and Kili. Nobody else can ever be added to a DM, which is why the sweep goes
-here and not into a channel. The sweep quotes her inbox, her boards and Salesforce, and a channel
-is a place other people can be added to later.
+**`D09H14LK9QU` is a different conversation and it is the wrong one. Corrected 2026-08-25.**
+An earlier version of this entry named it and called its members "Kiki and Kili". Both wrong. It is
+Kiki's own self-DM: every message in it was authored by her account, each carrying a "Sent using
+Claude" footer. Two sweeps ever reached it, 10 August and 25 August. She happened to see the first
+and replied to it. The second she never saw, and that afternoon she asked why the routine had not
+run.
 
-**What she may do.** Post the sweep. Reply to a follow-up on it.
+**Why a self-DM is the worst possible address.** Slack does not notify anyone of their own message:
+no sound, no badge, no unread mark, and it arrives already read. So the sweep was not merely in an
+odd place, it was in the one place that guarantees silence. Posting *as* Kiki is a constraint of the
+connector and the opening line answers it. Posting *to* Kiki as Kiki answers nothing.
 
-**What she may not do.** Everything else. The sweep is read-only work and this message is its
-only output.
+**Why the mistake survived.** The read-back passed. It proved a message existed in a conversation,
+and it could not know the conversation was the wrong one or that nobody had been told. Verifying
+delivery and verifying arrival are different checks, and only the first had been built. Both sweep
+prompts now require a `PushNotification` carrying the finding before a run may call itself done.
 
-**Why this entry exists.** Added 2026-08-25 after the delivery audit below. It was the only
-conversation Kili posts to that had no entry here, and her own rule at the top of this file is
-that no entry means she reads and does not act. The rule written to stop her acting in a strange
-channel could have stopped her posting the sweep at all.
+**Members.** Kiki and Kili the bot. Nobody else can ever be added to a DM, which is why the sweep
+goes here and not into a channel. The sweep quotes her inbox, her boards and Salesforce, and a
+channel is a place other people can be added to later.
+
+**What she may do.** Post the sweep, then request the push that carries its finding. Reply to a
+follow-up on it.
+
+**What she may not do.** Everything else. The sweep is read-only work, and that message plus its
+push are its only output.
+
+**Why this entry exists.** Added 2026-08-25 after the delivery audit below, then corrected the same
+day once the two DMs were told apart. Her own rule at the top of this file is that no entry means
+she reads and does not act, so the rule written to stop her acting in a strange channel could have
+stopped her posting the sweep at all.
 
 ---
 

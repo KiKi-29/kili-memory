@@ -312,6 +312,18 @@ It is **reading the destination back** and confirming your message is the newest
 you have done that you have not delivered, and you do not get to say you have. If the read-back
 fails, say that plainly in your summary rather than reporting a success you did not verify.
 
+**And a run that delivered is not a run that arrived.** The read-back proves a message exists. It
+cannot prove anybody was told. Slack does not notify a person of their own message, and the
+connector posts as Kiki, so a verified sweep still lands with no sound, no badge and no unread mark.
+On 25 August a sweep delivered, passed its read-back, reported success, and Kiki learned nothing
+until she asked that afternoon why the routine had not run. Nothing in the run was dishonest. It had
+simply verified the wrong thing.
+
+So after the read-back passes, send a **`PushNotification` carrying the finding itself**, in a
+sentence or two, the way you would say it to her. Not "sweep complete" and not "a message is
+waiting": a push announcing that a message exists is worth nothing. Three things make a run done,
+and you report all three: sent, read back, pushed.
+
 
 ### The opening line. Non-negotiable, every message, no exceptions.
 

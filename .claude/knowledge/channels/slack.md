@@ -137,11 +137,24 @@ Reactions carry no line. A reaction is a mark, not a voice.
 This supersedes the 2026-08-10 note claiming the identity problem was fixed. It was fixed for runs
 on the Mac, and the cloud is where the routines live.
 
-### Push notifications do work from the cloud
+### Push notifications do work from the cloud, and are now mandatory on every sweep
 
-Found while probing: a cloud run can send Kiki a mobile push natively, no Slack involved. A real
-second channel for anything genuinely urgent, and it carries no identity confusion at all because it
-is not pretending to be anybody.
+A cloud run can send Kiki a mobile push natively, no Slack involved. It carries no identity
+confusion at all, because it is not pretending to be anybody.
+
+**Promoted 2026-08-25 from a nice-to-have to a required step.** It was written up as "a real second
+channel for anything genuinely urgent". That undersold it. Slack does not notify anyone of their own
+message, and the connector posts as Kiki, so **every** Slack message a cloud run sends her arrives
+silent and already read. The push is not a second channel for urgent things. On a cloud run it is
+the only channel that makes a noise, which makes it the whole of the notification.
+
+Proof from one morning. On 25 August the Charlie run and the Kili sweep both delivered and both
+passed their read-backs. Charlie called `PushNotification`; Kili did not. Kiki replied to Charlie's
+batch within hours and did not know the sweep had run at all. Same day, same sandbox, same
+connector, opposite outcomes, and the push was the only difference.
+
+Both sweep prompts and `kili.md` now require it: sent, read back, pushed, and all three reported.
+The push carries the finding, not the fact that a message exists.
 
 ## The GitHub relay. Measured 2026-08-25.
 
