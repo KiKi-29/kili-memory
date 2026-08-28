@@ -226,3 +226,34 @@ app is ever installed, install it on `kili-reports` only.**
 
 **The reports repo is private and must stay private.** A sweep quotes her inbox, her boards and
 Salesforce, so those files can name real people.
+
+## What the relay is allowed to carry. Added 2026-08-28.
+
+The relay made length free, and that turned out to be a problem rather than a feature.
+
+Before it, a long message was awkward to send. Now the Action splits anything oversized on paragraph
+boundaries and threads the remainder, so nothing pushes back on volume. Five routine prompts also
+carried the line *"do not truncate it to fit"* — written on 25 August to stop truncation at Slack's
+message limit, and read as licence to write long. On 2026-08-28 a sweep arrived at **sixty lines
+across nine blocks with seven bare row ids**. Kiki's word was *overwhelming*.
+
+**So the shape is fixed, and it is not the relay's job to fix it.** The relay will happily post
+whatever it is given. The ceiling lives in `.claude/agents/kili.md` under "Talking to Kiki":
+
+- **Three items, two lines each**, plus one offer line naming what was held back.
+- **Never a bare id.** Name the thing and link it: `<https://cube84-bunch.monday.com/boards/{boardId}/pulses/{itemId}|the row's real name>`.
+  A channel is `#blog-intake-channel`, not `C0BRQ4DTJQN`.
+
+Charlie's weekly batch is the one exception on count, because up to six topics *is* its output. One
+line per topic, and the id rule applies in full.
+
+### `archive/` is committed and never posted. Do not "fix" this.
+
+Full working notes go to **`archive/<date>-<run>.md`** in `kili-reports`. Only the short message goes
+to `reports/**.md`.
+
+The workflow fires on `paths: reports/**.md`, so a file under `archive/` is committed, versioned and
+readable by the next run, and silent. **That path filter is load-bearing.** Widening it to `**.md`
+would look like a tidy-up and would start posting the long version, which is the exact thing being
+prevented. Nothing is lost by holding detail back, because it is in git.
+
