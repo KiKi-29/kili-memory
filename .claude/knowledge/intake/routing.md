@@ -245,6 +245,13 @@ typed as a file column and is used as a text field. Search these specific IDs.
 
 **Blog Tracker 2026 & 2025 `8422767857`**
 
+**Kili may create and update rows here as of 2026-09-02.** Kiki's decision. Until then this was the
+one board she was forbidden to write to, because it is Abhilaash Jaishankar's team production board
+and moving a topic onto it was a deliberate human step. Propose-first still applies: she shows Kiki
+the row and creates it on a yes. **Charlie and Wrighter remain blocked** — anything of theirs that
+needs a row here comes through Kili.
+
+
 | Column | ID | Type | Holds in practice |
 |---|---|---|---|
 | Doc Link | `text_mknah1bh` | **text** | The content doc URL, and sometimes the Gmail thread URL |
