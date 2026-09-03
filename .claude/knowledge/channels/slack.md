@@ -112,55 +112,59 @@ pushed, confirmed present in the cloud checkout, and changed nothing. That setti
 sandbox on the Mac, not the cloud proxy. It was reverted, because as written it would have
 restricted the *local* sandbox to slack.com only.
 
-**There is no route around this.** Not a relay, not a custom domain, not a webhook host. Do not
-spend another run looking for one.
+**Bash cannot reach `slack.com` from a cloud run, and that has never changed.** What did change is
+that it stopped mattering. **GitHub is on the allowlist and GitHub can reach Slack**, so the relay
+works — see "THE RELAY IS LIVE" below, which is the operative section and supersedes anything above
+it. An earlier version of this paragraph said there was no route around the block and told you to stop
+looking. That was wrong, and it was wrong for two weeks.
 
 ### What it means for her voice
 
-**On Kiki's Mac, in a session, Bash reaches Slack and Kili speaks as Kili.** Verified.
+**She speaks as herself, everywhere. Corrected 2026-08-26.**
 
-**In a cloud run, the only way to reach Slack is the MCP connector, which posts as Kiki.** No
-setting changes that.
+Messages go out through the relay under her own bot token, so they arrive as **Kili** — her name, her
+avatar, an `APP` badge. That holds in a cloud run and on the Mac alike.
 
-The mitigation, set by Kiki on 2026-08-22 and **non-negotiable**: every message opens with this
-line, verbatim, then a blank line, then the content.
+**There is no opening disclosure line. Do not write one.** This section used to require every message
+to begin, verbatim, with _"Kili here, Kiki's AI sidekick posting on behalf of her. Any mistakes, tag
+Kiki. I am still learning."_ and called it non-negotiable. **It is retired.** It existed for exactly
+one reason — the connector posted under Kiki's own account, so a colleague reading Kili's words
+believed Kiki had written them, and the line was what kept that honest. Kili is the sender now, so
+the line would be false, and a false disclosure is worse than none.
 
-> _Kili here, Kiki's AI sidekick posting on behalf of her. Any mistakes, tag Kiki. I am still learning._
+**Never post through the Slack connector.** Reading with it is fine and is needed for the read-back.
+Posting with it puts her words under Kiki's name — and because Slack groups consecutive messages from
+one author, it renders with no name and no avatar at all, reading as Kiki talking to herself.
 
-It is not a style choice and not open to shortening. A message from Kiki's account that Kili wrote
-is a colleague reading something they believe Kiki said, and the line is what keeps that honest. It
-also tells a reader what to do about an error, which "tag Kiki" supplies and a bare name prefix does
-not.
+**Reactions are the one exception**, because only the connector can place one. A reaction is a mark,
+not a voice, so it carries nothing.
 
-Reactions carry no line. A reaction is a mark, not a voice.
+### Push notifications work from the cloud, and are for failures only
 
-This supersedes the 2026-08-10 note claiming the identity problem was fixed. It was fixed for runs
-on the Mac, and the cloud is where the routines live.
+A cloud run can send Kiki a mobile push natively, with no Slack involved and no identity confusion,
+because it is not pretending to be anybody.
 
-### Push notifications do work from the cloud, and are now mandatory on every sweep
+**It was mandatory on every sweep between 25 and 28 August, and it is not any more.** The reason it
+was required was that the connector posted as Kiki and *Slack does not notify anyone of their own
+message*, so every sweep arrived silent and already read — the push was the only thing that made a
+noise. Once she became her own sender, Slack started notifying properly, Kiki confirmed her phone
+buzzed, and a routine push became a second alert for something she had already been told.
 
-A cloud run can send Kiki a mobile push natively, no Slack involved. It carries no identity
-confusion at all, because it is not pretending to be anybody.
+**Send one when delivery failed** — the push was rejected, or the read-back showed the wrong sender or
+nothing. Name the exact error and stop. **Or when a finding genuinely cannot wait** for her to open
+Slack, and that bar is high.
 
-**Promoted 2026-08-25 from a nice-to-have to a required step.** It was written up as "a real second
-channel for anything genuinely urgent". That undersold it. Slack does not notify anyone of their own
-message, and the connector posts as Kiki, so **every** Slack message a cloud run sends her arrives
-silent and already read. The push is not a second channel for urgent things. On a cloud run it is
-the only channel that makes a noise, which makes it the whole of the notification.
-
-Proof from one morning. On 25 August the Charlie run and the Kili sweep both delivered and both
-passed their read-backs. Charlie called `PushNotification`; Kili did not. Kiki replied to Charlie's
-batch within hours and did not know the sweep had run at all. Same day, same sandbox, same
-connector, opposite outcomes, and the push was the only difference.
-
-Both sweep prompts and `kili.md` now require it: sent, read back, pushed, and all three reported.
-The push carries the finding, not the fact that a message exists.
+Worth keeping for the shape of the lesson: on 25 August the Charlie run and the Kili sweep both
+delivered and both passed their read-backs. Charlie called `PushNotification`; Kili did not. Kiki
+replied to Charlie's batch within hours and did not know the sweep had run at all. Same day, same
+sandbox, same connector, opposite outcomes. **A read-back proves a message exists. It cannot prove
+anybody was told.**
 
 ## The GitHub relay. Measured 2026-08-25.
 
-The section above says there is no route around the egress block and to stop looking. **That is
-still true for reaching Slack directly, and it is now too strong as written.** GitHub is on the
-allowlist, and GitHub can reach Slack. So a relay exists, in one direction only.
+**This is the operative section on delivery. Everything above it is context.** Bash still cannot
+reach `slack.com` from a cloud run, and that is measured, not guessed. But GitHub is on the allowlist
+and GitHub can reach Slack, so the block stopped mattering.
 
 **What works.** `KiKi-29/kili-reports` is a private repo holding one workflow and a `reports/`
 folder. A report file pushed there fires a GitHub Action, which posts to Slack with Kili's own
