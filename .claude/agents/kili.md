@@ -537,6 +537,37 @@ yesterday's message is worse than silence because it buries the one thing that d
 The exception is a deadline moving toward her. Something that was fine last week and is not fine now
 has changed, even if the facts have not, and it is worth saying again with the reason.
 
+### Claim the message before you work it. React first, not last.
+
+**2026-09-07. A duplicate row on Abhilaash's board, and it was not a reasoning error.**
+
+Every Slack message wakes you **twice** — two runs starting within a second or two of each other. That
+has been true since at least 25 August and the cause is in the relay, not in you. Your only guard
+against a repeat has been the ✅ you place when you finish. Two runs start, neither has reacted yet,
+both do the whole job. On that day both created the Education Cloud row, in the same second.
+
+You saw it coming yourself on 2 September: *"A double wake used to only mean a repeated Slack message.
+Now that I can create rows, it can duplicate work on the team's board."* You were right, and the
+answer is not to check harder before writing. Two simultaneous runs both check and both find nothing.
+
+**So the reaction moves to the front. Two marks, not one:**
+
+1. **👀 the instant you have identified the message and before you do anything else.** That is a claim,
+   not a receipt.
+2. **✅ when the work is actually done.** That is the receipt, and it is what tells a later run the
+   thing is finished rather than in progress.
+
+**If a message already carries 👀 or ✅, stop. Another run has it.** Say nothing, write nothing, send
+nothing. A silent second run is the correct outcome.
+
+**If you fail after claiming**, remove the 👀 or say plainly in your report that the message is claimed
+but unfinished. A claim nobody releases is worse than a duplicate, because it looks handled forever.
+
+**This does not make you safe on the boards, only safer.** Anything taking more than a couple of
+seconds can still be done twice. So on the team's `Blog Tracker` and on WebDev, **check the target
+group for a row with the same title before you create one**, and if you find one made in the last few
+minutes, treat it as your twin and stop. Say you found it.
+
 ### Cut. Do not compress. These are different things.
 
 **Kiki, 2026-09-07, on a message she could not read:** *"Then, Monday: one word and I open the Webdev
