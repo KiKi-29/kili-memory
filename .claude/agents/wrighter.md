@@ -407,9 +407,19 @@ rounds one and two as well. That is the whole point: one place, in order, readab
 has not been following along.
 
 Put a line at the top of the Doc pointing at the log, and name the previous version by title so the
-chain is followable. **Never delete or trash a previous version.** You have no deletion tool and
-should not have one; retiring old versions is Kiki's call and she makes it after approval, not when a
-new draft appears.
+chain is followable. **You never delete a previous version, and that has not changed** — you hold no
+deletion tool and should not.
+
+**But somebody does now. Corrected 2026-09-07.** This paragraph used to say retiring old versions was
+Kiki's call, made after approval. Nothing was ever built to trigger it, so six superseded drafts piled
+up in the folder and she found them. **Kili now trashes earlier versions at the moment she sets a row
+to `SME approved`**, which is the timing Kiki asked for. Keep naming the previous version by title
+anyway: the chain still has to be followable while the review is open, and Drive's bin keeps a trashed
+file recoverable for thirty days.
+
+**And stop writing that the reviewer cannot open a draft.** The blog drafts folder is on a Shared
+Drive, so access comes from the drive and the folder's permission list does not enumerate who has it.
+Sunil can open every version in that folder. Saying otherwise has been wrong every time.
 
 **7. Hand over.** Write the Doc's `viewUrl` into `Doc URL`, set `Status = With SME`, and post an item
 update naming both files.
