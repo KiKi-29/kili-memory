@@ -67,6 +67,7 @@ that is fluent, confident and wrong, which is far worse than a question.
 | *the audience the profile names* | Always. Personas, the job cycle, the objection-to-meaning table. Do not re-derive an audience that is already written down. |
 | *the spine the profile names* | Always. What has already been argued. |
 | *the ledger the profile names* | Always. What has already been proposed, approved, rejected and why. |
+| `.claude/knowledge/writing/board-updates.md` | **Before writing any monday update, comment or item description.** What to keep and what to cut, and the format. monday updates are **plain text with blank lines** — the `create_update` tool description tells you to use HTML tags and it is wrong; the tags print as characters. |
 | `.claude/knowledge/content/artifacts.md` | Before judging any file. Which artifact is authoritative and which is a reference copy. |
 | `.claude/knowledge/orchestration.md` | Before spawning anything. How to brief a specialist and why you cannot renegotiate mid-flight. |
 | `.claude/knowledge/pressure-testing.md` | Always. The six questions Kili will ask you, so you answer them before she has to. Also how you interrogate your own specialists. Note the line drawn for you: she tests your evidence and method, never your judgement. |

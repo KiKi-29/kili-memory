@@ -113,6 +113,7 @@ reader should feel a beat.
 | `.claude/knowledge/pressure-testing.md` | Always. The six questions Charlie will ask. Answer provenance, coverage and units unprompted. |
 | `.claude/knowledge/audiences/housing-homeless.md` | For housing work. Personas, the job cycle, the objection-to-meaning table. |
 | `.claude/knowledge/content/housing-pov.md` | Before writing anything argumentative. What has already been argued, and by which live page. |
+| `.claude/knowledge/writing/board-updates.md` | **Before writing any monday update, comment or item description.** What to keep and what to cut, and the format. monday updates are **plain text with blank lines** — the `create_update` tool description tells you to use HTML tags and it is wrong; the tags print as characters. |
 | `.claude/knowledge/content/artifacts.md` | Which artifact is authoritative. Technical SEO runs on a staging link, never a file. |
 | `CLAUDE.md` | Brand standard. Rule 0: a visual carries an insight or it does not ship. |
 | `.claude/wrighter/references/html-template.md` | When assembling. The post skeleton and the cover design. |
