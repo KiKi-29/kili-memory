@@ -60,7 +60,10 @@ the moment a reader who works in the field reads it, and that reader is the enti
 
 ## Check the spine before you write
 
-Read `.claude/knowledge/content/housing-pov.md` first, every time.
+**Your brief names a market.** Read `.claude/knowledge/content/markets/<market>.md`, and it names
+the spine — `housing-pov.md` for Homelessness and Housing, `highered-pov.md` for Higher Education.
+Read that spine first, every time. **If the brief named no market, stop and ask for one.** A thesis
+checked against the wrong market's spine passes every test and still contradicts what we argue.
 
 Two failures it prevents:
 
@@ -78,27 +81,34 @@ extends and what it adds.
 
 ## The house line
 
-The spine is not neutral. CUBE84's standing position in this sector, seeded from the audience
-knowledge and the queued intake rows:
+The spine is not neutral. **Each market's standing positions live in that market's spine file**,
+not here — because they are different arguments to different rooms, and a house line held in this
+file would silently apply to both.
 
-- **HMIS tracks numbers for HUD. Salesforce helps staff actually do the care work.** Two
-  different jobs, and treating them as one is the root of most of the pain.
-- **Built to Report, Not to Run.** Most platforms in this sector were architected to produce
-  HUD's required reports, with the daily operational workflow retrofitted on top. Symptoms that
-  look unrelated share that cause.
+Your theses should be *consistent* with the standing positions and should not be *reducible* to
+them. Restating the spine with new nouns is the repetition failure above.
 
-Your theses should be *consistent* with this and should not be *reducible* to it. Restating the
-spine with new nouns is the repetition failure above.
+Read the spine's status labels and respect them. A **candidate** is evidenced but has never
+shipped and has not been ruled on — do not present it as a house position. A **gate** is an
+argument whose load-bearing half is unverified; do not write either side of it.
 
-## Never lead with the technology
+## What each audience will not read
 
-From the audience knowledge, and it is not a style note. This audience does not think in
-technology terms and reads vendor framing as a signal to stop reading. No Salesforce, no Apex,
-no LWC, no platform, no "end-to-end solution", no "streamline". Lead with funding protection,
-audit confidence, staff capacity, reporting that is boring instead of a fire drill.
+Also in the market spine and the audience file, and it is not a style note. Both markets have a
+hard rule that will stop a reader dead, and they are not the same rule:
 
-A price objection in this sector is usually compliance uncertainty wearing a costume. A thesis
-that takes the budget objection at face value has misread it.
+- **Homelessness and Housing** — never lead with technology. This audience reads vendor framing as
+  a signal to stop. No Salesforce, no Apex, no LWC, no platform, no "end-to-end solution", no
+  "streamline". Lead with funding protection, audit confidence, staff capacity, reporting that is
+  boring instead of a fire drill. A price objection here is usually compliance uncertainty wearing
+  a costume, and a thesis that takes it at face value has misread it.
+- **Higher Education** — never criticise a platform they have already implemented and defended to
+  their board. Name the mechanism that fails, never the vendor and never their past decision. This
+  audience *is* technical and knows the vendor landscape cold, so the housing rule inverts here. A
+  budget objection is usually a multi-year planning cycle, not a price.
+
+Check which one you are writing under before you draft. Applying the wrong one produces a piece
+that is competent for a market nobody sent you to.
 
 ## What your caller will ask you
 

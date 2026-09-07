@@ -91,20 +91,20 @@ All `observed` — nothing has been proposed to Kiki yet.
 |---|---|--:|---|---|---|
 | 1 | `salesforce-owned-elsewhere-student-affairs-cannot-state-status` | 8 | booth, notes | The CRM is owned by IT, enrolment or advancement, so the student-affairs contact cannot scope, price or sponsor work on it | observed |
 | 2 | `initial-contact-lacks-purchasing-authority` | 6 | booth, outbound | The practitioner who feels the pain has no budget line; the budget holder is one to three levels up in a different reporting chain | observed |
-| 3 | `engagement-app-not-connected-to-crm-or-advising-system` | 5 | booth, inbound | The belonging layer sits outside the system holding the student record, so participation data never reaches the person advising the student | observed |
-| 4 | `multi-year-budget-planning-cycle-gates-entry` | 5 | booth, outbound | A planning cycle, not a line item. The term is measured in years, so the question is when the window opens, not whether price can drop | observed |
+| 3 | `engagement-app-not-connected-to-crm-or-advising-system` | 5 | booth, inbound | The belonging layer sits outside the system holding the student record, so participation data never reaches the person advising the student | **approved** |
+| 4 | `multi-year-budget-planning-cycle-gates-entry` | 5 | booth, outbound | A planning cycle, not a line item. The term is measured in years, so the question is when the window opens, not whether price can drop | **killed (TL)** |
 | 5 | `buyer-routes-to-multi-stakeholder-group-call` | 5 | booth | The buying unit is assembled by the practitioner, not the vendor. Asking for the group is the qualification step | observed |
 | 6 | `single-advisor-view-across-sis-lms-cocurricular` | 4 | booth | Staff assemble this view manually today, across three systems, per student | observed |
 | 7 | `legacy-sis-integration-sets-the-price-floor` | 4 | booth | The engagement layer must reach a system of record predating the CRM; that integration, not the product, sets the floor price | observed |
 | 8 | `trio-first-gen-cohort-programs-as-bounded-buying-unit` | 4 | booth, outbound | Federally-funded programmes report against a bounded roster, so they can adopt a narrow tool without an enterprise decision | observed |
-| 9 | `graduate-cohort-unserved-by-undergrad-belonging-model` | 3 | booth | Co-curricular belonging models assume a four-year undergraduate arc; graduate cohorts are short-tenure and terminal, so the participation signals the model needs do not exist | observed |
+| 9 | `graduate-cohort-unserved-by-undergrad-belonging-model` | 3 | booth | Co-curricular belonging models assume a four-year undergraduate arc; graduate cohorts are short-tenure and terminal, so the participation signals the model needs do not exist | **killed (TL)** |
 | 10 | `institutions-enter-via-staffing-gap-on-owned-platform` | 3 | inbound | Institutions own the platform and are short of hands, not software. Demand presents as a capacity gap and the buyer is a functional director, not IT | observed |
-| 11 | `incumbent-point-tool-retained-but-does-not-satisfy` | 3 | booth | Dissatisfaction is about permissions and connectivity, not functionality, which is why replacement cycles repeat without resolving anything | observed |
-| 12 | `staff-data-access-permission-tiers-gate-adoption` | 2 | booth | Who can see what is a procurement gate, evaluated before functionality | observed |
+| 11 | `incumbent-point-tool-retained-but-does-not-satisfy` | 3 | booth | Dissatisfaction is about permissions and connectivity, not functionality, which is why replacement cycles repeat without resolving anything | **approved** |
+| 12 | `staff-data-access-permission-tiers-gate-adoption` | 2 | booth | Who can see what is a procurement gate, evaluated before functionality | **approved** |
 | 13 | `advancement-demand-arrives-unpaid-no-paid-keyword-coverage` | 2 | inbound | Advancement buyers arrive organic and referral; there is no paid coverage of the terms they would use | observed |
 | 14 | `ai-earmark-exists-buy-decision-gates-on-hallucination-control` | 2 | booth, notes | The AI budget exists ahead of the use case; the buy decision turns on a credible grounding-and-guardrails answer, not on capability | observed |
 | 15 | `key-person-dependency-strands-student-data` | 2 | booth | Tooling and institutional knowledge sit with individuals; departures strand the data and freeze the process | observed |
-| 16 | `success-coaching-function-distinct-from-academic-advising` | 2 | booth, notes | Coaching sits outside the advising org and is measured on persistence, not registration, so advising-tool positioning does not reach it | observed |
+| 16 | `success-coaching-function-distinct-from-academic-advising` | 2 | booth, notes | Coaching sits outside the advising org and is measured on persistence, not registration, so advising-tool positioning does not reach it | **killed (TL)** |
 | 17 | `branded-search-converts-procurement-verification-not-new-demand` | 2 | inbound | Branded search converts people already inside a procurement process. The blank message is the tell | observed |
 | 18 | `residence-life-runs-a-separate-engagement-stack` | 2 | booth, outbound | Residence life buys its own event and engagement tooling on a separate budget | observed |
 
@@ -173,6 +173,34 @@ a `signal-miner` source. What it shows, pulled 2026-08-28:
 ---
 
 ## Run log
+
+**Run 1 — 2026-09-02, first proposal. Kiki approved 2 of 4.**
+
+Worked from the ledger, no re-mine — the sources are static. Four topics proposed against a ceiling
+of six. **Kiki took the two that needed no ruling from her**; the other two are parked, not
+rejected, and must not be re-proposed as new.
+
+| Topic | Bucket | Outcome |
+|---|---|---|
+| The Salesforce Education Cloud Data Model, Documented Properly | SEO | **Approved.** Board item `12962371406`. |
+| The Evaluation Ends Where the Real Decision Starts | TL | **Approved.** Board item `12962350241`. Built on #3, #11, #12. |
+| The person who can't buy it is the only one who can get it bought | TL | **Parked** — needs a conversation with Prabitha before it faces outward. This is spine candidate **C3**; approving it is a ruling on C3, not a new position. |
+| The quote is for the tool. The cost is the record it has to reach. | TL | **Parked and gated** — no organisation in the pool is recorded *stating* a price. Needs an approved-source anchor on integration cost, or it does not draft. |
+
+**Three theses refused by `pov-editor`**, recorded as `killed` above so they are not re-derived:
+budget-as-planning-cycle (the audience already knows it — sales enablement, not an argument),
+graduate belonging (entangled with a watch-list signal and on territory the BU lead is working),
+and success-coaching-versus-advising (**its evidence is that two organisations volunteered the
+belief unprompted — that is the definition of consensus**).
+
+**Four SEO candidates died on Google verification.** Semrush overstated every one:
+`crm managed services for higher education` 70 → no data · `higher education crm software
+comparison` 170 → 10 (**17x**) · `salesforce managed services partner` 260 → 30 (8.7x) ·
+`benefits of crm in higher education` 170 → 20 (8.5x). Recorded in the market profile by name.
+
+**Five signal clusters have no search demand anywhere** — AI governance and hallucination control,
+success coaching, advisor 360 and early alert, SIS integration cost, residence life. A strong
+fingerprint is not a keyword. Those are TL or nothing.
 
 **Run 0 — 2026-08-28, backfill.** First mine of the market. Four sources, 56-61 organisations,
 18 fingerprints above the floor, 7 held on the watch list, 12 organisations excluded on domain,

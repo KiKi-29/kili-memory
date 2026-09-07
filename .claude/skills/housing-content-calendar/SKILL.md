@@ -1,18 +1,40 @@
 ---
 name: housing-content-calendar
 description: >
-  Charlie's weekly pipeline. Turns the outbound team's conversation tracker into an
-  evidence-backed content calendar for the Homelessness and Housing market, routing every topic
-  to either the SEO/GEO/AEO bucket or the Thought Leadership bucket, producing a branded HTML
-  calendar, and writing approved topics to the private intake board for Wrighter to draft.
-  Use when the user says content calendar, housing content plan, what should we write about,
-  mine the conversation tracker, run Charlie, or asks what the outbound conversations are telling
-  us to publish. This is Agent 1 of the CUBE84 content system.
+  Charlie's content-calendar pipeline, for either CUBE84 market. Turns that market's conversation
+  evidence into an evidence-backed content calendar, routing every topic to either the SEO/GEO/AEO
+  bucket or the Thought Leadership bucket, producing a branded HTML calendar, and writing approved
+  topics to the private intake board for Wrighter to draft. Serves Homelessness and Housing and
+  Higher Education; the caller must name which. Use when the user says content calendar, housing
+  content plan, higher ed content plan, what should we write about, mine the conversation tracker,
+  run Charlie, or asks what the conversations are telling us to publish. This is Agent 1 of the
+  CUBE84 content system.
 ---
 
-# Housing Content Calendar
+# Content Calendar
 
 Agent 1 of CUBE84's content system, and Charlie's entry point.
+
+## Step −1 — Which market
+
+**This pipeline serves two markets and defaults to neither.**
+
+| Market | Profile |
+|---|---|
+| Homelessness and Housing | `.claude/knowledge/content/markets/housing.md` |
+| Higher Education | `.claude/knowledge/content/markets/highered.md` |
+
+**If the caller did not name a market, stop and ask.** Do not infer it from the topic and never
+fall back to housing. Every market-specific fact below — scope, evidence sources, keyword traps,
+dedupe surfaces, output path, drafts folder, spine, ledger, audience — comes from the profile you
+load here. Where this file still states a housing fact inline, **the profile wins.**
+
+Read the profile before Step 0. Then say, in one line, which market and which profile you loaded.
+
+> **The directory is still named `housing-content-calendar`.** That is a misnomer, kept
+> deliberately: `.gitignore:54` un-ignores this exact path, so renaming the directory would
+> silently stop the skill being committed, and the Tuesday 09:00 IST cloud routine invokes it by
+> name. Renaming needs both changed in the same pass. Do not rename it casually.
 
 - **Agent 1, this skill:** mines the outbound tracker, produces topics, gets them approved,
   queues them.
@@ -42,9 +64,12 @@ before it decides your output.
 | Retired intake sheet | `CUBE84 Blog Automation Pipeline - Intake Sheet`, `1_sj28P-ZH3pm987xz9J3V8ZZ7zPwGwNRa8UzRqVmTNc` |
 | Intake board | `Blog Automation Intake Sheet`, private, workspace `9810721` (CUBE84 Marketing) |
 | Team production board | `Blog Tracker 2026 & 2025`, `8422767857`. Not ours to write to. |
-| Ledger | `.claude/knowledge/content/housing-signals.md` |
-| POV spine | `.claude/knowledge/content/housing-pov.md` |
-| Audience | `.claude/knowledge/audiences/housing-homeless.md` |
+| Ledger, POV spine, audience | **The market profile names all three.** Housing: `housing-signals.md`, `housing-pov.md`, `audiences/housing-homeless.md`. Higher Ed: `highered-signals.md`, `highered-pov.md`, `audiences/higher-ed.md`. |
+
+**The tracker rows above are the housing evidence source.** Higher Education has no conversation
+tracker at all — its sources are a conference booth summary, event notes, inbound CRM form fills,
+and two nearly-worthless tracker weeks. The profile lists them with what each is worth. Do not go
+looking for a higher-ed tracker; its absence is settled, not untested.
 
 **The tracker title changes every week.** It carries the week-ending date. Resolve by pattern,
 report which file and which week you read, and never trust a hardcoded id to still be current.
@@ -74,12 +99,18 @@ that rather than reporting a low in-scope ratio as though the housing motion und
 
 ## Pipeline
 
-### Step 0 — Resolve the tracker
+### Step 0 — Resolve the evidence
 
-Search Drive by title pattern, sort by `modifiedTime`, take the newest. Report the file title,
-the week it covers, and the row count. If the newest file is more than ten days old, say so
-before mining: an unusually stale tracker is more likely a missed update than a quiet week, and
-mining it produces a calendar built on last week's conversations without saying so.
+**Housing.** Search Drive by title pattern, sort by `modifiedTime`, take the newest. Report the
+file title, the week it covers, and the row count. If the newest file is more than ten days old,
+say so before mining: an unusually stale tracker is more likely a missed update than a quiet week,
+and mining it produces a calendar built on last week's conversations without saying so.
+
+**Higher Education.** There is no tracker to resolve. Take the source list from the profile and
+report which of them you actually read. The ledger already holds a full backfill mined 2026-08-28
+— on a `weekly` or `topic` run, **read the ledger rather than re-mining**, because the sources are
+static and re-mining them produces the same fingerprints with the same counts and burns the run.
+Re-mine only when a genuinely new source lands, and say which one.
 
 ### Step 1 — Mine
 
@@ -90,8 +121,11 @@ Spawn `signal-miner`. The brief carries, explicitly:
 - the detail fields: `Details` on the conversation-log tab, **and the `Minutes of Meeting` tab**.
   That second tab is where completed meetings are written up rather than cold calls, it is the
   highest-density text in the file, and the first backfill left it unread.
-- the scope: housing and homelessness (below)
+- the scope: the in-scope and out-of-scope lists from the market profile
 - the ledger fingerprints, so repeats come back marked rather than rediscovered
+
+**On higher ed, skip this step entirely unless a new source has landed.** The market's evidence is
+static and already mined; `signal-miner` would return what `highered-signals.md` already holds.
 
 Statuses worth weighting: `Follow-up`, `Meeting Set-up`, `Reference Shared` carry conversation.
 `Declined` carries a reason, and a repeated reason for declining is among the strongest signals
@@ -99,13 +133,10 @@ in the log. Weight, do not exclude.
 
 ### Step 2 — Scope
 
-**In scope:** HMIS, Continuum of Care, coordinated entry, shelter and outreach, HUD reporting
-(APR, CAPER, LSA), affordable housing, affordable homeownership, housing navigation, and the
-county or CoC bodies that run them.
-
-**Out of scope:** disability services, behavioral health, aging services, and general human
-services. These are genuinely present in the tracker and are a different audience with different
-keywords.
+**Take the in-scope and out-of-scope lists from the market profile.** They differ completely
+between markets, and the out-of-scope list is the one that bites: in housing it is disability,
+behavioral health and aging services; in higher ed it is K-12, districts, charter networks,
+professional associations and edtech vendors, all of which look like the market at a glance.
 
 Out-of-scope rows are **counted and characterised in one line** in the calendar. Never dropped
 silently. "Fourteen of forty-one rows were disability and behavioral health providers, not mined"
@@ -134,7 +165,8 @@ Cheapest first, stop at the first hit:
 2. The intake board. A `Queued` or `Drafting` item covering it means it is already in flight.
 3. **The live site, and not the Drive index.** Read `https://cube84.com/sitemap.xml` and
    `https://cube84.com/blog_sitemap.xml`, then confirm against Search Console via Windsor.
-   Verified 2026-08-20: **28 live housing URLs**, 20 pages plus 8 blog posts.
+   The profile carries the verified count: **28 live housing URLs** (20 pages + 8 blog posts,
+   2026-08-20); **42 live higher-ed URLs** (14 pages + 28 blog posts, 2026-08-28).
 4. **The blog centre Shared Drive**, root `0ALgcD68qBHPzUk9PVA`. Readable, confirmed 2026-08-21.
    Subfolders `Nonprofit Blogs` (`1i3Ra_egJt4MxH5KLn-due4gM6KfE-c_f`), `Data Cloud Blogs`, `Blog
    Image References`, plus loose docs in the root. This is the record of what was **started**, and
@@ -190,6 +222,11 @@ report. Use each for what it actually knows.
 
 #### Known traps in this keyword set
 
+**These are the HOUSING traps.** Higher Education has its own set in
+`markets/highered.md` — the "salesforce" demand collapse, the Semrush/Google order reversal, the
+1,000-row API ceiling, and the fact that no higher-ed keyword has ever produced a real lead. Read
+the traps belonging to the market you were called about, not these.
+
 Established live on 2026-08-20 against both tools. Check them before trusting a headline number.
 
 - **HMIS is an ambiguous acronym.** Funeral home and cemetery management software also call
@@ -236,8 +273,10 @@ production, no downstream agent** in the calendar and on the board. Do not let t
 
 ### Step 7 — Assemble and propose
 
-Write the HTML per `references/calendar-template.md` to
-`Homeless and Housing/content-calendar-WE-<dd-mm>.html`.
+Write the HTML per `references/calendar-template.md` to **the output path the market profile
+names** — `Homeless and Housing/content-calendar-WE-<dd-mm>.html` for housing,
+`Higher Ed/content-calendar-<yyyy-mm-dd>.html` for higher ed. The higher-ed path carries a date
+rather than a week-ending label, because that market has no weekly cadence to anchor to.
 
 Then the Slack DM to Kiki: numbered, one line per topic, bucket and title and evidence count and
 either the keyword with its real volume or the counter-claim, plus the path to the HTML and the
@@ -297,10 +336,15 @@ comment on the Doc. Nothing in this pipeline reaches the CMS.
 `SME` is a text column that must hold an address, not a name. There are two Mohans and two Manishes, and a bare
 first name is how a draft reaches the wrong person. Never resolve a name to an address.
 
-Drafts land in **Blog Drive / Homeless and Housing**, folder id
-**`1aEKbVGydpYi-FtCHFsR7TvBC-NQrzdi2`**. Address it by id. Two other folders with that exact name
-exist elsewhere in Drive, under `LinkedIn Articles` and under `GTM - Highperformr.ai`, and a name
-search files the work where nobody looks for it.
+Drafts land in **the folder the market profile names.** For housing that is
+**Blog Drive / Homeless and Housing**, folder id **`1aEKbVGydpYi-FtCHFsR7TvBC-NQrzdi2`**. Address
+it by id. Two other folders with that exact name exist elsewhere in Drive, under
+`LinkedIn Articles` and under `GTM - Highperformr.ai`, and a name search files the work where
+nobody looks for it.
+
+**Higher Education has no drafts folder yet.** None exists in the Blog Drive. Until one is created
+and recorded in the profile, Wrighter cannot deliver in that market — say so plainly and stop.
+**Never write higher-ed drafts into the housing folder** to get past it.
 
 `Description` is the angle Wrighter works from, so it carries the argument, the persona, and for
 TL rows the three slots. A thin description produces a thin blog, and this field is the only

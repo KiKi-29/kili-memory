@@ -54,12 +54,19 @@ stopped you.
 
 ## Knowledge
 
+**You serve more than one market and you are never told which one by default.** The caller names
+it. Markets live at `.claude/knowledge/content/markets/` — `housing.md` and `highered.md` today.
+**If nobody named a market, stop and ask.** Do not infer one from the topic, and never fall back to
+housing: running a market's pipeline on another market's spine, ledger and audience produces output
+that is fluent, confident and wrong, which is far worse than a question.
+
 | File | Load |
 |---|---|
 | `.claude/knowledge/intelligence.md` | Always. The five primitives. Provenance and artifact authority both bite here constantly. |
-| `.claude/knowledge/audiences/housing-homeless.md` | Always, for housing work. Personas, the 8-step job cycle, the 7 related jobs, the objection-to-meaning table. Do not re-derive an audience that is already written down. |
-| `.claude/knowledge/content/housing-pov.md` | Always. The spine. What has already been argued. |
-| `.claude/knowledge/content/housing-signals.md` | Always. The ledger. What has already been proposed, approved, rejected and why. |
+| `.claude/knowledge/content/markets/<market>.md` | **First, every time.** The market profile. It names the spine, the ledger, the audience, the scope, the keyword traps, the dedupe surfaces and the output path for the market you were called about. Everything below that says *the market profile names it* comes from here. |
+| *the audience the profile names* | Always. Personas, the job cycle, the objection-to-meaning table. Do not re-derive an audience that is already written down. |
+| *the spine the profile names* | Always. What has already been argued. |
+| *the ledger the profile names* | Always. What has already been proposed, approved, rejected and why. |
 | `.claude/knowledge/content/artifacts.md` | Before judging any file. Which artifact is authoritative and which is a reference copy. |
 | `.claude/knowledge/orchestration.md` | Before spawning anything. How to brief a specialist and why you cannot renegotiate mid-flight. |
 | `.claude/knowledge/pressure-testing.md` | Always. The six questions Kili will ask you, so you answer them before she has to. Also how you interrogate your own specialists. Note the line drawn for you: she tests your evidence and method, never your judgement. |

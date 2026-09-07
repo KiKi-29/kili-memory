@@ -19,9 +19,9 @@ produces confident, on-brand, wrong output.
 | Signal ledger | `.claude/knowledge/content/highered-signals.md` |
 | Audience | `.claude/knowledge/audiences/higher-ed.md` |
 | Calendar output | `Higher Ed/content-calendar-<yyyy-mm-dd>.html` |
-| Wrighter drafts folder | **Not created yet.** No Higher Ed folder exists in Blog Drive `0ALgcD68qBHPzUk9PVA`. Until one does, Wrighter cannot deliver here — say so rather than writing into the housing folder. |
-| Default CMS category | **Unresolved.** `Nonprofit` is the housing one. Call `list_blog_categories` and do not guess. |
-| Default SME | **Unresolved.** Kiki fills the `SME` column by hand; no agent writes to it. |
+| Wrighter drafts folder | **Blog Drive / Higher Ed, `1OCXFfWMEh_IqCg_sCWmMXecQls8CzhRG`.** Created 2026-09-02. **Address it by id, never by name** — several other folders called `Higher Ed` and `Higher Education` exist elsewhere in Drive (under `Higher Ed Strategy`, under a nonprofit emailer folder, and more), and a name search files the work where nobody looks for it. Same trap the housing folder has. |
+| Default CMS category | **`Education`.** Confirmed against `list_blog_categories` on 2026-09-02 — it is a real active category, not a guess. (`Nonprofit` is the housing one.) `Experience Cloud`, `Marketing Cloud` and `AI` also exist and may fit a specific piece better; the field takes an array, so a second category is allowed. |
+| Default SME | **`prabitha@cube84.com`.** Named by Kiki 2026-09-02. Address verified in Gmail — she is the sender on many threads and there is exactly one Prabitha at CUBE84, so this is confirmed rather than resolved from a first name. **The board's `SME` column is still Kiki's to fill by hand; no agent writes to it.** This entry tells you whose review to expect, not permission to write the field. |
 
 ## The offerings. Settled 2026-08-30 by Kiki. Do not re-question.
 
@@ -99,12 +99,61 @@ say which the decision used. **This market is the case that proved the rule.**
 |---|---|
 | **Adding "salesforce" destroys demand** | Alumni terms alone: 530/mo. The same terms plus "salesforce": 20/mo. Retention varies by layer — 11.2% at the CRM layer, 3.8% in alumni, 0.7% in admissions. CUBE84 sells at the application layer while being findable only under the platform. |
 | **Semrush and Google reverse each other here** | *student engagement platform* against *student success platform* — Semrush had the order backwards. A calendar sequenced on the wrong ranking fails the way ad spend on it does. |
+| **Semrush overstates this market by far more than 2x** | The general print-both rule triggers at ~2x. **Measured 2026-09-02, the real divergence runs to 17x**, and four candidates that looked like low-KD wins on Semrush alone died on the Google check. Verify every seed against Keyword Planner before it reaches a calendar. |
+
+**Terms measured and killed 2026-09-02. Do not re-propose without new evidence.**
+
+| Keyword | Semrush | Google KP | Divergence |
+|---|--:|--:|--:|
+| `crm managed services for higher education` | 70 | **no data** | — |
+| `higher education crm software comparison` | 170 | **10** | 17x |
+| `salesforce managed services partner` | 260 | **30** | 8.7x |
+| `benefits of crm in higher education` | 170 | **20** | 8.5x |
+
+Also null on Google: seven thought-leadership-adjacent seed phrases, and five signal clusters with
+no search demand anywhere — AI governance and hallucination control, success coaching, advisor 360
+and early alert, SIS integration cost, residence life. **A signal being strong in the ledger does
+not mean anyone searches for it.** Those belong in Thought Leadership or nowhere.
 | **The Semrush API caps at 1,000 rows** | It truncated the Student Engagement set, so 45,780/mo is a **floor**, not a total. The UI export runs to 10,000+. Manual export spec: `Higher Ed/Keyword_Research/_SEMRUSH_DOWNLOAD_SPEC.md`. |
 | **No higher-ed keyword has ever produced a real lead** | Across 434 paid rows, not one alumni, advancement or "higher education" keyword. The two paid wins in 19 months both came on *staffing* intent. |
 
-**Research already done — do not re-derive.** Alumni Engagement is complete (267 keywords /
-7,820 a month). Student Engagement is truncated. The other four have none.
-Files live in `Higher Ed/Keyword_Research/`.
+**Research already done — do not re-derive.** Files live in `Higher Ed/Keyword_Research/`.
+
+> **Superseded 2026-09-02.** This section previously read *"Alumni Engagement is complete. Student
+> Engagement is truncated. **The other four have none.**"* That last clause was wrong when written
+> and would have had a run commission research that already existed. Corrected below.
+
+| Offering | Research on disk |
+|---|---|
+| Alumni Engagement | Complete. 267 keywords / 7,820 a month. |
+| Student Engagement | Original set truncated by the **1,000-row API cap** (45,780/mo is a floor). An expanded manual set exists dated 2026-08-30 — 5,181 rows plus 1,775 retention rows. |
+| Advancement | 10,003 rows, 2026-08-30. |
+| Complete Constituent | 10,003 rows, 2026-08-30. |
+| Education Cloud & Higher Ed CRM | 198 + 100 rows, 2026-08-30. |
+| Corporate Engagement / Folio | None, and none should be pulled — see the gate above. |
+
+**Advancement and Complete Constituent sit exactly at 10,003 rows, which is the UI export ceiling
+of 10,000 plus headers.** Like the Student Engagement set, those are **floors, not totals.** Any
+figure derived from them is a lower bound and must be reported as one.
+
+### What the raw row counts hide
+
+Verified 2026-09-02 by counting, not estimating. **Do not quote the headline volume of either
+file** — most of it is not this market.
+
+- **Advancement: 34,200/mo raw, of which only ~9.3% (3,170/mo) is advancement-profession intent.**
+  The rest is academic advising, career services, credentials and course advancement. Even the
+  surviving 9% is largely navigational and jobs intent — "office of advancement", "advancement
+  services jobs", "director of advancement services". **Advancement holds 75% of Closed Won and
+  has essentially no buyer search demand.** That is not a research gap; it is the finding.
+- **Complete Constituent: 71,240/mo raw, of which ~0.3% (200/mo) is higher-ed relevant.** The
+  questions file is dominated by Dreamforce dates and "how to merge accounts in salesforce". It is
+  a generic Salesforce dump, not a higher-ed set.
+- **The student-engagement question set (194 questions) is classroom pedagogy** — "what is student
+  engagement", "how to keep students engaged". Teacher intent, AI Overview on every one. Out of
+  scope. The *platform* term is a different matter: `student engagement platform` at 1,300/mo on
+  Google has a genuine higher-ed buyer SERP (Modern Campus, Ready Education, Suitable, campusM,
+  Modo Labs, CampusESP), verified 2026-09-02.
 
 ---
 
@@ -124,6 +173,36 @@ Files live in `Higher Ed/Keyword_Research/`.
   plan for Alumni Engagement: 10 web pages, 20 blog topics, 5 collaterals, all keyword-anchored
   with volume attached. **It contains zero thought leadership.** Charlie's contribution to Alumni
   is the Thought Leadership bucket, not more SEO topics.
+#### Approved by Kiki 2026-09-02 — eleven Alumni blogs, HELD not yet queued
+
+Selected off `Higher Ed Content Plan` and confirmed good to go. **Not on the intake board yet**
+— Kiki is still working through the remaining decisions and asked that these be held. Queue them
+when she says, `Market = Higher Ed`, `Category = Education`, SME left blank for her to fill.
+
+| # | Topic | Vol/mo |
+|---|---|--:|
+| 1 | Graduway vs Almabase vs Hivebrite: What Each Is Actually Good At | 60 |
+| 2 | Alumni Engagement Platform Alternatives: A Buyer's Shortlist | 40 |
+| 3 | Can Ellucian CRM Advance Handle Parent and Alumni Engagement? | 30 |
+| 4 | 48 Alumni Engagement Ideas, Sorted by Budget and Team Size | 360 |
+| 5 | Alumni Engagement Best Practices: What the Strongest Programs Do Differently | 240 |
+| 6 | How to Engage Alumni: 12 Approaches That Work | 220 |
+| 7 | How to Engage Alumni on Social Media | 130 |
+| 8 | How to Measure Alumni Engagement: The Metrics That Matter | 200 |
+| 9 | The Alumni Engagement Survey: Questions, Samples, Benchmarks | 130 |
+| 10 | Engaging Young Alumni: Why the First Five Years Decide Everything | 110 |
+| 11 | From Engagement to Giving: Connecting Alumni Activity to Donations | 110 |
+
+**Deliberately not selected** from the same plan, so do not treat them as oversights: *Does HubSpot
+Track Alumni Engagement*, *How to Build an Alumni Engagement Strategy (with a template)*, *What Is
+Alumni Engagement? A Working Definition*, *Virtual Alumni Engagement*, and *Corporate Alumni
+Engagement* (which is entangled with the unresolved Folio definition).
+
+**One hazard on item 1.** It names Almabase — a direct competitor ranking page one for
+`alumni engagement platform` — while our own product is called Alma. Publishing a comparison that
+puts those two names side by side invites the association we would otherwise avoid. The
+Almabase-versus-Alma decision is still open; **check it before this one drafts**, not after.
+
 - **The Higher Education Content Engine Tracker** (`1Mv7nUdNmWIN2sru0AJAueQA5v2f0R29I`, owned by
   the BU lead) — the human-run offering-collateral plan across all offerings, with named owners
   and blogs already published and in ideation. **Charlie runs parallel to this, not over it.**
