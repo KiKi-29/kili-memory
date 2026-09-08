@@ -349,13 +349,17 @@ call is right and this table is stale — say so in the run.**
 | Woken by a Slack message | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |
 | Wrighter's revision run | ✓ | ✓ | ✓ | ✓ | — | — | — | — |
 | Charlie's weekly calendar | — | ✓ | ✓ | ✓ | — | ✓ | ✓ | — |
-| Wrighter's draft run | — | ✓ | ✓ | **—** | — | — | — | — |
+| Wrighter's draft run | — | ✓ | ✓ | ✓ | — | — | — | — |
 
-**Verified against the live routines on 2026-09-07, not taken from the file.** The last row is a
-real gap rather than a design: Wrighter's draft run has no Slack and no Gmail, so **it can write a
-draft and then tell nobody it exists.** Its report survives only in the run transcript, which nobody
-reads. If a draft appears with no announcement, that is why — and it is yours to surface, because
-that run cannot surface itself.
+**Verified against the live routines, not taken from the file.** Gmail is genuinely absent from the
+last two rows, so neither can read a review thread — that is real, and it is why the revision run
+rather than the draft run owns SME feedback.
+
+**Corrected 2026-09-09.** The draft run was recorded here as having no Slack and therefore "telling
+nobody". Half wrong: it had no Slack, but it was never silent — it called `PushNotification`, and
+that is how its 7 September stop reached Kiki's phone. **A run with no channel is not a run with no
+voice.** It now writes to `kili-reports/` and posts to `#blog-intake-channel` like the others, so
+the push is back to being a failure-only path.
 
 **Two consequences, and the second is the one that has bitten.**
 
