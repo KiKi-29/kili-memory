@@ -63,7 +63,7 @@ before it decides your output.
 | Published-topic dedupe | `Already existing Blog topics`, `1gjqkEuWL2YKH6tJRyUElkI_AZ1LNh2TcQxelQCLA0JM` |
 | Retired intake sheet | `CUBE84 Blog Automation Pipeline - Intake Sheet`, `1_sj28P-ZH3pm987xz9J3V8ZZ7zPwGwNRa8UzRqVmTNc` |
 | Intake board | `Blog Automation Intake Sheet`, private, workspace `9810721` (CUBE84 Marketing) |
-| Team production board | `Blog Tracker 2026 & 2025`, `8422767857`. Not ours to write to. |
+| Team production board | `Blog Tracker 2026 & 2025`, `8422767857`. **Kili writes to it, since 2026-09-07** — an approved row is handed over by creating a row there. Charlie still does not. |
 | Ledger, POV spine, audience | **The market profile names all three.** Housing: `housing-signals.md`, `housing-pov.md`, `audiences/housing-homeless.md`. Higher Ed: `highered-signals.md`, `highered-pov.md`, `audiences/higher-ed.md`. |
 
 **The tracker rows above are the housing evidence source.** Higher Education has no conversation
@@ -306,7 +306,7 @@ https://cube84-bunch.monday.com/boards/18427467231
 | Column | ID | Type |
 |---|---|---|
 | Topic | `name` | item name |
-| Status | `color_mm6d8573` | status: Queued / Drafting / With SME / SME approved / Pushed to staging / Published / Error / Gated |
+| Status | `color_mm6d8573` | status: Queued / Drafting / Draft ready, not sent / Scheduled to SME / Sent to SME / SME approved / Error / Gated / Retired |
 | Type | `color_mm6dmkk2` | status: blog / whitepaper / ebook |
 | Bucket | `color_mm6dnftw` | status: SEO-GEO-AEO / Thought Leadership |
 | Description | `long_text_mm6djmd1` | long_text |
@@ -329,9 +329,16 @@ https://cube84-bunch.monday.com/boards/18427467231
 Verified column ids, so nothing has to be rediscovered. Re-read with `get_board_info` before
 writing if a column may have been added, per the tool's own precondition.
 
-`Status` labels match Wrighter's state machine exactly. **Wrighter now stops at `With SME`** and
-never sets `Pushed to staging` or `Published`; Kili sets `SME approved` off an explicit Approved
-comment on the Doc. Nothing in this pipeline reaches the CMS.
+`Status` labels match Wrighter's state machine exactly. **Relabelled 2026-09-08:** `With SME` became
+`Draft ready, not sent`, because it claimed the reviewer held the draft when nobody had been asked —
+six drafts were found sitting on people who had never been sent anything. The two dead CMS-push
+labels were reused: `Published` and `Pushed to staging` are now `Sent to SME` and `Scheduled to SME`,
+both Kili's, and both meaning a real email. **Wrighter stops at `Draft ready, not sent`** and sets
+`SME approved` off an explicit Approved comment on the Doc. Nothing in this pipeline reaches the CMS.
+
+Two more columns exist that this table predates: `Handoff` (`color_mm6z56nf`) and `Blog Tracker Row`
+(`board_relation_mm6ze9s4`), plus live mirrors of the tracker's status and published date. All of it
+is Kili's after approval. Charlie writes none of them.
 
 `SME` is a text column that must hold an address, not a name. There are two Mohans and two Manishes, and a bare
 first name is how a draft reaches the wrong person. Never resolve a name to an address.

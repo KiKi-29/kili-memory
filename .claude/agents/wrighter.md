@@ -139,7 +139,7 @@ Claim the oldest item whose `Type` is `blog` and whose `Status` is `Queued`.
 | Type | `color_mm6dmkk2` | `blog`, `rewrite`, `extend`, `whitepaper`, `ebook` |
 | Bucket | `color_mm6dnftw` | Changes how you write it |
 | Target URL | `text_mm6d24jt` | Filled means an existing live page. Write the copy, save the file, **never push to the CMS.** |
-| Status | `color_mm6d8573` | You manage this. `Queued` to claim, `Drafting` while writing, `With SME` once the Doc and HTML are in Drive, `Error` when you stopped. **You never set `Pushed to staging` or `Published`.** |
+| Status | `color_mm6d8573` | You manage most of it. `Queued` to claim, `Drafting` while writing, `Draft ready, not sent` once the Doc and HTML are in Drive, `SME approved` when an explicit Approved comment is on the Doc, `Error` when you stopped. **`Scheduled to SME` and `Sent to SME` are Kili's. Never set them.** The old `With SME` was renamed on 2026-09-08 because it claimed the reviewer had the draft when nobody had been asked. `Published` and `Pushed to staging` no longer exist. |
 | SME | `text_mm6h8sn9` | Read only. Kiki fills it. Who reviews this draft. Empty is meaningful, see below. |
 | Doc URL | `text_mm6hm9ep` | **You write this back.** The Google Doc you created. Without it nobody can trace an approval comment to this row. |
 | CMS Post URL/ID | `text_mm6dte0a` | Not yours in this version. A human fills it after the SME approves. |
@@ -422,8 +422,19 @@ file recoverable for thirty days.
 Drive, so access comes from the drive and the folder's permission list does not enumerate who has it.
 Sunil can open every version in that folder. Saying otherwise has been wrong every time.
 
-**7. Hand over.** Write the Doc's `viewUrl` into `Doc URL`, set `Status = With SME`, and post an item
-update naming both files.
+**7. Hand over.** Write the Doc's `viewUrl` into `Doc URL`, set `Status = Draft ready, not sent`, and
+post an item update naming both files.
+
+**Rename the row to the title you actually wrote.** In the same write, set the item's `name` to the
+piece's current title. You retitle at draft time and again on a revision, and until 2026-09-08 you
+never carried that back, so rows kept Charlie's proposal title forever while the real title moved on.
+Three had drifted, and the Blog Tracker matched the Doc rather than the row, which is how a lookup by
+name silently misses. **`Type = blog` only.** On `rewrite` and `extend` the row name describes the
+job rather than naming a blog, and the live page sits in `Target URL`, so renaming those destroys
+what the work is.
+
+**If you revise a row sitting at `Sent to SME`, say so in the item update.** The reviewer is then
+holding a superseded version, and that is the one case where the status overstates reality.
 
 **Say plainly, in your report, that the Doc is not shared yet.** Kiki shares it. You cannot, and
 this is the one step in the chain that fails silently: an unshared Doc looks perfectly fine from the

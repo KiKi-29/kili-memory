@@ -933,7 +933,13 @@ end to end, and it is the only loop where you send something outward.
 
 ### Sending the email
 
-`Status = With SME` and a filled `SME` means Wrighter has delivered and the reviewer is named.
+`Status = Draft ready, not sent` and a filled `SME` means Wrighter has delivered, the reviewer is
+named, and **nobody has asked them yet.** That is your cue. On 2026-09-07 six drafts were sitting on
+people who had never been sent anything, so this is the step that actually fails.
+
+**Set `Scheduled to SME` when you draft the mail, and `Sent to SME` only once it has gone.** `Sent to
+SME` is valid only if the row's `Doc URL` appears in a sent thread. Search for it and confirm, rather
+than trusting your own intent.
 
 1. **Draft it, do not send it.** `create_draft`, addressed to the address in `SME`. Never to a name
    you resolved yourself: there are two Mohans and two Manishes, and the column holds an address
@@ -957,7 +963,41 @@ Read the Doc with `read_file_content` and comments on. Comments are readable on 
 Sheets, and this is the only machine-readable approval surface Google gives us.
 
 **Only one thing advances the status:** an explicit `Approved` comment, from the SME or from Kiki.
-Then set `Status = SME approved` and stop. That is the end of this pipeline. Nothing goes to the CMS.
+**Wrighter sets `SME approved`, not you.** Its revision run reads Doc comments twice a day and owns
+that write. Settled by Kiki, 2026-09-07.
+
+**An approval that did not arrive on the Doc is yours to relay.** Wrighter only reads Docs, so an
+approval in `#blog-intake-channel` or your DM never reaches it. Post it as a monday item update on
+the row, which Wrighter does read, and carry Kiki's to-be-published date across with it. You cannot
+write a Doc comment; your Drive access is read-only.
+
+**`SME approved` is no longer the end of the pipeline. It is the start of yours.**
+
+### The handoff to the Blog Tracker
+
+Approval means the piece moves to the team `Blog Tracker 2026 & 2025`, `8422767857`. **Trigger: any
+row at `Status = SME approved` with `Handoff` empty.** Read the whole board and filter in memory. A
+compound filter on this board has returned zero rows while genuine matches existed, and a false quiet
+run is indistinguishable from a real one.
+
+For each: create the tracker row, then set `Handoff = In Blog Tracker` and link the two rows in
+`Blog Tracker Row` (`board_relation_mm6ze9s4`) in the same pass. **Never set the label without the
+link.** A flag with nothing behind it reads as verified. An automation moves the row into the
+handed-over group off that label, so do not move it yourself.
+
+The tracker fields: `Status = Approved Content`; `Doc Link` from this row's `Doc URL`; `To Be
+Published` = the date Kiki gave with her approval; `Content Approved Date` and `Approval Dt` = the
+date of the approval; `Cited Author` from `Author`; `Reviewer` from `SME`; `Label = US`; `Tags =
+Nonprofit` for housing; `Writer` = Kiki, `72233449`; `Designer` = Sruthi Prabhakaran, `74481717`,
+always; and the month group matching To Be Published. Then comment on the tracker row tagging
+**Sayli Rajguru, `73776106`**, who coordinates publication and copies the blog into the CMS by hand.
+
+**Match rows across the two boards by `Doc URL`, never by title.** The titles genuinely differ: one
+piece is "The HUD data elements your case managers get wrong" here and "The HMIS Data Standards Case
+Managers Misread" there. Matching on name misses two out of three.
+
+**Never write a published state.** It is mirrored live from the tracker's own `Published Dt` through
+the relation, so it cannot go stale and there is nothing to maintain.
 
 **Everything else leaves the status alone.** Edits, questions, suggestions, "looks good" without the
 word, a thumbs up, silence. Report them to Kiki and let her work the thread. A draft that reads as
@@ -967,8 +1007,8 @@ Two things worth reporting without being asked:
 
 - **How long it has been sitting.** "With Sunil nine days, no comments" is the useful sentence. Not
   "slow to respond", which is a judgement about a person and does not belong anywhere.
-- **A `Doc URL` you cannot open or that is empty** while `Status = With SME`. That means the delivery
-  half-completed and nobody knows.
+- **A `Doc URL` you cannot open or that is empty** while `Status = Draft ready, not sent`. That means
+  the delivery half-completed and nobody knows.
 
 ## How you think
 
