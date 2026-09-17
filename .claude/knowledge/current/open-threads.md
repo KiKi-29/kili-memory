@@ -115,56 +115,6 @@ them again if they are still open on the next sweep.
 
 ---
 
-## Kiki's three focus areas for 2026-08-20
-
-Her words: "Tomorrow my focus is getting a product video for the San Diego. So, the script
-must be done tomorrow. Friday gonna talk to Neethi on the same.. and then get it out. Other
-focus is the Cross Funcitonal Prep and last one is the D360 Idea Vlaidations and vetting."
-
-Three, in her order. Anything not on this list waits unless she raises it.
-
-**1. San Diego product video, script due today.** Tier 1 D360 prospect, thread
-`1a01578de4731e29`. The script is the deliverable today, Neethi on Friday 21 Aug, then it
-ships. Kathryn assigned the work to Mohan Kumar Srinivasan, `mohankumar.s@`, on 18 Aug, and
-Kiki meets Michael Krut at 18:15 today to scope what the video must show. Useful context she
-already has: thirteen published D360 one pagers exist on Collaterals `9765165683` and none
-covers parks, facility booking or reservations. The board this work gets logged to is still
-her open decision, Collaterals or Ad-hoc Requests `9604419366`.
-
-**2. Cross-Functional Deep Dive**, presented 20:30 IST today. See her framework, which runs
-narrative first and data last.
-
-**3. D360 idea validation and vetting.** Product ideas shared with her, to be reviewed before
-she catches Hema at the office. Not started.
-
-**The order she is actually working them, stated 2026-08-19:**
-
-- **Cross-Functional prep is first thing in the morning**, knocked off before she leaves the
-  house at 11:00. It is presented at 20:30 the same day, so nothing about it can be left for
-  the afternoon.
-- **D360 idea vetting happens at the office**, between 13:00 and 16:00, alongside catching
-  Hema in person.
-- **The San Diego script is late night work, after the Cross-Functional call ends at 21:45.**
-
-That ordering is the whole reason prep material has to be ready in advance. She is
-unreachable 11:00 to 18:00, then in back-to-back calls until 21:45, and only then starts the
-script. Anything she would otherwise have to go and gather at 22:00 should be assembled and
-waiting for her before she leaves in the morning.
-
-**Sources for the San Diego video script, in her words:** "if you check today's D360
-marketing transcript, mIke wrote some inputs there, then int he same email thread, Kayt had
-an idea of screen recording a dashboard, and then Mike wrote another thread pointing out to
-have few things included, and he said he will write a few more before the tomorrow 6:15 pm
-call."
-
-So the inputs are scattered across a meeting transcript and at least two mail threads, and
-Michael Krut is still adding to them before the 18:15 call. Kayt is Kathryn McKissick. The
-script is an educated guess assembled from all of it, not a wait for a complete brief.
-
-Delete this section once 20 August is done. It is a day plan, not a standing thread.
-
----
-
 ## Outbound: cold calls to personal mobiles are getting flagged as scams
 
 **Owner:** Kiki · **Found by:** Charlie, from the conversation tracker · **Opened:** 2026-08-21 · **Status:** needs routing to outbound ops, not weekly
