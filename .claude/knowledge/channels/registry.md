@@ -87,13 +87,20 @@ run.
 
 **Why a self-DM is the worst possible address.** Slack does not notify anyone of their own message:
 no sound, no badge, no unread mark, and it arrives already read. So the sweep was not merely in an
-odd place, it was in the one place that guarantees silence. Posting *as* Kiki is a constraint of the
-connector and the opening line answers it. Posting *to* Kiki as Kiki answers nothing.
+odd place, it was in the one place that guarantees silence. Posting *to* Kiki as Kiki answers
+nothing.
 
 **Why the mistake survived.** The read-back passed. It proved a message existed in a conversation,
 and it could not know the conversation was the wrong one or that nobody had been told. Verifying
-delivery and verifying arrival are different checks, and only the first had been built. Both sweep
-prompts now require a `PushNotification` carrying the finding before a run may call itself done.
+delivery and verifying arrival are different checks, and only the first had been built.
+
+**Both fixes named above are now retired, and this paragraph used to assert them as current.** The
+opening line went on 2026-08-28: Kili sends through the relay under her own name, so there is
+nothing left to disclose. The mandatory `PushNotification` went the same day, once Kiki confirmed a
+message from Kili's own account buzzes her phone unaided — a routine push is a second alert for
+something she has already been told. A push now fires **only** on a delivery failure, naming the
+exact error, and then the run stops. Arrival is answered by the sender being somebody else, not by
+a second notification.
 
 **Members.** Kiki and Kili the bot. Nobody else can ever be added to a DM, which is why the sweep
 goes here and not into a channel. The sweep quotes her inbox, her boards and Salesforce, and a
