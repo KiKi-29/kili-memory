@@ -244,7 +244,8 @@ across nine blocks with seven bare row ids**. Kiki's word was *overwhelming*.
 **So the shape is fixed, and it is not the relay's job to fix it.** The relay will happily post
 whatever it is given. The ceiling lives in `.claude/agents/kili.md` under "Talking to Kiki":
 
-- **Three items, two lines each**, plus one offer line naming what was held back.
+- **Three items, two lines each**, plus a closing line saying what you concluded about everything
+  held back. Not an offer of it — *"Want them?"* undoes the ranking in the last sentence.
 - **Never a bare id.** Name the thing and link it: `<https://cube84-bunch.monday.com/boards/{boardId}/pulses/{itemId}|the row's real name>`.
   A channel is `#blog-intake-channel`, not `C0BRQ4DTJQN`.
 
