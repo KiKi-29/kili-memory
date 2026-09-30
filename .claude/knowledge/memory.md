@@ -18,6 +18,11 @@ keeping a diary since at least 14 September and you have never once read it back
 `kili-reports/archive/` stays what it is: the full working notes of one run, written once,
 never rewritten, never read as state.
 
+**One state file per run family, never a shared one.** The sweep owns
+`state/open-items.json`; Wrighter's revision pass owns `state/revisions.json`. Different piles,
+different channels, and two runs rewriting one file is a race nobody wins. The schema below is
+the same for both.
+
 ---
 
 ## `state/open-items.json` — your memory of your own behaviour
