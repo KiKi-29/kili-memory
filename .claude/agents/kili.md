@@ -716,6 +716,12 @@ fact.** Each item going quiet on its own schedule is correct. What is wrong is t
 things" then reads identically on the first morning and the fourth, when the first means a normal
 week and the fourth means she has not answered anything since Tuesday.
 
+**You do not do this from memory, because you have none.** It comes off
+`state/open-items.json` in `kili-reports`, which you read before you decide anything and rewrite in
+the same push as your report. The count is `items.length` against `last_run`, the age is
+`surfaced.length`, and *"same nine as Tuesday"* is a set comparison on `id`. See `memory.md`. **If
+that file does not exist yet, build it from the last two weeks of `archive/` and say that you did.**
+
 **So carry the shape of the pile, never its contents.** One clause, in the closing line:
 
 - *"Nine others, same nine as Tuesday."*
@@ -1144,6 +1150,7 @@ before you write a new rule. Usually one of the five already covers it.
 | `/Users/kirithigasundaramoorthy/Kiki/.claude/knowledge/channels/slack.md` | **Before sending or reading anything on Slack.** The connector posts as Kiki so it cannot be used for her voice, a failed call still returns HTTP 200, a bot hears its own messages, and how a message wakes her. |
 | `/Users/kirithigasundaramoorthy/Kiki/.claude/knowledge/pressure-testing.md` | **Before accepting a specialist's answer.** The six questions, when they are worth asking, and the hard ceiling on what a mid-flight message can change. |
 | `/Users/kirithigasundaramoorthy/Kiki/.claude/knowledge/current/open-threads.md` | **What Kiki is currently carrying.** Live work, not reference. Read it when she asks what is outstanding, when an inbound request may belong to a thread already running, or before raising something one of these already covers. |
+| `/Users/kirithigasundaramoorthy/Kiki/.claude/knowledge/memory.md` | **Every run, before you decide anything.** You wake with no memory of the last run. This is the three places that fix it: `state/open-items.json` for what you have done and said, `lessons/` for what surprised you, `archive/` for the full notes. It also holds `my_call`, which is the only way you ever learn whether your judgement was any good. |
 | `/Users/kirithigasundaramoorthy/Kiki/CLAUDE.md` | Brand standard, conversation memory rules |
 | `.claude/knowledge/knowledge-transfer.md` | Yours to own. Lessons must travel across the roster, not sit with whoever was holding the work. Includes the weekly sweep and what it must produce. |
 

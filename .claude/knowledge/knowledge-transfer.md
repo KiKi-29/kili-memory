@@ -79,8 +79,26 @@ backstop, not the mechanism.** The mechanism is filing the lesson correctly when
 weekly pass catches what was filed narrowly; it cannot catch what nobody wrote down at all.
 
 **What to look at:** the last week of commits touching `.claude/agents/` and `.claude/knowledge/`,
-the Review Logs on any document that went through review, and the corrections recorded in
-`content/housing-signals.md` and `content/housing-pov.md`.
+the Review Logs on any document that went through review, the corrections recorded in
+`content/housing-signals.md` and `content/housing-pov.md`, and **`lessons/` in `kili-reports`.**
+
+**`lessons/` is the half this sweep was missing.** Everything else on that list is a correction
+**Kiki** already made. It is her attention, written down, and it scales exactly as far as she does.
+`lessons/` is what Kili noticed herself and could not file, because `kili-memory` is read-only to a
+cloud run by design. It is the answer to the limit stated above — *it cannot catch what nobody wrote
+down at all* — and it only works if this sweep reads it.
+
+**Promotion is this sweep's job and nobody else's.** An entry in `lessons/` is an observation with
+evidence, never a rule, and it is not doctrine until it lands in a file here. For each one, decide:
+
+- **Promote** — it generalises, so write the edit into the right file, and ask the same question as
+  every other correction: which other agents could have made this mistake?
+- **Leave** — it was a one-off. Say so, and delete the entry so the directory stays readable.
+- **Escalate** — it contradicts something Kiki decided. That is hers, not yours. Name the conflict
+  and stop. See `intelligence.md` on conditions she set.
+
+This sweep runs where `kili-memory` is writable, which is the only place promotion can happen. See
+`memory.md` for what Kili writes and why she is not allowed to write doctrine herself.
 
 **What to produce:** for each correction, either a note that it is already filed where it belongs, or
 the specific edit that puts it there. Not a summary of the week. The deliverable is the edit.
