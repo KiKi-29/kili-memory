@@ -58,6 +58,18 @@ the conversations imply practitioners believe, unverified"** are both legitimate
 second in the voice of the first is not. A thesis built on a consensus nobody holds collapses
 the moment a reader who works in the field reads it, and that reader is the entire audience.
 
+## Verify the design before you argue against it
+
+**Found 2026-10-05.** A thesis argued that coordinated entry was designed as one front door, while
+people arrive elsewhere. HUD explicitly allows multiple access points, so the SME rejected the
+premise and the piece was rebuilt. The consensus check above did not catch it, because the error was
+about **how the system works**, not what the sector believes.
+
+Before slot 3, confirm from the regulation or HUD guidance that the system was actually meant to do
+the thing your thesis says it fails at. The corrected premise is usually the sharper thesis:
+*"uninstrumented handoff versus instrumented handoff"* beat *"one door versus many"*. The full set of
+tests is in `.claude/knowledge/writing/expert-review-lens.md`.
+
 ## Check the spine before you write
 
 **Your brief names a market.** Read `.claude/knowledge/content/markets/<market>.md`, and it names

@@ -1,0 +1,225 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><title>Your HMIS Holds a Person and a Housing Program and Cannot Connect Them - v2</title></head>
+<body>
+
+<p><b>Preview, exactly as the page will look:</b> <a href="https://drive.google.com/file/d/1w13pQ25ZnTGRuNqZ4eH8FRZO_oCTz64a/view?usp=drivesdk">hmis-holds-person-housing-program-cannot-connect-them-v2.html</a> &mdash; the designed version, with the cover and the two charts. Every table below carries the same numbers the charts plot.</p>
+
+<p><b>Second draft, revised after a first round of review.</b> The Review Log is the last section of this document, after Sources, and it records all five comments from that round and what happened to each one. The previous version is titled <i>It Takes Four Facts to Place One Person Tonight. No System Holds All Four.</i> and sits in the same folder.</p>
+
+<p><b>WHAT CHANGED, IN ONE LINE.</b> The sentence structure and every heading. One comment governed the whole revision, saying the grammar was chopping the readability and the piece read like a bulletin rather than an article, so the entire body was rebuilt as connected prose and all eight section headings were rewritten to stand on their own in a table of contents. The title changed as well, and it now names the vertical. No count, no quotation, no citation and no argument changed, and the opposing case is word for word what it was.</p>
+
+<p><b>THE TITLE NOW NAMES THE VERTICAL.</b> The previous title was <i>It Takes Four Facts to Place One Person Tonight. No System Holds All Four.</i> The new one is <i>Your HMIS Holds a Person and a Housing Program and Cannot Connect Them.</i> It follows the direction given in review: signal the homelessness and housing space at a glance, and replace the generic word system with something specific to the vertical. HMIS does that work, and housing program does it a second time for a reader who does not know the acronym. Slug, cover, page title and both file names have moved with it.</p>
+
+<p><b>The four facts line survives, as a pull quote rather than a heading.</b> Review said the string reads well inline and poorly as a section title, so it now sits as a pull quote at the top of the first section, and the heading above it says what that section establishes.</p>
+
+<p><b>One question is still open and it is a judgment call rather than a fix.</b> No source is named for the opening account. The four organizations behind it are described by type only and no link is offered, so a reader cannot audit that part of the evidence. Everything the argument actually rests on is a public HUD document that is linked and checkable. Worth deciding whether any of those organizations should be named, with permission.</p>
+
+<p><b>To approve:</b> leave a comment on this document saying <b>Approved</b>. That comment is the only approval signal the pipeline can read. Anything else, comment in place and it will be picked up on the next pass and recorded in the Review Log.</p>
+
+<hr>
+
+<h1>Your HMIS Holds a Person and a Housing Program and Cannot Connect Them</h1>
+<p>By Sunil Jith S H &middot; For CoC leads, HMIS administrators and shelter operations</p>
+
+<p>Somebody at a homeless authority once walked through everything a street outreach worker has to establish before making a single phone call. The worker needs a bed of the right sex, at a named shelter, free that night, in a program the client is genuinely eligible for, and on the bottom bunk, because this particular client cannot climb to a top one. Four facts stand between one person and one placement, and no system in that community holds all four. So every morning somebody at the authority calls every shelter in turn and assembles the answer by hand.</p>
+
+<p>The sector has a name for the missing piece, and the name is too small. When the sector calls it a real-time bed availability problem, the phrase reads as a feature request that some future release will close. Availability is only one of the four facts, though, and the other three go missing by exactly the same mechanism. The record holds a person in full, and it holds a program in full, but nothing inside it joins the two. So the join gets made by a human being on a telephone, and the only trace it leaves behind is a note that somebody was referred.</p>
+
+<p>That claim is testable against HUD&rsquo;s own documents, which is why every element number and field count below comes from the FY 2026 HMIS Data Standards Manual, the version HUD released in October 2025 and made effective on 1 October 2025.</p>
+
+<h2>Two of the Four Facts a Placement Needs Have No HMIS Element at All</h2>
+
+<blockquote><p><b>A bed of the right sex, free tonight, in a program the client qualifies for, on the bottom bunk.</b><br>What one street outreach worker has to establish before a single phone call.</p></blockquote>
+
+<p>The FY 2026 standards do not treat those four facts symmetrically, and the asymmetry is the finding.</p>
+
+<p>The client&rsquo;s sex is a person-side fact, and HUD added a dedicated element for it in FY 2026. Element 4.21 Sex is new in this release, and it is collected at record creation for all clients. Under the CoC Program it is required for all components <i>except SSO Coordinated Entry</i>, and its Project Type Applicability list runs through emergency shelter, street outreach, transitional housing, permanent supportive housing, services only, safe haven, homelessness prevention and rapid re-housing without naming Coordinated Entry once. So the one element that carries that fact is excused in precisely the component where the referral gets made. The program side has no counterpart at all, because element 2.07 Bed and Unit Inventory Information splits a project&rsquo;s beds by Household Type, and the three options are households without children, households with at least one adult and one child, and households with only children.</p>
+
+<p>A bed at a specific shelter, free tonight, is a program-side fact with a timestamp on it, and 2.07 carries the program side without any timestamp at all. Its Collection Point reads &ldquo;Initial HMIS project set up, reviewed at least annually and updated as needed to reflect changes,&rdquo; and the manual adds that &ldquo;minor day-to-day fluctuations need not be recorded.&rdquo; Total bed inventory is defined as the count &ldquo;available for occupancy as of the &lsquo;Inventory Start Date&rsquo;&rdquo;. What that produces is a capacity figure with a start date attached to it, which is exactly right for the Housing Inventory Count and useless at 9pm.</p>
+
+<p>Eligibility is the fact that belongs to both sides at once, and it has no element anywhere in the standards. HUD does require the rule to exist in writing, under 24 CFR 578.7(a)(9)(i), where the Continuum of Care must &ldquo;establish and consistently follow written standards&rdquo; that include &ldquo;policies and procedures for evaluating individuals&rsquo; and families&rsquo; eligibility for assistance under this part.&rdquo; So the rule is mandatory, and the form it takes is prose, because nothing in the data standards holds a machine-readable version of it.</p>
+
+<p>The bottom bunk has no element either, and it is the fact people assume must be recorded somewhere. Element 2.07&rsquo;s Bed Type field offers three responses, and all three describe procurement rather than furniture: facility-based beds, voucher beds, other beds. HUD does name the underlying need elsewhere, in the guidance attached to the disability elements, where collection is permitted at admission when the information is &ldquo;needed to determine whether applicants need units with special features.&rdquo; The standards therefore contemplate a client who needs a unit with special features, while giving the inventory no field in which a special feature can be recorded.</p>
+
+<table border="1" cellpadding="6" cellspacing="0">
+  <tr><td>The fact the worker needs</td><td>Where the FY 2026 standards put it</td><td>When it is true</td></tr>      <tr><td>A bed of the right sex</td><td>Person side: element 4.21 Sex, new in FY 2026. Program side: nothing; 2.07 splits beds by household type</td><td>At record creation, and not required in the CoC coordinated entry component</td></tr>
+    <tr><td>At a specific shelter, free tonight</td><td>Program side: element 2.07 Total bed inventory, a capacity count</td><td>As of the Inventory Start Date, reviewed at least annually</td></tr>
+    <tr><td>In a program the client is eligible for</td><td>No element. The rule is required in writing by 24 CFR 578.7(a)(9)(i)</td><td>Confirmed by the receiving provider after the referral is made</td></tr>
+    <tr><td>On the bottom bunk</td><td>No element. 2.07 Bed Type is facility-based, voucher, or other</td><td>Never recorded</td></tr>
+  </table>
+<p>Element numbers and field definitions from the FY 2026 HMIS Data Standards Manual (HUD, effective 1 October 2025). Written standards requirement from 24 CFR 578.7(a)(9)(i).</p>
+
+<h2>Fifteen Fields in Element 2.07 Describe a Shelter&rsquo;s Beds, and None of Them Records Tonight</h2>
+
+<p>Element 2.07 is a serious piece of design that answers a different question from the one an outreach worker is asking. Its Response Descriptions list fifteen fields. Three of them are dates and identifiers, namely Inventory Start Date, Inventory End Date and CoC Code. Three more are category labels, namely Household Type, Bed Type and Availability, where availability means year-round, seasonal or overflow rather than free or taken. The remaining nine are integers, and every one of them counts capacity: six dedicated-bed fields for chronically homeless veterans, youth veterans, other veterans, chronically homeless youth, other youth and other chronically homeless persons, plus non-dedicated beds, total bed inventory and total unit inventory.</p>
+
+<p>Not one of the fifteen records how many of those beds are empty right now. The manual is explicit about the cadence it wants instead, saying that inventory counts &ldquo;should be accurately recorded within the last week of each of the months of January, April, July, and October,&rdquo; and giving its reason in the same sentence, &ldquo;to satisfy APR and LSA inventory accuracy.&rdquo; That amounts to four snapshots a year, timed to two reports. More frequent updates for significant changes are &ldquo;encouraged, but not required.&rdquo;</p>
+
+<table border="1" cellpadding="6" cellspacing="0">
+  <tr><td>What the field records</td><td>Number of fields</td></tr>      <tr><td>Integer counts of capacity</td><td>9</td></tr>
+    <tr><td>Category labels: household type, bed type, availability</td><td>3</td></tr>
+    <tr><td>Dates and identifiers</td><td>3</td></tr>
+    <tr><td>How many beds are free tonight</td><td>0</td></tr>
+    <tr><td>Total fields in element 2.07</td><td>15</td></tr>
+  </table>
+<p>Figure 1. The fifteen fields of element 2.07 Bed and Unit Inventory Information, grouped by what each field records. The preview renders this as a bar chart drawn to scale from these counts. Source: FY 2026 HMIS Data Standards Manual, element 2.07 Response Descriptions.</p>
+
+<p>None of that is an oversight. A quarterly capacity snapshot is the right instrument for measuring whether a community&rsquo;s inventory matches its need, and the annual gaps analysis required by 24 CFR 578.7(c)(3) runs on exactly that. The trouble starts when the planning record is the only record, because a worker with a person in front of them then has to query a planning artifact for an operational answer.</p>
+
+<h2>HUD&rsquo;s Own Wording Makes a Recorded Referral the Proof That a Bed Was Open</h2>
+
+<p>Element 4.20 Coordinated Entry Event is where the join is supposed to happen, and reading its instructions closely shows what it actually does. The Data Collection Instruction says: &ldquo;Recording any event in Field 2, Responses 10 through 15, 17 and 18 indicates there is an opening for the client to be housed by the project.&rdquo; The same logic repeats inside each of those responses, so that against &ldquo;Referral to Emergency Shelter bed opening&rdquo; the description reads: &ldquo;A &lsquo;referral&rsquo; indicates there is an opening for the client to be housed by this project.&rdquo;</p>
+
+<p>Read as a data model, the direction of inference runs backwards from what anyone needs. The system does not hold an opening that a worker can find and then refer into. A worker finds the opening some other way, records a referral, and the recorded referral is what asserts the opening existed. The evidence of a vacancy is the paperwork of having already used it, which makes the morning round of phone calls the real discovery mechanism and leaves the software sitting downstream of it.</p>
+
+<p>Eligibility arrives even later. Element 4.20&rsquo;s Referral Result field has three responses, and two of them are failures: client accepted, client rejected, provider rejected. The description of the third one says exactly when the eligibility question gets settled: &ldquo;A provider may determine, after meeting with the client and reviewing eligibility documentation, that a client is not eligible for a project and reject the referral.&rdquo; The determination lands only once that meeting has happened, so the rule that decided the outcome was knowable before the referral ever went out, and the record learns it afterward, as a rejection code.</p>
+
+<p>Element 4.19 Coordinated Entry Assessment closes the person side in the same shape, because its Prioritization Status field carries only two responses: placed on prioritization list, or not placed on prioritization list. A person is on a list, and which programs that person qualifies for never becomes part of the record. The field-by-field detail of both elements is set out in <a href="https://cube84.com/blog/coordinated-entry-systems-hud-requires-work-falls-through">what HUD&rsquo;s coordinated entry standards require and where the work falls through</a>.</p>
+
+<h2>Every CoC Is Required to Write Down Its Eligibility Rules, and Most Keep Them in a PDF</h2>
+
+<p>The eligibility rules are missing from the record rather than from the community, which is a different problem with a different fix.</p>
+
+<p>Section 578.7(a)(9) is unambiguous about their existence. The Continuum of Care must, in consultation with Emergency Solutions Grants recipients, &ldquo;establish and consistently follow written standards for providing Continuum of Care assistance,&rdquo; and the minimum contents run to six items, of which the first is eligibility and three more are prioritization policies for transitional housing, rapid re-housing and permanent supportive housing. Every CoC operating lawfully therefore holds a document that answers the outreach worker&rsquo;s third question, and has committed to following it consistently. That document is mandatory, locally owned, auditable, and in most communities a PDF. A worker on a phone is reconstructing from memory a rule that somebody has already written down, and the provider at the other end of the referral is the only party who applies it.</p>
+
+<h2>HUD Described Vacancy Tracking and Eligibility Matching in 2018, and Made Both Optional</h2>
+
+<p>The sharpest document in this argument sits outside the data standards. HUD&rsquo;s Coordinated Entry Management and Data Guide, in Chapter 3 on data systems at page 24, lists the functionalities a CoC might want from whatever system runs its coordinated entry. Thirteen appear, under three headings, and two of them describe the connection layer almost in the words an outreach worker would use.</p>
+
+<blockquote><p>&ldquo;Vacancy tracking, so referrals can be made to available units/beds. Some software can support reservation options to ensure staff on the receiving end know to reserve a bed as they wait for the participant to arrive.&rdquo;</p></blockquote>
+
+<blockquote><p>&ldquo;Automated housing and service options. Produces a list of housing options and supportive services resources with specific eligibility criteria, such as HIV+/AIDS status, to more efficiently identify and refer resources.&rdquo;</p></blockquote>
+
+<p>A third entry, listed under coordinated entry management, asks for &ldquo;a searchable database of housing and supportive services resources that can be maintained by the CoC&rdquo; holding &ldquo;eligibility and exclusionary criteria, resource availability, and contact information.&rdquo; Between them, those three describe a program record that knows its own vacancies and its own rules, which is the whole of what is missing.</p>
+
+<p>The framing around the list is the point. HUD introduces it by saying &ldquo;although not every system may have or need each one of these functionalities, the policy oversight entity should use this list as a reference in determining the best solution,&rdquo; which makes the thirteen a reference rather than a requirement. Compare that with the treatment element 2.07 gets, where the manual states that &ldquo;an HMIS must have an accurate record of Bed and Unit Inventory Information for all continuum residential projects.&rdquo; One capability is required, validated and reported on. The other is a suggestion inside a guide whose file dates to November 2018.</p>
+
+<table border="1" cellpadding="6" cellspacing="0">
+  <tr><td>Group in the FY 2026 HMIS Data Standards</td><td>Required elements</td></tr>      <tr><td>Project Descriptor Data Elements</td><td>7</td></tr>
+    <tr><td>Universal Data Elements</td><td>13</td></tr>
+    <tr><td>Common Program Specific Data Elements</td><td>16</td></tr>
+    <tr><td>Elements recording a live opening or an eligibility match</td><td>0</td></tr>
+  </table>
+<p>Figure 2. Required data elements in three of the FY 2026 groups, counted from the manual&rsquo;s contents, against the number of elements that record whether a specific bed is open now or which programs a client qualifies for. The preview renders this as a bar chart drawn to scale from these counts. The federal partner specific groups are not included in these three totals. Source: FY 2026 HMIS Data Standards Manual.</p>
+
+<table border="1" cellpadding="6" cellspacing="0">
+  <tr><td>Capability</td><td>How HUD treats it</td><td>Where it is written</td></tr>      <tr><td>Bed and unit capacity per project</td><td>An HMIS must hold an accurate record for all continuum residential projects</td><td>Data Standards Manual, element 2.07</td></tr>
+    <tr><td>The referral and its result</td><td>Collection required for all CoC components providing coordinated entry</td><td>Data Standards Manual, element 4.20</td></tr>
+    <tr><td>Vacancy tracking with bed reservation</td><td>One of thirteen functionalities offered as a reference list</td><td>Coordinated Entry Management and Data Guide, page 24</td></tr>
+    <tr><td>Housing options filtered by eligibility criteria</td><td>One of thirteen functionalities offered as a reference list</td><td>Coordinated Entry Management and Data Guide, page 24</td></tr>
+    <tr><td>Resource directory holding eligibility and exclusionary criteria</td><td>One of thirteen functionalities offered as a reference list</td><td>Coordinated Entry Management and Data Guide, page 24</td></tr>
+  </table>
+<p>Sources as named in the right-hand column. Quoted wording appears in the paragraphs above and below this table.</p>
+
+<h2>The Strongest Case for Keeping Eligibility Rules Out of the HMIS Entirely</h2>
+
+<p>There is a real argument on the other side and it deserves stating properly, because it is the argument a good CoC director will make in the first thirty seconds.</p>
+
+<p>Who qualifies for what is a local policy decision, and it is supposed to be. Section 578.7(a)(9) puts the eligibility and prioritization standards in the hands of the Continuum, in consultation with its ESG recipients, precisely so a community can weigh chronic homelessness against families with children against fleeing domestic violence in the way that fits its own inventory and its own population. Those weights move. They move when a NOFO changes, when a funder adds a condition, when a project comes online with a dedicated bed requirement, and sometimes mid-year because one grant agreement was renegotiated. A rule set that volatile is a poor candidate for anything hard-coded, and every hour spent maintaining it in software is an hour off a caseload.</p>
+
+<p>The failure mode is worse than the maintenance cost. A system that tells a worker a client is not eligible, and is wrong, has denied that person a bed, and nobody will ever see it happen. A phone call fails loudly. A filter fails silently and at scale. Set against that, a worker who knows the local rules and calls a colleague who also knows them is a robust, if slow, mechanism, and it has the enormous advantage of putting judgment about a human being in the hands of a human being. Hard-coding eligibility, on this view, is how a community builds the wrong thing and then trusts it.</p>
+
+<h2>An Eligibility Rule in a Policy Binder Is Already Hard-Coded, Just Where Nobody Can Check It</h2>
+
+<p>That case is right about the decision and wrong about the record, and the distinction between the two carries the whole argument.</p>
+
+<p>Deciding who qualifies is policy. It belongs to the Continuum and it should stay there. Writing that decision down in a form something other than a person can read produces a record of a decision already taken, and a community that has published written standards under 578.7(a)(9) has taken the decision and committed it to paper. The live question is therefore where the fixed version sits: in a PDF that no workflow touches, or in a field the referring worker sees at the moment of referral, versioned and owned by the same committee that owns the PDF. A rule in a binder is already hard-coded. It is coded into whoever happens to remember it.</p>
+
+<p>The silent-failure objection points toward a design answer rather than away from one. A connection layer that gates is dangerous, and a connection layer that ranks and warns is not. Surfacing that a client appears to fall outside a program&rsquo;s written criteria, with the criterion named, and leaving the referral available anyway, gives the worker the thing they currently reconstruct from memory while taking no decision away from them. It also leaves a trace, which the phone call does not. HUD&rsquo;s own event list already includes &ldquo;Referral to Non-continuum services: Ineligible for continuum services&rdquo; and, separately, &ldquo;Eligible clients who could not be referred to continuum services because there is no availability.&rdquo; The standards distinguish an eligibility failure from an availability failure. They simply record the distinction after the fact, one client at a time, which means no community can count how often either one happened before a placement was lost.</p>
+
+<p>Building in that order is what CUBE84 argues for, and the argument holds whether or not a product name ever reaches a purchase order. Housing360 is the HMIS, and it appears on HUD&rsquo;s FY 2026 vendor report validation list at software version 2.0, with the APR CSV validated 12 August 2026 and the CAPER CSV validated 21 August 2026, which is a table any reader can check for themselves. Care360 carries the coordinated entry work alongside it. The reason two records are involved at all is argued in <a href="https://cube84.com/webinar/housing-hmis-built-to-report-not-to-run">most housing systems were built to report, not to run</a>, and traced through the daily work in <a href="https://cube84.com/blog/how-salesforce-supports-housing-nonprofits-along-with-hmis">how Salesforce supports housing nonprofits alongside HMIS</a>.</p>
+
+<h2>Three Questions to Ask Before the Next Annual Bed Inventory Review</h2>
+
+<p>Element 2.07 has to be reviewed at least annually, which means every community has a scheduled moment when somebody is already looking at the program record. Three questions turn that review into a test of the connection layer, and none of them needs a vendor in the room.</p>
+
+<ul>
+  <li><b>Where does a worker look to find an opening, and is that place the system?</b> If the honest answer is a phone call, a group text or a shared spreadsheet, then the referral recorded in element 4.20 is a receipt for a discovery that happened somewhere else. Count the minutes a day that discovery costs across the team, because that number is the size of the gap.</li>
+  <li><b>Which document holds the written standards required by 578.7(a)(9), and does any system read it?</b> Find the file, then check its date against the most recent change to a program&rsquo;s eligibility criteria. A stale file means people are working from the remembered version.</li>
+  <li><b>When a provider rejects a referral on eligibility, can anyone count how often and against which criterion?</b> Element 4.20 records the rejection, so if the reason cannot be grouped and totaled, a preventable failure is repeating with no evidence that it is a pattern.</li>
+</ul>
+
+<p>The four facts an outreach worker needs are not exotic. Three of them exist somewhere in a community&rsquo;s records today, and the fourth is written in a policy document that a committee approved. Assembling them is the work, and at the moment the assembling is done by hand, one call at a time, by the person with the least time to spare.</p>
+
+<h2>Sources</h2>
+<ul>
+  <li><a href="https://files.hudexchange.info/resources/documents/HMIS-Data-Standards.pdf">FY 2026 HMIS Data Standards Manual</a>, U.S. Department of Housing and Urban Development, Version 1, released October 2025, effective 1 October 2025. Element 2.07 Bed and Unit Inventory Information, including its Collection Point, the fifteen fields in its Response Descriptions, the January/April/July/October cadence and the day-to-day fluctuation exclusion. Element 4.19 Coordinated Entry Assessment, Prioritization Status. Element 4.20 Coordinated Entry Event, including the Field 2 opening statement, the referral response descriptions and the three Referral Result values. Element 4.21 Sex, listed as a new element in the FY 2026 revision history. Element counts for the Project Descriptor, Universal and Common Program Specific groups, taken from the manual&rsquo;s contents.</li>
+  <li><a href="https://www.ecfr.gov/current/title-24/section-578.7">24 CFR 578.7, Responsibilities of the Continuum of Care</a> (eCFR, current text). Paragraph (a)(9) and its six minimum written standards, paragraph (a)(9)(i) on eligibility, and paragraph (c)(3) on the annual gaps analysis.</li>
+  <li><a href="https://files.hudexchange.info/resources/documents/coordinated-entry-management-and-data-guide.pdf">Coordinated Entry Management and Data Guide</a>, HUD. Chapter 3, Data Systems, page 24: the thirteen functionalities listed under three headings, the framing sentence introducing them as a reference, and the wording of the vacancy tracking, automated housing and service options, and resource directory entries. The file&rsquo;s own metadata dates it to November 2018.</li>
+  <li><a href="https://www.hudexchange.info/programs/hmis/vendor-report-validation/">HMIS Vendor Report Validation</a>, HUD Exchange. The FY 2026 rows for vendor CUBE84, software Housing360, version 2.0: APR CSV with a Date Validated of 12 August 2026, and CAPER CSV with a Date Validated of 21 August 2026. Read from the live table on 8 September 2026.</li>
+</ul>
+
+<p>The opening account comes from CUBE84&rsquo;s own conversations with practitioners at the National Alliance to End Homelessness 2026 conference. Every person, employer, county, city and state has been removed; roles and organization types are what remain. Four organizations in that corpus described a version of the same gap, and the counts in this piece describe that corpus rather than the sector.</p>
+<hr>
+
+<h2>Open Questions</h2>
+
+<p><b>1. The headline. RESOLVED in Round 1.</b> The first draft asked which of two titles should ship, the board row name or the draft headline. Comment AAACAgiL7IA answered it and went further, asking for a title that signals the homelessness and housing space at a glance and that replaces the generic word system with something specific to the vertical. The piece now runs under <i>Your HMIS Holds a Person and a Housing Program and Cannot Connect Them.</i> Nothing further is needed unless the wording itself needs another pass.</p>
+
+<p><b>2. No source is named for the opening account, and that costs the reader something. STILL OPEN.</b> The four organizations behind it are described by type only, and no link is offered, so a reader cannot audit that part of the evidence. Everything the argument actually rests on is a public HUD document that is linked and checkable. Worth deciding whether any of those organizations should be named, with permission.</p>
+
+<h2>Review Log</h2>
+
+<p>One row per comment, oldest round first, carried forward in every later version. The comment id is recorded against each row so a reply inside a thread already answered can be told apart from the part already dealt with. Cells carry no bold or italic on purpose, because Drive&rsquo;s conversion turns inline markup inside a table into visible characters.</p>
+
+<table border="1" cellpadding="6" cellspacing="0">
+  <tr><td>Round and source</td><td>Who raised it</td><td>What they asked for</td><td>What was done</td></tr>
+
+  <tr>
+    <td>Round 1. Doc comment on version 1, 2026-09-08 16:59:07 UTC. Comment id AAACAgiL7IA, anchored on the H1.</td>
+    <td>Kiki - Kirithiga Sundaramoorthy</td>
+    <td>Title needs to be changed. At a glance it tells nothing about Homeless and Housing space. Felt better to me: The System Holds a Person and a Program and Cannot Connect Them. But the word System is still generic. Can be more specific to this vertical.</td>
+    <td>DONE, AS A VARIANT OF THE TITLE SHE OFFERED RATHER THAN THAT TITLE EXACTLY. Before: It Takes Four Facts to Place One Person Tonight. No System Holds All Four. After: Your HMIS Holds a Person and a Housing Program and Cannot Connect Them. Both of her requirements are met. System is replaced by HMIS, which is the vertical's own term and cannot be read as belonging to any other sector, and Housing Program signals the space a second time for a reader who does not know the acronym. Her exact wording was not taken because it still contains the generic word she flagged, and because Program alone does not signal housing. The slug is now hmis-holds-person-housing-program-cannot-connect-them, the cover headline and kicker are rebuilt at the new wording, the page title tag is updated and both file names carry the new slug. This also resolves open question 1 from the previous version, which had asked which of two titles should ship.</td>
+  </tr>
+
+  <tr>
+    <td>Round 1. Doc comment on version 1, 2026-09-08 17:00:25 UTC. Comment id AAACAgiL7IM, anchored on the opening paragraph beginning Somebody at a homeless authority described what a street outreach worker has to establish.</td>
+    <td>Kiki - Kirithiga Sundaramoorthy</td>
+    <td>Intent is right. The sentence framing is grammatically incorrect. It needs better way of writing it down. Sounds like reading a bulletin now.</td>
+    <td>DONE. The paragraph carried five sentence fragments in a row. Before: Somebody at a homeless authority described what a street outreach worker has to establish before making one phone call. A bed of the right sex. At a specific shelter. Free tonight. In a program the client is eligible for, and on the bottom bunk, because the client cannot climb to a top one. Four facts, one placement. No system in that community holds all four, so every morning somebody at the authority calls every shelter and assembles the answer by hand. After: Somebody at a homeless authority once walked through everything a street outreach worker has to establish before making a single phone call. The worker needs a bed of the right sex, at a named shelter, free that night, in a program the client is genuinely eligible for, and on the bottom bunk, because this particular client cannot climb to a top one. Four facts stand between one person and one placement, and no system in that community holds all four. So every morning somebody at the authority calls every shelter in turn and assembles the answer by hand. Four facts still arrive in order and still arrive concretely, now inside one sentence with a subject and a verb instead of four broken off ones. Nothing was added and nothing was hedged.</td>
+  </tr>
+
+  <tr>
+    <td>Round 1. Doc comment on version 1, 2026-09-08 17:00:54 UTC. Comment id AAACAgiL7IU, anchored on the sentence Called a real-time bed availability problem, it reads as a feature request that a future release will close.</td>
+    <td>Kiki - Kirithiga Sundaramoorthy</td>
+    <td>Grammatically wrong. Rephrase.</td>
+    <td>DONE, AND SHE WAS RIGHT ABOUT WHY. It was a dangling modifier. The participle Called had no subject to attach to, so the sentence literally said the reading was called a bed availability problem. After: When the sector calls it a real-time bed availability problem, the phrase reads as a feature request that some future release will close. The participle becomes a subordinate clause with the sector as its subject, and the point is unchanged.</td>
+  </tr>
+
+  <tr>
+    <td>Round 1. Doc comment on version 1, 2026-09-08 17:02:19 UTC. Comment id AAACAgiL7Io, anchored on the H2 A Bed of the Right Sex, Free Tonight, in a Program the Client Qualifies For, on the Bottom Bunk.</td>
+    <td>Kiki - Kirithiga Sundaramoorthy</td>
+    <td>This is good for an in between quote or somewhere in inline of the blog. But as a title, it is not doing a better job of what the person is explaining. So, when you think about headings think of that as somebody reading it in TOC as well. It should make sense on its own.</td>
+    <td>DONE, AND THE STRING WAS KEPT WHERE SHE SUGGESTED IT WOULD WORK. The heading is now Two of the Four Facts a Placement Needs Have No HMIS Element at All, which states what the section establishes and is readable in a contents list with nothing above it. The flagged string survives immediately below that heading as a pull quote, with a one-line label underneath reading What one street outreach worker has to establish before a single phone call, so the reader still meets the four facts in their original vivid form. The label is deliberately not framed as a quotation of a named source, because no source is named for that account anywhere in the piece.</td>
+  </tr>
+
+  <tr>
+    <td>Round 1. Doc comment on version 1, 2026-09-08 17:03:56 UTC. Comment id AAACAgiL7Is, anchored at the top of the document. Treated as the instruction governing the whole revision.</td>
+    <td>Kiki - Kirithiga Sundaramoorthy</td>
+    <td>This blog is good theme. Story is correct. But the grammar is chopping the readability so badly. Poor sentence structure. Like the sentence structure is more like a bulletin board or a short memo sent to somebody over a text message. Not great for a reader. Must be rewrote with that in mind. And as for as the headings, think of that as somebody reading it in TOC as well. It should make sense on its own.</td>
+    <td>DONE AS TWO SEPARATE PASSES OVER THE WHOLE PIECE. Pass one, sentence structure. Every paragraph was read for fragments and clipped declaratives and rebuilt as connected prose. The fixes beyond the three she anchored individually: Four snapshots a year, aligned to two reports became That amounts to four snapshots a year, timed to two reports. After meeting with the client, standing alone for emphasis, became The determination lands only once that meeting has happened, so the rule that decided the outcome was knowable before the referral ever went out. The rule is mandatory and it is prose became So the rule is mandatory, and the form it takes is prose, because nothing in the data standards holds a machine-readable version of it. It is a reference list became a which-clause inside the sentence carrying HUD's own framing quotation, so the judgement now sits on the evidence instead of following it as a verdict. Which makes the morning round of phone calls the actual discovery mechanism, a fragment opening with Which, is now a relative clause on the sentence before it. Element 4.21 Sex is new in this release, collected at record creation, about all clients, three stacked appositives, is now two clauses joined by and. Read that as a data model and the direction of inference runs backwards is now Read as a data model, the direction of inference runs backwards. Roughly a dozen further sentences gained the connective the full stop had been standing in for, mostly because, so, which and while. Pass two, headings, is recorded in the row below. NOTHING IN THE ARGUMENT MOVED. Every count, every element number, every HUD quotation and both charts are exactly as they were, and the opposing case section is word for word unchanged apart from one spelling correction noted below.</td>
+  </tr>
+
+  <tr>
+    <td>Round 1. The rest of the heading pass, following comments AAACAgiL7Io and AAACAgiL7Is. Not flagged individually.</td>
+    <td>Nobody asked for these one by one. They follow from the standard she set twice.</td>
+    <td>Every heading has to make sense on its own to somebody reading a table of contents.</td>
+    <td>DONE FOR ALL EIGHT SECTION HEADINGS, SEVEN OF WHICH WERE NOT FLAGGED. One. A Bed of the Right Sex, Free Tonight, in a Program the Client Qualifies For, on the Bottom Bunk became Two of the Four Facts a Placement Needs Have No HMIS Element at All. Two. Fifteen Fields Describe a Shelter's Beds and None Records Tonight became Fifteen Fields in Element 2.07 Describe a Shelter's Beds, and None of Them Records Tonight, so the element is named rather than assumed from the section before it. Three. HUD's Own Wording Makes a Recorded Referral the Proof That an Opening Existed became HUD's Own Wording Makes a Recorded Referral the Proof That a Bed Was Open, replacing the abstract noun opening with the concrete thing at stake. Four. Eligibility Already Exists as a Written Policy the System Never Reads became Every CoC Is Required to Write Down Its Eligibility Rules, and Most Keep Them in a PDF, which drops the same generic word System she flagged in the title and states the contradiction the section proves. Five. HUD Named Vacancy Tracking and Eligibility Matching in 2018, on a List of Things to Consider became HUD Described Vacancy Tracking and Eligibility Matching in 2018, and Made Both Optional. Six. The Strongest Case for Keeping Eligibility Out of the Software became The Strongest Case for Keeping Eligibility Rules Out of the HMIS Entirely, naming the vertical rather than the generic software. Seven. A Rule in a Policy Binder Is Already Hard-Coded, Just Where Nobody Can Check It became An Eligibility Rule in a Policy Binder Is Already Hard-Coded, Just Where Nobody Can Check It, so a reader meeting it in a contents list knows which rule. Eight. Three Questions to Ask Before the Next Annual Bed Inventory Review was tested against the same standard and left unchanged, because it already identifies its own subject and its own moment with nothing above it. No heading carries a pronoun of any kind.</td>
+  </tr>
+
+  <tr>
+    <td>Round 1. Not raised in review. Recorded because it was not requested.</td>
+    <td>Nobody asked for these.</td>
+    <td>Not requested.</td>
+    <td>THREE SPELLING AND TYPOGRAPHICAL FIXES, MADE UNDER THE GRAMMAR INSTRUCTION. The house standard is American English and the draft carried three British forms. Prioritisation is now prioritization in the two places it appeared as prose, one of which sits inside the opposing case section that is otherwise word for word unchanged. Judgement is now judgment, also in that section. Totalled is now totaled. The element field name Prioritization Status was already correct and is untouched. Separately, the previous version's Google Doc ended one sentence with a note that somebody was referred to, with a stray trailing preposition, which the HTML preview did not have. The two now agree on referred.</td>
+  </tr>
+
+  <tr>
+    <td>Round 1. What this revision did not do.</td>
+    <td>Not applicable.</td>
+    <td>Not applicable.</td>
+    <td>THE EVIDENCE AND THE ARGUMENT ARE UNCHANGED. The fifteen fields of element 2.07 with the nine, three, three and zero split; the seven, thirteen and sixteen element counts; the 4.20 Data Collection Instruction quotation; the 4.21 Sex exception for SSO Coordinated Entry; 24 CFR 578.7(a)(9)(i) and (c)(3); the thirteen functionalities on page 24 of the Coordinated Entry Management and Data Guide; and the Housing360 vendor validation dates of 12 August 2026 for the APR CSV and 21 August 2026 for the CAPER CSV are all exactly as they were. Every HUD quotation is word for word. Both charts plot the same numbers and all three tables carry the same rows. All three interlinks are unchanged. The opposing case section was deliberately not softened, on the reasoning that the instruction was about grammar and the argument was praised, so weakening it would have been hedging behind a style note. No organization is named anywhere in the piece, and the opening account is still described by organization type only. Still open and not solved here: no source is named for that opening account, which is open question 2 above. Also still open, none of it raised by a comment, three fields on the intake row are empty, namely Word Count, Category, where Nonprofit is the housing value, and SME, so nobody has yet been named to review this.</td>
+  </tr>
+</table>
+
+</body></html>

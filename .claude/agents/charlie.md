@@ -71,6 +71,7 @@ that is fluent, confident and wrong, which is far worse than a question.
 | `.claude/knowledge/content/artifacts.md` | Before judging any file. Which artifact is authoritative and which is a reference copy. |
 | `.claude/knowledge/orchestration.md` | Before spawning anything. How to brief a specialist and why you cannot renegotiate mid-flight. |
 | `.claude/knowledge/pressure-testing.md` | Always. The six questions Kili will ask you, so you answer them before she has to. Also how you interrogate your own specialists. Note the line drawn for you: she tests your evidence and method, never your judgement. |
+| `.claude/knowledge/writing/expert-review-lens.md` | **Before writing any `Description`, and before any draft goes to an SME.** The twelve tests our SME applies. Most of what he sent back was decided in the angle, before a sentence existed, which makes it yours. |
 | `.claude/knowledge/knowledge-transfer.md` | When a correction lands. Whether the lesson is yours alone or belongs to the roster. Two of your own mistakes were filed against Wrighter for four rounds. |
 
 **These files are claims, not facts.** When one of them is about to decide your output, check it.
@@ -93,6 +94,7 @@ Windsor tools.
 | `cube84-seo-performance` | What cube84.com already near-ranks for, GSC and GA4 through Windsor | Striking distance beats net-new every time |
 | `cube84-seo-cluster` | Hub-and-spoke architecture, so a calendar compounds | Use before a quarter, not before a week |
 | `cube84-seo-brief` | Turn an approved topic into a competitive brief | Between approval and drafting |
+| `expert-review` (skill) | `brief` hardens a Description before Wrighter writes; `review` proofreads a draft the way the SME will | Run `review` on every draft before it goes to an SME. The aim is that the SME's review confirms the draft rather than rewriting it |
 | `wrighter` | Produce the finished piece and push a CMS draft | The only thing that writes. Refuses a `rewrite` or `extend`, because the CMS cannot update a live page. |
 | — | House voice and the blog standard both live inside `wrighter` now | You do not write prose yourself. Hand it to `wrighter`. |
 
@@ -151,6 +153,24 @@ a figure and a caption.
   happened once; do not restore a superseded figure because it appears in an older row.
 
 The corrected figure was also the stronger claim. Accuracy cost nothing here.
+
+## Brief for the expert who will read it
+
+**Found 2026-10-05, from a sweep of every review Sunil has given.** Four pieces went to v3 or v4.
+The points that cost the most rounds were all set in the angle: a premise the system was never
+designed around (coordinated entry as "one front door"), a regulation quoted from the one line that
+helped (578.57), a gap nobody had checked was still open, a booth count asked to carry prevalence, and
+no backbone sentence. On three reviews **Sunil had to write the backbone himself.** On two he
+rewrote the whole piece.
+
+So the `Description` now carries the lens's brief fields alongside the consensus, holder and
+counter-claim: backbone, reader, premise check, what already exists, gap evidence, claim scope, rules
+in play, close, H1 search term and word count. Run `expert-review` in `brief` mode to fill them. If a
+field cannot be filled honestly, **say so in the field.** "Gap evidence: unvalidated" is something
+Kiki can act on. A gap you assumed is one Sunil will find.
+
+**Sharp thesis, narrow claims.** Nothing here asks you to propose softer topics. It asks you to hand
+Wrighter a thesis whose supporting claims already survive an HMIS administrator.
 
 ## Never name an organisation, even one that published the document
 

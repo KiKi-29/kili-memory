@@ -103,6 +103,14 @@ reader should feel a beat.
 - Sentence lengths vary, and short sentences land on purpose rather than on a schedule.
 - Every stat is exact, unrounded, and names its source on the same line.
 - No filler and no meta-narration.
+- No quantifier or universal (`most`, `every`, `nobody`, `nothing`) without a source that counts it.
+- Every regulation is described from the whole paragraph, not the line that helps, and cited to the
+  right paragraph.
+- The piece concedes what already exists before naming the gap, and answers every objection it raises.
+- One backbone sentence, one named reader in the byline line, and a close that is a point of view or
+  next step rather than a pitch.
+
+The last four come from the expert review lens, which holds the full twelve.
 
 ---
 
@@ -117,6 +125,7 @@ reader should feel a beat.
 | `.claude/knowledge/content/artifacts.md` | Which artifact is authoritative. Technical SEO runs on a staging link, never a file. |
 | `CLAUDE.md` | Brand standard. Rule 0: a visual carries an insight or it does not ship. |
 | `.claude/wrighter/references/html-template.md` | When assembling. The post skeleton and the cover design. |
+| `.claude/knowledge/writing/expert-review-lens.md` | **Always, before drafting and again before delivering.** The twelve tests the SME applies, built from every review Sunil has given. Sharp thesis, narrow claims. Run it through the `expert-review` skill in `preflight` mode. |
 | `.claude/knowledge/knowledge-transfer.md` | When a correction lands. A lesson filed only where it was discovered is half-learned. Say which other agents could make the same mistake. |
 
 ---
@@ -320,6 +329,12 @@ not a degraded fallback and it needs no apology in the report. Say which path yo
 cover in a system font and screenshots it perfectly happily, and nothing errors. A wrong-font cover
 looks finished, which makes it worse than no raster at all. If you cannot confirm the fonts loaded,
 take path B.
+
+**5b. Preflight.** Run the `expert-review` skill in `preflight` mode on the draft and fix what it
+finds before anything goes to Drive. Anything you cannot fix without an input (an unconfirmed product
+capability, an unvalidated gap, a regulation the run cannot open) becomes one plain line in the Doc
+header, so the SME meets it as a question. Four pieces went to v3 or v4 on review points this pass
+would have caught. Say in the hand-back which tests passed, which you fixed, and which are open.
 
 **6. Deliver to Drive.** Two files, one folder, and the folder is addressed **by id**:
 
@@ -560,6 +575,30 @@ Do this for every heading in the piece, not the one that was flagged.
 This costs nothing. A piece can run one case through its whole body and still carry headings that
 name the subject rather than pointing at it, because the body is read in order and the headings are
 not.
+
+## Quote the anchor, never infer it by position
+
+**Found 2026-10-05.** The Review Log on *HMIS Is a Person, Not a Platform* attached all four of
+Kiki's v2 comments to the wrong passage, each shifted by one position. It then recorded one of them as
+a comment on the H1, called it a contradiction with her "the title is too good" comment, and put that
+contradiction to her. **No comment had asked for a new title.** The outcome was right by luck, and the
+record was false.
+
+- `read_file_content` with comments returns each comment against its anchored text. **Copy the first
+  words of the anchored text into the row**, in quotation marks. Never work out the anchor from the
+  order the comments appear in.
+- If a comment has no anchor text, write "anchored on the document", not a guess.
+
+## A reviewer's own rewrite is the strongest review there is
+
+**Found 2026-10-05.** Sunil twice stopped commenting and rewrote a piece himself:
+`naehboothrestructuredv5.md` and `hmiseligibilityrulesv4.md`. Neither appears in any Review Log, and
+the next version of the eligibility piece was built without reference to his.
+
+When the reviewer sends their own version, by link, Chat or email, **it is the review.** Read it in
+full and diff it against your draft. Then log, as rows, what their version changed: structure,
+claims, title, sections added or cut. Say which of those changes the new version adopts and which it
+does not, and why. A rewrite that goes unlogged tells the reviewer their work was not read.
 
 ## The reviewer and the commenter are two different people
 
