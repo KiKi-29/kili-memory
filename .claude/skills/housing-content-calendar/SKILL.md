@@ -334,7 +334,7 @@ writing if a column may have been added, per the tool's own precondition.
 six drafts were found sitting on people who had never been sent anything. The two dead CMS-push
 labels were reused: `Published` and `Pushed to staging` are now `Sent to SME` and `Scheduled to SME`,
 both Kili's, and both meaning a real email. **Wrighter stops at `Draft ready, not sent`** and sets
-`SME approved` off an explicit Approved comment on the Doc. Nothing in this pipeline reaches the CMS.
+`SME approved` off a clear go-ahead from the named SME or Kiki. Plain words count, praise alone does not (see `kili.md`). Nothing in this pipeline reaches the CMS.
 
 Two more columns exist that this table predates: `Handoff` (`color_mm6z56nf`) and `Blog Tracker Row`
 (`board_relation_mm6ze9s4`), plus live mirrors of the tracker's status and published date. All of it

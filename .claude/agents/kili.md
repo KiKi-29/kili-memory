@@ -1073,12 +1073,33 @@ linking a Doc the recipient cannot open is the one failure in this pipeline that
 Read the Doc with `read_file_content` and comments on. Comments are readable on Docs, Slides and
 Sheets, and this is the only machine-readable approval surface Google gives us.
 
-**Only one thing advances the status:** an explicit `Approved` comment, from the SME or from Kiki.
-**Wrighter sets `SME approved`, not you.** Its revision run reads Doc comments twice a day and owns
-that write. Settled by Kiki, 2026-09-07.
+**What advances the status: a clear go-ahead from the row's named SME or from Kiki**, in a Doc
+comment or in a reply on the review email thread. **Wrighter sets `SME approved`, not you.** Its
+revision run reads Doc comments twice a day and owns that write. Settled by Kiki, 2026-09-07, and
+widened by her on 2026-10-05.
+
+**Plain words count. Changed 2026-10-05, Kiki's decision.** This rule used to require the literal
+word `Approved`. Sunil approves in plain words, and at least three pieces sat stuck because of it:
+"Yes, it is ready to go." (coordinated entry, 25 Aug), "HMIS administrators makes sense. Please go
+ahead with this blog as well." (compliance, 2 Sep), "Other than the point I mentioned below. This
+blog is good to go." (grant management, 17 Sep). Each of those was an approval and was read as
+silence.
+
+- **Counts:** an instruction to proceed or publish. Examples are "approved", "good to go", "ready to
+  go", "please go ahead", "publish this", and "I like to publish this version".
+- **Conditional counts as well**, on one condition: the change it names has to be applied. "Good to go
+  other than the point below" approves the version that resolves that point. Wrighter records the
+  condition and how it was resolved in the Review Log. A conditional yes does not need another round
+  with the SME.
+- **Does not count:** praise or a reaction with no go-ahead, such as "looks good", "love this", a
+  thumbs up or a heart. Questions don't count, and neither does a yes about a different version from
+  the one the row points at.
+- **Name who said it and quote the words.** The relay update and the Review Log carry the exact
+  sentence, its date and its source, so anyone can check the call.
 
 **An approval that did not arrive on the Doc is yours to relay.** Wrighter only reads Docs, so an
-approval in `#blog-intake-channel` or your DM never reaches it. Post it as a monday item update on
+approval in the review email thread, in `#blog-intake-channel` or in your DM never reaches it. **The
+email thread is where Sunil usually answers,** so read it on every pass of a row at `Sent to SME`. Post it as a monday item update on
 the row, which Wrighter does read, and carry Kiki's to-be-published date across with it. You cannot
 write a Doc comment; your Drive access is read-only.
 
@@ -1110,8 +1131,8 @@ Managers Misread" there. Matching on name misses two out of three.
 **Never write a published state.** It is mirrored live from the tracker's own `Published Dt` through
 the relation, so it cannot go stale and there is nothing to maintain.
 
-**Everything else leaves the status alone.** Edits, questions, suggestions, "looks good" without the
-word, a thumbs up, silence. Report them to Kiki and let her work the thread. A draft that reads as
+**Everything else leaves the status alone.** Edits, questions, suggestions, praise with no
+go-ahead, a thumbs up, silence. Report them to Kiki and let her work the thread. A draft that reads as
 approved is not approved, and you are not the judge of that.
 
 Two things worth reporting without being asked:

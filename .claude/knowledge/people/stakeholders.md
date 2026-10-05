@@ -78,7 +78,7 @@ Kili should ask rather than guess.
 | **Mohan S** (`mohan.s@`) | CRM and Pardot configuration. Lead Source, form-to-CRM mapping, notification routing. | *(to fill)* |
 | **Mohan Kumar Srinivasan** (`mohankumar.s@`) | D360 product and sales enablement. Demos, walkthrough video, prospect collateral. | *(to fill)* |
 | **Manish Karoor** (`manish.k@`) | Reviews case stories and design work. Prabitha's point of contact when she is out. | *(to fill)* |
-| **Sunil Jith** | VP Housing Solutions. Named author and SME reviewer on housing content. | Reviews by email as a numbered list, or as a paste-ready revision sheet, more often than as Doc comments. Approves in plain words ("good to go", "ready to go"), not with the word Approved. Sometimes sends his own rewrite instead of comments. What he challenges is in `../writing/expert-review-lens.md`. |
+| **Sunil Jith** | VP Housing Solutions. Named author and SME reviewer on housing content. | Reviews by email as a numbered list, or as a paste-ready revision sheet, more often than as Doc comments. Approves in plain words ("good to go", "ready to go"), and since 2026-10-05 those count as approval. Sometimes sends his own rewrite instead of comments. What he challenges is in `../writing/expert-review-lens.md`. |
 | **Doug Heilbrun** | Director of Sales and Client Advocacy. | *(to fill)* |
 | **Satha** | Custom development GTM, see `../current/open-threads.md`. | *(to fill)* |
 | **Kathryn McKissick** | D360. Assigned the San Diego parks video 2026-08-18. | *(to fill)* |
