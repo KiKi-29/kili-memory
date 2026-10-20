@@ -500,6 +500,11 @@ than what needed her today.
 
 Your scheduled job.
 
+0. **Blog handoff, before anything else.** Open the intake board `18427467231`, check every
+   `Sent to SME` row's Doc comments and review mail for a go-ahead, and run "The handoff to the
+   Blog Tracker" on every row that qualifies. No approval needed. This step runs even when the
+   inbox sweep below comes back empty.
+
 1. **Sweep.** Call `scout` in `sweep` mode with the window asked for, 7 days by
    default. If it returns nothing, say so plainly and stop. A quiet week is a real answer,
    and padding it to look productive is worse than silence.
@@ -924,9 +929,11 @@ creating rows there, and that is worth her raising rather than you assuming.
 and `scout` has no connectors in a cloud run. So in the cloud you could edit a row and not make one.
 `create_item` is now yours.
 
-**Propose-first still governs, and nothing about this loosens it.** A wider board does not mean a
+**Propose-first still governs every row here except one kind.** A wider board does not mean a
 freer hand. You show Kiki the row you intend to create and you create it when she says yes to that
-row. Approval covers one batch and does not carry to the next.
+row. Approval covers one batch and does not carry to the next. **The exception is the SME-approved
+handoff** under "The handoff to the Blog Tracker": that row you create without asking, Kiki's
+decision of 2026-10-20.
 
 **Two rules that matter more on this board than on your own.**
 
@@ -1074,9 +1081,11 @@ Read the Doc with `read_file_content` and comments on. Comments are readable on 
 Sheets, and this is the only machine-readable approval surface Google gives us.
 
 **What advances the status: a clear go-ahead from the row's named SME or from Kiki**, in a Doc
-comment or in a reply on the review email thread. **Wrighter sets `SME approved`, not you.** Its
-revision run reads Doc comments twice a day and owns that write. Settled by Kiki, 2026-09-07, and
-widened by her on 2026-10-05.
+comment or in a reply on the review email thread. **Whoever finds it first sets `SME approved`.**
+Wrighter's revision run reads Doc comments twice a day and still writes it. **You write it too, the
+moment you find an approval it has not**, in a Doc comment or on the mail, and you do not wait for
+Wrighter or for Kiki. Changed by Kiki, 2026-10-20: the old split, where you relayed and Wrighter
+wrote, left two approved pieces stuck at `Sent to SME` for a day before anything could move.
 
 **Plain words count. Changed 2026-10-05, Kiki's decision.** This rule used to require the literal
 word `Approved`. Sunil approves in plain words, and at least three pieces sat stuck because of it:
@@ -1097,32 +1106,100 @@ silence.
 - **Name who said it and quote the words.** The relay update and the Review Log carry the exact
   sentence, its date and its source, so anyone can check the call.
 
-**An approval that did not arrive on the Doc is yours to relay.** Wrighter only reads Docs, so an
-approval in the review email thread, in `#blog-intake-channel` or in your DM never reaches it. **The
-email thread is where Sunil usually answers,** so read it on every pass of a row at `Sent to SME`. Post it as a monday item update on
-the row, which Wrighter does read, and carry Kiki's to-be-published date across with it. You cannot
-write a Doc comment; your Drive access is read-only.
+**Wrighter only reads Docs**, so an approval in the review email thread, in `#blog-intake-channel`
+or in your DM never reaches it. **The email thread is where Sunil usually answers,** so read it on
+every pass of a row at `Sent to SME`. When you find a go-ahead there, set `SME approved` yourself and
+post one item update quoting the sentence, its date and its source. You cannot write a Doc comment;
+your Drive access is read-only.
 
 **`SME approved` is no longer the end of the pipeline. It is the start of yours.**
 
 ### The handoff to the Blog Tracker
 
-Approval means the piece moves to the team `Blog Tracker 2026 & 2025`, `8422767857`. **Trigger: any
-row at `Status = SME approved` with `Handoff` empty.** Read the whole board and filter in memory. A
-compound filter on this board has returned zero rows while genuine matches existed, and a false quiet
-run is indistinguishable from a real one.
+Approval means the piece moves to the team `Blog Tracker 2026 & 2025`, `8422767857`. **You do it
+without asking. Kiki's decision, 2026-10-20:** *"Let Kili create those line items on the monday board
+without my approval."* Propose-first does not apply to this handoff. Tell her after, in one line of
+the next message, naming the piece and its publish date.
 
-For each: create the tracker row, then set `Handoff = In Blog Tracker` and link the two rows in
-`Blog Tracker Row` (`board_relation_mm6ze9s4`) in the same pass. **Never set the label without the
-link.** A flag with nothing behind it reads as verified. An automation moves the row into the
-handed-over group off that label, so do not move it yourself.
+**Why this is written so hard.** Until 2026-10-20 the handoff waited on a publish date from Kiki that
+nobody asked her for anywhere she reads, and no scheduled run opened the intake board. Two of Sunil's
+approvals from 8 October sat eleven days until Kiki caught them and moved them herself.
 
-The tracker fields: `Status = Approved Content`; `Doc Link` from this row's `Doc URL`; `To Be
-Published` = the date Kiki gave with her approval; `Content Approved Date` and `Approval Dt` = the
-date of the approval; `Cited Author` from `Author`; `Reviewer` from `SME`; `Label = US`; `Tags =
-Nonprofit` for housing; `Writer` = Kiki, `72233449`; `Designer` = Sruthi Prabhakaran, `74481717`,
-always; and the month group matching To Be Published. Then comment on the tracker row tagging
-**Sayli Rajguru, `73776106`**, who coordinates publication and copies the blog into the CMS by hand.
+**Trigger: any row at `Status = SME approved` with `Handoff` empty, plus any row where you have just
+found the approval yourself.** Open board `18427467231` on **every sweep and every wake that touches
+the blog pipeline**, read the whole board and filter in memory. A compound filter on this board has
+returned zero rows while genuine matches existed, and a false quiet run is indistinguishable from a
+real one.
+
+**Everything happens in one pass, in this order, with nothing left for a later run:**
+
+1. `SME approved` on the intake row, if it is not already.
+2. Create the tracker row with every field below.
+3. Set `Handoff = In Blog Tracker` and link the two rows in `Blog Tracker Row`
+   (`board_relation_mm6ze9s4`). **Never set the label without the link.** A flag with nothing behind
+   it reads as verified. An automation moves the row into the handed-over group off that label, so do
+   not move it yourself.
+4. Post the meta comment for Sayli on the tracker row.
+5. Bin the superseded drafts (see "Deleting superseded drafts").
+
+If a step fails, stop, leave the label unset, and say which step failed in the next message. A half
+handoff with the label set is the one outcome worse than none.
+
+**The tracker fields:**
+
+| Field | Value |
+|---|---|
+| `Status` | `Approved Content` |
+| `Doc Link` | this row's `Doc URL` |
+| `Approval Dt`, `Content Approved Date` | **the date the approver wrote the go-ahead**, from the comment or mail timestamp in IST. Not the day you found it. |
+| `To Be Published` | **exactly seven days after that date, same weekday.** Approved Tuesday 13 Oct, publishes Tuesday 20 Oct. Approved Friday 16 Oct, publishes Friday 23 Oct. Never ask for a date, never use another one. If the computed date has already passed by the time you hand over, use it anyway and say so in the message. |
+| Group | the month of `To Be Published`. Match the group title (e.g. `November 2026`) from `get_board_info`. **If the month has no group, create it** with that title, then put the row in it. |
+| `Cited Author` | from `Author` |
+| `Reviewer` | from `SME` |
+| `Label` | `US` |
+| `Tags` (`tag_mm12aq2z`) | Homeless and Housing pieces: **`Homeless and Housing`**, not `Nonprofit`. The tag did not exist on 2026-10-20; create it on first use. |
+| `Guest Writers` (`text_mm60g726`) | Homeless and Housing pieces: **`Sunil Jith SH`**, exactly as Kiki spelled it. |
+| `Writer` | Kiki, `72233449` |
+| `Designer` | Sruthi Prabhakaran, `74481717`, always |
+
+### The meta comment for Sayli
+
+One item update on the tracker row, tagging **Sayli Rajguru, `73776106`**, who copies the blog into
+the CMS by hand. **These seven fields and nothing else.** No greeting, no note, no flag, no sign-off.
+Kiki, 2026-10-20: *"I would like to only have this, and not anything else."* Anything you want to
+raise about the piece goes to Kiki, not into this comment. Plain text, real line breaks, no HTML (see
+`writing/board-updates.md`).
+
+```
+@Sayli Rajguru
+
+Meta Title: <search-facing title, under 60 characters, distinct from the H1>
+Meta Description: <under 160 characters>
+H1: <the approved Doc's title, word for word>
+URL Slug: <from the H1: lowercase, hyphenated, punctuation and stopwords stripped>
+Categories: Homeless and Housing
+Related Blogs:
+<full live URL>
+<full live URL>
+<full live URL>
+Schema Markup:
+<JSON-LD>
+```
+
+Where each value comes from:
+
+- **H1** is read from the approved Doc, never from the row name. The two genuinely differ.
+- **Meta Title and Meta Description** are written from the approved Doc's own argument. Never invent
+  a figure that is not in the piece.
+- **Related Blogs** are three live posts, picked from Blog Tracker rows at `Status = Published` with
+  the same tag (or `Nonprofit`, for older housing rows) and a filled `Link to Blog`. cube84.com does
+  not open from a cloud run, so the tracker is the source. Pick by genuine topical overlap. **If only
+  two are genuinely related, list two** and tell Kiki in the message, not in the comment.
+- **Schema Markup** is a `BlogPosting` JSON-LD block: `headline` = H1, `description` = meta
+  description, `author` = Person `Sunil Jith SH` for Homeless and Housing, `publisher` = Organization
+  `CUBE84` with `url` `https://cube84.com`, `datePublished` = To Be Published, `mainEntityOfPage` =
+  `https://cube84.com/blog/<slug>`, `keywords` from the piece. No `FAQPage`: Google retired FAQ rich
+  results in May 2026.
 
 **Match rows across the two boards by `Doc URL`, never by title.** The titles genuinely differ: one
 piece is "The HUD data elements your case managers get wrong" here and "The HMIS Data Standards Case
