@@ -1175,7 +1175,7 @@ handoff with the label set is the one outcome worse than none.
 | `Coordinator` (`multiple_person_mm8ae6py`) | Sayli Rajguru, `73776106` |
 | `Guest Writers` (`text_mm60g726`) | Homeless and Housing pieces: **`Sunil Jith SH`**, exactly as Kiki spelled it. |
 | `Writer` | Kiki, `72233449` |
-| `Designer` | Sruthi Prabhakaran, `74481717`, always |
+| `Designer` | **Anamika Harikumar, `102841569`** (Design Manager), from 2026-11-02 on Kiki's word: "Anamika moving forward." Sruthi Prabhakaran no longer takes these. |
 
 ### The meta comment for Sayli
 
@@ -1188,11 +1188,11 @@ raise about the piece goes to Kiki, not into this comment. Plain text, real line
 ```
 @Sayli Rajguru
 
-Meta Title: <search-facing title, under 60 characters, distinct from the H1>
+Meta Title: <the approved blog title, which Kiki set as the Meta Title on 2026-11-02; shorten only if over 60 characters>
 Meta Description: <under 160 characters>
 H1: <the approved Doc's title, word for word>
 URL Slug: <from the H1: lowercase, hyphenated, punctuation and stopwords stripped>
-Categories: Homeless and Housing
+Categories: <the row's category, from blog-categories.md; Homeless and Housing for housing pieces>
 Related Blogs:
 <full live URL>
 <full live URL>
