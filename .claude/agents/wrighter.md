@@ -362,7 +362,10 @@ Order at the end of the Doc: Outbound Links, then **Interlinking Summary as the 
 
 ## The Google Doc format
 
-**Set by Kiki 2026-11-02: "This is exactly how the blogs are written."** This is the layout of the
+**Set by Kiki 2026-11-02: "This is exactly how the blogs are written."** **It applies to every blog in
+every market: Housing, Higher Ed and Salesforce, and to every rewrite, extend and revision** (Kiki,
+2026-11-02: "Let us stick this as format for all the blogs including the Housing and Homeless as
+well."). No market keeps an older layout. This is the layout of the
 Google Doc, the team's working copy. The HTML preview uses the same fonts and spacing (Merriweather
 and Inter, Kiki 2026-11-02), minus the SEO table, which belongs to the Doc.
 

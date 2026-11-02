@@ -1,3 +1,9 @@
+> **Fonts changed 2026-11-02.** Blogs use **Merriweather** (title and headings) and **Inter** (body,
+> labels, numbers) in every market, per Kiki and `wrighter.md` *The Google Doc format*. The CSS
+> below is updated. The raster cover section further down still embeds Poppins/Lato from
+> `assets/fonts.css`, which has no Merriweather, so take the inline-SVG cover path (path B) with
+> Google Fonts until that file is rebuilt.
+
 # HTML + Cover Templates (CUBE84 Blog Publisher)
 
 These are the assembly templates for `body_html` and the featured cover image.
@@ -13,7 +19,7 @@ Two different palettes apply, on purpose:
   (azure `#4187FF`, electric violet `#7646FE`, lightning yellow `#FDCB18`, etc.),
   since it is a standalone brand asset, not body content.
 
-Fonts: **Poppins** for headings, **Lato** for body/labels/numbers. In `body_html`
+Fonts: **Merriweather** for headings, **Inter** for body/labels/numbers. In `body_html`
 declare them with a web-safe fallback stack (the CMS front end is expected to load the
 brand webfonts); never substitute another typeface.
 
@@ -27,9 +33,9 @@ block, then the content.
 
 ```html
 <style>
-  .c84-blog{font-family:'Lato',-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
+  .c84-blog{font-family:'Inter',-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
     color:#161616;line-height:1.7;font-size:18px;max-width:760px;margin:0 auto}
-  .c84-blog h1,.c84-blog h2,.c84-blog h3{font-family:'Poppins',-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
+  .c84-blog h1,.c84-blog h2,.c84-blog h3{font-family:'Merriweather',-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
     color:#161616;line-height:1.25;font-weight:700}
   .c84-blog h1{font-size:38px;margin:0 0 8px}
   .c84-blog h2{font-size:27px;margin:44px 0 12px}
@@ -40,7 +46,7 @@ block, then the content.
   .c84-blog li{margin:0 0 8px}
   .c84-blog table{border-collapse:collapse;width:100%;margin:24px 0;font-size:16px}
   .c84-blog th,.c84-blog td{border:1px solid #e2e2e2;padding:10px 14px;text-align:left;vertical-align:top}
-  .c84-blog th{background:#F6F6F6;font-family:'Poppins',sans-serif;font-weight:600}
+  .c84-blog th{background:#F6F6F6;font-family:'Merriweather',sans-serif;font-weight:600}
   .c84-blog td.num,.c84-blog th.num{text-align:right;font-variant-numeric:tabular-nums}
   .c84-blog figure{margin:24px 0}
   .c84-blog figcaption{font-size:14px;color:#5a5a5a;margin-top:8px}
@@ -87,7 +93,7 @@ data — never eyeball it.
 ```html
 <figure>
   <svg viewBox="0 0 480 260" role="img" aria-label="{{chart description}}"
-       font-family="Lato, sans-serif" width="100%">
+       font-family="Inter, sans-serif" width="100%">
     <!-- baseline -->
     <line x1="40" y1="220" x2="470" y2="220" stroke="#c9c9c9" stroke-width="1"/>
     <!-- one <rect> per datum: y = 220 - (value/maxValue)*180 ; height = (value/maxValue)*180 -->
@@ -106,7 +112,7 @@ Keep to azure `#4187FF` for the data mark and greys for axes/gridlines in the bo
 ### Diagram (framework / steps / flow)
 
 Use simple `<svg>` boxes + connectors, or a semantic ordered list styled as steps. Keep
-labels in Poppins, connectors in `#161616`. No external images.
+labels in Merriweather, connectors in `#161616`. No external images.
 
 ---
 
