@@ -1169,7 +1169,10 @@ handoff with the label set is the one outcome worse than none.
 | `Cited Author` | from `Author` |
 | `Reviewer` | from `SME` |
 | `Label` | `US` |
-| `Tags` (`tag_mm12aq2z`) | Homeless and Housing pieces: **`Homeless and Housing`**, not `Nonprofit`. The tag did not exist on 2026-10-20; create it on first use. |
+| `Tags` (`tag_mm12aq2z`) | **The intake row's `Category`** (Kiki 2026-11-02: "the tags column is nothing but our categories"). Create the tag on first use with `create_or_get_tag`; monday strips spaces, so `Staff Augmentation` lands as `StaffAugmentation`. Homeless and Housing pieces: **`Homeless and Housing`**, not `Nonprofit`. |
+| `Content Handover Dt` (`date_mkzrgwm7`) | the day you hand the row to the tracker |
+| `Content Due Date` (`date_mktkry39`) | **the 20th of the month before `To Be Published`** (Kiki 2026-11-02: every month, next month's blogs are ready by the 20th). A November piece is due 20 October. |
+| `Coordinator` (`multiple_person_mm8ae6py`) | Sayli Rajguru, `73776106` |
 | `Guest Writers` (`text_mm60g726`) | Homeless and Housing pieces: **`Sunil Jith SH`**, exactly as Kiki spelled it. |
 | `Writer` | Kiki, `72233449` |
 | `Designer` | Sruthi Prabhakaran, `74481717`, always |
