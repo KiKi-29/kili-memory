@@ -436,7 +436,8 @@ Top to bottom:
 |---|---|---|
 | Line spacing 1.15 everywhere | `line-height:1.15` | 1.15 |
 | Space after every paragraph and list | `margin-bottom:12pt` | 12pt after |
-| Space after every table, and after the horizontal line | One empty spacer paragraph directly after it: `<p style="font-family:'Inter';font-size:10.5pt;line-height:1.15;margin:0">&nbsp;</p>` | An empty 1.15 line (tested 2026-11-02) |
+| Space after every table | One empty spacer paragraph directly after it: `<p style="font-family:'Inter';font-size:10.5pt;line-height:1.15;margin:0">&nbsp;</p>` | An empty 1.15 line (tested 2026-11-02) |
+| Space after the horizontal line | **Two** of the same spacer paragraphs directly after `<hr>`. Conversion puts the line inside the paragraph that follows it, so the first spacer becomes the line's own paragraph and only the second is the blank line. One spacer leaves no gap (v4 shipped that way, 2026-11-02). | The line, then one empty line (tested 2026-11-02) |
 | Heading to body, two lines | `margin-bottom:24pt` on every `h1`, `h2`, `h3` | 24pt after |
 
 Docs drops the top margin of whatever follows a table or a line, so a table followed by a heading,
