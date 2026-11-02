@@ -110,6 +110,22 @@ person who owns the content, route it there.
 
 ---
 
+## Corrected again 2026-11-02: edit with real HTML through the GraphQL API
+
+The 2026-09-07 finding below is true **for the dedicated `create_update` tool**, which escapes tags.
+It is not true for the raw API. `edit_update(id, body)` sent through `all_monday_api` stores real
+HTML: on 2 November six Sayli meta comments were rewritten with `<p>`, `<strong>`, `<br>`, `<ul><li>`
+and monday's mention anchor, and `text_body` came back clean (numbered sections, bullets, no tag
+characters). So:
+
+- **An edit tool exists.** Fix a comment by editing it; never repost. Kiki: "If you are pasting
+  your comment, then you have to delete the old one. Mostly try to edit the existing comment."
+- **Format for the reader.** Kiki: "Always format things properly... short bullets or numbered, so
+  it is readable." Spaced, numbered sections and bullet lists, not a wall of `Label: value` lines.
+- Editing drops a `mentionsList` mention; keep it by writing monday's anchor into the body:
+  `<a class="user_mention_editor router" href="https://cube84-bunch.monday.com/users/<id>" data-mention-type="User" data-mention-id="<id>">@Name</a>`.
+- Verify by reading `text_body` back: tag characters there mean the markup was escaped.
+
 ## The mechanism, corrected 2026-09-07
 
 **Format: plain text with real line breaks. Not HTML. Not markdown.**

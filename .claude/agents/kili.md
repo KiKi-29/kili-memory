@@ -1179,6 +1179,16 @@ handoff with the label set is the one outcome worse than none.
 
 ### The meta comment for Sayli
 
+**Formatted for Sayli to read, set by Kiki 2026-11-02:** "Always format things properly... it needs
+to have short bullets or numbered, so it is readable for Sayli." Seven numbered sections, each a
+bold heading on its own line with its value under it and a blank line between sections; Related
+Blogs as a bulleted list. A wall of `Label: value` lines is wrong even when every value is right. To
+fix a comment, **edit it** (`edit_update`), never repost; if you ever must repost, delete the old
+one in the same pass. Editing drops a `mentionsList` mention, so write the mention into the body as
+monday's own anchor (`<a class="user_mention_editor router" href="https://cube84-bunch.monday.com/users/73776106" data-mention-type="User" data-mention-id="73776106">@Sayli Rajguru</a>`)
+and the rest as HTML: `<p><strong>1. Meta Title</strong><br>value</p>`, `<ul><li>` for the blogs.
+Live example: tracker item 13439492984, update 5684917395.
+
 One item update on the tracker row, tagging **Sayli Rajguru, `73776106`**, who copies the blog into
 the CMS by hand. **These seven fields and nothing else.** No greeting, no note, no flag, no sign-off.
 Kiki, 2026-10-20: *"I would like to only have this, and not anything else."* Anything you want to
