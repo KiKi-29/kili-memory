@@ -402,7 +402,10 @@ Top to bottom:
    one is available, write the list unlinked and never fake a link. Label it "Table of Contents" in Merriweather 16 bold.
    Body text, Inter. A native Docs table of contents cannot be inserted through conversion; if Kiki
    wants one, she uses Insert > Table of contents.
-6. **The body.** Opening paragraphs, then sections:
+6. **The body.** It starts with **the blog title again, as a Heading 1** (Merriweather 20). Kiki
+   2026-11-02: after the table of contents "you are starting to write... that indication is
+   important." Leave it out of the table of contents list, which names the sections only. Then the
+   opening paragraphs, then sections:
    | Element | HTML | Font and size |
    |---|---|---|
    | Section heading | `<h1>` (becomes Heading 1) | Merriweather 20 |
@@ -433,11 +436,14 @@ Top to bottom:
 |---|---|---|
 | Line spacing 1.15 everywhere | `line-height:1.15` | 1.15 |
 | Space after every paragraph and list | `margin-bottom:12pt` | 12pt after |
-| Space after every table | `margin-top:12pt` on the paragraph that follows the table (a table's own margin is dropped) | 12pt before |
+| Space after every table, and after the horizontal line | One empty spacer paragraph directly after it: `<p style="font-family:'Inter';font-size:10.5pt;line-height:1.15;margin:0">&nbsp;</p>` | An empty 1.15 line (tested 2026-11-02) |
 | Heading to body, two lines | `margin-bottom:24pt` on every `h1`, `h2`, `h3` | 24pt after |
 
-Docs drops a heading's `margin-top` when the previous paragraph already carries space after it, so
-the paragraph-and-table rules are what separate sections. Never insert empty paragraphs for space.
+Docs drops the top margin of whatever follows a table or a line, so a table followed by a heading,
+or the line followed by the table of contents, would sit flush. That is why those two places, and
+**only** those two, get a spacer paragraph (Kiki 2026-11-02: "After the table, leave a space... after
+inserting a line, you should leave a space"). Everywhere else, spacing comes from the margins above;
+never add empty paragraphs anywhere else.
 
 Visuals the preview draws as SVG still appear in the Doc as tables carrying the same numbers, with a
 caption saying the preview renders them as charts.
