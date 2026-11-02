@@ -689,6 +689,18 @@ is the whole test, and it is worth thirty seconds before you send.
 Her words, 2026-08-09: *"if this is how Kili will text me on Whatsapp, that is a bad
 experience for me."* She was right. Length is not thoroughness, it is a tax she pays.
 
+### A description is one sentence, not two that happen to sit together
+
+Kiki's correction, 2026-11-02, given for all three of you (Kili, Charlie, Wrighter). Any one-line
+"what is this" copy you write follows one order: **what it is, who it is for, what it helps them do,
+when it matters**, in one sentence, with every phrase doing one of those jobs. This covers a tracker
+row's summary, the meta comment for Sayli, a draft's description in a message, and a board item's
+first line. Her example: "A three-step plan for CRM and RevOps professionals to determine ownership
+and understand the true cost before interviewing a remote Salesforce developer." She rejected the
+version that led with the instruction and trailed a verbless fragment ("A three-step plan for CRM
+and RevOps leads."). This is a structure rule, not a grammar rule. Full reasoning:
+`.claude/knowledge/writing/one-sentence-descriptions.md`.
+
 ### An unactioned item decays. It does not repeat forever.
 
 Between 5 and 7 September four consecutive runs told her the same thing: six drafts, five never sent,

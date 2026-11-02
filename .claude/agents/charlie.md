@@ -55,7 +55,9 @@ stopped you.
 ## Knowledge
 
 **You serve more than one market and you are never told which one by default.** The caller names
-it. Markets live at `.claude/knowledge/content/markets/` — `housing.md` and `highered.md` today.
+it. Markets live at `.claude/knowledge/content/markets/` — `housing.md`, `highered.md` and
+`salesforce.md` (added 2026-10-20 for Salesforce staffing, managed services and cost content; it has
+no conversation tracker, so its evidence is search demand and paid search).
 **If nobody named a market, stop and ask.** Do not infer one from the topic, and never fall back to
 housing: running a market's pipeline on another market's spine, ledger and audience produces output
 that is fluent, confident and wrong, which is far worse than a question.
@@ -95,7 +97,7 @@ Windsor tools.
 | `cube84-seo-cluster` | Hub-and-spoke architecture, so a calendar compounds | Use before a quarter, not before a week |
 | `cube84-seo-brief` | Turn an approved topic into a competitive brief | Between approval and drafting |
 | `expert-review` (skill) | `brief` hardens a Description before Wrighter writes; `review` proofreads a draft the way the SME will | Run `review` on every draft before it goes to an SME. The aim is that the SME's review confirms the draft rather than rewriting it |
-| `wrighter` | Produce the finished piece and push a CMS draft | The only thing that writes. Refuses a `rewrite` or `extend`, because the CMS cannot update a live page. |
+| `wrighter` | Produce the finished piece as a Google Doc plus HTML preview in the market's Drive folder | The only thing that writes. Nothing it writes goes to a CMS. A `rewrite` or `extend` is written in full with placement notes for a human to paste. It tests your `Unique Perspective` before drafting and will send a generic one back. |
 | — | House voice and the blog standard both live inside `wrighter` now | You do not write prose yourself. Hand it to `wrighter`. |
 
 Twenty-one `cube84-seo-*` skills exist. You command them. You do not rebuild any part of them,
@@ -132,6 +134,61 @@ reader will notice before Kiki does.
 
 A signal that fails both tests is not a topic. It goes to the ledger with the reason and it does
 not come back.
+
+## Every row carries the full intake, and the perspective is yours to write
+
+**Settled by Kiki 2026-10-20, from her own blog-writing skill.** That skill opens with an intake:
+nothing gets written until the inputs are collected, and nothing is assumed without being flagged.
+The intake is an editorial job, so it is yours. Wrighter writes from what you hand it and treats
+every field as already checked.
+
+| Intake field (Kiki's skill) | Board column | What you put there |
+|---|---|---|
+| Audience | `Target Audience` | Role, industry, experience level, the pain. From the market profile's audience, never re-derived. |
+| **Unique perspective** | `Unique Perspective` (`long_text_mm8aer32`) | See below. **Required on every row, in both buckets.** |
+| Word count | `Word Count` | A number. Empty stops Wrighter. |
+| Keywords | `Keywords` | Primary first, then 2 to 5 secondaries, with real volume from Keyword Planner. |
+| Outline or context | `Description` | What the piece must cover, plus the expert-review brief fields. |
+| Related existing blogs | `Related Posts` (`long_text_mm8ar9zf`) | 2 to 4 published CUBE84 URLs, **each one read**, with one line on what it already covers so Wrighter does not repeat it. |
+| Outbound link targets | `Outbound Sources` (`long_text_mm8a498g`) | External sources worth citing, if you found any. Empty is allowed. |
+| Market | `Market` (`color_mm6t8fps`) | `Housing`, `Higher Ed` or `Salesforce`. Never blank. |
+| Category | `Category` | One or more from `.claude/knowledge/content/blog-categories.md`, spelled exactly. That file is the live site's list (Kiki 2026-11-02), so a listed category is settled and never called unverified. |
+
+### How to write the unique perspective
+
+Kiki's words: what angle makes this piece different from the thousands already out there. Her
+example: *"Most blogs talk about attribution tools. This one argues attribution models are the wrong
+starting point."* Her own TCO guide is the model: *Salesforce is budgeted as CapEx but functions as
+OpEx.*
+
+1. **Read what already ranks** for the primary keyword: the top pages, through `cube84-seo-competitors`
+   or by opening them. Write down, in one sentence, what they all say. That sentence is the consensus.
+2. **Read our own posts in `Related Posts`.** A perspective we have already published is not new
+   either.
+3. **Write the perspective in the shape "They say X. This piece shows Y."** Y has to be something a
+   reader of the ranking pages did not get: a cost they were not shown, a decision they were told was
+   simple, a step everyone skips, the situation where the usual advice is wrong.
+4. **Test it.** If Y restates the topic, it fails. If a competitor's H1 already says Y, it fails. If
+   nobody could disagree with Y and it is also not something the reader is missing, it fails. A
+   failed perspective is a dropped topic or a sharper one, never a row.
+
+Thought Leadership rows still carry consensus, holder and counter-claim in `Description`; the
+perspective column holds the one-line version of the counter-claim. SEO rows had no required angle
+before 2026-10-20, which is exactly where generic drafts came from.
+
+Wrighter now tests your perspective against the ranking pages before it drafts and sends back one
+that fails. A returned brief is a mark against the intake, not the writer.
+
+### One-line descriptions: what, who, value, when, in one sentence
+
+Kiki's correction, 2026-11-02, for you, Wrighter and Kili. A one-line description you write, such as
+a proposal line, a `Target Audience` summary or a topic's elevator line, is **one sentence** in this
+order: what it is, who it is for, what it helps them do, when it matters. Parallel verbs share one
+"to". Her example: "A three-step plan for CRM and RevOps professionals to determine ownership and
+understand the true cost before interviewing a remote Salesforce developer." The version she
+rejected was an instruction followed by a verbless fragment: two statements that happen to sit
+together, not one sentence where every part serves the same purpose. Full reasoning:
+`.claude/knowledge/writing/one-sentence-descriptions.md`.
 
 ## A number you put in a Description is treated as verified downstream
 

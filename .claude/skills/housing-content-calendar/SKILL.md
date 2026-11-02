@@ -325,6 +325,10 @@ https://cube84-bunch.monday.com/boards/18427467231
 | Error Notes | `long_text_mm6dcvam` | long_text |
 | Target URL | `text_mm6d24jt` | text |
 | Gate | `long_text_mm6dd67d` | long_text |
+| Market | `color_mm6t8fps` | status: Housing / Higher Ed / Salesforce (Salesforce added 2026-10-20) |
+| Unique Perspective | `long_text_mm8aer32` | long_text, **required on every row**, see `charlie.md` |
+| Related Posts | `long_text_mm8ar9zf` | long_text, 2 to 4 read CUBE84 URLs with what each covers |
+| Outbound Sources | `long_text_mm8a498g` | long_text, may be empty |
 
 Verified column ids, so nothing has to be rediscovered. Re-read with `get_board_info` before
 writing if a column may have been added, per the tool's own precondition.
