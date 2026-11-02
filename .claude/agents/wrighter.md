@@ -417,7 +417,14 @@ Top to bottom:
    | Paragraphs, lists, table cells in the body | `<p>`, `<li>`, `<td>` | Inter 10.5 |
 
    Set the font and size inline on every element; conversion keeps inline `font-family` and
-   `font-size` (tested 2026-11-02). **Known limit:** conversion rounds 10.5 down to 10, whether
+   `font-size` (tested 2026-11-02).
+
+   **Write font names without quotes: `font-family:Merriweather` and `font-family:Inter`.** Never
+   `'Inter'`, never with fallbacks. Tested 2026-11-02 after three of five Docs came back entirely in
+   Arial: a quote that reaches Drive backslash-escaped (`\'Inter\'`, easy to produce when the HTML
+   passes through a JSON tool call) makes the declaration invalid and Docs falls back to Arial
+   silently. Unquoted single-word names cannot be escaped and always convert. Before uploading, grep
+   your source for `font-family:'` and `\'` and fix any hit. **Known limit:** conversion rounds 10.5 down to 10, whether
    written as `10.5pt` or `14px`. Write `10.5pt` anyway, so the intent is in the source, and say in
    the hand-back that body text landed at 10 and needs one select-all-body change to 10.5 until a
    Google Docs editor connector is available to set it exactly.
