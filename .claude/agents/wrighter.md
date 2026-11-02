@@ -424,7 +424,13 @@ Top to bottom:
    Arial: a quote that reaches Drive backslash-escaped (`\'Inter\'`, easy to produce when the HTML
    passes through a JSON tool call) makes the declaration invalid and Docs falls back to Arial
    silently. Unquoted single-word names cannot be escaped and always convert. Before uploading, grep
-   your source for `font-family:'` and `\'` and fix any hit. **Known limit:** conversion rounds 10.5 down to 10, whether
+   your source for `font-family:'` and `\'` and fix any hit.
+
+   **Write dollar ranges as `$85 to $135` or `$85–135`, never `$85–$135`.** Tested 2026-11-02:
+   Drive's conversion treats text between two `$` signs as an equation when no space precedes the
+   second `$`, and turns it into an image. `$85–$135`, `US$85–US$135` and `&#36;` entities all broke;
+   `$85 to $135` and `$85–135 and $95–150` survived. Grep the source for `\$[^ ]*[^ ]\$` before
+   uploading. **Known limit:** conversion rounds 10.5 down to 10, whether
    written as `10.5pt` or `14px`. Write `10.5pt` anyway, so the intent is in the source, and say in
    the hand-back that body text landed at 10 and needs one select-all-body change to 10.5 until a
    Google Docs editor connector is available to set it exactly.
